@@ -1,0 +1,157 @@
+No source file named malloc.c.
+Hardware assisted breakpoint 1 (malloc.c:3808) pending.
+No symbol "__libc_realloc" in current context.
+The program is not being run.
+Starting program: /home/tyler/json-c/build/tests/test2 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib64/libthread_db.so.1".
+
+Breakpoint 1, __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
+3809	  assert (nclears >= 3);
+#0  __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
+#1  0x00007ffff7fb1dcf in json_tokener_new_ex (depth=32) at /home/tyler/json-c/json_tokener.c:157
+#2  0x00007ffff7fb1e88 in json_tokener_new () at /home/tyler/json-c/json_tokener.c:180
+#3  0x00007ffff7fb2036 in json_tokener_parse_verbose (str=0x402010 "/* more difficult test case */{ \"glossary\": { \"title\": \"example glossary\", \"GlossDiv\": { \"title\": \"S\", \"GlossList\": [ { \"ID\": \"SGML\", \"SortAs\": \"SGML\", \"GlossTerm\": \"Standard Generalized Markup Langua"..., error=0x7fffffffdee4) at /home/tyler/json-c/json_tokener.c:227
+#4  0x00007ffff7fb2017 in json_tokener_parse (str=0x402010 "/* more difficult test case */{ \"glossary\": { \"title\": \"example glossary\", \"GlossDiv\": { \"title\": \"S\", \"GlossList\": [ { \"ID\": \"SGML\", \"SortAs\": \"SGML\", \"GlossTerm\": \"Standard Generalized Markup Langua"...) at /home/tyler/json-c/json_tokener.c:218
+#5  0x0000000000401174 in main (argc=1, argv=0x7fffffffe048) at /home/tyler/json-c/tests/test2.c:31
+calloc 0x4052a0 72
+
+Breakpoint 1, __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
+3809	  assert (nclears >= 3);
+#0  __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
+#1  0x00007ffff7fb1df6 in json_tokener_new_ex (depth=32) at /home/tyler/json-c/json_tokener.c:160
+#2  0x00007ffff7fb1e88 in json_tokener_new () at /home/tyler/json-c/json_tokener.c:180
+#3  0x00007ffff7fb2036 in json_tokener_parse_verbose (str=0x402010 "/* more difficult test case */{ \"glossary\": { \"title\": \"example glossary\", \"GlossDiv\": { \"title\": \"S\", \"GlossList\": [ { \"ID\": \"SGML\", \"SortAs\": \"SGML\", \"GlossTerm\": \"Standard Generalized Markup Langua"..., error=0x7fffffffdee4) at /home/tyler/json-c/json_tokener.c:227
+#4  0x00007ffff7fb2017 in json_tokener_parse (str=0x402010 "/* more difficult test case */{ \"glossary\": { \"title\": \"example glossary\", \"GlossDiv\": { \"title\": \"S\", \"GlossList\": [ { \"ID\": \"SGML\", \"SortAs\": \"SGML\", \"GlossTerm\": \"Standard Generalized Markup Langua"...) at /home/tyler/json-c/json_tokener.c:218
+#5  0x0000000000401174 in main (argc=1, argv=0x7fffffffe048) at /home/tyler/json-c/tests/test2.c:31
+calloc 0x4052f0 1024
+
+Breakpoint 1, __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
+3809	  assert (nclears >= 3);
+#0  __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
+#1  0x00007ffff7fb7c7d in printbuf_new () at /home/tyler/json-c/printbuf.c:41
+#2  0x00007ffff7fb1e26 in json_tokener_new_ex (depth=32) at /home/tyler/json-c/json_tokener.c:166
+#3  0x00007ffff7fb1e88 in json_tokener_new () at /home/tyler/json-c/json_tokener.c:180
+#4  0x00007ffff7fb2036 in json_tokener_parse_verbose (str=0x402010 "/* more difficult test case */{ \"glossary\": { \"title\": \"example glossary\", \"GlossDiv\": { \"title\": \"S\", \"GlossList\": [ { \"ID\": \"SGML\", \"SortAs\": \"SGML\", \"GlossTerm\": \"Standard Generalized Markup Langua"..., error=0x7fffffffdee4) at /home/tyler/json-c/json_tokener.c:227
+#5  0x00007ffff7fb2017 in json_tokener_parse (str=0x402010 "/* more difficult test case */{ \"glossary\": { \"title\": \"example glossary\", \"GlossDiv\": { \"title\": \"S\", \"GlossList\": [ { \"ID\": \"SGML\", \"SortAs\": \"SGML\", \"GlossTerm\": \"Standard Generalized Markup Langua"...) at /home/tyler/json-c/json_tokener.c:218
+#6  0x0000000000401174 in main (argc=1, argv=0x7fffffffe048) at /home/tyler/json-c/tests/test2.c:31
+calloc 0x405700 16
+
+Breakpoint 1, __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
+3809	  assert (nclears >= 3);
+#0  __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
+#1  0x00007ffff7fb7148 in lh_table_new (size=16, free_fn=0x7ffff7faebb2 <json_object_lh_entry_free>, hash_fn=0x7ffff7fb7060 <lh_char_hash>, equal_fn=0x7ffff7fb70c7 <lh_char_equal>) at /home/tyler/json-c/linkhash.c:505
+#2  0x00007ffff7fb723e in lh_kchar_table_new (size=16, free_fn=0x7ffff7faebb2 <json_object_lh_entry_free>) at /home/tyler/json-c/linkhash.c:527
+#3  0x00007ffff7faec73 in json_object_new_object () at /home/tyler/json-c/json_object.c:536
+#4  0x00007ffff7fb24ad in json_tokener_parse_ex (tok=0x4052a0, str=0x40202e "{ \"glossary\": { \"title\": \"example glossary\", \"GlossDiv\": { \"title\": \"S\", \"GlossList\": [ { \"ID\": \"SGML\", \"SortAs\": \"SGML\", \"GlossTerm\": \"Standard Generalized Markup Language\", \"Acronym\": \"SGML\", \"Abbre"..., len=-1) at /home/tyler/json-c/json_tokener.c:401
+#5  0x00007ffff7fb2060 in json_tokener_parse_verbose (str=0x402010 "/* more difficult test case */{ \"glossary\": { \"title\": \"example glossary\", \"GlossDiv\": { \"title\": \"S\", \"GlossList\": [ { \"ID\": \"SGML\", \"SortAs\": \"SGML\", \"GlossTerm\": \"Standard Generalized Markup Langua"..., error=0x7fffffffdee4) at /home/tyler/json-c/json_tokener.c:230
+#6  0x00007ffff7fb2017 in json_tokener_parse (str=0x402010 "/* more difficult test case */{ \"glossary\": { \"title\": \"example glossary\", \"GlossDiv\": { \"title\": \"S\", \"GlossList\": [ { \"ID\": \"SGML\", \"SortAs\": \"SGML\", \"GlossTerm\": \"Standard Generalized Markup Langua"...) at /home/tyler/json-c/json_tokener.c:218
+#7  0x0000000000401174 in main (argc=1, argv=0x7fffffffe048) at /home/tyler/json-c/tests/test2.c:31
+calloc 0x405970 56
+
+Breakpoint 1, __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
+3809	  assert (nclears >= 3);
+#0  __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
+#1  0x00007ffff7fb7183 in lh_table_new (size=16, free_fn=0x7ffff7faebb2 <json_object_lh_entry_free>, hash_fn=0x7ffff7fb7060 <lh_char_hash>, equal_fn=0x7ffff7fb70c7 <lh_char_equal>) at /home/tyler/json-c/linkhash.c:511
+#2  0x00007ffff7fb723e in lh_kchar_table_new (size=16, free_fn=0x7ffff7faebb2 <json_object_lh_entry_free>) at /home/tyler/json-c/linkhash.c:527
+#3  0x00007ffff7faec73 in json_object_new_object () at /home/tyler/json-c/json_object.c:536
+#4  0x00007ffff7fb24ad in json_tokener_parse_ex (tok=0x4052a0, str=0x40202e "{ \"glossary\": { \"title\": \"example glossary\", \"GlossDiv\": { \"title\": \"S\", \"GlossList\": [ { \"ID\": \"SGML\", \"SortAs\": \"SGML\", \"GlossTerm\": \"Standard Generalized Markup Language\", \"Acronym\": \"SGML\", \"Abbre"..., len=-1) at /home/tyler/json-c/json_tokener.c:401
+#5  0x00007ffff7fb2060 in json_tokener_parse_verbose (str=0x402010 "/* more difficult test case */{ \"glossary\": { \"title\": \"example glossary\", \"GlossDiv\": { \"title\": \"S\", \"GlossList\": [ { \"ID\": \"SGML\", \"SortAs\": \"SGML\", \"GlossTerm\": \"Standard Generalized Markup Langua"..., error=0x7fffffffdee4) at /home/tyler/json-c/json_tokener.c:230
+#6  0x00007ffff7fb2017 in json_tokener_parse (str=0x402010 "/* more difficult test case */{ \"glossary\": { \"title\": \"example glossary\", \"GlossDiv\": { \"title\": \"S\", \"GlossList\": [ { \"ID\": \"SGML\", \"SortAs\": \"SGML\", \"GlossTerm\": \"Standard Generalized Markup Langua"...) at /home/tyler/json-c/json_tokener.c:218
+#7  0x0000000000401174 in main (argc=1, argv=0x7fffffffe048) at /home/tyler/json-c/tests/test2.c:31
+calloc 0x4059b0 640
+
+Breakpoint 1, __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
+3809	  assert (nclears >= 3);
+#0  __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
+#1  0x00007ffff7fb7148 in lh_table_new (size=16, free_fn=0x7ffff7faebb2 <json_object_lh_entry_free>, hash_fn=0x7ffff7fb7060 <lh_char_hash>, equal_fn=0x7ffff7fb70c7 <lh_char_equal>) at /home/tyler/json-c/linkhash.c:505
+#2  0x00007ffff7fb723e in lh_kchar_table_new (size=16, free_fn=0x7ffff7faebb2 <json_object_lh_entry_free>) at /home/tyler/json-c/linkhash.c:527
+#3  0x00007ffff7faec73 in json_object_new_object () at /home/tyler/json-c/json_object.c:536
+#4  0x00007ffff7fb24ad in json_tokener_parse_ex (tok=0x4052a0, str=0x40203c "{ \"title\": \"example glossary\", \"GlossDiv\": { \"title\": \"S\", \"GlossList\": [ { \"ID\": \"SGML\", \"SortAs\": \"SGML\", \"GlossTerm\": \"Standard Generalized Markup Language\", \"Acronym\": \"SGML\", \"Abbrev\": \"ISO 8879:"..., len=-1) at /home/tyler/json-c/json_tokener.c:401
+#5  0x00007ffff7fb2060 in json_tokener_parse_verbose (str=0x402010 "/* more difficult test case */{ \"glossary\": { \"title\": \"example glossary\", \"GlossDiv\": { \"title\": \"S\", \"GlossList\": [ { \"ID\": \"SGML\", \"SortAs\": \"SGML\", \"GlossTerm\": \"Standard Generalized Markup Langua"..., error=0x7fffffffdee4) at /home/tyler/json-c/json_tokener.c:230
+#6  0x00007ffff7fb2017 in json_tokener_parse (str=0x402010 "/* more difficult test case */{ \"glossary\": { \"title\": \"example glossary\", \"GlossDiv\": { \"title\": \"S\", \"GlossList\": [ { \"ID\": \"SGML\", \"SortAs\": \"SGML\", \"GlossTerm\": \"Standard Generalized Markup Langua"...) at /home/tyler/json-c/json_tokener.c:218
+#7  0x0000000000401174 in main (argc=1, argv=0x7fffffffe048) at /home/tyler/json-c/tests/test2.c:31
+calloc 0x405ca0 56
+
+Breakpoint 1, __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
+3809	  assert (nclears >= 3);
+#0  __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
+#1  0x00007ffff7fb7183 in lh_table_new (size=16, free_fn=0x7ffff7faebb2 <json_object_lh_entry_free>, hash_fn=0x7ffff7fb7060 <lh_char_hash>, equal_fn=0x7ffff7fb70c7 <lh_char_equal>) at /home/tyler/json-c/linkhash.c:511
+#2  0x00007ffff7fb723e in lh_kchar_table_new (size=16, free_fn=0x7ffff7faebb2 <json_object_lh_entry_free>) at /home/tyler/json-c/linkhash.c:527
+#3  0x00007ffff7faec73 in json_object_new_object () at /home/tyler/json-c/json_object.c:536
+#4  0x00007ffff7fb24ad in json_tokener_parse_ex (tok=0x4052a0, str=0x40203c "{ \"title\": \"example glossary\", \"GlossDiv\": { \"title\": \"S\", \"GlossList\": [ { \"ID\": \"SGML\", \"SortAs\": \"SGML\", \"GlossTerm\": \"Standard Generalized Markup Language\", \"Acronym\": \"SGML\", \"Abbrev\": \"ISO 8879:"..., len=-1) at /home/tyler/json-c/json_tokener.c:401
+#5  0x00007ffff7fb2060 in json_tokener_parse_verbose (str=0x402010 "/* more difficult test case */{ \"glossary\": { \"title\": \"example glossary\", \"GlossDiv\": { \"title\": \"S\", \"GlossList\": [ { \"ID\": \"SGML\", \"SortAs\": \"SGML\", \"GlossTerm\": \"Standard Generalized Markup Langua"..., error=0x7fffffffdee4) at /home/tyler/json-c/json_tokener.c:230
+#6  0x00007ffff7fb2017 in json_tokener_parse (str=0x402010 "/* more difficult test case */{ \"glossary\": { \"title\": \"example glossary\", \"GlossDiv\": { \"title\": \"S\", \"GlossList\": [ { \"ID\": \"SGML\", \"SortAs\": \"SGML\", \"GlossTerm\": \"Standard Generalized Markup Langua"...) at /home/tyler/json-c/json_tokener.c:218
+#7  0x0000000000401174 in main (argc=1, argv=0x7fffffffe048) at /home/tyler/json-c/tests/test2.c:31
+calloc 0x405ce0 640
+
+Breakpoint 1, __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
+3809	  assert (nclears >= 3);
+#0  __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
+#1  0x00007ffff7fb7148 in lh_table_new (size=16, free_fn=0x7ffff7faebb2 <json_object_lh_entry_free>, hash_fn=0x7ffff7fb7060 <lh_char_hash>, equal_fn=0x7ffff7fb70c7 <lh_char_equal>) at /home/tyler/json-c/linkhash.c:505
+#2  0x00007ffff7fb723e in lh_kchar_table_new (size=16, free_fn=0x7ffff7faebb2 <json_object_lh_entry_free>) at /home/tyler/json-c/linkhash.c:527
+#3  0x00007ffff7faec73 in json_object_new_object () at /home/tyler/json-c/json_object.c:536
+#4  0x00007ffff7fb24ad in json_tokener_parse_ex (tok=0x4052a0, str=0x402067 "{ \"title\": \"S\", \"GlossList\": [ { \"ID\": \"SGML\", \"SortAs\": \"SGML\", \"GlossTerm\": \"Standard Generalized Markup Language\", \"Acronym\": \"SGML\", \"Abbrev\": \"ISO 8879:1986\", \"GlossDef\": \"A meta-markup language,"..., len=-1) at /home/tyler/json-c/json_tokener.c:401
+#5  0x00007ffff7fb2060 in json_tokener_parse_verbose (str=0x402010 "/* more difficult test case */{ \"glossary\": { \"title\": \"example glossary\", \"GlossDiv\": { \"title\": \"S\", \"GlossList\": [ { \"ID\": \"SGML\", \"SortAs\": \"SGML\", \"GlossTerm\": \"Standard Generalized Markup Langua"..., error=0x7fffffffdee4) at /home/tyler/json-c/json_tokener.c:230
+#6  0x00007ffff7fb2017 in json_tokener_parse (str=0x402010 "/* more difficult test case */{ \"glossary\": { \"title\": \"example glossary\", \"GlossDiv\": { \"title\": \"S\", \"GlossList\": [ { \"ID\": \"SGML\", \"SortAs\": \"SGML\", \"GlossTerm\": \"Standard Generalized Markup Langua"...) at /home/tyler/json-c/json_tokener.c:218
+#7  0x0000000000401174 in main (argc=1, argv=0x7fffffffe048) at /home/tyler/json-c/tests/test2.c:31
+calloc 0x406040 56
+
+Breakpoint 1, __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
+3809	  assert (nclears >= 3);
+#0  __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
+#1  0x00007ffff7fb7183 in lh_table_new (size=16, free_fn=0x7ffff7faebb2 <json_object_lh_entry_free>, hash_fn=0x7ffff7fb7060 <lh_char_hash>, equal_fn=0x7ffff7fb70c7 <lh_char_equal>) at /home/tyler/json-c/linkhash.c:511
+#2  0x00007ffff7fb723e in lh_kchar_table_new (size=16, free_fn=0x7ffff7faebb2 <json_object_lh_entry_free>) at /home/tyler/json-c/linkhash.c:527
+#3  0x00007ffff7faec73 in json_object_new_object () at /home/tyler/json-c/json_object.c:536
+#4  0x00007ffff7fb24ad in json_tokener_parse_ex (tok=0x4052a0, str=0x402067 "{ \"title\": \"S\", \"GlossList\": [ { \"ID\": \"SGML\", \"SortAs\": \"SGML\", \"GlossTerm\": \"Standard Generalized Markup Language\", \"Acronym\": \"SGML\", \"Abbrev\": \"ISO 8879:1986\", \"GlossDef\": \"A meta-markup language,"..., len=-1) at /home/tyler/json-c/json_tokener.c:401
+#5  0x00007ffff7fb2060 in json_tokener_parse_verbose (str=0x402010 "/* more difficult test case */{ \"glossary\": { \"title\": \"example glossary\", \"GlossDiv\": { \"title\": \"S\", \"GlossList\": [ { \"ID\": \"SGML\", \"SortAs\": \"SGML\", \"GlossTerm\": \"Standard Generalized Markup Langua"..., error=0x7fffffffdee4) at /home/tyler/json-c/json_tokener.c:230
+#6  0x00007ffff7fb2017 in json_tokener_parse (str=0x402010 "/* more difficult test case */{ \"glossary\": { \"title\": \"example glossary\", \"GlossDiv\": { \"title\": \"S\", \"GlossList\": [ { \"ID\": \"SGML\", \"SortAs\": \"SGML\", \"GlossTerm\": \"Standard Generalized Markup Langua"...) at /home/tyler/json-c/json_tokener.c:218
+#7  0x0000000000401174 in main (argc=1, argv=0x7fffffffe048) at /home/tyler/json-c/tests/test2.c:31
+calloc 0x406080 640
+
+Breakpoint 1, __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
+3809	  assert (nclears >= 3);
+#0  __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
+#1  0x00007ffff7fb7148 in lh_table_new (size=16, free_fn=0x7ffff7faebb2 <json_object_lh_entry_free>, hash_fn=0x7ffff7fb7060 <lh_char_hash>, equal_fn=0x7ffff7fb70c7 <lh_char_equal>) at /home/tyler/json-c/linkhash.c:505
+#2  0x00007ffff7fb723e in lh_kchar_table_new (size=16, free_fn=0x7ffff7faebb2 <json_object_lh_entry_free>) at /home/tyler/json-c/linkhash.c:527
+#3  0x00007ffff7faec73 in json_object_new_object () at /home/tyler/json-c/json_object.c:536
+#4  0x00007ffff7fb24ad in json_tokener_parse_ex (tok=0x4052a0, str=0x402086 "{ \"ID\": \"SGML\", \"SortAs\": \"SGML\", \"GlossTerm\": \"Standard Generalized Markup Language\", \"Acronym\": \"SGML\", \"Abbrev\": \"ISO 8879:1986\", \"GlossDef\": \"A meta-markup language, used to create markup language"..., len=-1) at /home/tyler/json-c/json_tokener.c:401
+#5  0x00007ffff7fb2060 in json_tokener_parse_verbose (str=0x402010 "/* more difficult test case */{ \"glossary\": { \"title\": \"example glossary\", \"GlossDiv\": { \"title\": \"S\", \"GlossList\": [ { \"ID\": \"SGML\", \"SortAs\": \"SGML\", \"GlossTerm\": \"Standard Generalized Markup Langua"..., error=0x7fffffffdee4) at /home/tyler/json-c/json_tokener.c:230
+#6  0x00007ffff7fb2017 in json_tokener_parse (str=0x402010 "/* more difficult test case */{ \"glossary\": { \"title\": \"example glossary\", \"GlossDiv\": { \"title\": \"S\", \"GlossList\": [ { \"ID\": \"SGML\", \"SortAs\": \"SGML\", \"GlossTerm\": \"Standard Generalized Markup Langua"...) at /home/tyler/json-c/json_tokener.c:218
+#7  0x0000000000401174 in main (argc=1, argv=0x7fffffffe048) at /home/tyler/json-c/tests/test2.c:31
+calloc 0x406560 56
+
+Breakpoint 1, __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
+3809	  assert (nclears >= 3);
+#0  __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
+#1  0x00007ffff7fb7183 in lh_table_new (size=16, free_fn=0x7ffff7faebb2 <json_object_lh_entry_free>, hash_fn=0x7ffff7fb7060 <lh_char_hash>, equal_fn=0x7ffff7fb70c7 <lh_char_equal>) at /home/tyler/json-c/linkhash.c:511
+#2  0x00007ffff7fb723e in lh_kchar_table_new (size=16, free_fn=0x7ffff7faebb2 <json_object_lh_entry_free>) at /home/tyler/json-c/linkhash.c:527
+#3  0x00007ffff7faec73 in json_object_new_object () at /home/tyler/json-c/json_object.c:536
+#4  0x00007ffff7fb24ad in json_tokener_parse_ex (tok=0x4052a0, str=0x402086 "{ \"ID\": \"SGML\", \"SortAs\": \"SGML\", \"GlossTerm\": \"Standard Generalized Markup Language\", \"Acronym\": \"SGML\", \"Abbrev\": \"ISO 8879:1986\", \"GlossDef\": \"A meta-markup language, used to create markup language"..., len=-1) at /home/tyler/json-c/json_tokener.c:401
+#5  0x00007ffff7fb2060 in json_tokener_parse_verbose (str=0x402010 "/* more difficult test case */{ \"glossary\": { \"title\": \"example glossary\", \"GlossDiv\": { \"title\": \"S\", \"GlossList\": [ { \"ID\": \"SGML\", \"SortAs\": \"SGML\", \"GlossTerm\": \"Standard Generalized Markup Langua"..., error=0x7fffffffdee4) at /home/tyler/json-c/json_tokener.c:230
+#6  0x00007ffff7fb2017 in json_tokener_parse (str=0x402010 "/* more difficult test case */{ \"glossary\": { \"title\": \"example glossary\", \"GlossDiv\": { \"title\": \"S\", \"GlossList\": [ { \"ID\": \"SGML\", \"SortAs\": \"SGML\", \"GlossTerm\": \"Standard Generalized Markup Langua"...) at /home/tyler/json-c/json_tokener.c:218
+#7  0x0000000000401174 in main (argc=1, argv=0x7fffffffe048) at /home/tyler/json-c/tests/test2.c:31
+calloc 0x4065a0 640
+
+Breakpoint 1, __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
+3809	  assert (nclears >= 3);
+#0  __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
+#1  0x00007ffff7fb7c7d in printbuf_new () at /home/tyler/json-c/printbuf.c:41
+#2  0x00007ffff7fae732 in json_object_to_json_string_length (jso=0x405930, flags=1, length=0x0) at /home/tyler/json-c/json_object.c:418
+#3  0x00007ffff7fae7dc in json_object_to_json_string_ext (jso=0x405930, flags=1) at /home/tyler/json-c/json_object.c:436
+#4  0x00007ffff7fae7fb in json_object_to_json_string (jso=0x405930) at /home/tyler/json-c/json_object.c:443
+#5  0x0000000000401184 in main (argc=1, argv=0x7fffffffe048) at /home/tyler/json-c/tests/test2.c:38
+calloc 0x406e30 16
+[Inferior 1 (process 1524346) exited normally]
+No stack.
+3804	     contents have an odd number of INTERNAL_SIZE_T-sized words;
+3805	     minimally 3.  */
+3806	  d = (INTERNAL_SIZE_T *) mem;
+3807	  clearsize = csz - SIZE_SZ;
+3808	  nclears = clearsize / sizeof (INTERNAL_SIZE_T);
+3809	  assert (nclears >= 3);
+3810	
+3811	  if (nclears > 9)
+3812	    return memset (d, 0, clearsize);
+3813	
+quit
