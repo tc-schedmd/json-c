@@ -35,7 +35,8 @@ set(ALL_TEST_NAMES
     test_strerror
     test_util_file
     test_visit
-    test_object_iterator)
+    test_object_iterator
+    test_multi_thread)
 
 if (NOT DISABLE_JSON_POINTER)
     set(ALL_TEST_NAMES ${ALL_TEST_NAMES} test_json_pointer)
