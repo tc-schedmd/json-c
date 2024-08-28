@@ -7,7 +7,7 @@
  * it under the terms of the MIT license. See COPYING for details.
  *
  */
-
+#define SPEC___THREAD
 #include "config.h"
 
 #include "strerror_override.h"
