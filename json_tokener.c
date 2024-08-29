@@ -196,6 +196,7 @@ static void json_tokener_reset_level(struct json_tokener *tok, int depth)
 	json_object_put(tok->stack[depth].current);
 	tok->stack[depth].current = NULL;
 	free(tok->stack[depth].obj_field_name);
+	/* printf("FREEING %d %p\n", tok->depth, tok->stack[depth].obj_field_name); */
 	tok->stack[depth].obj_field_name = NULL;
 }
 
@@ -1202,6 +1203,7 @@ struct json_object *json_tokener_parse_ex(struct json_tokener *tok, const char *
 					printbuf_memappend_checked(tok->pb, case_start,
 					                           str - case_start);
 					obj_field_name = strdup(tok->pb->buf);
+					printf("DUPED   %d %p\n", tok->depth, obj_field_name);
 					if (obj_field_name == NULL)
 					{
 						tok->err = json_tokener_error_memory;
@@ -1256,6 +1258,7 @@ struct json_object *json_tokener_parse_ex(struct json_tokener *tok, const char *
 		case json_tokener_state_object_value_add:
 			json_object_object_add(current, obj_field_name, obj);
 			free(obj_field_name);
+			printf("FREEING %d %p\n", tok->depth, obj_field_name);
 			obj_field_name = NULL;
 			saved_state = json_tokener_state_object_sep;
 			state = json_tokener_state_eatws;
