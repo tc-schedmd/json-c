@@ -508,6 +508,8 @@ struct lh_table *lh_table_new(int size, lh_entry_free_fn *free_fn, lh_hash_fn *h
 
 	t->count = 0;
 	t->size = size;
+	t->head = NULL;
+	t->tail = NULL;
 	t->table = (struct lh_entry *)calloc(size, sizeof(struct lh_entry));
 	if (!t->table)
 	{
