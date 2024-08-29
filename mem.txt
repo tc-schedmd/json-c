@@ -3,6 +3,7 @@ Hardware assisted breakpoint 3 at 0x7ffff7d670c3: file malloc.c, line 3808.
 Hardware assisted breakpoint 4 at 0x7ffff7d667d3: file malloc.c, line 3538.
 Hardware assisted breakpoint 5 at 0x7ffff7d68154: file reallocarray.c, line 30.
 Breakpoint 6 at 0x7ffff7d664d0: free. (9 locations)
+Breakpoint 7 at 0x7ffff7fb53da: file /home/tyler/json-c/json_tokener.c, line 1258.
 Continuing.
 
 Breakpoint 3, __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
@@ -204,6 +205,10 @@ Breakpoint 2, __GI___libc_malloc (bytes=bytes@entry=6) at malloc.c:3329
 #7  0x0000000000401154 in main (argc=1, argv=0x7fffffffe048) at /home/tyler/json-c/tests/test2.c:31
 malloc 0x405e00 6
 
+Breakpoint 7, json_tokener_parse_ex (tok=0x4052a0, str=0x402059 ", \"GlossDiv\": { \"title\": \"S\", \"GlossList\": [ { \"ID\": \"SGML\", \"SortAs\": \"SGML\", \"GlossTerm\": \"Standard Generalized Markup Language\", \"Acronym\": \"SGML\", \"Abbrev\": \"ISO 8879:1986\", \"GlossDef\": \"A meta-ma"..., len=-1) at /home/tyler/json-c/json_tokener.c:1258
+1258				free(obj_field_name);
+obj_field_name 405d90 title
+
 Breakpoint 6.1, __GI___libc_free (mem=0x405d90) at malloc.c:3359
 3359	{
 #0  __GI___libc_free (mem=0x405d90) at malloc.c:3359
@@ -311,6 +316,10 @@ Breakpoint 2, __GI___libc_malloc (bytes=bytes@entry=6) at malloc.c:3329
 #6  0x00007ffff7fb1fd7 in json_tokener_parse (str=0x402010 "/* more difficult test case */{ \"glossary\": { \"title\": \"example glossary\", \"GlossDiv\": { \"title\": \"S\", \"GlossList\": [ { \"ID\": \"SGML\", \"SortAs\": \"SGML\", \"GlossTerm\": \"Standard Generalized Markup Langua"...) at /home/tyler/json-c/json_tokener.c:218
 #7  0x0000000000401154 in main (argc=1, argv=0x7fffffffe048) at /home/tyler/json-c/tests/test2.c:31
 malloc 0x4061a0 6
+
+Breakpoint 7, json_tokener_parse_ex (tok=0x4052a0, str=0x402075 ", \"GlossList\": [ { \"ID\": \"SGML\", \"SortAs\": \"SGML\", \"GlossTerm\": \"Standard Generalized Markup Language\", \"Acronym\": \"SGML\", \"Abbrev\": \"ISO 8879:1986\", \"GlossDef\": \"A meta-markup language, used to creat"..., len=-1) at /home/tyler/json-c/json_tokener.c:1258
+1258				free(obj_field_name);
+obj_field_name 406130 title
 
 Breakpoint 6.1, __GI___libc_free (mem=0x406130) at malloc.c:3359
 3359	{
@@ -466,6 +475,10 @@ Breakpoint 2, __GI___libc_malloc (bytes=bytes@entry=3) at malloc.c:3329
 #7  0x0000000000401154 in main (argc=1, argv=0x7fffffffe048) at /home/tyler/json-c/tests/test2.c:31
 malloc 0x4066c0 3
 
+Breakpoint 7, json_tokener_parse_ex (tok=0x4052a0, str=0x402094 ", \"SortAs\": \"SGML\", \"GlossTerm\": \"Standard Generalized Markup Language\", \"Acronym\": \"SGML\", \"Abbrev\": \"ISO 8879:1986\", \"GlossDef\": \"A meta-markup language, used to create markup languages such as DocB"..., len=-1) at /home/tyler/json-c/json_tokener.c:1258
+1258				free(obj_field_name);
+obj_field_name 406650 ID
+
 Breakpoint 6.1, __GI___libc_free (mem=0x406650) at malloc.c:3359
 3359	{
 #0  __GI___libc_free (mem=0x406650) at malloc.c:3359
@@ -518,6 +531,10 @@ Breakpoint 2, __GI___libc_malloc (bytes=bytes@entry=7) at malloc.c:3329
 #6  0x00007ffff7fb1fd7 in json_tokener_parse (str=0x402010 "/* more difficult test case */{ \"glossary\": { \"title\": \"example glossary\", \"GlossDiv\": { \"title\": \"S\", \"GlossList\": [ { \"ID\": \"SGML\", \"SortAs\": \"SGML\", \"GlossTerm\": \"Standard Generalized Markup Langua"...) at /home/tyler/json-c/json_tokener.c:218
 #7  0x0000000000401154 in main (argc=1, argv=0x7fffffffe048) at /home/tyler/json-c/tests/test2.c:31
 malloc 0x406730 7
+
+Breakpoint 7, json_tokener_parse_ex (tok=0x4052a0, str=0x4020a6 ", \"GlossTerm\": \"Standard Generalized Markup Language\", \"Acronym\": \"SGML\", \"Abbrev\": \"ISO 8879:1986\", \"GlossDef\": \"A meta-markup language, used to create markup languages such as DocBook.\", \"GlossSeeAl"..., len=-1) at /home/tyler/json-c/json_tokener.c:1258
+1258				free(obj_field_name);
+obj_field_name 406650 SortAs
 
 Breakpoint 6.1, __GI___libc_free (mem=0x406650) at malloc.c:3359
 3359	{
@@ -583,6 +600,10 @@ Breakpoint 2, __GI___libc_malloc (bytes=bytes@entry=10) at malloc.c:3329
 #7  0x0000000000401154 in main (argc=1, argv=0x7fffffffe048) at /home/tyler/json-c/tests/test2.c:31
 malloc 0x406800 10
 
+Breakpoint 7, json_tokener_parse_ex (tok=0x4052a0, str=0x4020db ", \"Acronym\": \"SGML\", \"Abbrev\": \"ISO 8879:1986\", \"GlossDef\": \"A meta-markup language, used to create markup languages such as DocBook.\", \"GlossSeeAlso\": [\"GML\", \"XML\", \"markup\"] } ] } } }", len=-1) at /home/tyler/json-c/json_tokener.c:1258
+1258				free(obj_field_name);
+obj_field_name 406650 GlossTerm
+
 Breakpoint 6.1, __GI___libc_free (mem=0x406650) at malloc.c:3359
 3359	{
 #0  __GI___libc_free (mem=0x406650) at malloc.c:3359
@@ -636,6 +657,10 @@ Breakpoint 2, __GI___libc_malloc (bytes=bytes@entry=8) at malloc.c:3329
 #7  0x0000000000401154 in main (argc=1, argv=0x7fffffffe048) at /home/tyler/json-c/tests/test2.c:31
 malloc 0x406870 8
 
+Breakpoint 7, json_tokener_parse_ex (tok=0x4052a0, str=0x4020ee ", \"Abbrev\": \"ISO 8879:1986\", \"GlossDef\": \"A meta-markup language, used to create markup languages such as DocBook.\", \"GlossSeeAlso\": [\"GML\", \"XML\", \"markup\"] } ] } } }", len=-1) at /home/tyler/json-c/json_tokener.c:1258
+1258				free(obj_field_name);
+obj_field_name 406650 Acronym
+
 Breakpoint 6.1, __GI___libc_free (mem=0x406650) at malloc.c:3359
 3359	{
 #0  __GI___libc_free (mem=0x406650) at malloc.c:3359
@@ -688,6 +713,10 @@ Breakpoint 2, __GI___libc_malloc (bytes=bytes@entry=7) at malloc.c:3329
 #6  0x00007ffff7fb1fd7 in json_tokener_parse (str=0x402010 "/* more difficult test case */{ \"glossary\": { \"title\": \"example glossary\", \"GlossDiv\": { \"title\": \"S\", \"GlossList\": [ { \"ID\": \"SGML\", \"SortAs\": \"SGML\", \"GlossTerm\": \"Standard Generalized Markup Langua"...) at /home/tyler/json-c/json_tokener.c:218
 #7  0x0000000000401154 in main (argc=1, argv=0x7fffffffe048) at /home/tyler/json-c/tests/test2.c:31
 malloc 0x4068e0 7
+
+Breakpoint 7, json_tokener_parse_ex (tok=0x4052a0, str=0x402109 ", \"GlossDef\": \"A meta-markup language, used to create markup languages such as DocBook.\", \"GlossSeeAlso\": [\"GML\", \"XML\", \"markup\"] } ] } } }", len=-1) at /home/tyler/json-c/json_tokener.c:1258
+1258				free(obj_field_name);
+obj_field_name 406650 Abbrev
 
 Breakpoint 6.1, __GI___libc_free (mem=0x406650) at malloc.c:3359
 3359	{
@@ -752,6 +781,10 @@ Breakpoint 2, __GI___libc_malloc (bytes=bytes@entry=9) at malloc.c:3329
 #6  0x00007ffff7fb1fd7 in json_tokener_parse (str=0x402010 "/* more difficult test case */{ \"glossary\": { \"title\": \"example glossary\", \"GlossDiv\": { \"title\": \"S\", \"GlossList\": [ { \"ID\": \"SGML\", \"SortAs\": \"SGML\", \"GlossTerm\": \"Standard Generalized Markup Langua"...) at /home/tyler/json-c/json_tokener.c:218
 #7  0x0000000000401154 in main (argc=1, argv=0x7fffffffe048) at /home/tyler/json-c/tests/test2.c:31
 malloc 0x406a20 9
+
+Breakpoint 7, json_tokener_parse_ex (tok=0x4052a0, str=0x402161 ", \"GlossSeeAlso\": [\"GML\", \"XML\", \"markup\"] } ] } } }", len=-1) at /home/tyler/json-c/json_tokener.c:1258
+1258				free(obj_field_name);
+obj_field_name 406650 GlossDef
 
 Breakpoint 6.1, __GI___libc_free (mem=0x406650) at malloc.c:3359
 3359	{
@@ -913,6 +946,10 @@ Breakpoint 2, __GI___libc_malloc (bytes=bytes@entry=13) at malloc.c:3329
 #7  0x0000000000401154 in main (argc=1, argv=0x7fffffffe048) at /home/tyler/json-c/tests/test2.c:31
 malloc 0x406c30 13
 
+Breakpoint 7, json_tokener_parse_ex (tok=0x4052a0, str=0x40218c "} ] } } }", len=-1) at /home/tyler/json-c/json_tokener.c:1258
+1258				free(obj_field_name);
+obj_field_name 406650 GlossSeeAlso
+
 Breakpoint 6.1, __GI___libc_free (mem=0x406650) at malloc.c:3359
 3359	{
 #0  __GI___libc_free (mem=0x406650) at malloc.c:3359
@@ -953,6 +990,10 @@ Breakpoint 6.1, __GI___libc_free (mem=0x0) at malloc.c:3359
 #5  0x0000000000401154 in main (argc=1, argv=0x7fffffffe048) at /home/tyler/json-c/tests/test2.c:31
 free 0x0
 
+Breakpoint 7, json_tokener_parse_ex (tok=0x4052a0, str=0x402190 "} } }", len=-1) at /home/tyler/json-c/json_tokener.c:1258
+1258				free(obj_field_name);
+obj_field_name 406130 GlossList
+
 Breakpoint 6.1, __GI___libc_free (mem=0x406130) at malloc.c:3359
 3359	{
 #0  __GI___libc_free (mem=0x406130) at malloc.c:3359
@@ -972,6 +1013,10 @@ Breakpoint 6.1, __GI___libc_free (mem=0x0) at malloc.c:3359
 #5  0x0000000000401154 in main (argc=1, argv=0x7fffffffe048) at /home/tyler/json-c/tests/test2.c:31
 free 0x0
 
+Breakpoint 7, json_tokener_parse_ex (tok=0x4052a0, str=0x402192 "} }", len=-1) at /home/tyler/json-c/json_tokener.c:1258
+1258				free(obj_field_name);
+obj_field_name 405d90 GlossDiv
+
 Breakpoint 6.1, __GI___libc_free (mem=0x405d90) at malloc.c:3359
 3359	{
 #0  __GI___libc_free (mem=0x405d90) at malloc.c:3359
@@ -990,6 +1035,10 @@ Breakpoint 6.1, __GI___libc_free (mem=0x0) at malloc.c:3359
 #4  0x00007ffff7fb1fd7 in json_tokener_parse (str=0x402010 "/* more difficult test case */{ \"glossary\": { \"title\": \"example glossary\", \"GlossDiv\": { \"title\": \"S\", \"GlossList\": [ { \"ID\": \"SGML\", \"SortAs\": \"SGML\", \"GlossTerm\": \"Standard Generalized Markup Langua"...) at /home/tyler/json-c/json_tokener.c:218
 #5  0x0000000000401154 in main (argc=1, argv=0x7fffffffe048) at /home/tyler/json-c/tests/test2.c:31
 free 0x0
+
+Breakpoint 7, json_tokener_parse_ex (tok=0x4052a0, str=0x402194 "}", len=-1) at /home/tyler/json-c/json_tokener.c:1258
+1258				free(obj_field_name);
+obj_field_name 405a60 glossary
 
 Breakpoint 6.1, __GI___libc_free (mem=0x405a60) at malloc.c:3359
 3359	{
@@ -1062,7 +1111,7 @@ free 0x4052a0
 Breakpoint 6.1, __GI___libc_free (mem=0x405d90) at malloc.c:3359
 3359	{
 #0  __GI___libc_free (mem=0x405d90) at malloc.c:3359
-#1  0x00007ffff7faeba2 in json_object_lh_entry_free (ent=0x4059d8) at /home/tyler/json-c/json_object.c:520
+#1  0x00007ffff7faeba2 in json_object_lh_entry_free (ent=0x405a00) at /home/tyler/json-c/json_object.c:520
 #2  0x00007ffff7fb72ff in lh_table_free (t=0x405790) at /home/tyler/json-c/linkhash.c:574
 #3  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405750) at /home/tyler/json-c/json_object.c:526
 #4  0x00007ffff7fae3e4 in json_object_put (jso=0x405750) at /home/tyler/json-c/json_object.c:300
@@ -1072,11 +1121,11 @@ free 0x405d90
 Breakpoint 6.1, __GI___libc_free (mem=0x405e00) at malloc.c:3359
 3359	{
 #0  __GI___libc_free (mem=0x405e00) at malloc.c:3359
-#1  0x00007ffff7faeba2 in json_object_lh_entry_free (ent=0x405ba0) at /home/tyler/json-c/json_object.c:520
+#1  0x00007ffff7faeba2 in json_object_lh_entry_free (ent=0x405c68) at /home/tyler/json-c/json_object.c:520
 #2  0x00007ffff7fb72ff in lh_table_free (t=0x405ac0) at /home/tyler/json-c/linkhash.c:574
 #3  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405a80) at /home/tyler/json-c/json_object.c:526
 #4  0x00007ffff7fae3e4 in json_object_put (jso=0x405a80) at /home/tyler/json-c/json_object.c:300
-#5  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4059d8) at /home/tyler/json-c/json_object.c:521
+#5  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405a00) at /home/tyler/json-c/json_object.c:521
 #6  0x00007ffff7fb72ff in lh_table_free (t=0x405790) at /home/tyler/json-c/linkhash.c:574
 #7  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405750) at /home/tyler/json-c/json_object.c:526
 #8  0x00007ffff7fae3e4 in json_object_put (jso=0x405750) at /home/tyler/json-c/json_object.c:300
@@ -1089,11 +1138,11 @@ Breakpoint 6.1, __GI___libc_free (mem=0x405db0) at malloc.c:3359
 #1  0x00007ffff7fae43e in json_object_generic_delete (jso=0x405db0) at /home/tyler/json-c/json_object.c:313
 #2  0x00007ffff7fb0580 in json_object_string_delete (jso=0x405db0) at /home/tyler/json-c/json_object.c:1263
 #3  0x00007ffff7fae400 in json_object_put (jso=0x405db0) at /home/tyler/json-c/json_object.c:302
-#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405ba0) at /home/tyler/json-c/json_object.c:521
+#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405c68) at /home/tyler/json-c/json_object.c:521
 #5  0x00007ffff7fb72ff in lh_table_free (t=0x405ac0) at /home/tyler/json-c/linkhash.c:574
 #6  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405a80) at /home/tyler/json-c/json_object.c:526
 #7  0x00007ffff7fae3e4 in json_object_put (jso=0x405a80) at /home/tyler/json-c/json_object.c:300
-#8  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4059d8) at /home/tyler/json-c/json_object.c:521
+#8  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405a00) at /home/tyler/json-c/json_object.c:521
 #9  0x00007ffff7fb72ff in lh_table_free (t=0x405790) at /home/tyler/json-c/linkhash.c:574
 #10 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405750) at /home/tyler/json-c/json_object.c:526
 #11 0x00007ffff7fae3e4 in json_object_put (jso=0x405750) at /home/tyler/json-c/json_object.c:300
@@ -1103,11 +1152,11 @@ free 0x405db0
 Breakpoint 6.1, __GI___libc_free (mem=0x406130) at malloc.c:3359
 3359	{
 #0  __GI___libc_free (mem=0x406130) at malloc.c:3359
-#1  0x00007ffff7faeba2 in json_object_lh_entry_free (ent=0x405bc8) at /home/tyler/json-c/json_object.c:520
+#1  0x00007ffff7faeba2 in json_object_lh_entry_free (ent=0x405bf0) at /home/tyler/json-c/json_object.c:520
 #2  0x00007ffff7fb72ff in lh_table_free (t=0x405ac0) at /home/tyler/json-c/linkhash.c:574
 #3  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405a80) at /home/tyler/json-c/json_object.c:526
 #4  0x00007ffff7fae3e4 in json_object_put (jso=0x405a80) at /home/tyler/json-c/json_object.c:300
-#5  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4059d8) at /home/tyler/json-c/json_object.c:521
+#5  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405a00) at /home/tyler/json-c/json_object.c:521
 #6  0x00007ffff7fb72ff in lh_table_free (t=0x405790) at /home/tyler/json-c/linkhash.c:574
 #7  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405750) at /home/tyler/json-c/json_object.c:526
 #8  0x00007ffff7fae3e4 in json_object_put (jso=0x405750) at /home/tyler/json-c/json_object.c:300
@@ -1117,15 +1166,15 @@ free 0x406130
 Breakpoint 6.1, __GI___libc_free (mem=0x4061a0) at malloc.c:3359
 3359	{
 #0  __GI___libc_free (mem=0x4061a0) at malloc.c:3359
-#1  0x00007ffff7faeba2 in json_object_lh_entry_free (ent=0x405f40) at /home/tyler/json-c/json_object.c:520
+#1  0x00007ffff7faeba2 in json_object_lh_entry_free (ent=0x406008) at /home/tyler/json-c/json_object.c:520
 #2  0x00007ffff7fb72ff in lh_table_free (t=0x405e60) at /home/tyler/json-c/linkhash.c:574
 #3  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405e20) at /home/tyler/json-c/json_object.c:526
 #4  0x00007ffff7fae3e4 in json_object_put (jso=0x405e20) at /home/tyler/json-c/json_object.c:300
-#5  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405bc8) at /home/tyler/json-c/json_object.c:521
+#5  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405bf0) at /home/tyler/json-c/json_object.c:521
 #6  0x00007ffff7fb72ff in lh_table_free (t=0x405ac0) at /home/tyler/json-c/linkhash.c:574
 #7  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405a80) at /home/tyler/json-c/json_object.c:526
 #8  0x00007ffff7fae3e4 in json_object_put (jso=0x405a80) at /home/tyler/json-c/json_object.c:300
-#9  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4059d8) at /home/tyler/json-c/json_object.c:521
+#9  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405a00) at /home/tyler/json-c/json_object.c:521
 #10 0x00007ffff7fb72ff in lh_table_free (t=0x405790) at /home/tyler/json-c/linkhash.c:574
 #11 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405750) at /home/tyler/json-c/json_object.c:526
 #12 0x00007ffff7fae3e4 in json_object_put (jso=0x405750) at /home/tyler/json-c/json_object.c:300
@@ -1138,15 +1187,15 @@ Breakpoint 6.1, __GI___libc_free (mem=0x406150) at malloc.c:3359
 #1  0x00007ffff7fae43e in json_object_generic_delete (jso=0x406150) at /home/tyler/json-c/json_object.c:313
 #2  0x00007ffff7fb0580 in json_object_string_delete (jso=0x406150) at /home/tyler/json-c/json_object.c:1263
 #3  0x00007ffff7fae400 in json_object_put (jso=0x406150) at /home/tyler/json-c/json_object.c:302
-#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405f40) at /home/tyler/json-c/json_object.c:521
+#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x406008) at /home/tyler/json-c/json_object.c:521
 #5  0x00007ffff7fb72ff in lh_table_free (t=0x405e60) at /home/tyler/json-c/linkhash.c:574
 #6  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405e20) at /home/tyler/json-c/json_object.c:526
 #7  0x00007ffff7fae3e4 in json_object_put (jso=0x405e20) at /home/tyler/json-c/json_object.c:300
-#8  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405bc8) at /home/tyler/json-c/json_object.c:521
+#8  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405bf0) at /home/tyler/json-c/json_object.c:521
 #9  0x00007ffff7fb72ff in lh_table_free (t=0x405ac0) at /home/tyler/json-c/linkhash.c:574
 #10 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405a80) at /home/tyler/json-c/json_object.c:526
 #11 0x00007ffff7fae3e4 in json_object_put (jso=0x405a80) at /home/tyler/json-c/json_object.c:300
-#12 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4059d8) at /home/tyler/json-c/json_object.c:521
+#12 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405a00) at /home/tyler/json-c/json_object.c:521
 #13 0x00007ffff7fb72ff in lh_table_free (t=0x405790) at /home/tyler/json-c/linkhash.c:574
 #14 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405750) at /home/tyler/json-c/json_object.c:526
 #15 0x00007ffff7fae3e4 in json_object_put (jso=0x405750) at /home/tyler/json-c/json_object.c:300
@@ -1156,15 +1205,15 @@ free 0x406150
 Breakpoint 6.1, __GI___libc_free (mem=0x406650) at malloc.c:3359
 3359	{
 #0  __GI___libc_free (mem=0x406650) at malloc.c:3359
-#1  0x00007ffff7faeba2 in json_object_lh_entry_free (ent=0x405f90) at /home/tyler/json-c/json_object.c:520
+#1  0x00007ffff7faeba2 in json_object_lh_entry_free (ent=0x4060d0) at /home/tyler/json-c/json_object.c:520
 #2  0x00007ffff7fb72ff in lh_table_free (t=0x405e60) at /home/tyler/json-c/linkhash.c:574
 #3  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405e20) at /home/tyler/json-c/json_object.c:526
 #4  0x00007ffff7fae3e4 in json_object_put (jso=0x405e20) at /home/tyler/json-c/json_object.c:300
-#5  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405bc8) at /home/tyler/json-c/json_object.c:521
+#5  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405bf0) at /home/tyler/json-c/json_object.c:521
 #6  0x00007ffff7fb72ff in lh_table_free (t=0x405ac0) at /home/tyler/json-c/linkhash.c:574
 #7  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405a80) at /home/tyler/json-c/json_object.c:526
 #8  0x00007ffff7fae3e4 in json_object_put (jso=0x405a80) at /home/tyler/json-c/json_object.c:300
-#9  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4059d8) at /home/tyler/json-c/json_object.c:521
+#9  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405a00) at /home/tyler/json-c/json_object.c:521
 #10 0x00007ffff7fb72ff in lh_table_free (t=0x405790) at /home/tyler/json-c/linkhash.c:574
 #11 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405750) at /home/tyler/json-c/json_object.c:526
 #12 0x00007ffff7fae3e4 in json_object_put (jso=0x405750) at /home/tyler/json-c/json_object.c:300
@@ -1174,7 +1223,7 @@ free 0x406650
 Breakpoint 6.1, __GI___libc_free (mem=0x4066c0) at malloc.c:3359
 3359	{
 #0  __GI___libc_free (mem=0x4066c0) at malloc.c:3359
-#1  0x00007ffff7faeba2 in json_object_lh_entry_free (ent=0x406488) at /home/tyler/json-c/json_object.c:520
+#1  0x00007ffff7faeba2 in json_object_lh_entry_free (ent=0x406578) at /home/tyler/json-c/json_object.c:520
 #2  0x00007ffff7fb72ff in lh_table_free (t=0x406380) at /home/tyler/json-c/linkhash.c:574
 #3  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x406340) at /home/tyler/json-c/json_object.c:526
 #4  0x00007ffff7fae3e4 in json_object_put (jso=0x406340) at /home/tyler/json-c/json_object.c:300
@@ -1182,15 +1231,15 @@ Breakpoint 6.1, __GI___libc_free (mem=0x4066c0) at malloc.c:3359
 #6  0x00007ffff7fad484 in array_list_free (arr=0x406200) at /home/tyler/json-c/arraylist.c:69
 #7  0x00007ffff7fb0b9e in json_object_array_delete (jso=0x4061c0) at /home/tyler/json-c/json_object.c:1457
 #8  0x00007ffff7fae3f2 in json_object_put (jso=0x4061c0) at /home/tyler/json-c/json_object.c:301
-#9  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405f90) at /home/tyler/json-c/json_object.c:521
+#9  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4060d0) at /home/tyler/json-c/json_object.c:521
 #10 0x00007ffff7fb72ff in lh_table_free (t=0x405e60) at /home/tyler/json-c/linkhash.c:574
 #11 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405e20) at /home/tyler/json-c/json_object.c:526
 #12 0x00007ffff7fae3e4 in json_object_put (jso=0x405e20) at /home/tyler/json-c/json_object.c:300
-#13 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405bc8) at /home/tyler/json-c/json_object.c:521
+#13 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405bf0) at /home/tyler/json-c/json_object.c:521
 #14 0x00007ffff7fb72ff in lh_table_free (t=0x405ac0) at /home/tyler/json-c/linkhash.c:574
 #15 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405a80) at /home/tyler/json-c/json_object.c:526
 #16 0x00007ffff7fae3e4 in json_object_put (jso=0x405a80) at /home/tyler/json-c/json_object.c:300
-#17 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4059d8) at /home/tyler/json-c/json_object.c:521
+#17 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405a00) at /home/tyler/json-c/json_object.c:521
 #18 0x00007ffff7fb72ff in lh_table_free (t=0x405790) at /home/tyler/json-c/linkhash.c:574
 #19 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405750) at /home/tyler/json-c/json_object.c:526
 #20 0x00007ffff7fae3e4 in json_object_put (jso=0x405750) at /home/tyler/json-c/json_object.c:300
@@ -1203,7 +1252,7 @@ Breakpoint 6.1, __GI___libc_free (mem=0x406670) at malloc.c:3359
 #1  0x00007ffff7fae43e in json_object_generic_delete (jso=0x406670) at /home/tyler/json-c/json_object.c:313
 #2  0x00007ffff7fb0580 in json_object_string_delete (jso=0x406670) at /home/tyler/json-c/json_object.c:1263
 #3  0x00007ffff7fae400 in json_object_put (jso=0x406670) at /home/tyler/json-c/json_object.c:302
-#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x406488) at /home/tyler/json-c/json_object.c:521
+#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x406578) at /home/tyler/json-c/json_object.c:521
 #5  0x00007ffff7fb72ff in lh_table_free (t=0x406380) at /home/tyler/json-c/linkhash.c:574
 #6  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x406340) at /home/tyler/json-c/json_object.c:526
 #7  0x00007ffff7fae3e4 in json_object_put (jso=0x406340) at /home/tyler/json-c/json_object.c:300
@@ -1211,15 +1260,15 @@ Breakpoint 6.1, __GI___libc_free (mem=0x406670) at malloc.c:3359
 #9  0x00007ffff7fad484 in array_list_free (arr=0x406200) at /home/tyler/json-c/arraylist.c:69
 #10 0x00007ffff7fb0b9e in json_object_array_delete (jso=0x4061c0) at /home/tyler/json-c/json_object.c:1457
 #11 0x00007ffff7fae3f2 in json_object_put (jso=0x4061c0) at /home/tyler/json-c/json_object.c:301
-#12 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405f90) at /home/tyler/json-c/json_object.c:521
+#12 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4060d0) at /home/tyler/json-c/json_object.c:521
 #13 0x00007ffff7fb72ff in lh_table_free (t=0x405e60) at /home/tyler/json-c/linkhash.c:574
 #14 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405e20) at /home/tyler/json-c/json_object.c:526
 #15 0x00007ffff7fae3e4 in json_object_put (jso=0x405e20) at /home/tyler/json-c/json_object.c:300
-#16 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405bc8) at /home/tyler/json-c/json_object.c:521
+#16 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405bf0) at /home/tyler/json-c/json_object.c:521
 #17 0x00007ffff7fb72ff in lh_table_free (t=0x405ac0) at /home/tyler/json-c/linkhash.c:574
 #18 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405a80) at /home/tyler/json-c/json_object.c:526
 #19 0x00007ffff7fae3e4 in json_object_put (jso=0x405a80) at /home/tyler/json-c/json_object.c:300
-#20 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4059d8) at /home/tyler/json-c/json_object.c:521
+#20 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405a00) at /home/tyler/json-c/json_object.c:521
 #21 0x00007ffff7fb72ff in lh_table_free (t=0x405790) at /home/tyler/json-c/linkhash.c:574
 #22 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405750) at /home/tyler/json-c/json_object.c:526
 #23 0x00007ffff7fae3e4 in json_object_put (jso=0x405750) at /home/tyler/json-c/json_object.c:300
@@ -1229,7 +1278,7 @@ free 0x406670
 Breakpoint 6.1, __GI___libc_free (mem=0x406730) at malloc.c:3359
 3359	{
 #0  __GI___libc_free (mem=0x406730) at malloc.c:3359
-#1  0x00007ffff7faeba2 in json_object_lh_entry_free (ent=0x406460) at /home/tyler/json-c/json_object.c:520
+#1  0x00007ffff7faeba2 in json_object_lh_entry_free (ent=0x406618) at /home/tyler/json-c/json_object.c:520
 #2  0x00007ffff7fb72ff in lh_table_free (t=0x406380) at /home/tyler/json-c/linkhash.c:574
 #3  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x406340) at /home/tyler/json-c/json_object.c:526
 #4  0x00007ffff7fae3e4 in json_object_put (jso=0x406340) at /home/tyler/json-c/json_object.c:300
@@ -1237,15 +1286,15 @@ Breakpoint 6.1, __GI___libc_free (mem=0x406730) at malloc.c:3359
 #6  0x00007ffff7fad484 in array_list_free (arr=0x406200) at /home/tyler/json-c/arraylist.c:69
 #7  0x00007ffff7fb0b9e in json_object_array_delete (jso=0x4061c0) at /home/tyler/json-c/json_object.c:1457
 #8  0x00007ffff7fae3f2 in json_object_put (jso=0x4061c0) at /home/tyler/json-c/json_object.c:301
-#9  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405f90) at /home/tyler/json-c/json_object.c:521
+#9  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4060d0) at /home/tyler/json-c/json_object.c:521
 #10 0x00007ffff7fb72ff in lh_table_free (t=0x405e60) at /home/tyler/json-c/linkhash.c:574
 #11 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405e20) at /home/tyler/json-c/json_object.c:526
 #12 0x00007ffff7fae3e4 in json_object_put (jso=0x405e20) at /home/tyler/json-c/json_object.c:300
-#13 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405bc8) at /home/tyler/json-c/json_object.c:521
+#13 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405bf0) at /home/tyler/json-c/json_object.c:521
 #14 0x00007ffff7fb72ff in lh_table_free (t=0x405ac0) at /home/tyler/json-c/linkhash.c:574
 #15 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405a80) at /home/tyler/json-c/json_object.c:526
 #16 0x00007ffff7fae3e4 in json_object_put (jso=0x405a80) at /home/tyler/json-c/json_object.c:300
-#17 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4059d8) at /home/tyler/json-c/json_object.c:521
+#17 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405a00) at /home/tyler/json-c/json_object.c:521
 #18 0x00007ffff7fb72ff in lh_table_free (t=0x405790) at /home/tyler/json-c/linkhash.c:574
 #19 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405750) at /home/tyler/json-c/json_object.c:526
 #20 0x00007ffff7fae3e4 in json_object_put (jso=0x405750) at /home/tyler/json-c/json_object.c:300
@@ -1258,7 +1307,7 @@ Breakpoint 6.1, __GI___libc_free (mem=0x4066e0) at malloc.c:3359
 #1  0x00007ffff7fae43e in json_object_generic_delete (jso=0x4066e0) at /home/tyler/json-c/json_object.c:313
 #2  0x00007ffff7fb0580 in json_object_string_delete (jso=0x4066e0) at /home/tyler/json-c/json_object.c:1263
 #3  0x00007ffff7fae400 in json_object_put (jso=0x4066e0) at /home/tyler/json-c/json_object.c:302
-#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x406460) at /home/tyler/json-c/json_object.c:521
+#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x406618) at /home/tyler/json-c/json_object.c:521
 #5  0x00007ffff7fb72ff in lh_table_free (t=0x406380) at /home/tyler/json-c/linkhash.c:574
 #6  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x406340) at /home/tyler/json-c/json_object.c:526
 #7  0x00007ffff7fae3e4 in json_object_put (jso=0x406340) at /home/tyler/json-c/json_object.c:300
@@ -1266,15 +1315,15 @@ Breakpoint 6.1, __GI___libc_free (mem=0x4066e0) at malloc.c:3359
 #9  0x00007ffff7fad484 in array_list_free (arr=0x406200) at /home/tyler/json-c/arraylist.c:69
 #10 0x00007ffff7fb0b9e in json_object_array_delete (jso=0x4061c0) at /home/tyler/json-c/json_object.c:1457
 #11 0x00007ffff7fae3f2 in json_object_put (jso=0x4061c0) at /home/tyler/json-c/json_object.c:301
-#12 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405f90) at /home/tyler/json-c/json_object.c:521
+#12 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4060d0) at /home/tyler/json-c/json_object.c:521
 #13 0x00007ffff7fb72ff in lh_table_free (t=0x405e60) at /home/tyler/json-c/linkhash.c:574
 #14 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405e20) at /home/tyler/json-c/json_object.c:526
 #15 0x00007ffff7fae3e4 in json_object_put (jso=0x405e20) at /home/tyler/json-c/json_object.c:300
-#16 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405bc8) at /home/tyler/json-c/json_object.c:521
+#16 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405bf0) at /home/tyler/json-c/json_object.c:521
 #17 0x00007ffff7fb72ff in lh_table_free (t=0x405ac0) at /home/tyler/json-c/linkhash.c:574
 #18 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405a80) at /home/tyler/json-c/json_object.c:526
 #19 0x00007ffff7fae3e4 in json_object_put (jso=0x405a80) at /home/tyler/json-c/json_object.c:300
-#20 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4059d8) at /home/tyler/json-c/json_object.c:521
+#20 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405a00) at /home/tyler/json-c/json_object.c:521
 #21 0x00007ffff7fb72ff in lh_table_free (t=0x405790) at /home/tyler/json-c/linkhash.c:574
 #22 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405750) at /home/tyler/json-c/json_object.c:526
 #23 0x00007ffff7fae3e4 in json_object_put (jso=0x405750) at /home/tyler/json-c/json_object.c:300
@@ -1284,7 +1333,7 @@ free 0x4066e0
 Breakpoint 6.1, __GI___libc_free (mem=0x406800) at malloc.c:3359
 3359	{
 #0  __GI___libc_free (mem=0x406800) at malloc.c:3359
-#1  0x00007ffff7faeba2 in json_object_lh_entry_free (ent=0x406528) at /home/tyler/json-c/json_object.c:520
+#1  0x00007ffff7faeba2 in json_object_lh_entry_free (ent=0x406460) at /home/tyler/json-c/json_object.c:520
 #2  0x00007ffff7fb72ff in lh_table_free (t=0x406380) at /home/tyler/json-c/linkhash.c:574
 #3  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x406340) at /home/tyler/json-c/json_object.c:526
 #4  0x00007ffff7fae3e4 in json_object_put (jso=0x406340) at /home/tyler/json-c/json_object.c:300
@@ -1292,15 +1341,15 @@ Breakpoint 6.1, __GI___libc_free (mem=0x406800) at malloc.c:3359
 #6  0x00007ffff7fad484 in array_list_free (arr=0x406200) at /home/tyler/json-c/arraylist.c:69
 #7  0x00007ffff7fb0b9e in json_object_array_delete (jso=0x4061c0) at /home/tyler/json-c/json_object.c:1457
 #8  0x00007ffff7fae3f2 in json_object_put (jso=0x4061c0) at /home/tyler/json-c/json_object.c:301
-#9  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405f90) at /home/tyler/json-c/json_object.c:521
+#9  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4060d0) at /home/tyler/json-c/json_object.c:521
 #10 0x00007ffff7fb72ff in lh_table_free (t=0x405e60) at /home/tyler/json-c/linkhash.c:574
 #11 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405e20) at /home/tyler/json-c/json_object.c:526
 #12 0x00007ffff7fae3e4 in json_object_put (jso=0x405e20) at /home/tyler/json-c/json_object.c:300
-#13 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405bc8) at /home/tyler/json-c/json_object.c:521
+#13 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405bf0) at /home/tyler/json-c/json_object.c:521
 #14 0x00007ffff7fb72ff in lh_table_free (t=0x405ac0) at /home/tyler/json-c/linkhash.c:574
 #15 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405a80) at /home/tyler/json-c/json_object.c:526
 #16 0x00007ffff7fae3e4 in json_object_put (jso=0x405a80) at /home/tyler/json-c/json_object.c:300
-#17 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4059d8) at /home/tyler/json-c/json_object.c:521
+#17 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405a00) at /home/tyler/json-c/json_object.c:521
 #18 0x00007ffff7fb72ff in lh_table_free (t=0x405790) at /home/tyler/json-c/linkhash.c:574
 #19 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405750) at /home/tyler/json-c/json_object.c:526
 #20 0x00007ffff7fae3e4 in json_object_put (jso=0x405750) at /home/tyler/json-c/json_object.c:300
@@ -1313,7 +1362,7 @@ Breakpoint 6.1, __GI___libc_free (mem=0x4067a0) at malloc.c:3359
 #1  0x00007ffff7fae43e in json_object_generic_delete (jso=0x4067a0) at /home/tyler/json-c/json_object.c:313
 #2  0x00007ffff7fb0580 in json_object_string_delete (jso=0x4067a0) at /home/tyler/json-c/json_object.c:1263
 #3  0x00007ffff7fae400 in json_object_put (jso=0x4067a0) at /home/tyler/json-c/json_object.c:302
-#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x406528) at /home/tyler/json-c/json_object.c:521
+#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x406460) at /home/tyler/json-c/json_object.c:521
 #5  0x00007ffff7fb72ff in lh_table_free (t=0x406380) at /home/tyler/json-c/linkhash.c:574
 #6  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x406340) at /home/tyler/json-c/json_object.c:526
 #7  0x00007ffff7fae3e4 in json_object_put (jso=0x406340) at /home/tyler/json-c/json_object.c:300
@@ -1321,15 +1370,15 @@ Breakpoint 6.1, __GI___libc_free (mem=0x4067a0) at malloc.c:3359
 #9  0x00007ffff7fad484 in array_list_free (arr=0x406200) at /home/tyler/json-c/arraylist.c:69
 #10 0x00007ffff7fb0b9e in json_object_array_delete (jso=0x4061c0) at /home/tyler/json-c/json_object.c:1457
 #11 0x00007ffff7fae3f2 in json_object_put (jso=0x4061c0) at /home/tyler/json-c/json_object.c:301
-#12 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405f90) at /home/tyler/json-c/json_object.c:521
+#12 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4060d0) at /home/tyler/json-c/json_object.c:521
 #13 0x00007ffff7fb72ff in lh_table_free (t=0x405e60) at /home/tyler/json-c/linkhash.c:574
 #14 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405e20) at /home/tyler/json-c/json_object.c:526
 #15 0x00007ffff7fae3e4 in json_object_put (jso=0x405e20) at /home/tyler/json-c/json_object.c:300
-#16 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405bc8) at /home/tyler/json-c/json_object.c:521
+#16 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405bf0) at /home/tyler/json-c/json_object.c:521
 #17 0x00007ffff7fb72ff in lh_table_free (t=0x405ac0) at /home/tyler/json-c/linkhash.c:574
 #18 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405a80) at /home/tyler/json-c/json_object.c:526
 #19 0x00007ffff7fae3e4 in json_object_put (jso=0x405a80) at /home/tyler/json-c/json_object.c:300
-#20 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4059d8) at /home/tyler/json-c/json_object.c:521
+#20 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405a00) at /home/tyler/json-c/json_object.c:521
 #21 0x00007ffff7fb72ff in lh_table_free (t=0x405790) at /home/tyler/json-c/linkhash.c:574
 #22 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405750) at /home/tyler/json-c/json_object.c:526
 #23 0x00007ffff7fae3e4 in json_object_put (jso=0x405750) at /home/tyler/json-c/json_object.c:300
@@ -1339,7 +1388,7 @@ free 0x4067a0
 Breakpoint 6.1, __GI___libc_free (mem=0x406870) at malloc.c:3359
 3359	{
 #0  __GI___libc_free (mem=0x406870) at malloc.c:3359
-#1  0x00007ffff7faeba2 in json_object_lh_entry_free (ent=0x406500) at /home/tyler/json-c/json_object.c:520
+#1  0x00007ffff7faeba2 in json_object_lh_entry_free (ent=0x4064b0) at /home/tyler/json-c/json_object.c:520
 #2  0x00007ffff7fb72ff in lh_table_free (t=0x406380) at /home/tyler/json-c/linkhash.c:574
 #3  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x406340) at /home/tyler/json-c/json_object.c:526
 #4  0x00007ffff7fae3e4 in json_object_put (jso=0x406340) at /home/tyler/json-c/json_object.c:300
@@ -1347,15 +1396,15 @@ Breakpoint 6.1, __GI___libc_free (mem=0x406870) at malloc.c:3359
 #6  0x00007ffff7fad484 in array_list_free (arr=0x406200) at /home/tyler/json-c/arraylist.c:69
 #7  0x00007ffff7fb0b9e in json_object_array_delete (jso=0x4061c0) at /home/tyler/json-c/json_object.c:1457
 #8  0x00007ffff7fae3f2 in json_object_put (jso=0x4061c0) at /home/tyler/json-c/json_object.c:301
-#9  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405f90) at /home/tyler/json-c/json_object.c:521
+#9  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4060d0) at /home/tyler/json-c/json_object.c:521
 #10 0x00007ffff7fb72ff in lh_table_free (t=0x405e60) at /home/tyler/json-c/linkhash.c:574
 #11 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405e20) at /home/tyler/json-c/json_object.c:526
 #12 0x00007ffff7fae3e4 in json_object_put (jso=0x405e20) at /home/tyler/json-c/json_object.c:300
-#13 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405bc8) at /home/tyler/json-c/json_object.c:521
+#13 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405bf0) at /home/tyler/json-c/json_object.c:521
 #14 0x00007ffff7fb72ff in lh_table_free (t=0x405ac0) at /home/tyler/json-c/linkhash.c:574
 #15 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405a80) at /home/tyler/json-c/json_object.c:526
 #16 0x00007ffff7fae3e4 in json_object_put (jso=0x405a80) at /home/tyler/json-c/json_object.c:300
-#17 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4059d8) at /home/tyler/json-c/json_object.c:521
+#17 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405a00) at /home/tyler/json-c/json_object.c:521
 #18 0x00007ffff7fb72ff in lh_table_free (t=0x405790) at /home/tyler/json-c/linkhash.c:574
 #19 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405750) at /home/tyler/json-c/json_object.c:526
 #20 0x00007ffff7fae3e4 in json_object_put (jso=0x405750) at /home/tyler/json-c/json_object.c:300
@@ -1368,7 +1417,7 @@ Breakpoint 6.1, __GI___libc_free (mem=0x406820) at malloc.c:3359
 #1  0x00007ffff7fae43e in json_object_generic_delete (jso=0x406820) at /home/tyler/json-c/json_object.c:313
 #2  0x00007ffff7fb0580 in json_object_string_delete (jso=0x406820) at /home/tyler/json-c/json_object.c:1263
 #3  0x00007ffff7fae400 in json_object_put (jso=0x406820) at /home/tyler/json-c/json_object.c:302
-#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x406500) at /home/tyler/json-c/json_object.c:521
+#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4064b0) at /home/tyler/json-c/json_object.c:521
 #5  0x00007ffff7fb72ff in lh_table_free (t=0x406380) at /home/tyler/json-c/linkhash.c:574
 #6  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x406340) at /home/tyler/json-c/json_object.c:526
 #7  0x00007ffff7fae3e4 in json_object_put (jso=0x406340) at /home/tyler/json-c/json_object.c:300
@@ -1376,15 +1425,15 @@ Breakpoint 6.1, __GI___libc_free (mem=0x406820) at malloc.c:3359
 #9  0x00007ffff7fad484 in array_list_free (arr=0x406200) at /home/tyler/json-c/arraylist.c:69
 #10 0x00007ffff7fb0b9e in json_object_array_delete (jso=0x4061c0) at /home/tyler/json-c/json_object.c:1457
 #11 0x00007ffff7fae3f2 in json_object_put (jso=0x4061c0) at /home/tyler/json-c/json_object.c:301
-#12 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405f90) at /home/tyler/json-c/json_object.c:521
+#12 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4060d0) at /home/tyler/json-c/json_object.c:521
 #13 0x00007ffff7fb72ff in lh_table_free (t=0x405e60) at /home/tyler/json-c/linkhash.c:574
 #14 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405e20) at /home/tyler/json-c/json_object.c:526
 #15 0x00007ffff7fae3e4 in json_object_put (jso=0x405e20) at /home/tyler/json-c/json_object.c:300
-#16 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405bc8) at /home/tyler/json-c/json_object.c:521
+#16 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405bf0) at /home/tyler/json-c/json_object.c:521
 #17 0x00007ffff7fb72ff in lh_table_free (t=0x405ac0) at /home/tyler/json-c/linkhash.c:574
 #18 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405a80) at /home/tyler/json-c/json_object.c:526
 #19 0x00007ffff7fae3e4 in json_object_put (jso=0x405a80) at /home/tyler/json-c/json_object.c:300
-#20 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4059d8) at /home/tyler/json-c/json_object.c:521
+#20 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405a00) at /home/tyler/json-c/json_object.c:521
 #21 0x00007ffff7fb72ff in lh_table_free (t=0x405790) at /home/tyler/json-c/linkhash.c:574
 #22 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405750) at /home/tyler/json-c/json_object.c:526
 #23 0x00007ffff7fae3e4 in json_object_put (jso=0x405750) at /home/tyler/json-c/json_object.c:300
@@ -1394,7 +1443,7 @@ free 0x406820
 Breakpoint 6.1, __GI___libc_free (mem=0x4068e0) at malloc.c:3359
 3359	{
 #0  __GI___libc_free (mem=0x4068e0) at malloc.c:3359
-#1  0x00007ffff7faeba2 in json_object_lh_entry_free (ent=0x4065a0) at /home/tyler/json-c/json_object.c:520
+#1  0x00007ffff7faeba2 in json_object_lh_entry_free (ent=0x406550) at /home/tyler/json-c/json_object.c:520
 #2  0x00007ffff7fb72ff in lh_table_free (t=0x406380) at /home/tyler/json-c/linkhash.c:574
 #3  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x406340) at /home/tyler/json-c/json_object.c:526
 #4  0x00007ffff7fae3e4 in json_object_put (jso=0x406340) at /home/tyler/json-c/json_object.c:300
@@ -1402,15 +1451,15 @@ Breakpoint 6.1, __GI___libc_free (mem=0x4068e0) at malloc.c:3359
 #6  0x00007ffff7fad484 in array_list_free (arr=0x406200) at /home/tyler/json-c/arraylist.c:69
 #7  0x00007ffff7fb0b9e in json_object_array_delete (jso=0x4061c0) at /home/tyler/json-c/json_object.c:1457
 #8  0x00007ffff7fae3f2 in json_object_put (jso=0x4061c0) at /home/tyler/json-c/json_object.c:301
-#9  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405f90) at /home/tyler/json-c/json_object.c:521
+#9  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4060d0) at /home/tyler/json-c/json_object.c:521
 #10 0x00007ffff7fb72ff in lh_table_free (t=0x405e60) at /home/tyler/json-c/linkhash.c:574
 #11 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405e20) at /home/tyler/json-c/json_object.c:526
 #12 0x00007ffff7fae3e4 in json_object_put (jso=0x405e20) at /home/tyler/json-c/json_object.c:300
-#13 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405bc8) at /home/tyler/json-c/json_object.c:521
+#13 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405bf0) at /home/tyler/json-c/json_object.c:521
 #14 0x00007ffff7fb72ff in lh_table_free (t=0x405ac0) at /home/tyler/json-c/linkhash.c:574
 #15 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405a80) at /home/tyler/json-c/json_object.c:526
 #16 0x00007ffff7fae3e4 in json_object_put (jso=0x405a80) at /home/tyler/json-c/json_object.c:300
-#17 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4059d8) at /home/tyler/json-c/json_object.c:521
+#17 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405a00) at /home/tyler/json-c/json_object.c:521
 #18 0x00007ffff7fb72ff in lh_table_free (t=0x405790) at /home/tyler/json-c/linkhash.c:574
 #19 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405750) at /home/tyler/json-c/json_object.c:526
 #20 0x00007ffff7fae3e4 in json_object_put (jso=0x405750) at /home/tyler/json-c/json_object.c:300
@@ -1423,7 +1472,7 @@ Breakpoint 6.1, __GI___libc_free (mem=0x406890) at malloc.c:3359
 #1  0x00007ffff7fae43e in json_object_generic_delete (jso=0x406890) at /home/tyler/json-c/json_object.c:313
 #2  0x00007ffff7fb0580 in json_object_string_delete (jso=0x406890) at /home/tyler/json-c/json_object.c:1263
 #3  0x00007ffff7fae400 in json_object_put (jso=0x406890) at /home/tyler/json-c/json_object.c:302
-#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4065a0) at /home/tyler/json-c/json_object.c:521
+#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x406550) at /home/tyler/json-c/json_object.c:521
 #5  0x00007ffff7fb72ff in lh_table_free (t=0x406380) at /home/tyler/json-c/linkhash.c:574
 #6  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x406340) at /home/tyler/json-c/json_object.c:526
 #7  0x00007ffff7fae3e4 in json_object_put (jso=0x406340) at /home/tyler/json-c/json_object.c:300
@@ -1431,15 +1480,15 @@ Breakpoint 6.1, __GI___libc_free (mem=0x406890) at malloc.c:3359
 #9  0x00007ffff7fad484 in array_list_free (arr=0x406200) at /home/tyler/json-c/arraylist.c:69
 #10 0x00007ffff7fb0b9e in json_object_array_delete (jso=0x4061c0) at /home/tyler/json-c/json_object.c:1457
 #11 0x00007ffff7fae3f2 in json_object_put (jso=0x4061c0) at /home/tyler/json-c/json_object.c:301
-#12 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405f90) at /home/tyler/json-c/json_object.c:521
+#12 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4060d0) at /home/tyler/json-c/json_object.c:521
 #13 0x00007ffff7fb72ff in lh_table_free (t=0x405e60) at /home/tyler/json-c/linkhash.c:574
 #14 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405e20) at /home/tyler/json-c/json_object.c:526
 #15 0x00007ffff7fae3e4 in json_object_put (jso=0x405e20) at /home/tyler/json-c/json_object.c:300
-#16 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405bc8) at /home/tyler/json-c/json_object.c:521
+#16 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405bf0) at /home/tyler/json-c/json_object.c:521
 #17 0x00007ffff7fb72ff in lh_table_free (t=0x405ac0) at /home/tyler/json-c/linkhash.c:574
 #18 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405a80) at /home/tyler/json-c/json_object.c:526
 #19 0x00007ffff7fae3e4 in json_object_put (jso=0x405a80) at /home/tyler/json-c/json_object.c:300
-#20 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4059d8) at /home/tyler/json-c/json_object.c:521
+#20 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405a00) at /home/tyler/json-c/json_object.c:521
 #21 0x00007ffff7fb72ff in lh_table_free (t=0x405790) at /home/tyler/json-c/linkhash.c:574
 #22 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405750) at /home/tyler/json-c/json_object.c:526
 #23 0x00007ffff7fae3e4 in json_object_put (jso=0x405750) at /home/tyler/json-c/json_object.c:300
@@ -1449,7 +1498,7 @@ free 0x406890
 Breakpoint 6.1, __GI___libc_free (mem=0x406a20) at malloc.c:3359
 3359	{
 #0  __GI___libc_free (mem=0x406a20) at malloc.c:3359
-#1  0x00007ffff7faeba2 in json_object_lh_entry_free (ent=0x406578) at /home/tyler/json-c/json_object.c:520
+#1  0x00007ffff7faeba2 in json_object_lh_entry_free (ent=0x406488) at /home/tyler/json-c/json_object.c:520
 #2  0x00007ffff7fb72ff in lh_table_free (t=0x406380) at /home/tyler/json-c/linkhash.c:574
 #3  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x406340) at /home/tyler/json-c/json_object.c:526
 #4  0x00007ffff7fae3e4 in json_object_put (jso=0x406340) at /home/tyler/json-c/json_object.c:300
@@ -1457,15 +1506,15 @@ Breakpoint 6.1, __GI___libc_free (mem=0x406a20) at malloc.c:3359
 #6  0x00007ffff7fad484 in array_list_free (arr=0x406200) at /home/tyler/json-c/arraylist.c:69
 #7  0x00007ffff7fb0b9e in json_object_array_delete (jso=0x4061c0) at /home/tyler/json-c/json_object.c:1457
 #8  0x00007ffff7fae3f2 in json_object_put (jso=0x4061c0) at /home/tyler/json-c/json_object.c:301
-#9  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405f90) at /home/tyler/json-c/json_object.c:521
+#9  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4060d0) at /home/tyler/json-c/json_object.c:521
 #10 0x00007ffff7fb72ff in lh_table_free (t=0x405e60) at /home/tyler/json-c/linkhash.c:574
 #11 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405e20) at /home/tyler/json-c/json_object.c:526
 #12 0x00007ffff7fae3e4 in json_object_put (jso=0x405e20) at /home/tyler/json-c/json_object.c:300
-#13 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405bc8) at /home/tyler/json-c/json_object.c:521
+#13 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405bf0) at /home/tyler/json-c/json_object.c:521
 #14 0x00007ffff7fb72ff in lh_table_free (t=0x405ac0) at /home/tyler/json-c/linkhash.c:574
 #15 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405a80) at /home/tyler/json-c/json_object.c:526
 #16 0x00007ffff7fae3e4 in json_object_put (jso=0x405a80) at /home/tyler/json-c/json_object.c:300
-#17 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4059d8) at /home/tyler/json-c/json_object.c:521
+#17 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405a00) at /home/tyler/json-c/json_object.c:521
 #18 0x00007ffff7fb72ff in lh_table_free (t=0x405790) at /home/tyler/json-c/linkhash.c:574
 #19 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405750) at /home/tyler/json-c/json_object.c:526
 #20 0x00007ffff7fae3e4 in json_object_put (jso=0x405750) at /home/tyler/json-c/json_object.c:300
@@ -1478,7 +1527,7 @@ Breakpoint 6.1, __GI___libc_free (mem=0x406990) at malloc.c:3359
 #1  0x00007ffff7fae43e in json_object_generic_delete (jso=0x406990) at /home/tyler/json-c/json_object.c:313
 #2  0x00007ffff7fb0580 in json_object_string_delete (jso=0x406990) at /home/tyler/json-c/json_object.c:1263
 #3  0x00007ffff7fae400 in json_object_put (jso=0x406990) at /home/tyler/json-c/json_object.c:302
-#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x406578) at /home/tyler/json-c/json_object.c:521
+#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x406488) at /home/tyler/json-c/json_object.c:521
 #5  0x00007ffff7fb72ff in lh_table_free (t=0x406380) at /home/tyler/json-c/linkhash.c:574
 #6  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x406340) at /home/tyler/json-c/json_object.c:526
 #7  0x00007ffff7fae3e4 in json_object_put (jso=0x406340) at /home/tyler/json-c/json_object.c:300
@@ -1486,15 +1535,15 @@ Breakpoint 6.1, __GI___libc_free (mem=0x406990) at malloc.c:3359
 #9  0x00007ffff7fad484 in array_list_free (arr=0x406200) at /home/tyler/json-c/arraylist.c:69
 #10 0x00007ffff7fb0b9e in json_object_array_delete (jso=0x4061c0) at /home/tyler/json-c/json_object.c:1457
 #11 0x00007ffff7fae3f2 in json_object_put (jso=0x4061c0) at /home/tyler/json-c/json_object.c:301
-#12 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405f90) at /home/tyler/json-c/json_object.c:521
+#12 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4060d0) at /home/tyler/json-c/json_object.c:521
 #13 0x00007ffff7fb72ff in lh_table_free (t=0x405e60) at /home/tyler/json-c/linkhash.c:574
 #14 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405e20) at /home/tyler/json-c/json_object.c:526
 #15 0x00007ffff7fae3e4 in json_object_put (jso=0x405e20) at /home/tyler/json-c/json_object.c:300
-#16 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405bc8) at /home/tyler/json-c/json_object.c:521
+#16 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405bf0) at /home/tyler/json-c/json_object.c:521
 #17 0x00007ffff7fb72ff in lh_table_free (t=0x405ac0) at /home/tyler/json-c/linkhash.c:574
 #18 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405a80) at /home/tyler/json-c/json_object.c:526
 #19 0x00007ffff7fae3e4 in json_object_put (jso=0x405a80) at /home/tyler/json-c/json_object.c:300
-#20 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4059d8) at /home/tyler/json-c/json_object.c:521
+#20 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405a00) at /home/tyler/json-c/json_object.c:521
 #21 0x00007ffff7fb72ff in lh_table_free (t=0x405790) at /home/tyler/json-c/linkhash.c:574
 #22 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405750) at /home/tyler/json-c/json_object.c:526
 #23 0x00007ffff7fae3e4 in json_object_put (jso=0x405750) at /home/tyler/json-c/json_object.c:300
@@ -1504,7 +1553,7 @@ free 0x406990
 Breakpoint 6.1, __GI___libc_free (mem=0x406c30) at malloc.c:3359
 3359	{
 #0  __GI___libc_free (mem=0x406c30) at malloc.c:3359
-#1  0x00007ffff7faeba2 in json_object_lh_entry_free (ent=0x4065c8) at /home/tyler/json-c/json_object.c:520
+#1  0x00007ffff7faeba2 in json_object_lh_entry_free (ent=0x406528) at /home/tyler/json-c/json_object.c:520
 #2  0x00007ffff7fb72ff in lh_table_free (t=0x406380) at /home/tyler/json-c/linkhash.c:574
 #3  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x406340) at /home/tyler/json-c/json_object.c:526
 #4  0x00007ffff7fae3e4 in json_object_put (jso=0x406340) at /home/tyler/json-c/json_object.c:300
@@ -1512,15 +1561,15 @@ Breakpoint 6.1, __GI___libc_free (mem=0x406c30) at malloc.c:3359
 #6  0x00007ffff7fad484 in array_list_free (arr=0x406200) at /home/tyler/json-c/arraylist.c:69
 #7  0x00007ffff7fb0b9e in json_object_array_delete (jso=0x4061c0) at /home/tyler/json-c/json_object.c:1457
 #8  0x00007ffff7fae3f2 in json_object_put (jso=0x4061c0) at /home/tyler/json-c/json_object.c:301
-#9  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405f90) at /home/tyler/json-c/json_object.c:521
+#9  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4060d0) at /home/tyler/json-c/json_object.c:521
 #10 0x00007ffff7fb72ff in lh_table_free (t=0x405e60) at /home/tyler/json-c/linkhash.c:574
 #11 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405e20) at /home/tyler/json-c/json_object.c:526
 #12 0x00007ffff7fae3e4 in json_object_put (jso=0x405e20) at /home/tyler/json-c/json_object.c:300
-#13 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405bc8) at /home/tyler/json-c/json_object.c:521
+#13 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405bf0) at /home/tyler/json-c/json_object.c:521
 #14 0x00007ffff7fb72ff in lh_table_free (t=0x405ac0) at /home/tyler/json-c/linkhash.c:574
 #15 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405a80) at /home/tyler/json-c/json_object.c:526
 #16 0x00007ffff7fae3e4 in json_object_put (jso=0x405a80) at /home/tyler/json-c/json_object.c:300
-#17 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4059d8) at /home/tyler/json-c/json_object.c:521
+#17 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405a00) at /home/tyler/json-c/json_object.c:521
 #18 0x00007ffff7fb72ff in lh_table_free (t=0x405790) at /home/tyler/json-c/linkhash.c:574
 #19 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405750) at /home/tyler/json-c/json_object.c:526
 #20 0x00007ffff7fae3e4 in json_object_put (jso=0x405750) at /home/tyler/json-c/json_object.c:300
@@ -1537,7 +1586,7 @@ Breakpoint 6.1, __GI___libc_free (mem=0x406750) at malloc.c:3359
 #5  0x00007ffff7fad484 in array_list_free (arr=0x405720) at /home/tyler/json-c/arraylist.c:69
 #6  0x00007ffff7fb0b9e in json_object_array_delete (jso=0x406a40) at /home/tyler/json-c/json_object.c:1457
 #7  0x00007ffff7fae3f2 in json_object_put (jso=0x406a40) at /home/tyler/json-c/json_object.c:301
-#8  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4065c8) at /home/tyler/json-c/json_object.c:521
+#8  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x406528) at /home/tyler/json-c/json_object.c:521
 #9  0x00007ffff7fb72ff in lh_table_free (t=0x406380) at /home/tyler/json-c/linkhash.c:574
 #10 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x406340) at /home/tyler/json-c/json_object.c:526
 #11 0x00007ffff7fae3e4 in json_object_put (jso=0x406340) at /home/tyler/json-c/json_object.c:300
@@ -1545,15 +1594,15 @@ Breakpoint 6.1, __GI___libc_free (mem=0x406750) at malloc.c:3359
 #13 0x00007ffff7fad484 in array_list_free (arr=0x406200) at /home/tyler/json-c/arraylist.c:69
 #14 0x00007ffff7fb0b9e in json_object_array_delete (jso=0x4061c0) at /home/tyler/json-c/json_object.c:1457
 #15 0x00007ffff7fae3f2 in json_object_put (jso=0x4061c0) at /home/tyler/json-c/json_object.c:301
-#16 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405f90) at /home/tyler/json-c/json_object.c:521
+#16 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4060d0) at /home/tyler/json-c/json_object.c:521
 #17 0x00007ffff7fb72ff in lh_table_free (t=0x405e60) at /home/tyler/json-c/linkhash.c:574
 #18 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405e20) at /home/tyler/json-c/json_object.c:526
 #19 0x00007ffff7fae3e4 in json_object_put (jso=0x405e20) at /home/tyler/json-c/json_object.c:300
-#20 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405bc8) at /home/tyler/json-c/json_object.c:521
+#20 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405bf0) at /home/tyler/json-c/json_object.c:521
 #21 0x00007ffff7fb72ff in lh_table_free (t=0x405ac0) at /home/tyler/json-c/linkhash.c:574
 #22 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405a80) at /home/tyler/json-c/json_object.c:526
 #23 0x00007ffff7fae3e4 in json_object_put (jso=0x405a80) at /home/tyler/json-c/json_object.c:300
-#24 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4059d8) at /home/tyler/json-c/json_object.c:521
+#24 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405a00) at /home/tyler/json-c/json_object.c:521
 #25 0x00007ffff7fb72ff in lh_table_free (t=0x405790) at /home/tyler/json-c/linkhash.c:574
 #26 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405750) at /home/tyler/json-c/json_object.c:526
 #27 0x00007ffff7fae3e4 in json_object_put (jso=0x405750) at /home/tyler/json-c/json_object.c:300
@@ -1570,7 +1619,7 @@ Breakpoint 6.1, __GI___libc_free (mem=0x406b90) at malloc.c:3359
 #5  0x00007ffff7fad484 in array_list_free (arr=0x405720) at /home/tyler/json-c/arraylist.c:69
 #6  0x00007ffff7fb0b9e in json_object_array_delete (jso=0x406a40) at /home/tyler/json-c/json_object.c:1457
 #7  0x00007ffff7fae3f2 in json_object_put (jso=0x406a40) at /home/tyler/json-c/json_object.c:301
-#8  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4065c8) at /home/tyler/json-c/json_object.c:521
+#8  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x406528) at /home/tyler/json-c/json_object.c:521
 #9  0x00007ffff7fb72ff in lh_table_free (t=0x406380) at /home/tyler/json-c/linkhash.c:574
 #10 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x406340) at /home/tyler/json-c/json_object.c:526
 #11 0x00007ffff7fae3e4 in json_object_put (jso=0x406340) at /home/tyler/json-c/json_object.c:300
@@ -1578,15 +1627,15 @@ Breakpoint 6.1, __GI___libc_free (mem=0x406b90) at malloc.c:3359
 #13 0x00007ffff7fad484 in array_list_free (arr=0x406200) at /home/tyler/json-c/arraylist.c:69
 #14 0x00007ffff7fb0b9e in json_object_array_delete (jso=0x4061c0) at /home/tyler/json-c/json_object.c:1457
 #15 0x00007ffff7fae3f2 in json_object_put (jso=0x4061c0) at /home/tyler/json-c/json_object.c:301
-#16 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405f90) at /home/tyler/json-c/json_object.c:521
+#16 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4060d0) at /home/tyler/json-c/json_object.c:521
 #17 0x00007ffff7fb72ff in lh_table_free (t=0x405e60) at /home/tyler/json-c/linkhash.c:574
 #18 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405e20) at /home/tyler/json-c/json_object.c:526
 #19 0x00007ffff7fae3e4 in json_object_put (jso=0x405e20) at /home/tyler/json-c/json_object.c:300
-#20 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405bc8) at /home/tyler/json-c/json_object.c:521
+#20 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405bf0) at /home/tyler/json-c/json_object.c:521
 #21 0x00007ffff7fb72ff in lh_table_free (t=0x405ac0) at /home/tyler/json-c/linkhash.c:574
 #22 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405a80) at /home/tyler/json-c/json_object.c:526
 #23 0x00007ffff7fae3e4 in json_object_put (jso=0x405a80) at /home/tyler/json-c/json_object.c:300
-#24 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4059d8) at /home/tyler/json-c/json_object.c:521
+#24 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405a00) at /home/tyler/json-c/json_object.c:521
 #25 0x00007ffff7fb72ff in lh_table_free (t=0x405790) at /home/tyler/json-c/linkhash.c:574
 #26 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405750) at /home/tyler/json-c/json_object.c:526
 #27 0x00007ffff7fae3e4 in json_object_put (jso=0x405750) at /home/tyler/json-c/json_object.c:300
@@ -1603,7 +1652,7 @@ Breakpoint 6.1, __GI___libc_free (mem=0x406be0) at malloc.c:3359
 #5  0x00007ffff7fad484 in array_list_free (arr=0x405720) at /home/tyler/json-c/arraylist.c:69
 #6  0x00007ffff7fb0b9e in json_object_array_delete (jso=0x406a40) at /home/tyler/json-c/json_object.c:1457
 #7  0x00007ffff7fae3f2 in json_object_put (jso=0x406a40) at /home/tyler/json-c/json_object.c:301
-#8  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4065c8) at /home/tyler/json-c/json_object.c:521
+#8  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x406528) at /home/tyler/json-c/json_object.c:521
 #9  0x00007ffff7fb72ff in lh_table_free (t=0x406380) at /home/tyler/json-c/linkhash.c:574
 #10 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x406340) at /home/tyler/json-c/json_object.c:526
 #11 0x00007ffff7fae3e4 in json_object_put (jso=0x406340) at /home/tyler/json-c/json_object.c:300
@@ -1611,15 +1660,15 @@ Breakpoint 6.1, __GI___libc_free (mem=0x406be0) at malloc.c:3359
 #13 0x00007ffff7fad484 in array_list_free (arr=0x406200) at /home/tyler/json-c/arraylist.c:69
 #14 0x00007ffff7fb0b9e in json_object_array_delete (jso=0x4061c0) at /home/tyler/json-c/json_object.c:1457
 #15 0x00007ffff7fae3f2 in json_object_put (jso=0x4061c0) at /home/tyler/json-c/json_object.c:301
-#16 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405f90) at /home/tyler/json-c/json_object.c:521
+#16 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4060d0) at /home/tyler/json-c/json_object.c:521
 #17 0x00007ffff7fb72ff in lh_table_free (t=0x405e60) at /home/tyler/json-c/linkhash.c:574
 #18 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405e20) at /home/tyler/json-c/json_object.c:526
 #19 0x00007ffff7fae3e4 in json_object_put (jso=0x405e20) at /home/tyler/json-c/json_object.c:300
-#20 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405bc8) at /home/tyler/json-c/json_object.c:521
+#20 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405bf0) at /home/tyler/json-c/json_object.c:521
 #21 0x00007ffff7fb72ff in lh_table_free (t=0x405ac0) at /home/tyler/json-c/linkhash.c:574
 #22 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405a80) at /home/tyler/json-c/json_object.c:526
 #23 0x00007ffff7fae3e4 in json_object_put (jso=0x405a80) at /home/tyler/json-c/json_object.c:300
-#24 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4059d8) at /home/tyler/json-c/json_object.c:521
+#24 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405a00) at /home/tyler/json-c/json_object.c:521
 #25 0x00007ffff7fb72ff in lh_table_free (t=0x405790) at /home/tyler/json-c/linkhash.c:574
 #26 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405750) at /home/tyler/json-c/json_object.c:526
 #27 0x00007ffff7fae3e4 in json_object_put (jso=0x405750) at /home/tyler/json-c/json_object.c:300
@@ -1632,7 +1681,7 @@ Breakpoint 6.1, __GI___libc_free (mem=0x406a80) at malloc.c:3359
 #1  0x00007ffff7fad4a6 in array_list_free (arr=0x405720) at /home/tyler/json-c/arraylist.c:70
 #2  0x00007ffff7fb0b9e in json_object_array_delete (jso=0x406a40) at /home/tyler/json-c/json_object.c:1457
 #3  0x00007ffff7fae3f2 in json_object_put (jso=0x406a40) at /home/tyler/json-c/json_object.c:301
-#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4065c8) at /home/tyler/json-c/json_object.c:521
+#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x406528) at /home/tyler/json-c/json_object.c:521
 #5  0x00007ffff7fb72ff in lh_table_free (t=0x406380) at /home/tyler/json-c/linkhash.c:574
 #6  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x406340) at /home/tyler/json-c/json_object.c:526
 #7  0x00007ffff7fae3e4 in json_object_put (jso=0x406340) at /home/tyler/json-c/json_object.c:300
@@ -1640,15 +1689,15 @@ Breakpoint 6.1, __GI___libc_free (mem=0x406a80) at malloc.c:3359
 #9  0x00007ffff7fad484 in array_list_free (arr=0x406200) at /home/tyler/json-c/arraylist.c:69
 #10 0x00007ffff7fb0b9e in json_object_array_delete (jso=0x4061c0) at /home/tyler/json-c/json_object.c:1457
 #11 0x00007ffff7fae3f2 in json_object_put (jso=0x4061c0) at /home/tyler/json-c/json_object.c:301
-#12 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405f90) at /home/tyler/json-c/json_object.c:521
+#12 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4060d0) at /home/tyler/json-c/json_object.c:521
 #13 0x00007ffff7fb72ff in lh_table_free (t=0x405e60) at /home/tyler/json-c/linkhash.c:574
 #14 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405e20) at /home/tyler/json-c/json_object.c:526
 #15 0x00007ffff7fae3e4 in json_object_put (jso=0x405e20) at /home/tyler/json-c/json_object.c:300
-#16 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405bc8) at /home/tyler/json-c/json_object.c:521
+#16 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405bf0) at /home/tyler/json-c/json_object.c:521
 #17 0x00007ffff7fb72ff in lh_table_free (t=0x405ac0) at /home/tyler/json-c/linkhash.c:574
 #18 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405a80) at /home/tyler/json-c/json_object.c:526
 #19 0x00007ffff7fae3e4 in json_object_put (jso=0x405a80) at /home/tyler/json-c/json_object.c:300
-#20 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4059d8) at /home/tyler/json-c/json_object.c:521
+#20 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405a00) at /home/tyler/json-c/json_object.c:521
 #21 0x00007ffff7fb72ff in lh_table_free (t=0x405790) at /home/tyler/json-c/linkhash.c:574
 #22 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405750) at /home/tyler/json-c/json_object.c:526
 #23 0x00007ffff7fae3e4 in json_object_put (jso=0x405750) at /home/tyler/json-c/json_object.c:300
@@ -1661,7 +1710,7 @@ Breakpoint 6.1, __GI___libc_free (mem=0x405720) at malloc.c:3359
 #1  0x00007ffff7fad4b2 in array_list_free (arr=0x405720) at /home/tyler/json-c/arraylist.c:71
 #2  0x00007ffff7fb0b9e in json_object_array_delete (jso=0x406a40) at /home/tyler/json-c/json_object.c:1457
 #3  0x00007ffff7fae3f2 in json_object_put (jso=0x406a40) at /home/tyler/json-c/json_object.c:301
-#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4065c8) at /home/tyler/json-c/json_object.c:521
+#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x406528) at /home/tyler/json-c/json_object.c:521
 #5  0x00007ffff7fb72ff in lh_table_free (t=0x406380) at /home/tyler/json-c/linkhash.c:574
 #6  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x406340) at /home/tyler/json-c/json_object.c:526
 #7  0x00007ffff7fae3e4 in json_object_put (jso=0x406340) at /home/tyler/json-c/json_object.c:300
@@ -1669,15 +1718,15 @@ Breakpoint 6.1, __GI___libc_free (mem=0x405720) at malloc.c:3359
 #9  0x00007ffff7fad484 in array_list_free (arr=0x406200) at /home/tyler/json-c/arraylist.c:69
 #10 0x00007ffff7fb0b9e in json_object_array_delete (jso=0x4061c0) at /home/tyler/json-c/json_object.c:1457
 #11 0x00007ffff7fae3f2 in json_object_put (jso=0x4061c0) at /home/tyler/json-c/json_object.c:301
-#12 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405f90) at /home/tyler/json-c/json_object.c:521
+#12 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4060d0) at /home/tyler/json-c/json_object.c:521
 #13 0x00007ffff7fb72ff in lh_table_free (t=0x405e60) at /home/tyler/json-c/linkhash.c:574
 #14 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405e20) at /home/tyler/json-c/json_object.c:526
 #15 0x00007ffff7fae3e4 in json_object_put (jso=0x405e20) at /home/tyler/json-c/json_object.c:300
-#16 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405bc8) at /home/tyler/json-c/json_object.c:521
+#16 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405bf0) at /home/tyler/json-c/json_object.c:521
 #17 0x00007ffff7fb72ff in lh_table_free (t=0x405ac0) at /home/tyler/json-c/linkhash.c:574
 #18 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405a80) at /home/tyler/json-c/json_object.c:526
 #19 0x00007ffff7fae3e4 in json_object_put (jso=0x405a80) at /home/tyler/json-c/json_object.c:300
-#20 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4059d8) at /home/tyler/json-c/json_object.c:521
+#20 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405a00) at /home/tyler/json-c/json_object.c:521
 #21 0x00007ffff7fb72ff in lh_table_free (t=0x405790) at /home/tyler/json-c/linkhash.c:574
 #22 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405750) at /home/tyler/json-c/json_object.c:526
 #23 0x00007ffff7fae3e4 in json_object_put (jso=0x405750) at /home/tyler/json-c/json_object.c:300
@@ -1690,7 +1739,7 @@ Breakpoint 6.1, __GI___libc_free (mem=0x406a40) at malloc.c:3359
 #1  0x00007ffff7fae43e in json_object_generic_delete (jso=0x406a40) at /home/tyler/json-c/json_object.c:313
 #2  0x00007ffff7fb0baa in json_object_array_delete (jso=0x406a40) at /home/tyler/json-c/json_object.c:1458
 #3  0x00007ffff7fae3f2 in json_object_put (jso=0x406a40) at /home/tyler/json-c/json_object.c:301
-#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4065c8) at /home/tyler/json-c/json_object.c:521
+#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x406528) at /home/tyler/json-c/json_object.c:521
 #5  0x00007ffff7fb72ff in lh_table_free (t=0x406380) at /home/tyler/json-c/linkhash.c:574
 #6  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x406340) at /home/tyler/json-c/json_object.c:526
 #7  0x00007ffff7fae3e4 in json_object_put (jso=0x406340) at /home/tyler/json-c/json_object.c:300
@@ -1698,15 +1747,15 @@ Breakpoint 6.1, __GI___libc_free (mem=0x406a40) at malloc.c:3359
 #9  0x00007ffff7fad484 in array_list_free (arr=0x406200) at /home/tyler/json-c/arraylist.c:69
 #10 0x00007ffff7fb0b9e in json_object_array_delete (jso=0x4061c0) at /home/tyler/json-c/json_object.c:1457
 #11 0x00007ffff7fae3f2 in json_object_put (jso=0x4061c0) at /home/tyler/json-c/json_object.c:301
-#12 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405f90) at /home/tyler/json-c/json_object.c:521
+#12 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4060d0) at /home/tyler/json-c/json_object.c:521
 #13 0x00007ffff7fb72ff in lh_table_free (t=0x405e60) at /home/tyler/json-c/linkhash.c:574
 #14 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405e20) at /home/tyler/json-c/json_object.c:526
 #15 0x00007ffff7fae3e4 in json_object_put (jso=0x405e20) at /home/tyler/json-c/json_object.c:300
-#16 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405bc8) at /home/tyler/json-c/json_object.c:521
+#16 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405bf0) at /home/tyler/json-c/json_object.c:521
 #17 0x00007ffff7fb72ff in lh_table_free (t=0x405ac0) at /home/tyler/json-c/linkhash.c:574
 #18 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405a80) at /home/tyler/json-c/json_object.c:526
 #19 0x00007ffff7fae3e4 in json_object_put (jso=0x405a80) at /home/tyler/json-c/json_object.c:300
-#20 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4059d8) at /home/tyler/json-c/json_object.c:521
+#20 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405a00) at /home/tyler/json-c/json_object.c:521
 #21 0x00007ffff7fb72ff in lh_table_free (t=0x405790) at /home/tyler/json-c/linkhash.c:574
 #22 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405750) at /home/tyler/json-c/json_object.c:526
 #23 0x00007ffff7fae3e4 in json_object_put (jso=0x405750) at /home/tyler/json-c/json_object.c:300
@@ -1723,15 +1772,15 @@ Breakpoint 6.1, __GI___libc_free (mem=0x4063c0) at malloc.c:3359
 #5  0x00007ffff7fad484 in array_list_free (arr=0x406200) at /home/tyler/json-c/arraylist.c:69
 #6  0x00007ffff7fb0b9e in json_object_array_delete (jso=0x4061c0) at /home/tyler/json-c/json_object.c:1457
 #7  0x00007ffff7fae3f2 in json_object_put (jso=0x4061c0) at /home/tyler/json-c/json_object.c:301
-#8  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405f90) at /home/tyler/json-c/json_object.c:521
+#8  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4060d0) at /home/tyler/json-c/json_object.c:521
 #9  0x00007ffff7fb72ff in lh_table_free (t=0x405e60) at /home/tyler/json-c/linkhash.c:574
 #10 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405e20) at /home/tyler/json-c/json_object.c:526
 #11 0x00007ffff7fae3e4 in json_object_put (jso=0x405e20) at /home/tyler/json-c/json_object.c:300
-#12 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405bc8) at /home/tyler/json-c/json_object.c:521
+#12 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405bf0) at /home/tyler/json-c/json_object.c:521
 #13 0x00007ffff7fb72ff in lh_table_free (t=0x405ac0) at /home/tyler/json-c/linkhash.c:574
 #14 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405a80) at /home/tyler/json-c/json_object.c:526
 #15 0x00007ffff7fae3e4 in json_object_put (jso=0x405a80) at /home/tyler/json-c/json_object.c:300
-#16 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4059d8) at /home/tyler/json-c/json_object.c:521
+#16 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405a00) at /home/tyler/json-c/json_object.c:521
 #17 0x00007ffff7fb72ff in lh_table_free (t=0x405790) at /home/tyler/json-c/linkhash.c:574
 #18 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405750) at /home/tyler/json-c/json_object.c:526
 #19 0x00007ffff7fae3e4 in json_object_put (jso=0x405750) at /home/tyler/json-c/json_object.c:300
@@ -1748,15 +1797,15 @@ Breakpoint 6.1, __GI___libc_free (mem=0x406380) at malloc.c:3359
 #5  0x00007ffff7fad484 in array_list_free (arr=0x406200) at /home/tyler/json-c/arraylist.c:69
 #6  0x00007ffff7fb0b9e in json_object_array_delete (jso=0x4061c0) at /home/tyler/json-c/json_object.c:1457
 #7  0x00007ffff7fae3f2 in json_object_put (jso=0x4061c0) at /home/tyler/json-c/json_object.c:301
-#8  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405f90) at /home/tyler/json-c/json_object.c:521
+#8  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4060d0) at /home/tyler/json-c/json_object.c:521
 #9  0x00007ffff7fb72ff in lh_table_free (t=0x405e60) at /home/tyler/json-c/linkhash.c:574
 #10 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405e20) at /home/tyler/json-c/json_object.c:526
 #11 0x00007ffff7fae3e4 in json_object_put (jso=0x405e20) at /home/tyler/json-c/json_object.c:300
-#12 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405bc8) at /home/tyler/json-c/json_object.c:521
+#12 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405bf0) at /home/tyler/json-c/json_object.c:521
 #13 0x00007ffff7fb72ff in lh_table_free (t=0x405ac0) at /home/tyler/json-c/linkhash.c:574
 #14 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405a80) at /home/tyler/json-c/json_object.c:526
 #15 0x00007ffff7fae3e4 in json_object_put (jso=0x405a80) at /home/tyler/json-c/json_object.c:300
-#16 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4059d8) at /home/tyler/json-c/json_object.c:521
+#16 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405a00) at /home/tyler/json-c/json_object.c:521
 #17 0x00007ffff7fb72ff in lh_table_free (t=0x405790) at /home/tyler/json-c/linkhash.c:574
 #18 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405750) at /home/tyler/json-c/json_object.c:526
 #19 0x00007ffff7fae3e4 in json_object_put (jso=0x405750) at /home/tyler/json-c/json_object.c:300
@@ -1773,15 +1822,15 @@ Breakpoint 6.1, __GI___libc_free (mem=0x406340) at malloc.c:3359
 #5  0x00007ffff7fad484 in array_list_free (arr=0x406200) at /home/tyler/json-c/arraylist.c:69
 #6  0x00007ffff7fb0b9e in json_object_array_delete (jso=0x4061c0) at /home/tyler/json-c/json_object.c:1457
 #7  0x00007ffff7fae3f2 in json_object_put (jso=0x4061c0) at /home/tyler/json-c/json_object.c:301
-#8  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405f90) at /home/tyler/json-c/json_object.c:521
+#8  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4060d0) at /home/tyler/json-c/json_object.c:521
 #9  0x00007ffff7fb72ff in lh_table_free (t=0x405e60) at /home/tyler/json-c/linkhash.c:574
 #10 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405e20) at /home/tyler/json-c/json_object.c:526
 #11 0x00007ffff7fae3e4 in json_object_put (jso=0x405e20) at /home/tyler/json-c/json_object.c:300
-#12 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405bc8) at /home/tyler/json-c/json_object.c:521
+#12 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405bf0) at /home/tyler/json-c/json_object.c:521
 #13 0x00007ffff7fb72ff in lh_table_free (t=0x405ac0) at /home/tyler/json-c/linkhash.c:574
 #14 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405a80) at /home/tyler/json-c/json_object.c:526
 #15 0x00007ffff7fae3e4 in json_object_put (jso=0x405a80) at /home/tyler/json-c/json_object.c:300
-#16 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4059d8) at /home/tyler/json-c/json_object.c:521
+#16 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405a00) at /home/tyler/json-c/json_object.c:521
 #17 0x00007ffff7fb72ff in lh_table_free (t=0x405790) at /home/tyler/json-c/linkhash.c:574
 #18 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405750) at /home/tyler/json-c/json_object.c:526
 #19 0x00007ffff7fae3e4 in json_object_put (jso=0x405750) at /home/tyler/json-c/json_object.c:300
@@ -1794,15 +1843,15 @@ Breakpoint 6.1, __GI___libc_free (mem=0x406230) at malloc.c:3359
 #1  0x00007ffff7fad4a6 in array_list_free (arr=0x406200) at /home/tyler/json-c/arraylist.c:70
 #2  0x00007ffff7fb0b9e in json_object_array_delete (jso=0x4061c0) at /home/tyler/json-c/json_object.c:1457
 #3  0x00007ffff7fae3f2 in json_object_put (jso=0x4061c0) at /home/tyler/json-c/json_object.c:301
-#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405f90) at /home/tyler/json-c/json_object.c:521
+#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4060d0) at /home/tyler/json-c/json_object.c:521
 #5  0x00007ffff7fb72ff in lh_table_free (t=0x405e60) at /home/tyler/json-c/linkhash.c:574
 #6  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405e20) at /home/tyler/json-c/json_object.c:526
 #7  0x00007ffff7fae3e4 in json_object_put (jso=0x405e20) at /home/tyler/json-c/json_object.c:300
-#8  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405bc8) at /home/tyler/json-c/json_object.c:521
+#8  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405bf0) at /home/tyler/json-c/json_object.c:521
 #9  0x00007ffff7fb72ff in lh_table_free (t=0x405ac0) at /home/tyler/json-c/linkhash.c:574
 #10 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405a80) at /home/tyler/json-c/json_object.c:526
 #11 0x00007ffff7fae3e4 in json_object_put (jso=0x405a80) at /home/tyler/json-c/json_object.c:300
-#12 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4059d8) at /home/tyler/json-c/json_object.c:521
+#12 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405a00) at /home/tyler/json-c/json_object.c:521
 #13 0x00007ffff7fb72ff in lh_table_free (t=0x405790) at /home/tyler/json-c/linkhash.c:574
 #14 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405750) at /home/tyler/json-c/json_object.c:526
 #15 0x00007ffff7fae3e4 in json_object_put (jso=0x405750) at /home/tyler/json-c/json_object.c:300
@@ -1815,15 +1864,15 @@ Breakpoint 6.1, __GI___libc_free (mem=0x406200) at malloc.c:3359
 #1  0x00007ffff7fad4b2 in array_list_free (arr=0x406200) at /home/tyler/json-c/arraylist.c:71
 #2  0x00007ffff7fb0b9e in json_object_array_delete (jso=0x4061c0) at /home/tyler/json-c/json_object.c:1457
 #3  0x00007ffff7fae3f2 in json_object_put (jso=0x4061c0) at /home/tyler/json-c/json_object.c:301
-#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405f90) at /home/tyler/json-c/json_object.c:521
+#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4060d0) at /home/tyler/json-c/json_object.c:521
 #5  0x00007ffff7fb72ff in lh_table_free (t=0x405e60) at /home/tyler/json-c/linkhash.c:574
 #6  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405e20) at /home/tyler/json-c/json_object.c:526
 #7  0x00007ffff7fae3e4 in json_object_put (jso=0x405e20) at /home/tyler/json-c/json_object.c:300
-#8  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405bc8) at /home/tyler/json-c/json_object.c:521
+#8  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405bf0) at /home/tyler/json-c/json_object.c:521
 #9  0x00007ffff7fb72ff in lh_table_free (t=0x405ac0) at /home/tyler/json-c/linkhash.c:574
 #10 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405a80) at /home/tyler/json-c/json_object.c:526
 #11 0x00007ffff7fae3e4 in json_object_put (jso=0x405a80) at /home/tyler/json-c/json_object.c:300
-#12 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4059d8) at /home/tyler/json-c/json_object.c:521
+#12 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405a00) at /home/tyler/json-c/json_object.c:521
 #13 0x00007ffff7fb72ff in lh_table_free (t=0x405790) at /home/tyler/json-c/linkhash.c:574
 #14 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405750) at /home/tyler/json-c/json_object.c:526
 #15 0x00007ffff7fae3e4 in json_object_put (jso=0x405750) at /home/tyler/json-c/json_object.c:300
@@ -1836,15 +1885,15 @@ Breakpoint 6.1, __GI___libc_free (mem=0x4061c0) at malloc.c:3359
 #1  0x00007ffff7fae43e in json_object_generic_delete (jso=0x4061c0) at /home/tyler/json-c/json_object.c:313
 #2  0x00007ffff7fb0baa in json_object_array_delete (jso=0x4061c0) at /home/tyler/json-c/json_object.c:1458
 #3  0x00007ffff7fae3f2 in json_object_put (jso=0x4061c0) at /home/tyler/json-c/json_object.c:301
-#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405f90) at /home/tyler/json-c/json_object.c:521
+#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4060d0) at /home/tyler/json-c/json_object.c:521
 #5  0x00007ffff7fb72ff in lh_table_free (t=0x405e60) at /home/tyler/json-c/linkhash.c:574
 #6  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405e20) at /home/tyler/json-c/json_object.c:526
 #7  0x00007ffff7fae3e4 in json_object_put (jso=0x405e20) at /home/tyler/json-c/json_object.c:300
-#8  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405bc8) at /home/tyler/json-c/json_object.c:521
+#8  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405bf0) at /home/tyler/json-c/json_object.c:521
 #9  0x00007ffff7fb72ff in lh_table_free (t=0x405ac0) at /home/tyler/json-c/linkhash.c:574
 #10 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405a80) at /home/tyler/json-c/json_object.c:526
 #11 0x00007ffff7fae3e4 in json_object_put (jso=0x405a80) at /home/tyler/json-c/json_object.c:300
-#12 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4059d8) at /home/tyler/json-c/json_object.c:521
+#12 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405a00) at /home/tyler/json-c/json_object.c:521
 #13 0x00007ffff7fb72ff in lh_table_free (t=0x405790) at /home/tyler/json-c/linkhash.c:574
 #14 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405750) at /home/tyler/json-c/json_object.c:526
 #15 0x00007ffff7fae3e4 in json_object_put (jso=0x405750) at /home/tyler/json-c/json_object.c:300
@@ -1857,11 +1906,11 @@ Breakpoint 6.1, __GI___libc_free (mem=0x405ea0) at malloc.c:3359
 #1  0x00007ffff7fb7322 in lh_table_free (t=0x405e60) at /home/tyler/json-c/linkhash.c:576
 #2  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405e20) at /home/tyler/json-c/json_object.c:526
 #3  0x00007ffff7fae3e4 in json_object_put (jso=0x405e20) at /home/tyler/json-c/json_object.c:300
-#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405bc8) at /home/tyler/json-c/json_object.c:521
+#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405bf0) at /home/tyler/json-c/json_object.c:521
 #5  0x00007ffff7fb72ff in lh_table_free (t=0x405ac0) at /home/tyler/json-c/linkhash.c:574
 #6  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405a80) at /home/tyler/json-c/json_object.c:526
 #7  0x00007ffff7fae3e4 in json_object_put (jso=0x405a80) at /home/tyler/json-c/json_object.c:300
-#8  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4059d8) at /home/tyler/json-c/json_object.c:521
+#8  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405a00) at /home/tyler/json-c/json_object.c:521
 #9  0x00007ffff7fb72ff in lh_table_free (t=0x405790) at /home/tyler/json-c/linkhash.c:574
 #10 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405750) at /home/tyler/json-c/json_object.c:526
 #11 0x00007ffff7fae3e4 in json_object_put (jso=0x405750) at /home/tyler/json-c/json_object.c:300
@@ -1874,11 +1923,11 @@ Breakpoint 6.1, __GI___libc_free (mem=0x405e60) at malloc.c:3359
 #1  0x00007ffff7fb732e in lh_table_free (t=0x405e60) at /home/tyler/json-c/linkhash.c:577
 #2  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405e20) at /home/tyler/json-c/json_object.c:526
 #3  0x00007ffff7fae3e4 in json_object_put (jso=0x405e20) at /home/tyler/json-c/json_object.c:300
-#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405bc8) at /home/tyler/json-c/json_object.c:521
+#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405bf0) at /home/tyler/json-c/json_object.c:521
 #5  0x00007ffff7fb72ff in lh_table_free (t=0x405ac0) at /home/tyler/json-c/linkhash.c:574
 #6  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405a80) at /home/tyler/json-c/json_object.c:526
 #7  0x00007ffff7fae3e4 in json_object_put (jso=0x405a80) at /home/tyler/json-c/json_object.c:300
-#8  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4059d8) at /home/tyler/json-c/json_object.c:521
+#8  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405a00) at /home/tyler/json-c/json_object.c:521
 #9  0x00007ffff7fb72ff in lh_table_free (t=0x405790) at /home/tyler/json-c/linkhash.c:574
 #10 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405750) at /home/tyler/json-c/json_object.c:526
 #11 0x00007ffff7fae3e4 in json_object_put (jso=0x405750) at /home/tyler/json-c/json_object.c:300
@@ -1891,11 +1940,11 @@ Breakpoint 6.1, __GI___libc_free (mem=0x405e20) at malloc.c:3359
 #1  0x00007ffff7fae43e in json_object_generic_delete (jso=0x405e20) at /home/tyler/json-c/json_object.c:313
 #2  0x00007ffff7faebe9 in json_object_object_delete (jso_base=0x405e20) at /home/tyler/json-c/json_object.c:527
 #3  0x00007ffff7fae3e4 in json_object_put (jso=0x405e20) at /home/tyler/json-c/json_object.c:300
-#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405bc8) at /home/tyler/json-c/json_object.c:521
+#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405bf0) at /home/tyler/json-c/json_object.c:521
 #5  0x00007ffff7fb72ff in lh_table_free (t=0x405ac0) at /home/tyler/json-c/linkhash.c:574
 #6  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405a80) at /home/tyler/json-c/json_object.c:526
 #7  0x00007ffff7fae3e4 in json_object_put (jso=0x405a80) at /home/tyler/json-c/json_object.c:300
-#8  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4059d8) at /home/tyler/json-c/json_object.c:521
+#8  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405a00) at /home/tyler/json-c/json_object.c:521
 #9  0x00007ffff7fb72ff in lh_table_free (t=0x405790) at /home/tyler/json-c/linkhash.c:574
 #10 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405750) at /home/tyler/json-c/json_object.c:526
 #11 0x00007ffff7fae3e4 in json_object_put (jso=0x405750) at /home/tyler/json-c/json_object.c:300
@@ -1908,7 +1957,7 @@ Breakpoint 6.1, __GI___libc_free (mem=0x405b00) at malloc.c:3359
 #1  0x00007ffff7fb7322 in lh_table_free (t=0x405ac0) at /home/tyler/json-c/linkhash.c:576
 #2  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405a80) at /home/tyler/json-c/json_object.c:526
 #3  0x00007ffff7fae3e4 in json_object_put (jso=0x405a80) at /home/tyler/json-c/json_object.c:300
-#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4059d8) at /home/tyler/json-c/json_object.c:521
+#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405a00) at /home/tyler/json-c/json_object.c:521
 #5  0x00007ffff7fb72ff in lh_table_free (t=0x405790) at /home/tyler/json-c/linkhash.c:574
 #6  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405750) at /home/tyler/json-c/json_object.c:526
 #7  0x00007ffff7fae3e4 in json_object_put (jso=0x405750) at /home/tyler/json-c/json_object.c:300
@@ -1921,7 +1970,7 @@ Breakpoint 6.1, __GI___libc_free (mem=0x405ac0) at malloc.c:3359
 #1  0x00007ffff7fb732e in lh_table_free (t=0x405ac0) at /home/tyler/json-c/linkhash.c:577
 #2  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405a80) at /home/tyler/json-c/json_object.c:526
 #3  0x00007ffff7fae3e4 in json_object_put (jso=0x405a80) at /home/tyler/json-c/json_object.c:300
-#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4059d8) at /home/tyler/json-c/json_object.c:521
+#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405a00) at /home/tyler/json-c/json_object.c:521
 #5  0x00007ffff7fb72ff in lh_table_free (t=0x405790) at /home/tyler/json-c/linkhash.c:574
 #6  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405750) at /home/tyler/json-c/json_object.c:526
 #7  0x00007ffff7fae3e4 in json_object_put (jso=0x405750) at /home/tyler/json-c/json_object.c:300
@@ -1934,7 +1983,7 @@ Breakpoint 6.1, __GI___libc_free (mem=0x405a80) at malloc.c:3359
 #1  0x00007ffff7fae43e in json_object_generic_delete (jso=0x405a80) at /home/tyler/json-c/json_object.c:313
 #2  0x00007ffff7faebe9 in json_object_object_delete (jso_base=0x405a80) at /home/tyler/json-c/json_object.c:527
 #3  0x00007ffff7fae3e4 in json_object_put (jso=0x405a80) at /home/tyler/json-c/json_object.c:300
-#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x4059d8) at /home/tyler/json-c/json_object.c:521
+#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x405a00) at /home/tyler/json-c/json_object.c:521
 #5  0x00007ffff7fb72ff in lh_table_free (t=0x405790) at /home/tyler/json-c/linkhash.c:574
 #6  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x405750) at /home/tyler/json-c/json_object.c:526
 #7  0x00007ffff7fae3e4 in json_object_put (jso=0x405750) at /home/tyler/json-c/json_object.c:300
@@ -1967,4 +2016,5 @@ Breakpoint 6.1, __GI___libc_free (mem=0x405750) at malloc.c:3359
 #3  0x00007ffff7fae3e4 in json_object_put (jso=0x405750) at /home/tyler/json-c/json_object.c:300
 #4  0x0000000000401164 in main (argc=1, argv=0x7fffffffe048) at /home/tyler/json-c/tests/test2.c:39
 free 0x405750
-[Inferior 1 (process 2191444) exited normally]
+[Inferior 1 (process 2225237) exited normally]
+quit
