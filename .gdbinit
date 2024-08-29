@@ -6,8 +6,5 @@ define watch_obj_field_name
   end
 end
 
-# watch_mem
-# watch_obj_field_name
-# break main
-# next
-# run
+break main
+break test2.c:41

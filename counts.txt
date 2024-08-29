@@ -1,14 +1,13 @@
 - inbalanced -------------------------------------------------------------------
-0x405a80 {'malloc': 1, 'reallo': 0, 'free': 0, 'calloc': 0, 'realla': 0}
 - invalid ----------------------------------------------------------------------
 0x0 {'malloc': 0, 'reallo': 0, 'free': 35, 'calloc': 0, 'realla': 0}
-0x4061a0 {'malloc': 1, 'reallo': 0, 'free': 3, 'calloc': 0, 'realla': 0}
-0x406540 {'malloc': 1, 'reallo': 0, 'free': 3, 'calloc': 0, 'realla': 0}
-0x406a60 {'malloc': 1, 'reallo': 0, 'free': 8, 'calloc': 0, 'realla': 0}
-0x406b60 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0}
-0x406d10 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0}
+0x405d90 {'malloc': 1, 'reallo': 0, 'free': 3, 'calloc': 0, 'realla': 0}
+0x406130 {'malloc': 1, 'reallo': 0, 'free': 3, 'calloc': 0, 'realla': 0}
+0x406650 {'malloc': 1, 'reallo': 0, 'free': 8, 'calloc': 0, 'realla': 0}
+0x406750 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0}
+0x406900 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0}
 - realloc'ed -------------------------------------------------------------------
-0x406640 {'malloc': 1, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0}
-0x406b60 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0}
-0x406d10 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0}
-0x406e90 {'malloc': 1, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0}
+0x406230 {'malloc': 1, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0}
+0x406750 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0}
+0x406900 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0}
+0x406a80 {'malloc': 1, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0}
