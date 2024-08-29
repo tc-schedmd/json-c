@@ -7,4 +7,4 @@ define watch_obj_field_name
 end
 
 break main
-break test2.c:41
+break test2.c:43
