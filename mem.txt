@@ -2,7 +2,7 @@ Hardware assisted breakpoint 3 at 0x7ffff7d65f82: file malloc.c, line 3329.
 Hardware assisted breakpoint 4 at 0x7ffff7d6607f: file malloc.c, line 3351.
 Hardware assisted breakpoint 5 at 0x7ffff7d670c3: file malloc.c, line 3808.
 Hardware assisted breakpoint 6 at 0x7ffff7d667d3: file malloc.c, line 3538.
-Breakpoint 7 at 0x7ffff7d664d0: free. (9 locations)
+Breakpoint 7 at 0x7ffff7d664d0: free. (7 locations)
 Continuing.
 
 Breakpoint 5, __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
@@ -10,7 +10,7 @@ warning: Source file is more recent than executable.
 3809	  assert (nclears >= 3);
 #0  __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
 #1  0x00000000004013e7 in main (argc=3, argv=0x7fffffffe018) at /home/tyler/json-c/tests/test_multi_thread.c:57
-calloc 0x4052a0 16
+calloc 0x4052a0 8
 
 Breakpoint 5, __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
 3809	  assert (nclears >= 3);
@@ -22,18 +22,7 @@ Breakpoint 5, __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at ma
 #5  __pthread_create_2_1 (newthread=<optimized out>, attr=<optimized out>, start_routine=<optimized out>, arg=<optimized out>) at pthread_create.c:655
 #6  0x0000000000401424 in main (argc=3, argv=0x7fffffffe018) at /home/tyler/json-c/tests/test_multi_thread.c:60
 calloc 0x4052c0 288
-
-Thread 1 "test_multi_thre" hit Breakpoint 5, __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
-3809	  assert (nclears >= 3);
-#0  __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
-#1  0x00007ffff7fd9fe4 in calloc (a=18, b=16) at ../include/rtld-malloc.h:44
-#2  allocate_dtv (result=result@entry=0x7ffff718f6c0) at ../elf/dl-tls.c:370
-#3  0x00007ffff7fdaa72 in __GI__dl_allocate_tls (mem=mem@entry=0x7ffff718f6c0) at ../elf/dl-tls.c:629
-#4  0x00007ffff7d56234 in allocate_stack (attr=0x7fffffffdde0, pdp=<synthetic pointer>, stack=<synthetic pointer>, stacksize=<synthetic pointer>) at /usr/src/debug/glibc-2.39-22.fc40.x86_64/nptl/allocatestack.c:429
-#5  __pthread_create_2_1 (newthread=<optimized out>, attr=<optimized out>, start_routine=<optimized out>, arg=<optimized out>) at pthread_create.c:655
-#6  0x0000000000401424 in main (argc=3, argv=0x7fffffffe018) at /home/tyler/json-c/tests/test_multi_thread.c:60
-calloc 0x4053f0 288
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
+[Switching to Thread 0x7ffff7b8f6c0 (LWP 1471199)]
 
 Thread 2 "test_multi_thre" hit Breakpoint 5, __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
 3809	  assert (nclears >= 3);
@@ -45,19 +34,6 @@ Thread 2 "test_multi_thre" hit Breakpoint 5, __libc_calloc (n=<optimized out>, e
 #5  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
 #6  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
 calloc 0x7ffff0000bb0 56
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 5, __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
-3809	  assert (nclears >= 3);
-#0  __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
-#1  0x00007ffff7fb7054 in lh_table_new (size=16, free_fn=0x7ffff7faeb72 <json_object_lh_entry_free>, hash_fn=0x7ffff7fb6f6c <lh_char_hash>, equal_fn=0x7ffff7fb6fd3 <lh_char_equal>) at /home/tyler/json-c/linkhash.c:505
-#2  0x00007ffff7fb714a in lh_kchar_table_new (size=16, free_fn=0x7ffff7faeb72 <json_object_lh_entry_free>) at /home/tyler/json-c/linkhash.c:527
-#3  0x00007ffff7faec33 in json_object_new_object () at /home/tyler/json-c/json_object.c:536
-#4  0x000000000040121f in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:22
-#5  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#6  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-calloc 0x7fffe8000bb0 56
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
 
 Thread 2 "test_multi_thre" hit Breakpoint 5, __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
 3809	  assert (nclears >= 3);
@@ -69,19 +45,6 @@ Thread 2 "test_multi_thre" hit Breakpoint 5, __libc_calloc (n=<optimized out>, e
 #5  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
 #6  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
 calloc 0x7ffff0000bf0 640
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 5, __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
-3809	  assert (nclears >= 3);
-#0  __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
-#1  0x00007ffff7fb708f in lh_table_new (size=16, free_fn=0x7ffff7faeb72 <json_object_lh_entry_free>, hash_fn=0x7ffff7fb6f6c <lh_char_hash>, equal_fn=0x7ffff7fb6fd3 <lh_char_equal>) at /home/tyler/json-c/linkhash.c:511
-#2  0x00007ffff7fb714a in lh_kchar_table_new (size=16, free_fn=0x7ffff7faeb72 <json_object_lh_entry_free>) at /home/tyler/json-c/linkhash.c:527
-#3  0x00007ffff7faec33 in json_object_new_object () at /home/tyler/json-c/json_object.c:536
-#4  0x000000000040121f in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:22
-#5  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#6  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-calloc 0x7fffe8000bf0 640
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
 
 Thread 2 "test_multi_thre" hit Breakpoint 5, __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
 3809	  assert (nclears >= 3);
@@ -93,19 +56,6 @@ Thread 2 "test_multi_thre" hit Breakpoint 5, __libc_calloc (n=<optimized out>, e
 #5  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
 #6  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
 calloc 0x7ffff0000ec0 56
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 5, __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
-3809	  assert (nclears >= 3);
-#0  __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
-#1  0x00007ffff7fb7054 in lh_table_new (size=16, free_fn=0x7ffff7faeb72 <json_object_lh_entry_free>, hash_fn=0x7ffff7fb6f6c <lh_char_hash>, equal_fn=0x7ffff7fb6fd3 <lh_char_equal>) at /home/tyler/json-c/linkhash.c:505
-#2  0x00007ffff7fb714a in lh_kchar_table_new (size=16, free_fn=0x7ffff7faeb72 <json_object_lh_entry_free>) at /home/tyler/json-c/linkhash.c:527
-#3  0x00007ffff7faec33 in json_object_new_object () at /home/tyler/json-c/json_object.c:536
-#4  0x0000000000401228 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:23
-#5  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#6  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-calloc 0x7fffe8000ec0 56
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
 
 Thread 2 "test_multi_thre" hit Breakpoint 5, __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
 3809	  assert (nclears >= 3);
@@ -117,19 +67,6 @@ Thread 2 "test_multi_thre" hit Breakpoint 5, __libc_calloc (n=<optimized out>, e
 #5  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
 #6  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
 calloc 0x7ffff0000f00 640
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 5, __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
-3809	  assert (nclears >= 3);
-#0  __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
-#1  0x00007ffff7fb708f in lh_table_new (size=16, free_fn=0x7ffff7faeb72 <json_object_lh_entry_free>, hash_fn=0x7ffff7fb6f6c <lh_char_hash>, equal_fn=0x7ffff7fb6fd3 <lh_char_equal>) at /home/tyler/json-c/linkhash.c:511
-#2  0x00007ffff7fb714a in lh_kchar_table_new (size=16, free_fn=0x7ffff7faeb72 <json_object_lh_entry_free>) at /home/tyler/json-c/linkhash.c:527
-#3  0x00007ffff7faec33 in json_object_new_object () at /home/tyler/json-c/json_object.c:536
-#4  0x0000000000401228 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:23
-#5  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#6  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-calloc 0x7fffe8000f00 640
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
 
 Thread 2 "test_multi_thre" hit Breakpoint 5, __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
 3809	  assert (nclears >= 3);
@@ -141,19 +78,6 @@ Thread 2 "test_multi_thre" hit Breakpoint 5, __libc_calloc (n=<optimized out>, e
 #5  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
 #6  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
 calloc 0x7ffff0001420 16
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 5, __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
-3809	  assert (nclears >= 3);
-#0  __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
-#1  0x00007ffff7fb7b89 in printbuf_new () at /home/tyler/json-c/printbuf.c:41
-#2  0x00007ffff7fae6f2 in json_object_to_json_string_length (jso=0x7fffe8000b70, flags=3, length=0x0) at /home/tyler/json-c/json_object.c:418
-#3  0x00007ffff7fae79c in json_object_to_json_string_ext (jso=0x7fffe8000b70, flags=3) at /home/tyler/json-c/json_object.c:436
-#4  0x0000000000401338 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:35
-#5  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#6  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-calloc 0x7fffe8001420 16
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
 
 Thread 2 "test_multi_thre" hit Breakpoint 6, 0x00007ffff7d667d3 in __GI___libc_realloc (oldmem=<optimized out>, bytes=<optimized out>) at malloc.c:3538
 3538	}
@@ -168,22 +92,6 @@ Thread 2 "test_multi_thre" hit Breakpoint 6, 0x00007ffff7d667d3 in __GI___libc_r
 #8  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
 #9  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
 reallo 0x7ffff0001440 0x1fba1 129921
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 6, 0x00007ffff7d667d3 in __GI___libc_realloc (oldmem=<optimized out>, bytes=<optimized out>) at malloc.c:3538
-3538	}
-#0  0x00007ffff7d667d3 in __GI___libc_realloc (oldmem=<optimized out>, bytes=<optimized out>) at malloc.c:3538
-#1  0x00007ffff7fb7c8c in printbuf_extend (p=0x7fffe8001420, min_size=33) at /home/tyler/json-c/printbuf.c:90
-#2  0x00007ffff7fb7e0e in printbuf_memset (pb=0x7fffe8001420, offset=31, charvalue=32, len=2) at /home/tyler/json-c/printbuf.c:131
-#3  0x00007ffff7fae81e in indent (pb=0x7fffe8001420, level=1, flags=3) at /home/tyler/json-c/json_object.c:456
-#4  0x00007ffff7fae909 in json_object_object_to_json_string (jso=0x7fffe8000b70, pb=0x7fffe8001420, level=0, flags=3) at /home/tyler/json-c/json_object.c:481
-#5  0x00007ffff7fae73b in json_object_to_json_string_length (jso=0x7fffe8000b70, flags=3, length=0x0) at /home/tyler/json-c/json_object.c:422
-#6  0x00007ffff7fae79c in json_object_to_json_string_ext (jso=0x7fffe8000b70, flags=3) at /home/tyler/json-c/json_object.c:436
-#7  0x0000000000401338 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:35
-#8  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#9  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-reallo 0x7fffe8001440 0x1fba1 129921
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
 
 Thread 2 "test_multi_thre" hit Breakpoint 6, 0x00007ffff7d667d3 in __GI___libc_realloc (oldmem=<optimized out>, bytes=<optimized out>) at malloc.c:3538
 3538	}
@@ -198,252 +106,10 @@ Thread 2 "test_multi_thre" hit Breakpoint 6, 0x00007ffff7d667d3 in __GI___libc_r
 #8  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
 #9  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
 reallo 0x7ffff0001440 0x1fb81 129857
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 6, 0x00007ffff7d667d3 in __GI___libc_realloc (oldmem=<optimized out>, bytes=<optimized out>) at malloc.c:3538
-3538	}
-#0  0x00007ffff7d667d3 in __GI___libc_realloc (oldmem=<optimized out>, bytes=<optimized out>) at malloc.c:3538
-#1  0x00007ffff7fb7c8c in printbuf_extend (p=0x7fffe8001420, min_size=65) at /home/tyler/json-c/printbuf.c:90
-#2  0x00007ffff7fb7d32 in printbuf_memappend (p=0x7fffe8001420, buf=0x7ffff7fba116 "true", size=4) at /home/tyler/json-c/printbuf.c:107
-#3  0x00007ffff7faf02e in json_object_boolean_to_json_string (jso=0x7fffe80012c0, pb=0x7fffe8001420, level=1, flags=3) at /home/tyler/json-c/json_object.c:655
-#4  0x00007ffff7faea85 in json_object_object_to_json_string (jso=0x7fffe8000b70, pb=0x7fffe8001420, level=0, flags=3) at /home/tyler/json-c/json_object.c:503
-#5  0x00007ffff7fae73b in json_object_to_json_string_length (jso=0x7fffe8000b70, flags=3, length=0x0) at /home/tyler/json-c/json_object.c:422
-#6  0x00007ffff7fae79c in json_object_to_json_string_ext (jso=0x7fffe8000b70, flags=3) at /home/tyler/json-c/json_object.c:436
-#7  0x0000000000401338 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:35
-#8  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#9  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-reallo 0x7fffe8001440 0x1fb81 129857
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
 
 Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff00011d0) at malloc.c:3359
 3359	{
 #0  __GI___libc_free (mem=0x7ffff00011d0) at malloc.c:3359
-#1  0x00007ffff7faeba2 in json_object_lh_entry_free (ent=0x7ffff0000c68) at /home/tyler/json-c/json_object.c:520
-#2  0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff0000bb0) at /home/tyler/json-c/linkhash.c:572
-#3  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:526
-#4  0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:300
-#5  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#6  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#7  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7ffff00011d0
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe80011d0) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7fffe80011d0) at malloc.c:3359
-#1  0x00007ffff7faeba2 in json_object_lh_entry_free (ent=0x7fffe8000c68) at /home/tyler/json-c/json_object.c:520
-#2  0x00007ffff7fb72e7 in lh_table_free (t=0x7fffe8000bb0) at /home/tyler/json-c/linkhash.c:572
-#3  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:526
-#4  0x00007ffff7fae3e4 in json_object_put (jso=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:300
-#5  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#6  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#7  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe80011d0
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
-
-Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0001190) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7ffff0001190) at malloc.c:3359
-#1  0x00007ffff7fae43e in json_object_generic_delete (jso=0x7ffff0001190) at /home/tyler/json-c/json_object.c:313
-#2  0x00007ffff7fae40e in json_object_put (jso=0x7ffff0001190) at /home/tyler/json-c/json_object.c:303
-#3  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7ffff0000c68) at /home/tyler/json-c/json_object.c:521
-#4  0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff0000bb0) at /home/tyler/json-c/linkhash.c:572
-#5  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:526
-#6  0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:300
-#7  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#8  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#9  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7ffff0001190
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe8001190) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7fffe8001190) at malloc.c:3359
-#1  0x00007ffff7fae43e in json_object_generic_delete (jso=0x7fffe8001190) at /home/tyler/json-c/json_object.c:313
-#2  0x00007ffff7fae40e in json_object_put (jso=0x7fffe8001190) at /home/tyler/json-c/json_object.c:303
-#3  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7fffe8000c68) at /home/tyler/json-c/json_object.c:521
-#4  0x00007ffff7fb72e7 in lh_table_free (t=0x7fffe8000bb0) at /home/tyler/json-c/linkhash.c:572
-#5  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:526
-#6  0x00007ffff7fae3e4 in json_object_put (jso=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:300
-#7  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#8  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#9  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe8001190
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
-
-Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0001240) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7ffff0001240) at malloc.c:3359
-#1  0x00007ffff7faeba2 in json_object_lh_entry_free (ent=0x7ffff0000c40) at /home/tyler/json-c/json_object.c:520
-#2  0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff0000bb0) at /home/tyler/json-c/linkhash.c:572
-#3  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:526
-#4  0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:300
-#5  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#6  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#7  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7ffff0001240
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe8001240) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7fffe8001240) at malloc.c:3359
-#1  0x00007ffff7faeba2 in json_object_lh_entry_free (ent=0x7fffe8000c40) at /home/tyler/json-c/json_object.c:520
-#2  0x00007ffff7fb72e7 in lh_table_free (t=0x7fffe8000bb0) at /home/tyler/json-c/linkhash.c:572
-#3  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:526
-#4  0x00007ffff7fae3e4 in json_object_put (jso=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:300
-#5  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#6  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#7  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe8001240
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
-
-Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff00011f0) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7ffff00011f0) at malloc.c:3359
-#1  0x00007ffff7fae43e in json_object_generic_delete (jso=0x7ffff00011f0) at /home/tyler/json-c/json_object.c:313
-#2  0x00007ffff7fb0580 in json_object_string_delete (jso=0x7ffff00011f0) at /home/tyler/json-c/json_object.c:1263
-#3  0x00007ffff7fae400 in json_object_put (jso=0x7ffff00011f0) at /home/tyler/json-c/json_object.c:302
-#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7ffff0000c40) at /home/tyler/json-c/json_object.c:521
-#5  0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff0000bb0) at /home/tyler/json-c/linkhash.c:572
-#6  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:526
-#7  0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:300
-#8  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#9  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#10 0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7ffff00011f0
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe80011f0) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7fffe80011f0) at malloc.c:3359
-#1  0x00007ffff7fae43e in json_object_generic_delete (jso=0x7fffe80011f0) at /home/tyler/json-c/json_object.c:313
-#2  0x00007ffff7fb0580 in json_object_string_delete (jso=0x7fffe80011f0) at /home/tyler/json-c/json_object.c:1263
-#3  0x00007ffff7fae400 in json_object_put (jso=0x7fffe80011f0) at /home/tyler/json-c/json_object.c:302
-#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7fffe8000c40) at /home/tyler/json-c/json_object.c:521
-#5  0x00007ffff7fb72e7 in lh_table_free (t=0x7fffe8000bb0) at /home/tyler/json-c/linkhash.c:572
-#6  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:526
-#7  0x00007ffff7fae3e4 in json_object_put (jso=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:300
-#8  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#9  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#10 0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe80011f0
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
-
-Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff00012a0) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7ffff00012a0) at malloc.c:3359
-#1  0x00007ffff7faeba2 in json_object_lh_entry_free (ent=0x7ffff0000da8) at /home/tyler/json-c/json_object.c:520
-#2  0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff0000bb0) at /home/tyler/json-c/linkhash.c:572
-#3  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:526
-#4  0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:300
-#5  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#6  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#7  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7ffff00012a0
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe80012a0) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7fffe80012a0) at malloc.c:3359
-#1  0x00007ffff7faeba2 in json_object_lh_entry_free (ent=0x7fffe8000da8) at /home/tyler/json-c/json_object.c:520
-#2  0x00007ffff7fb72e7 in lh_table_free (t=0x7fffe8000bb0) at /home/tyler/json-c/linkhash.c:572
-#3  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:526
-#4  0x00007ffff7fae3e4 in json_object_put (jso=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:300
-#5  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#6  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#7  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe80012a0
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
-
-Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0001260) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7ffff0001260) at malloc.c:3359
-#1  0x00007ffff7fae43e in json_object_generic_delete (jso=0x7ffff0001260) at /home/tyler/json-c/json_object.c:313
-#2  0x00007ffff7fae40e in json_object_put (jso=0x7ffff0001260) at /home/tyler/json-c/json_object.c:303
-#3  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7ffff0000da8) at /home/tyler/json-c/json_object.c:521
-#4  0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff0000bb0) at /home/tyler/json-c/linkhash.c:572
-#5  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:526
-#6  0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:300
-#7  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#8  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#9  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7ffff0001260
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe8001260) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7fffe8001260) at malloc.c:3359
-#1  0x00007ffff7fae43e in json_object_generic_delete (jso=0x7fffe8001260) at /home/tyler/json-c/json_object.c:313
-#2  0x00007ffff7fae40e in json_object_put (jso=0x7fffe8001260) at /home/tyler/json-c/json_object.c:303
-#3  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7fffe8000da8) at /home/tyler/json-c/json_object.c:521
-#4  0x00007ffff7fb72e7 in lh_table_free (t=0x7fffe8000bb0) at /home/tyler/json-c/linkhash.c:572
-#5  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:526
-#6  0x00007ffff7fae3e4 in json_object_put (jso=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:300
-#7  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#8  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#9  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe8001260
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
-
-Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0001300) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7ffff0001300) at malloc.c:3359
-#1  0x00007ffff7faeba2 in json_object_lh_entry_free (ent=0x7ffff0000c90) at /home/tyler/json-c/json_object.c:520
-#2  0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff0000bb0) at /home/tyler/json-c/linkhash.c:572
-#3  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:526
-#4  0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:300
-#5  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#6  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#7  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7ffff0001300
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe8001300) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7fffe8001300) at malloc.c:3359
-#1  0x00007ffff7faeba2 in json_object_lh_entry_free (ent=0x7fffe8000c90) at /home/tyler/json-c/json_object.c:520
-#2  0x00007ffff7fb72e7 in lh_table_free (t=0x7fffe8000bb0) at /home/tyler/json-c/linkhash.c:572
-#3  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:526
-#4  0x00007ffff7fae3e4 in json_object_put (jso=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:300
-#5  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#6  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#7  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe8001300
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
-
-Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff00012c0) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7ffff00012c0) at malloc.c:3359
-#1  0x00007ffff7fae43e in json_object_generic_delete (jso=0x7ffff00012c0) at /home/tyler/json-c/json_object.c:313
-#2  0x00007ffff7fae40e in json_object_put (jso=0x7ffff00012c0) at /home/tyler/json-c/json_object.c:303
-#3  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7ffff0000c90) at /home/tyler/json-c/json_object.c:521
-#4  0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff0000bb0) at /home/tyler/json-c/linkhash.c:572
-#5  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:526
-#6  0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:300
-#7  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#8  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#9  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7ffff00012c0
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe80012c0) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7fffe80012c0) at malloc.c:3359
-#1  0x00007ffff7fae43e in json_object_generic_delete (jso=0x7fffe80012c0) at /home/tyler/json-c/json_object.c:313
-#2  0x00007ffff7fae40e in json_object_put (jso=0x7fffe80012c0) at /home/tyler/json-c/json_object.c:303
-#3  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7fffe8000c90) at /home/tyler/json-c/json_object.c:521
-#4  0x00007ffff7fb72e7 in lh_table_free (t=0x7fffe8000bb0) at /home/tyler/json-c/linkhash.c:572
-#5  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:526
-#6  0x00007ffff7fae3e4 in json_object_put (jso=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:300
-#7  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#8  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#9  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe80012c0
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
-
-Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0001370) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7ffff0001370) at malloc.c:3359
 #1  0x00007ffff7faeba2 in json_object_lh_entry_free (ent=0x7ffff0000d30) at /home/tyler/json-c/json_object.c:520
 #2  0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff0000bb0) at /home/tyler/json-c/linkhash.c:572
 #3  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:526
@@ -451,21 +117,112 @@ Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0001
 #5  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
 #6  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
 #7  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7ffff0001370
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
+free 0x7ffff00011d0
 
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe8001370) at malloc.c:3359
+Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0001190) at malloc.c:3359
 3359	{
-#0  __GI___libc_free (mem=0x7fffe8001370) at malloc.c:3359
-#1  0x00007ffff7faeba2 in json_object_lh_entry_free (ent=0x7fffe8000d30) at /home/tyler/json-c/json_object.c:520
-#2  0x00007ffff7fb72e7 in lh_table_free (t=0x7fffe8000bb0) at /home/tyler/json-c/linkhash.c:572
-#3  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:526
-#4  0x00007ffff7fae3e4 in json_object_put (jso=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:300
+#0  __GI___libc_free (mem=0x7ffff0001190) at malloc.c:3359
+#1  0x00007ffff7fae43e in json_object_generic_delete (jso=0x7ffff0001190) at /home/tyler/json-c/json_object.c:313
+#2  0x00007ffff7fae40e in json_object_put (jso=0x7ffff0001190) at /home/tyler/json-c/json_object.c:303
+#3  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7ffff0000d30) at /home/tyler/json-c/json_object.c:521
+#4  0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff0000bb0) at /home/tyler/json-c/linkhash.c:572
+#5  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:526
+#6  0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:300
+#7  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
+#8  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
+#9  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+free 0x7ffff0001190
+
+Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0001240) at malloc.c:3359
+3359	{
+#0  __GI___libc_free (mem=0x7ffff0001240) at malloc.c:3359
+#1  0x00007ffff7faeba2 in json_object_lh_entry_free (ent=0x7ffff0000d58) at /home/tyler/json-c/json_object.c:520
+#2  0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff0000bb0) at /home/tyler/json-c/linkhash.c:572
+#3  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:526
+#4  0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:300
 #5  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
 #6  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
 #7  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe8001370
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
+free 0x7ffff0001240
+
+Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff00011f0) at malloc.c:3359
+3359	{
+#0  __GI___libc_free (mem=0x7ffff00011f0) at malloc.c:3359
+#1  0x00007ffff7fae43e in json_object_generic_delete (jso=0x7ffff00011f0) at /home/tyler/json-c/json_object.c:313
+#2  0x00007ffff7fb0580 in json_object_string_delete (jso=0x7ffff00011f0) at /home/tyler/json-c/json_object.c:1263
+#3  0x00007ffff7fae400 in json_object_put (jso=0x7ffff00011f0) at /home/tyler/json-c/json_object.c:302
+#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7ffff0000d58) at /home/tyler/json-c/json_object.c:521
+#5  0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff0000bb0) at /home/tyler/json-c/linkhash.c:572
+#6  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:526
+#7  0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:300
+#8  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
+#9  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
+#10 0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+free 0x7ffff00011f0
+
+Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff00012a0) at malloc.c:3359
+3359	{
+#0  __GI___libc_free (mem=0x7ffff00012a0) at malloc.c:3359
+#1  0x00007ffff7faeba2 in json_object_lh_entry_free (ent=0x7ffff0000cb8) at /home/tyler/json-c/json_object.c:520
+#2  0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff0000bb0) at /home/tyler/json-c/linkhash.c:572
+#3  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:526
+#4  0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:300
+#5  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
+#6  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
+#7  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+free 0x7ffff00012a0
+
+Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0001260) at malloc.c:3359
+3359	{
+#0  __GI___libc_free (mem=0x7ffff0001260) at malloc.c:3359
+#1  0x00007ffff7fae43e in json_object_generic_delete (jso=0x7ffff0001260) at /home/tyler/json-c/json_object.c:313
+#2  0x00007ffff7fae40e in json_object_put (jso=0x7ffff0001260) at /home/tyler/json-c/json_object.c:303
+#3  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7ffff0000cb8) at /home/tyler/json-c/json_object.c:521
+#4  0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff0000bb0) at /home/tyler/json-c/linkhash.c:572
+#5  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:526
+#6  0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:300
+#7  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
+#8  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
+#9  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+free 0x7ffff0001260
+
+Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0001300) at malloc.c:3359
+3359	{
+#0  __GI___libc_free (mem=0x7ffff0001300) at malloc.c:3359
+#1  0x00007ffff7faeba2 in json_object_lh_entry_free (ent=0x7ffff0000da8) at /home/tyler/json-c/json_object.c:520
+#2  0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff0000bb0) at /home/tyler/json-c/linkhash.c:572
+#3  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:526
+#4  0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:300
+#5  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
+#6  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
+#7  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+free 0x7ffff0001300
+
+Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff00012c0) at malloc.c:3359
+3359	{
+#0  __GI___libc_free (mem=0x7ffff00012c0) at malloc.c:3359
+#1  0x00007ffff7fae43e in json_object_generic_delete (jso=0x7ffff00012c0) at /home/tyler/json-c/json_object.c:313
+#2  0x00007ffff7fae40e in json_object_put (jso=0x7ffff00012c0) at /home/tyler/json-c/json_object.c:303
+#3  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7ffff0000da8) at /home/tyler/json-c/json_object.c:521
+#4  0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff0000bb0) at /home/tyler/json-c/linkhash.c:572
+#5  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:526
+#6  0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:300
+#7  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
+#8  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
+#9  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+free 0x7ffff00012c0
+
+Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0001370) at malloc.c:3359
+3359	{
+#0  __GI___libc_free (mem=0x7ffff0001370) at malloc.c:3359
+#1  0x00007ffff7faeba2 in json_object_lh_entry_free (ent=0x7ffff0000c40) at /home/tyler/json-c/json_object.c:520
+#2  0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff0000bb0) at /home/tyler/json-c/linkhash.c:572
+#3  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:526
+#4  0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:300
+#5  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
+#6  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
+#7  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+free 0x7ffff0001370
 
 Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0001320) at malloc.c:3359
 3359	{
@@ -473,7 +230,7 @@ Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0001
 #1  0x00007ffff7fae43e in json_object_generic_delete (jso=0x7ffff0001320) at /home/tyler/json-c/json_object.c:313
 #2  0x00007ffff7fb0580 in json_object_string_delete (jso=0x7ffff0001320) at /home/tyler/json-c/json_object.c:1263
 #3  0x00007ffff7fae400 in json_object_put (jso=0x7ffff0001320) at /home/tyler/json-c/json_object.c:302
-#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7ffff0000d30) at /home/tyler/json-c/json_object.c:521
+#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7ffff0000c40) at /home/tyler/json-c/json_object.c:521
 #5  0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff0000bb0) at /home/tyler/json-c/linkhash.c:572
 #6  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:526
 #7  0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:300
@@ -481,28 +238,11 @@ Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0001
 #9  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
 #10 0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
 free 0x7ffff0001320
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe8001320) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7fffe8001320) at malloc.c:3359
-#1  0x00007ffff7fae43e in json_object_generic_delete (jso=0x7fffe8001320) at /home/tyler/json-c/json_object.c:313
-#2  0x00007ffff7fb0580 in json_object_string_delete (jso=0x7fffe8001320) at /home/tyler/json-c/json_object.c:1263
-#3  0x00007ffff7fae400 in json_object_put (jso=0x7fffe8001320) at /home/tyler/json-c/json_object.c:302
-#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7fffe8000d30) at /home/tyler/json-c/json_object.c:521
-#5  0x00007ffff7fb72e7 in lh_table_free (t=0x7fffe8000bb0) at /home/tyler/json-c/linkhash.c:572
-#6  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:526
-#7  0x00007ffff7fae3e4 in json_object_put (jso=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:300
-#8  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#9  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#10 0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe8001320
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
 
 Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0001400) at malloc.c:3359
 3359	{
 #0  __GI___libc_free (mem=0x7ffff0001400) at malloc.c:3359
-#1  0x00007ffff7faeba2 in json_object_lh_entry_free (ent=0x7ffff0000e48) at /home/tyler/json-c/json_object.c:520
+#1  0x00007ffff7faeba2 in json_object_lh_entry_free (ent=0x7ffff0000c68) at /home/tyler/json-c/json_object.c:520
 #2  0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff0000bb0) at /home/tyler/json-c/linkhash.c:572
 #3  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:526
 #4  0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:300
@@ -510,29 +250,15 @@ Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0001
 #6  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
 #7  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
 free 0x7ffff0001400
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe8001400) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7fffe8001400) at malloc.c:3359
-#1  0x00007ffff7faeba2 in json_object_lh_entry_free (ent=0x7fffe8000e48) at /home/tyler/json-c/json_object.c:520
-#2  0x00007ffff7fb72e7 in lh_table_free (t=0x7fffe8000bb0) at /home/tyler/json-c/linkhash.c:572
-#3  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:526
-#4  0x00007ffff7fae3e4 in json_object_put (jso=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:300
-#5  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#6  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#7  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe8001400
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
 
 Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff00013e0) at malloc.c:3359
 3359	{
 #0  __GI___libc_free (mem=0x7ffff00013e0) at malloc.c:3359
-#1  0x00007ffff7faeba2 in json_object_lh_entry_free (ent=0x7ffff0001068) at /home/tyler/json-c/json_object.c:520
+#1  0x00007ffff7faeba2 in json_object_lh_entry_free (ent=0x7ffff0001108) at /home/tyler/json-c/json_object.c:520
 #2  0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff0000ec0) at /home/tyler/json-c/linkhash.c:572
 #3  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0000e80) at /home/tyler/json-c/json_object.c:526
 #4  0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0000e80) at /home/tyler/json-c/json_object.c:300
-#5  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7ffff0000e48) at /home/tyler/json-c/json_object.c:521
+#5  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7ffff0000c68) at /home/tyler/json-c/json_object.c:521
 #6  0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff0000bb0) at /home/tyler/json-c/linkhash.c:572
 #7  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:526
 #8  0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:300
@@ -540,43 +266,6 @@ Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0001
 #10 0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
 #11 0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
 free 0x7ffff00013e0
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe80013e0) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7fffe80013e0) at malloc.c:3359
-#1  0x00007ffff7faeba2 in json_object_lh_entry_free (ent=0x7fffe8001068) at /home/tyler/json-c/json_object.c:520
-#2  0x00007ffff7fb72e7 in lh_table_free (t=0x7fffe8000ec0) at /home/tyler/json-c/linkhash.c:572
-#3  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7fffe8000e80) at /home/tyler/json-c/json_object.c:526
-#4  0x00007ffff7fae3e4 in json_object_put (jso=0x7fffe8000e80) at /home/tyler/json-c/json_object.c:300
-#5  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7fffe8000e48) at /home/tyler/json-c/json_object.c:521
-#6  0x00007ffff7fb72e7 in lh_table_free (t=0x7fffe8000bb0) at /home/tyler/json-c/linkhash.c:572
-#7  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:526
-#8  0x00007ffff7fae3e4 in json_object_put (jso=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:300
-#9  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#10 0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#11 0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe80013e0
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe8001390) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7fffe8001390) at malloc.c:3359
-#1  0x00007ffff7fae43e in json_object_generic_delete (jso=0x7fffe8001390) at /home/tyler/json-c/json_object.c:313
-#2  0x00007ffff7fb0580 in json_object_string_delete (jso=0x7fffe8001390) at /home/tyler/json-c/json_object.c:1263
-#3  0x00007ffff7fae400 in json_object_put (jso=0x7fffe8001390) at /home/tyler/json-c/json_object.c:302
-#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7fffe8001068) at /home/tyler/json-c/json_object.c:521
-#5  0x00007ffff7fb72e7 in lh_table_free (t=0x7fffe8000ec0) at /home/tyler/json-c/linkhash.c:572
-#6  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7fffe8000e80) at /home/tyler/json-c/json_object.c:526
-#7  0x00007ffff7fae3e4 in json_object_put (jso=0x7fffe8000e80) at /home/tyler/json-c/json_object.c:300
-#8  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7fffe8000e48) at /home/tyler/json-c/json_object.c:521
-#9  0x00007ffff7fb72e7 in lh_table_free (t=0x7fffe8000bb0) at /home/tyler/json-c/linkhash.c:572
-#10 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:526
-#11 0x00007ffff7fae3e4 in json_object_put (jso=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:300
-#12 0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#13 0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#14 0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe8001390
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
 
 Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0001390) at malloc.c:3359
 3359	{
@@ -584,11 +273,11 @@ Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0001
 #1  0x00007ffff7fae43e in json_object_generic_delete (jso=0x7ffff0001390) at /home/tyler/json-c/json_object.c:313
 #2  0x00007ffff7fb0580 in json_object_string_delete (jso=0x7ffff0001390) at /home/tyler/json-c/json_object.c:1263
 #3  0x00007ffff7fae400 in json_object_put (jso=0x7ffff0001390) at /home/tyler/json-c/json_object.c:302
-#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7ffff0001068) at /home/tyler/json-c/json_object.c:521
+#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7ffff0001108) at /home/tyler/json-c/json_object.c:521
 #5  0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff0000ec0) at /home/tyler/json-c/linkhash.c:572
 #6  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0000e80) at /home/tyler/json-c/json_object.c:526
 #7  0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0000e80) at /home/tyler/json-c/json_object.c:300
-#8  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7ffff0000e48) at /home/tyler/json-c/json_object.c:521
+#8  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7ffff0000c68) at /home/tyler/json-c/json_object.c:521
 #9  0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff0000bb0) at /home/tyler/json-c/linkhash.c:572
 #10 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:526
 #11 0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:300
@@ -596,23 +285,6 @@ Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0001
 #13 0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
 #14 0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
 free 0x7ffff0001390
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe8000f00) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7fffe8000f00) at malloc.c:3359
-#1  0x00007ffff7fb730a in lh_table_free (t=0x7fffe8000ec0) at /home/tyler/json-c/linkhash.c:574
-#2  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7fffe8000e80) at /home/tyler/json-c/json_object.c:526
-#3  0x00007ffff7fae3e4 in json_object_put (jso=0x7fffe8000e80) at /home/tyler/json-c/json_object.c:300
-#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7fffe8000e48) at /home/tyler/json-c/json_object.c:521
-#5  0x00007ffff7fb72e7 in lh_table_free (t=0x7fffe8000bb0) at /home/tyler/json-c/linkhash.c:572
-#6  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:526
-#7  0x00007ffff7fae3e4 in json_object_put (jso=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:300
-#8  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#9  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#10 0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe8000f00
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
 
 Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0000f00) at malloc.c:3359
 3359	{
@@ -620,7 +292,7 @@ Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0000
 #1  0x00007ffff7fb730a in lh_table_free (t=0x7ffff0000ec0) at /home/tyler/json-c/linkhash.c:574
 #2  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0000e80) at /home/tyler/json-c/json_object.c:526
 #3  0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0000e80) at /home/tyler/json-c/json_object.c:300
-#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7ffff0000e48) at /home/tyler/json-c/json_object.c:521
+#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7ffff0000c68) at /home/tyler/json-c/json_object.c:521
 #5  0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff0000bb0) at /home/tyler/json-c/linkhash.c:572
 #6  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:526
 #7  0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:300
@@ -628,23 +300,6 @@ Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0000
 #9  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
 #10 0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
 free 0x7ffff0000f00
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe8000ec0) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7fffe8000ec0) at malloc.c:3359
-#1  0x00007ffff7fb7316 in lh_table_free (t=0x7fffe8000ec0) at /home/tyler/json-c/linkhash.c:575
-#2  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7fffe8000e80) at /home/tyler/json-c/json_object.c:526
-#3  0x00007ffff7fae3e4 in json_object_put (jso=0x7fffe8000e80) at /home/tyler/json-c/json_object.c:300
-#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7fffe8000e48) at /home/tyler/json-c/json_object.c:521
-#5  0x00007ffff7fb72e7 in lh_table_free (t=0x7fffe8000bb0) at /home/tyler/json-c/linkhash.c:572
-#6  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:526
-#7  0x00007ffff7fae3e4 in json_object_put (jso=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:300
-#8  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#9  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#10 0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe8000ec0
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
 
 Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0000ec0) at malloc.c:3359
 3359	{
@@ -652,7 +307,7 @@ Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0000
 #1  0x00007ffff7fb7316 in lh_table_free (t=0x7ffff0000ec0) at /home/tyler/json-c/linkhash.c:575
 #2  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0000e80) at /home/tyler/json-c/json_object.c:526
 #3  0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0000e80) at /home/tyler/json-c/json_object.c:300
-#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7ffff0000e48) at /home/tyler/json-c/json_object.c:521
+#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7ffff0000c68) at /home/tyler/json-c/json_object.c:521
 #5  0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff0000bb0) at /home/tyler/json-c/linkhash.c:572
 #6  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:526
 #7  0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:300
@@ -667,7 +322,7 @@ Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0000
 #1  0x00007ffff7fae43e in json_object_generic_delete (jso=0x7ffff0000e80) at /home/tyler/json-c/json_object.c:313
 #2  0x00007ffff7faebe9 in json_object_object_delete (jso_base=0x7ffff0000e80) at /home/tyler/json-c/json_object.c:527
 #3  0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0000e80) at /home/tyler/json-c/json_object.c:300
-#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7ffff0000e48) at /home/tyler/json-c/json_object.c:521
+#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7ffff0000c68) at /home/tyler/json-c/json_object.c:521
 #5  0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff0000bb0) at /home/tyler/json-c/linkhash.c:572
 #6  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:526
 #7  0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:300
@@ -675,23 +330,6 @@ Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0000
 #9  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
 #10 0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
 free 0x7ffff0000e80
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe8000e80) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7fffe8000e80) at malloc.c:3359
-#1  0x00007ffff7fae43e in json_object_generic_delete (jso=0x7fffe8000e80) at /home/tyler/json-c/json_object.c:313
-#2  0x00007ffff7faebe9 in json_object_object_delete (jso_base=0x7fffe8000e80) at /home/tyler/json-c/json_object.c:527
-#3  0x00007ffff7fae3e4 in json_object_put (jso=0x7fffe8000e80) at /home/tyler/json-c/json_object.c:300
-#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7fffe8000e48) at /home/tyler/json-c/json_object.c:521
-#5  0x00007ffff7fb72e7 in lh_table_free (t=0x7fffe8000bb0) at /home/tyler/json-c/linkhash.c:572
-#6  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:526
-#7  0x00007ffff7fae3e4 in json_object_put (jso=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:300
-#8  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#9  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#10 0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe8000e80
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
 
 Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0000bf0) at malloc.c:3359
 3359	{
@@ -703,19 +341,6 @@ Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0000
 #5  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
 #6  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
 free 0x7ffff0000bf0
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe8000bf0) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7fffe8000bf0) at malloc.c:3359
-#1  0x00007ffff7fb730a in lh_table_free (t=0x7fffe8000bb0) at /home/tyler/json-c/linkhash.c:574
-#2  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:526
-#3  0x00007ffff7fae3e4 in json_object_put (jso=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:300
-#4  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#5  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#6  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe8000bf0
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
 
 Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0000bb0) at malloc.c:3359
 3359	{
@@ -727,19 +352,6 @@ Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0000
 #5  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
 #6  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
 free 0x7ffff0000bb0
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe8000bb0) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7fffe8000bb0) at malloc.c:3359
-#1  0x00007ffff7fb7316 in lh_table_free (t=0x7fffe8000bb0) at /home/tyler/json-c/linkhash.c:575
-#2  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:526
-#3  0x00007ffff7fae3e4 in json_object_put (jso=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:300
-#4  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#5  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#6  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe8000bb0
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
 
 Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0001440) at malloc.c:3359
 3359	{
@@ -752,20 +364,6 @@ Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0001
 #6  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
 #7  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
 free 0x7ffff0001440
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe8001440) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7fffe8001440) at malloc.c:3359
-#1  0x00007ffff7fb8063 in printbuf_free (p=0x7fffe8001420) at /home/tyler/json-c/printbuf.c:189
-#2  0x00007ffff7fae432 in json_object_generic_delete (jso=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:312
-#3  0x00007ffff7faebe9 in json_object_object_delete (jso_base=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:527
-#4  0x00007ffff7fae3e4 in json_object_put (jso=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:300
-#5  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#6  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#7  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe8001440
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
 
 Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0001420) at malloc.c:3359
 3359	{
@@ -778,20 +376,6 @@ Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0001
 #6  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
 #7  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
 free 0x7ffff0001420
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe8001420) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7fffe8001420) at malloc.c:3359
-#1  0x00007ffff7fb806f in printbuf_free (p=0x7fffe8001420) at /home/tyler/json-c/printbuf.c:190
-#2  0x00007ffff7fae432 in json_object_generic_delete (jso=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:312
-#3  0x00007ffff7faebe9 in json_object_object_delete (jso_base=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:527
-#4  0x00007ffff7fae3e4 in json_object_put (jso=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:300
-#5  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#6  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#7  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe8001420
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
 
 Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0000b70) at malloc.c:3359
 3359	{
@@ -803,761 +387,8 @@ Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0000
 #5  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
 #6  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
 free 0x7ffff0000b70
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
 
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe8000b70) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7fffe8000b70) at malloc.c:3359
-#1  0x00007ffff7fae43e in json_object_generic_delete (jso=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:313
-#2  0x00007ffff7faebe9 in json_object_object_delete (jso_base=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:527
-#3  0x00007ffff7fae3e4 in json_object_put (jso=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:300
-#4  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#5  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#6  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe8000b70
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
-
-Thread 2 "test_multi_thre" hit Breakpoint 5, __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
-3809	  assert (nclears >= 3);
-#0  __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
-#1  0x00007ffff7fb7054 in lh_table_new (size=16, free_fn=0x7ffff7faeb72 <json_object_lh_entry_free>, hash_fn=0x7ffff7fb6f6c <lh_char_hash>, equal_fn=0x7ffff7fb6fd3 <lh_char_equal>) at /home/tyler/json-c/linkhash.c:505
-#2  0x00007ffff7fb714a in lh_kchar_table_new (size=16, free_fn=0x7ffff7faeb72 <json_object_lh_entry_free>) at /home/tyler/json-c/linkhash.c:527
-#3  0x00007ffff7faec33 in json_object_new_object () at /home/tyler/json-c/json_object.c:536
-#4  0x000000000040121f in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:22
-#5  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#6  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-calloc 0x7ffff00018e0 56
-
-Thread 2 "test_multi_thre" hit Breakpoint 5, __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
-3809	  assert (nclears >= 3);
-#0  __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
-#1  0x00007ffff7fb708f in lh_table_new (size=16, free_fn=0x7ffff7faeb72 <json_object_lh_entry_free>, hash_fn=0x7ffff7fb6f6c <lh_char_hash>, equal_fn=0x7ffff7fb6fd3 <lh_char_equal>) at /home/tyler/json-c/linkhash.c:511
-#2  0x00007ffff7fb714a in lh_kchar_table_new (size=16, free_fn=0x7ffff7faeb72 <json_object_lh_entry_free>) at /home/tyler/json-c/linkhash.c:527
-#3  0x00007ffff7faec33 in json_object_new_object () at /home/tyler/json-c/json_object.c:536
-#4  0x000000000040121f in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:22
-#5  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#6  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-calloc 0x7ffff0001920 640
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 5, __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
-3809	  assert (nclears >= 3);
-#0  __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
-#1  0x00007ffff7fb7054 in lh_table_new (size=16, free_fn=0x7ffff7faeb72 <json_object_lh_entry_free>, hash_fn=0x7ffff7fb6f6c <lh_char_hash>, equal_fn=0x7ffff7fb6fd3 <lh_char_equal>) at /home/tyler/json-c/linkhash.c:505
-#2  0x00007ffff7fb714a in lh_kchar_table_new (size=16, free_fn=0x7ffff7faeb72 <json_object_lh_entry_free>) at /home/tyler/json-c/linkhash.c:527
-#3  0x00007ffff7faec33 in json_object_new_object () at /home/tyler/json-c/json_object.c:536
-#4  0x000000000040121f in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:22
-#5  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#6  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-calloc 0x7fffe80014d0 56
-
-Thread 3 "test_multi_thre" hit Breakpoint 5, __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
-3809	  assert (nclears >= 3);
-#0  __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
-#1  0x00007ffff7fb708f in lh_table_new (size=16, free_fn=0x7ffff7faeb72 <json_object_lh_entry_free>, hash_fn=0x7ffff7fb6f6c <lh_char_hash>, equal_fn=0x7ffff7fb6fd3 <lh_char_equal>) at /home/tyler/json-c/linkhash.c:511
-#2  0x00007ffff7fb714a in lh_kchar_table_new (size=16, free_fn=0x7ffff7faeb72 <json_object_lh_entry_free>) at /home/tyler/json-c/linkhash.c:527
-#3  0x00007ffff7faec33 in json_object_new_object () at /home/tyler/json-c/json_object.c:536
-#4  0x000000000040121f in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:22
-#5  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#6  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-calloc 0x7fffe8001510 640
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
-
-Thread 2 "test_multi_thre" hit Breakpoint 5, __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
-3809	  assert (nclears >= 3);
-#0  __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
-#1  0x00007ffff7fb7054 in lh_table_new (size=16, free_fn=0x7ffff7faeb72 <json_object_lh_entry_free>, hash_fn=0x7ffff7fb6f6c <lh_char_hash>, equal_fn=0x7ffff7fb6fd3 <lh_char_equal>) at /home/tyler/json-c/linkhash.c:505
-#2  0x00007ffff7fb714a in lh_kchar_table_new (size=16, free_fn=0x7ffff7faeb72 <json_object_lh_entry_free>) at /home/tyler/json-c/linkhash.c:527
-#3  0x00007ffff7faec33 in json_object_new_object () at /home/tyler/json-c/json_object.c:536
-#4  0x0000000000401228 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:23
-#5  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#6  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-calloc 0x7ffff0001bb0 56
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 5, __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
-3809	  assert (nclears >= 3);
-#0  __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
-#1  0x00007ffff7fb7054 in lh_table_new (size=16, free_fn=0x7ffff7faeb72 <json_object_lh_entry_free>, hash_fn=0x7ffff7fb6f6c <lh_char_hash>, equal_fn=0x7ffff7fb6fd3 <lh_char_equal>) at /home/tyler/json-c/linkhash.c:505
-#2  0x00007ffff7fb714a in lh_kchar_table_new (size=16, free_fn=0x7ffff7faeb72 <json_object_lh_entry_free>) at /home/tyler/json-c/linkhash.c:527
-#3  0x00007ffff7faec33 in json_object_new_object () at /home/tyler/json-c/json_object.c:536
-#4  0x0000000000401228 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:23
-#5  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#6  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-calloc 0x7fffe80017a0 56
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
-
-Thread 2 "test_multi_thre" hit Breakpoint 5, __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
-3809	  assert (nclears >= 3);
-#0  __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
-#1  0x00007ffff7fb708f in lh_table_new (size=16, free_fn=0x7ffff7faeb72 <json_object_lh_entry_free>, hash_fn=0x7ffff7fb6f6c <lh_char_hash>, equal_fn=0x7ffff7fb6fd3 <lh_char_equal>) at /home/tyler/json-c/linkhash.c:511
-#2  0x00007ffff7fb714a in lh_kchar_table_new (size=16, free_fn=0x7ffff7faeb72 <json_object_lh_entry_free>) at /home/tyler/json-c/linkhash.c:527
-#3  0x00007ffff7faec33 in json_object_new_object () at /home/tyler/json-c/json_object.c:536
-#4  0x0000000000401228 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:23
-#5  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#6  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-calloc 0x7ffff0001bf0 640
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 5, __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
-3809	  assert (nclears >= 3);
-#0  __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
-#1  0x00007ffff7fb708f in lh_table_new (size=16, free_fn=0x7ffff7faeb72 <json_object_lh_entry_free>, hash_fn=0x7ffff7fb6f6c <lh_char_hash>, equal_fn=0x7ffff7fb6fd3 <lh_char_equal>) at /home/tyler/json-c/linkhash.c:511
-#2  0x00007ffff7fb714a in lh_kchar_table_new (size=16, free_fn=0x7ffff7faeb72 <json_object_lh_entry_free>) at /home/tyler/json-c/linkhash.c:527
-#3  0x00007ffff7faec33 in json_object_new_object () at /home/tyler/json-c/json_object.c:536
-#4  0x0000000000401228 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:23
-#5  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#6  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-calloc 0x7fffe80017e0 640
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
-
-Thread 2 "test_multi_thre" hit Breakpoint 5, __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
-3809	  assert (nclears >= 3);
-#0  __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
-#1  0x00007ffff7fb7b89 in printbuf_new () at /home/tyler/json-c/printbuf.c:41
-#2  0x00007ffff7fae6f2 in json_object_to_json_string_length (jso=0x7ffff0000b70, flags=3, length=0x0) at /home/tyler/json-c/json_object.c:418
-#3  0x00007ffff7fae79c in json_object_to_json_string_ext (jso=0x7ffff0000b70, flags=3) at /home/tyler/json-c/json_object.c:436
-#4  0x0000000000401338 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:35
-#5  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#6  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-calloc 0x7ffff0001420 16
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 5, __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
-3809	  assert (nclears >= 3);
-#0  __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
-#1  0x00007ffff7fb7b89 in printbuf_new () at /home/tyler/json-c/printbuf.c:41
-#2  0x00007ffff7fae6f2 in json_object_to_json_string_length (jso=0x7fffe8000b70, flags=3, length=0x0) at /home/tyler/json-c/json_object.c:418
-#3  0x00007ffff7fae79c in json_object_to_json_string_ext (jso=0x7fffe8000b70, flags=3) at /home/tyler/json-c/json_object.c:436
-#4  0x0000000000401338 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:35
-#5  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#6  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-calloc 0x7fffe8001420 16
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
-
-Thread 2 "test_multi_thre" hit Breakpoint 6, 0x00007ffff7d667d3 in __GI___libc_realloc (oldmem=<optimized out>, bytes=<optimized out>) at malloc.c:3538
-3538	}
-#0  0x00007ffff7d667d3 in __GI___libc_realloc (oldmem=<optimized out>, bytes=<optimized out>) at malloc.c:3538
-#1  0x00007ffff7fb7c8c in printbuf_extend (p=0x7ffff0001420, min_size=33) at /home/tyler/json-c/printbuf.c:90
-#2  0x00007ffff7fb7e0e in printbuf_memset (pb=0x7ffff0001420, offset=31, charvalue=32, len=2) at /home/tyler/json-c/printbuf.c:131
-#3  0x00007ffff7fae81e in indent (pb=0x7ffff0001420, level=1, flags=3) at /home/tyler/json-c/json_object.c:456
-#4  0x00007ffff7fae909 in json_object_object_to_json_string (jso=0x7ffff0000b70, pb=0x7ffff0001420, level=0, flags=3) at /home/tyler/json-c/json_object.c:481
-#5  0x00007ffff7fae73b in json_object_to_json_string_length (jso=0x7ffff0000b70, flags=3, length=0x0) at /home/tyler/json-c/json_object.c:422
-#6  0x00007ffff7fae79c in json_object_to_json_string_ext (jso=0x7ffff0000b70, flags=3) at /home/tyler/json-c/json_object.c:436
-#7  0x0000000000401338 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:35
-#8  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#9  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-reallo 0x7ffff0001e80 0x1f161 127297
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 6, 0x00007ffff7d667d3 in __GI___libc_realloc (oldmem=<optimized out>, bytes=<optimized out>) at malloc.c:3538
-3538	}
-#0  0x00007ffff7d667d3 in __GI___libc_realloc (oldmem=<optimized out>, bytes=<optimized out>) at malloc.c:3538
-#1  0x00007ffff7fb7c8c in printbuf_extend (p=0x7fffe8001420, min_size=33) at /home/tyler/json-c/printbuf.c:90
-#2  0x00007ffff7fb7e0e in printbuf_memset (pb=0x7fffe8001420, offset=31, charvalue=32, len=2) at /home/tyler/json-c/printbuf.c:131
-#3  0x00007ffff7fae81e in indent (pb=0x7fffe8001420, level=1, flags=3) at /home/tyler/json-c/json_object.c:456
-#4  0x00007ffff7fae909 in json_object_object_to_json_string (jso=0x7fffe8000b70, pb=0x7fffe8001420, level=0, flags=3) at /home/tyler/json-c/json_object.c:481
-#5  0x00007ffff7fae73b in json_object_to_json_string_length (jso=0x7fffe8000b70, flags=3, length=0x0) at /home/tyler/json-c/json_object.c:422
-#6  0x00007ffff7fae79c in json_object_to_json_string_ext (jso=0x7fffe8000b70, flags=3) at /home/tyler/json-c/json_object.c:436
-#7  0x0000000000401338 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:35
-#8  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#9  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-reallo 0x7fffe8001a70 0x1f571 128337
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
-
-Thread 2 "test_multi_thre" hit Breakpoint 6, 0x00007ffff7d667d3 in __GI___libc_realloc (oldmem=<optimized out>, bytes=<optimized out>) at malloc.c:3538
-3538	}
-#0  0x00007ffff7d667d3 in __GI___libc_realloc (oldmem=<optimized out>, bytes=<optimized out>) at malloc.c:3538
-#1  0x00007ffff7fb7c8c in printbuf_extend (p=0x7ffff0001420, min_size=65) at /home/tyler/json-c/printbuf.c:90
-#2  0x00007ffff7fb7d32 in printbuf_memappend (p=0x7ffff0001420, buf=0x7ffff7fba116 "true", size=4) at /home/tyler/json-c/printbuf.c:107
-#3  0x00007ffff7faf02e in json_object_boolean_to_json_string (jso=0x7ffff00012c0, pb=0x7ffff0001420, level=1, flags=3) at /home/tyler/json-c/json_object.c:655
-#4  0x00007ffff7faea85 in json_object_object_to_json_string (jso=0x7ffff0000b70, pb=0x7ffff0001420, level=0, flags=3) at /home/tyler/json-c/json_object.c:503
-#5  0x00007ffff7fae73b in json_object_to_json_string_length (jso=0x7ffff0000b70, flags=3, length=0x0) at /home/tyler/json-c/json_object.c:422
-#6  0x00007ffff7fae79c in json_object_to_json_string_ext (jso=0x7ffff0000b70, flags=3) at /home/tyler/json-c/json_object.c:436
-#7  0x0000000000401338 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:35
-#8  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#9  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-reallo 0x7ffff0001e80 0x1f141 127233
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 6, 0x00007ffff7d667d3 in __GI___libc_realloc (oldmem=<optimized out>, bytes=<optimized out>) at malloc.c:3538
-3538	}
-#0  0x00007ffff7d667d3 in __GI___libc_realloc (oldmem=<optimized out>, bytes=<optimized out>) at malloc.c:3538
-#1  0x00007ffff7fb7c8c in printbuf_extend (p=0x7fffe8001420, min_size=65) at /home/tyler/json-c/printbuf.c:90
-#2  0x00007ffff7fb7d32 in printbuf_memappend (p=0x7fffe8001420, buf=0x7ffff7fba116 "true", size=4) at /home/tyler/json-c/printbuf.c:107
-#3  0x00007ffff7faf02e in json_object_boolean_to_json_string (jso=0x7fffe80012c0, pb=0x7fffe8001420, level=1, flags=3) at /home/tyler/json-c/json_object.c:655
-#4  0x00007ffff7faea85 in json_object_object_to_json_string (jso=0x7fffe8000b70, pb=0x7fffe8001420, level=0, flags=3) at /home/tyler/json-c/json_object.c:503
-#5  0x00007ffff7fae73b in json_object_to_json_string_length (jso=0x7fffe8000b70, flags=3, length=0x0) at /home/tyler/json-c/json_object.c:422
-#6  0x00007ffff7fae79c in json_object_to_json_string_ext (jso=0x7fffe8000b70, flags=3) at /home/tyler/json-c/json_object.c:436
-#7  0x0000000000401338 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:35
-#8  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#9  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-reallo 0x7fffe8001a70 0x1f551 128273
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
-
-Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff00013e0) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7ffff00013e0) at malloc.c:3359
-#1  0x00007ffff7faeba2 in json_object_lh_entry_free (ent=0x7ffff0001998) at /home/tyler/json-c/json_object.c:520
-#2  0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff00018e0) at /home/tyler/json-c/linkhash.c:572
-#3  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:526
-#4  0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:300
-#5  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#6  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#7  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7ffff00013e0
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe80013e0) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7fffe80013e0) at malloc.c:3359
-#1  0x00007ffff7faeba2 in json_object_lh_entry_free (ent=0x7fffe8001588) at /home/tyler/json-c/json_object.c:520
-#2  0x00007ffff7fb72e7 in lh_table_free (t=0x7fffe80014d0) at /home/tyler/json-c/linkhash.c:572
-#3  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:526
-#4  0x00007ffff7fae3e4 in json_object_put (jso=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:300
-#5  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#6  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#7  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe80013e0
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
-
-Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0000e80) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7ffff0000e80) at malloc.c:3359
-#1  0x00007ffff7fae43e in json_object_generic_delete (jso=0x7ffff0000e80) at /home/tyler/json-c/json_object.c:313
-#2  0x00007ffff7fae40e in json_object_put (jso=0x7ffff0000e80) at /home/tyler/json-c/json_object.c:303
-#3  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7ffff0001998) at /home/tyler/json-c/json_object.c:521
-#4  0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff00018e0) at /home/tyler/json-c/linkhash.c:572
-#5  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:526
-#6  0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:300
-#7  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#8  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#9  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7ffff0000e80
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe8000e80) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7fffe8000e80) at malloc.c:3359
-#1  0x00007ffff7fae43e in json_object_generic_delete (jso=0x7fffe8000e80) at /home/tyler/json-c/json_object.c:313
-#2  0x00007ffff7fae40e in json_object_put (jso=0x7fffe8000e80) at /home/tyler/json-c/json_object.c:303
-#3  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7fffe8001588) at /home/tyler/json-c/json_object.c:521
-#4  0x00007ffff7fb72e7 in lh_table_free (t=0x7fffe80014d0) at /home/tyler/json-c/linkhash.c:572
-#5  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:526
-#6  0x00007ffff7fae3e4 in json_object_put (jso=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:300
-#7  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#8  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#9  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe8000e80
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
-
-Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0001400) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7ffff0001400) at malloc.c:3359
-#1  0x00007ffff7faeba2 in json_object_lh_entry_free (ent=0x7ffff0001970) at /home/tyler/json-c/json_object.c:520
-#2  0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff00018e0) at /home/tyler/json-c/linkhash.c:572
-#3  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:526
-#4  0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:300
-#5  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#6  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#7  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7ffff0001400
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe8001400) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7fffe8001400) at malloc.c:3359
-#1  0x00007ffff7faeba2 in json_object_lh_entry_free (ent=0x7fffe8001560) at /home/tyler/json-c/json_object.c:520
-#2  0x00007ffff7fb72e7 in lh_table_free (t=0x7fffe80014d0) at /home/tyler/json-c/linkhash.c:572
-#3  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:526
-#4  0x00007ffff7fae3e4 in json_object_put (jso=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:300
-#5  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#6  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#7  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe8001400
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe8001390) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7fffe8001390) at malloc.c:3359
-#1  0x00007ffff7fae43e in json_object_generic_delete (jso=0x7fffe8001390) at /home/tyler/json-c/json_object.c:313
-#2  0x00007ffff7fb0580 in json_object_string_delete (jso=0x7fffe8001390) at /home/tyler/json-c/json_object.c:1263
-#3  0x00007ffff7fae400 in json_object_put (jso=0x7fffe8001390) at /home/tyler/json-c/json_object.c:302
-#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7fffe8001560) at /home/tyler/json-c/json_object.c:521
-#5  0x00007ffff7fb72e7 in lh_table_free (t=0x7fffe80014d0) at /home/tyler/json-c/linkhash.c:572
-#6  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:526
-#7  0x00007ffff7fae3e4 in json_object_put (jso=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:300
-#8  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#9  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#10 0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe8001390
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
-
-Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0001390) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7ffff0001390) at malloc.c:3359
-#1  0x00007ffff7fae43e in json_object_generic_delete (jso=0x7ffff0001390) at /home/tyler/json-c/json_object.c:313
-#2  0x00007ffff7fb0580 in json_object_string_delete (jso=0x7ffff0001390) at /home/tyler/json-c/json_object.c:1263
-#3  0x00007ffff7fae400 in json_object_put (jso=0x7ffff0001390) at /home/tyler/json-c/json_object.c:302
-#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7ffff0001970) at /home/tyler/json-c/json_object.c:521
-#5  0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff00018e0) at /home/tyler/json-c/linkhash.c:572
-#6  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:526
-#7  0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:300
-#8  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#9  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#10 0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7ffff0001390
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe8001370) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7fffe8001370) at malloc.c:3359
-#1  0x00007ffff7faeba2 in json_object_lh_entry_free (ent=0x7fffe80016c8) at /home/tyler/json-c/json_object.c:520
-#2  0x00007ffff7fb72e7 in lh_table_free (t=0x7fffe80014d0) at /home/tyler/json-c/linkhash.c:572
-#3  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:526
-#4  0x00007ffff7fae3e4 in json_object_put (jso=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:300
-#5  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#6  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#7  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe8001370
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
-
-Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0001370) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7ffff0001370) at malloc.c:3359
-#1  0x00007ffff7faeba2 in json_object_lh_entry_free (ent=0x7ffff0001ad8) at /home/tyler/json-c/json_object.c:520
-#2  0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff00018e0) at /home/tyler/json-c/linkhash.c:572
-#3  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:526
-#4  0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:300
-#5  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#6  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#7  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7ffff0001370
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe8000ec0) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7fffe8000ec0) at malloc.c:3359
-#1  0x00007ffff7fae43e in json_object_generic_delete (jso=0x7fffe8000ec0) at /home/tyler/json-c/json_object.c:313
-#2  0x00007ffff7fae40e in json_object_put (jso=0x7fffe8000ec0) at /home/tyler/json-c/json_object.c:303
-#3  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7fffe80016c8) at /home/tyler/json-c/json_object.c:521
-#4  0x00007ffff7fb72e7 in lh_table_free (t=0x7fffe80014d0) at /home/tyler/json-c/linkhash.c:572
-#5  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:526
-#6  0x00007ffff7fae3e4 in json_object_put (jso=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:300
-#7  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#8  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#9  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe8000ec0
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
-
-Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0000ec0) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7ffff0000ec0) at malloc.c:3359
-#1  0x00007ffff7fae43e in json_object_generic_delete (jso=0x7ffff0000ec0) at /home/tyler/json-c/json_object.c:313
-#2  0x00007ffff7fae40e in json_object_put (jso=0x7ffff0000ec0) at /home/tyler/json-c/json_object.c:303
-#3  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7ffff0001ad8) at /home/tyler/json-c/json_object.c:521
-#4  0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff00018e0) at /home/tyler/json-c/linkhash.c:572
-#5  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:526
-#6  0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:300
-#7  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#8  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#9  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7ffff0000ec0
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe8001300) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7fffe8001300) at malloc.c:3359
-#1  0x00007ffff7faeba2 in json_object_lh_entry_free (ent=0x7fffe80015b0) at /home/tyler/json-c/json_object.c:520
-#2  0x00007ffff7fb72e7 in lh_table_free (t=0x7fffe80014d0) at /home/tyler/json-c/linkhash.c:572
-#3  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:526
-#4  0x00007ffff7fae3e4 in json_object_put (jso=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:300
-#5  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#6  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#7  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe8001300
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
-
-Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0001300) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7ffff0001300) at malloc.c:3359
-#1  0x00007ffff7faeba2 in json_object_lh_entry_free (ent=0x7ffff00019c0) at /home/tyler/json-c/json_object.c:520
-#2  0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff00018e0) at /home/tyler/json-c/linkhash.c:572
-#3  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:526
-#4  0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:300
-#5  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#6  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#7  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7ffff0001300
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe80012c0) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7fffe80012c0) at malloc.c:3359
-#1  0x00007ffff7fae43e in json_object_generic_delete (jso=0x7fffe80012c0) at /home/tyler/json-c/json_object.c:313
-#2  0x00007ffff7fae40e in json_object_put (jso=0x7fffe80012c0) at /home/tyler/json-c/json_object.c:303
-#3  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7fffe80015b0) at /home/tyler/json-c/json_object.c:521
-#4  0x00007ffff7fb72e7 in lh_table_free (t=0x7fffe80014d0) at /home/tyler/json-c/linkhash.c:572
-#5  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:526
-#6  0x00007ffff7fae3e4 in json_object_put (jso=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:300
-#7  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#8  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#9  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe80012c0
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
-
-Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff00012c0) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7ffff00012c0) at malloc.c:3359
-#1  0x00007ffff7fae43e in json_object_generic_delete (jso=0x7ffff00012c0) at /home/tyler/json-c/json_object.c:313
-#2  0x00007ffff7fae40e in json_object_put (jso=0x7ffff00012c0) at /home/tyler/json-c/json_object.c:303
-#3  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7ffff00019c0) at /home/tyler/json-c/json_object.c:521
-#4  0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff00018e0) at /home/tyler/json-c/linkhash.c:572
-#5  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:526
-#6  0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:300
-#7  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#8  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#9  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7ffff00012c0
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe80012a0) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7fffe80012a0) at malloc.c:3359
-#1  0x00007ffff7faeba2 in json_object_lh_entry_free (ent=0x7fffe8001650) at /home/tyler/json-c/json_object.c:520
-#2  0x00007ffff7fb72e7 in lh_table_free (t=0x7fffe80014d0) at /home/tyler/json-c/linkhash.c:572
-#3  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:526
-#4  0x00007ffff7fae3e4 in json_object_put (jso=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:300
-#5  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#6  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#7  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe80012a0
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
-
-Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff00012a0) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7ffff00012a0) at malloc.c:3359
-#1  0x00007ffff7faeba2 in json_object_lh_entry_free (ent=0x7ffff0001a60) at /home/tyler/json-c/json_object.c:520
-#2  0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff00018e0) at /home/tyler/json-c/linkhash.c:572
-#3  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:526
-#4  0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:300
-#5  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#6  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#7  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7ffff00012a0
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe8001320) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7fffe8001320) at malloc.c:3359
-#1  0x00007ffff7fae43e in json_object_generic_delete (jso=0x7fffe8001320) at /home/tyler/json-c/json_object.c:313
-#2  0x00007ffff7fb0580 in json_object_string_delete (jso=0x7fffe8001320) at /home/tyler/json-c/json_object.c:1263
-#3  0x00007ffff7fae400 in json_object_put (jso=0x7fffe8001320) at /home/tyler/json-c/json_object.c:302
-#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7fffe8001650) at /home/tyler/json-c/json_object.c:521
-#5  0x00007ffff7fb72e7 in lh_table_free (t=0x7fffe80014d0) at /home/tyler/json-c/linkhash.c:572
-#6  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:526
-#7  0x00007ffff7fae3e4 in json_object_put (jso=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:300
-#8  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#9  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#10 0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe8001320
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe80011d0) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7fffe80011d0) at malloc.c:3359
-#1  0x00007ffff7faeba2 in json_object_lh_entry_free (ent=0x7fffe8001768) at /home/tyler/json-c/json_object.c:520
-#2  0x00007ffff7fb72e7 in lh_table_free (t=0x7fffe80014d0) at /home/tyler/json-c/linkhash.c:572
-#3  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:526
-#4  0x00007ffff7fae3e4 in json_object_put (jso=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:300
-#5  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#6  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#7  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe80011d0
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
-
-Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0001320) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7ffff0001320) at malloc.c:3359
-#1  0x00007ffff7fae43e in json_object_generic_delete (jso=0x7ffff0001320) at /home/tyler/json-c/json_object.c:313
-#2  0x00007ffff7fb0580 in json_object_string_delete (jso=0x7ffff0001320) at /home/tyler/json-c/json_object.c:1263
-#3  0x00007ffff7fae400 in json_object_put (jso=0x7ffff0001320) at /home/tyler/json-c/json_object.c:302
-#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7ffff0001a60) at /home/tyler/json-c/json_object.c:521
-#5  0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff00018e0) at /home/tyler/json-c/linkhash.c:572
-#6  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:526
-#7  0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:300
-#8  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#9  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#10 0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7ffff0001320
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe8001240) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7fffe8001240) at malloc.c:3359
-#1  0x00007ffff7faeba2 in json_object_lh_entry_free (ent=0x7fffe8001948) at /home/tyler/json-c/json_object.c:520
-#2  0x00007ffff7fb72e7 in lh_table_free (t=0x7fffe80017a0) at /home/tyler/json-c/linkhash.c:572
-#3  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7fffe8000bb0) at /home/tyler/json-c/json_object.c:526
-#4  0x00007ffff7fae3e4 in json_object_put (jso=0x7fffe8000bb0) at /home/tyler/json-c/json_object.c:300
-#5  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7fffe8001768) at /home/tyler/json-c/json_object.c:521
-#6  0x00007ffff7fb72e7 in lh_table_free (t=0x7fffe80014d0) at /home/tyler/json-c/linkhash.c:572
-#7  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:526
-#8  0x00007ffff7fae3e4 in json_object_put (jso=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:300
-#9  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#10 0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#11 0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe8001240
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
-
-Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff00011d0) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7ffff00011d0) at malloc.c:3359
-#1  0x00007ffff7faeba2 in json_object_lh_entry_free (ent=0x7ffff0001b78) at /home/tyler/json-c/json_object.c:520
-#2  0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff00018e0) at /home/tyler/json-c/linkhash.c:572
-#3  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:526
-#4  0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:300
-#5  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#6  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#7  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7ffff00011d0
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe80011f0) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7fffe80011f0) at malloc.c:3359
-#1  0x00007ffff7fae43e in json_object_generic_delete (jso=0x7fffe80011f0) at /home/tyler/json-c/json_object.c:313
-#2  0x00007ffff7fb0580 in json_object_string_delete (jso=0x7fffe80011f0) at /home/tyler/json-c/json_object.c:1263
-#3  0x00007ffff7fae400 in json_object_put (jso=0x7fffe80011f0) at /home/tyler/json-c/json_object.c:302
-#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7fffe8001948) at /home/tyler/json-c/json_object.c:521
-#5  0x00007ffff7fb72e7 in lh_table_free (t=0x7fffe80017a0) at /home/tyler/json-c/linkhash.c:572
-#6  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7fffe8000bb0) at /home/tyler/json-c/json_object.c:526
-#7  0x00007ffff7fae3e4 in json_object_put (jso=0x7fffe8000bb0) at /home/tyler/json-c/json_object.c:300
-#8  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7fffe8001768) at /home/tyler/json-c/json_object.c:521
-#9  0x00007ffff7fb72e7 in lh_table_free (t=0x7fffe80014d0) at /home/tyler/json-c/linkhash.c:572
-#10 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:526
-#11 0x00007ffff7fae3e4 in json_object_put (jso=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:300
-#12 0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#13 0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#14 0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe80011f0
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
-
-Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0001240) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7ffff0001240) at malloc.c:3359
-#1  0x00007ffff7faeba2 in json_object_lh_entry_free (ent=0x7ffff0001d58) at /home/tyler/json-c/json_object.c:520
-#2  0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff0001bb0) at /home/tyler/json-c/linkhash.c:572
-#3  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0000bb0) at /home/tyler/json-c/json_object.c:526
-#4  0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0000bb0) at /home/tyler/json-c/json_object.c:300
-#5  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7ffff0001b78) at /home/tyler/json-c/json_object.c:521
-#6  0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff00018e0) at /home/tyler/json-c/linkhash.c:572
-#7  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:526
-#8  0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:300
-#9  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#10 0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#11 0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7ffff0001240
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe80017e0) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7fffe80017e0) at malloc.c:3359
-#1  0x00007ffff7fb730a in lh_table_free (t=0x7fffe80017a0) at /home/tyler/json-c/linkhash.c:574
-#2  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7fffe8000bb0) at /home/tyler/json-c/json_object.c:526
-#3  0x00007ffff7fae3e4 in json_object_put (jso=0x7fffe8000bb0) at /home/tyler/json-c/json_object.c:300
-#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7fffe8001768) at /home/tyler/json-c/json_object.c:521
-#5  0x00007ffff7fb72e7 in lh_table_free (t=0x7fffe80014d0) at /home/tyler/json-c/linkhash.c:572
-#6  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:526
-#7  0x00007ffff7fae3e4 in json_object_put (jso=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:300
-#8  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#9  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#10 0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe80017e0
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
-
-Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff00011f0) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7ffff00011f0) at malloc.c:3359
-#1  0x00007ffff7fae43e in json_object_generic_delete (jso=0x7ffff00011f0) at /home/tyler/json-c/json_object.c:313
-#2  0x00007ffff7fb0580 in json_object_string_delete (jso=0x7ffff00011f0) at /home/tyler/json-c/json_object.c:1263
-#3  0x00007ffff7fae400 in json_object_put (jso=0x7ffff00011f0) at /home/tyler/json-c/json_object.c:302
-#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7ffff0001d58) at /home/tyler/json-c/json_object.c:521
-#5  0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff0001bb0) at /home/tyler/json-c/linkhash.c:572
-#6  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0000bb0) at /home/tyler/json-c/json_object.c:526
-#7  0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0000bb0) at /home/tyler/json-c/json_object.c:300
-#8  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7ffff0001b78) at /home/tyler/json-c/json_object.c:521
-#9  0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff00018e0) at /home/tyler/json-c/linkhash.c:572
-#10 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:526
-#11 0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:300
-#12 0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#13 0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#14 0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7ffff00011f0
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe80017a0) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7fffe80017a0) at malloc.c:3359
-#1  0x00007ffff7fb7316 in lh_table_free (t=0x7fffe80017a0) at /home/tyler/json-c/linkhash.c:575
-#2  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7fffe8000bb0) at /home/tyler/json-c/json_object.c:526
-#3  0x00007ffff7fae3e4 in json_object_put (jso=0x7fffe8000bb0) at /home/tyler/json-c/json_object.c:300
-#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7fffe8001768) at /home/tyler/json-c/json_object.c:521
-#5  0x00007ffff7fb72e7 in lh_table_free (t=0x7fffe80014d0) at /home/tyler/json-c/linkhash.c:572
-#6  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:526
-#7  0x00007ffff7fae3e4 in json_object_put (jso=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:300
-#8  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#9  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#10 0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe80017a0
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
-
-Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0001bf0) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7ffff0001bf0) at malloc.c:3359
-#1  0x00007ffff7fb730a in lh_table_free (t=0x7ffff0001bb0) at /home/tyler/json-c/linkhash.c:574
-#2  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0000bb0) at /home/tyler/json-c/json_object.c:526
-#3  0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0000bb0) at /home/tyler/json-c/json_object.c:300
-#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7ffff0001b78) at /home/tyler/json-c/json_object.c:521
-#5  0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff00018e0) at /home/tyler/json-c/linkhash.c:572
-#6  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:526
-#7  0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:300
-#8  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#9  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#10 0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7ffff0001bf0
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe8000bb0) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7fffe8000bb0) at malloc.c:3359
-#1  0x00007ffff7fae43e in json_object_generic_delete (jso=0x7fffe8000bb0) at /home/tyler/json-c/json_object.c:313
-#2  0x00007ffff7faebe9 in json_object_object_delete (jso_base=0x7fffe8000bb0) at /home/tyler/json-c/json_object.c:527
-#3  0x00007ffff7fae3e4 in json_object_put (jso=0x7fffe8000bb0) at /home/tyler/json-c/json_object.c:300
-#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7fffe8001768) at /home/tyler/json-c/json_object.c:521
-#5  0x00007ffff7fb72e7 in lh_table_free (t=0x7fffe80014d0) at /home/tyler/json-c/linkhash.c:572
-#6  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:526
-#7  0x00007ffff7fae3e4 in json_object_put (jso=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:300
-#8  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#9  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#10 0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe8000bb0
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
-
-Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0001bb0) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7ffff0001bb0) at malloc.c:3359
-#1  0x00007ffff7fb7316 in lh_table_free (t=0x7ffff0001bb0) at /home/tyler/json-c/linkhash.c:575
-#2  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0000bb0) at /home/tyler/json-c/json_object.c:526
-#3  0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0000bb0) at /home/tyler/json-c/json_object.c:300
-#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7ffff0001b78) at /home/tyler/json-c/json_object.c:521
-#5  0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff00018e0) at /home/tyler/json-c/linkhash.c:572
-#6  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:526
-#7  0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:300
-#8  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#9  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#10 0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7ffff0001bb0
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe8001510) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7fffe8001510) at malloc.c:3359
-#1  0x00007ffff7fb730a in lh_table_free (t=0x7fffe80014d0) at /home/tyler/json-c/linkhash.c:574
-#2  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:526
-#3  0x00007ffff7fae3e4 in json_object_put (jso=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:300
-#4  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#5  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#6  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe8001510
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe80014d0) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7fffe80014d0) at malloc.c:3359
-#1  0x00007ffff7fb7316 in lh_table_free (t=0x7fffe80014d0) at /home/tyler/json-c/linkhash.c:575
-#2  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:526
-#3  0x00007ffff7fae3e4 in json_object_put (jso=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:300
-#4  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#5  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#6  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe80014d0
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
-
-Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0000bb0) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7ffff0000bb0) at malloc.c:3359
-#1  0x00007ffff7fae43e in json_object_generic_delete (jso=0x7ffff0000bb0) at /home/tyler/json-c/json_object.c:313
-#2  0x00007ffff7faebe9 in json_object_object_delete (jso_base=0x7ffff0000bb0) at /home/tyler/json-c/json_object.c:527
-#3  0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0000bb0) at /home/tyler/json-c/json_object.c:300
-#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7ffff0001b78) at /home/tyler/json-c/json_object.c:521
-#5  0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff00018e0) at /home/tyler/json-c/linkhash.c:572
-#6  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:526
-#7  0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:300
-#8  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#9  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#10 0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7ffff0000bb0
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe8001a70) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7fffe8001a70) at malloc.c:3359
-#1  0x00007ffff7fb8063 in printbuf_free (p=0x7fffe8001420) at /home/tyler/json-c/printbuf.c:189
-#2  0x00007ffff7fae432 in json_object_generic_delete (jso=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:312
-#3  0x00007ffff7faebe9 in json_object_object_delete (jso_base=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:527
-#4  0x00007ffff7fae3e4 in json_object_put (jso=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:300
-#5  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#6  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#7  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe8001a70
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
-
-Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0001920) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7ffff0001920) at malloc.c:3359
-#1  0x00007ffff7fb730a in lh_table_free (t=0x7ffff00018e0) at /home/tyler/json-c/linkhash.c:574
-#2  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:526
-#3  0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:300
-#4  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#5  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#6  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7ffff0001920
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe8001420) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7fffe8001420) at malloc.c:3359
-#1  0x00007ffff7fb806f in printbuf_free (p=0x7fffe8001420) at /home/tyler/json-c/printbuf.c:190
-#2  0x00007ffff7fae432 in json_object_generic_delete (jso=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:312
-#3  0x00007ffff7faebe9 in json_object_object_delete (jso_base=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:527
-#4  0x00007ffff7fae3e4 in json_object_put (jso=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:300
-#5  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#6  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#7  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe8001420
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe8000b70) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7fffe8000b70) at malloc.c:3359
-#1  0x00007ffff7fae43e in json_object_generic_delete (jso=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:313
-#2  0x00007ffff7faebe9 in json_object_object_delete (jso_base=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:527
-#3  0x00007ffff7fae3e4 in json_object_put (jso=0x7fffe8000b70) at /home/tyler/json-c/json_object.c:300
-#4  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#5  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#6  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe8000b70
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
-
-Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff00018e0) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7ffff00018e0) at malloc.c:3359
-#1  0x00007ffff7fb7316 in lh_table_free (t=0x7ffff00018e0) at /home/tyler/json-c/linkhash.c:575
-#2  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:526
-#3  0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:300
-#4  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#5  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#6  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7ffff00018e0
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x0) at malloc.c:3359
+Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x0) at malloc.c:3359
 3359	{
 #0  __GI___libc_free (mem=0x0) at malloc.c:3359
 #1  0x00007ffff7d7f612 in __glibc_tls_internal_free () at ../sysdeps/unix/sysv/linux/tls-internal.c:26
@@ -1565,22 +396,8 @@ Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x0) at mal
 #3  0x00007ffff7d554c7 in start_thread (arg=<optimized out>) at pthread_create.c:458
 #4  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
 free 0x0
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
 
-Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0001e80) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7ffff0001e80) at malloc.c:3359
-#1  0x00007ffff7fb8063 in printbuf_free (p=0x7ffff0001420) at /home/tyler/json-c/printbuf.c:189
-#2  0x00007ffff7fae432 in json_object_generic_delete (jso=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:312
-#3  0x00007ffff7faebe9 in json_object_object_delete (jso_base=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:527
-#4  0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:300
-#5  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#6  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#7  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7ffff0001e80
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x0) at malloc.c:3359
+Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x0) at malloc.c:3359
 3359	{
 #0  __GI___libc_free (mem=0x0) at malloc.c:3359
 #1  0x00007ffff7d7f623 in __glibc_tls_internal_free () at ../sysdeps/unix/sysv/linux/tls-internal.c:27
@@ -1588,250 +405,86 @@ Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x0) at mal
 #3  0x00007ffff7d554c7 in start_thread (arg=<optimized out>) at pthread_create.c:458
 #4  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
 free 0x0
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
 
-Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0001420) at malloc.c:3359
+Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff00013e0) at malloc.c:3359
 3359	{
-#0  __GI___libc_free (mem=0x7ffff0001420) at malloc.c:3359
-#1  0x00007ffff7fb806f in printbuf_free (p=0x7ffff0001420) at /home/tyler/json-c/printbuf.c:190
-#2  0x00007ffff7fae432 in json_object_generic_delete (jso=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:312
-#3  0x00007ffff7faebe9 in json_object_object_delete (jso_base=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:527
-#4  0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:300
-#5  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#6  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#7  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7ffff0001420
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe8001240) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7fffe8001240) at malloc.c:3359
+#0  __GI___libc_free (mem=0x7ffff00013e0) at malloc.c:3359
 #1  0x00007ffff7d6663b in tcache_thread_shutdown () at malloc.c:3234
 #2  __malloc_arena_thread_freeres () at /usr/src/debug/glibc-2.39-22.fc40.x86_64/malloc/arena.c:897
 #3  0x00007ffff7d68b72 in __libc_thread_freeres () at thread-freeres.c:41
 #4  0x00007ffff7d554c7 in start_thread (arg=<optimized out>) at pthread_create.c:458
 #5  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe8001240
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
+free 0x7ffff00013e0
+
+Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0001400) at malloc.c:3359
+3359	{
+#0  __GI___libc_free (mem=0x7ffff0001400) at malloc.c:3359
+#1  0x00007ffff7d6663b in tcache_thread_shutdown () at malloc.c:3234
+#2  __malloc_arena_thread_freeres () at /usr/src/debug/glibc-2.39-22.fc40.x86_64/malloc/arena.c:897
+#3  0x00007ffff7d68b72 in __libc_thread_freeres () at thread-freeres.c:41
+#4  0x00007ffff7d554c7 in start_thread (arg=<optimized out>) at pthread_create.c:458
+#5  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+free 0x7ffff0001400
+
+Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0001370) at malloc.c:3359
+3359	{
+#0  __GI___libc_free (mem=0x7ffff0001370) at malloc.c:3359
+#1  0x00007ffff7d6663b in tcache_thread_shutdown () at malloc.c:3234
+#2  __malloc_arena_thread_freeres () at /usr/src/debug/glibc-2.39-22.fc40.x86_64/malloc/arena.c:897
+#3  0x00007ffff7d68b72 in __libc_thread_freeres () at thread-freeres.c:41
+#4  0x00007ffff7d554c7 in start_thread (arg=<optimized out>) at pthread_create.c:458
+#5  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+free 0x7ffff0001370
+
+Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0001300) at malloc.c:3359
+3359	{
+#0  __GI___libc_free (mem=0x7ffff0001300) at malloc.c:3359
+#1  0x00007ffff7d6663b in tcache_thread_shutdown () at malloc.c:3234
+#2  __malloc_arena_thread_freeres () at /usr/src/debug/glibc-2.39-22.fc40.x86_64/malloc/arena.c:897
+#3  0x00007ffff7d68b72 in __libc_thread_freeres () at thread-freeres.c:41
+#4  0x00007ffff7d554c7 in start_thread (arg=<optimized out>) at pthread_create.c:458
+#5  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+free 0x7ffff0001300
+
+Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff00012a0) at malloc.c:3359
+3359	{
+#0  __GI___libc_free (mem=0x7ffff00012a0) at malloc.c:3359
+#1  0x00007ffff7d6663b in tcache_thread_shutdown () at malloc.c:3234
+#2  __malloc_arena_thread_freeres () at /usr/src/debug/glibc-2.39-22.fc40.x86_64/malloc/arena.c:897
+#3  0x00007ffff7d68b72 in __libc_thread_freeres () at thread-freeres.c:41
+#4  0x00007ffff7d554c7 in start_thread (arg=<optimized out>) at pthread_create.c:458
+#5  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+free 0x7ffff00012a0
+
+Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0001240) at malloc.c:3359
+3359	{
+#0  __GI___libc_free (mem=0x7ffff0001240) at malloc.c:3359
+#1  0x00007ffff7d6663b in tcache_thread_shutdown () at malloc.c:3234
+#2  __malloc_arena_thread_freeres () at /usr/src/debug/glibc-2.39-22.fc40.x86_64/malloc/arena.c:897
+#3  0x00007ffff7d68b72 in __libc_thread_freeres () at thread-freeres.c:41
+#4  0x00007ffff7d554c7 in start_thread (arg=<optimized out>) at pthread_create.c:458
+#5  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+free 0x7ffff0001240
+
+Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff00011d0) at malloc.c:3359
+3359	{
+#0  __GI___libc_free (mem=0x7ffff00011d0) at malloc.c:3359
+#1  0x00007ffff7d6663b in tcache_thread_shutdown () at malloc.c:3234
+#2  __malloc_arena_thread_freeres () at /usr/src/debug/glibc-2.39-22.fc40.x86_64/malloc/arena.c:897
+#3  0x00007ffff7d68b72 in __libc_thread_freeres () at thread-freeres.c:41
+#4  0x00007ffff7d554c7 in start_thread (arg=<optimized out>) at pthread_create.c:458
+#5  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+free 0x7ffff00011d0
 
 Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0000b70) at malloc.c:3359
 3359	{
 #0  __GI___libc_free (mem=0x7ffff0000b70) at malloc.c:3359
-#1  0x00007ffff7fae43e in json_object_generic_delete (jso=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:313
-#2  0x00007ffff7faebe9 in json_object_object_delete (jso_base=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:527
-#3  0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:300
-#4  0x0000000000401363 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:39
-#5  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#6  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+#1  0x00007ffff7d6663b in tcache_thread_shutdown () at malloc.c:3234
+#2  __malloc_arena_thread_freeres () at /usr/src/debug/glibc-2.39-22.fc40.x86_64/malloc/arena.c:897
+#3  0x00007ffff7d68b72 in __libc_thread_freeres () at thread-freeres.c:41
+#4  0x00007ffff7d554c7 in start_thread (arg=<optimized out>) at pthread_create.c:458
+#5  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
 free 0x7ffff0000b70
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe80011d0) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7fffe80011d0) at malloc.c:3359
-#1  0x00007ffff7d6663b in tcache_thread_shutdown () at malloc.c:3234
-#2  __malloc_arena_thread_freeres () at /usr/src/debug/glibc-2.39-22.fc40.x86_64/malloc/arena.c:897
-#3  0x00007ffff7d68b72 in __libc_thread_freeres () at thread-freeres.c:41
-#4  0x00007ffff7d554c7 in start_thread (arg=<optimized out>) at pthread_create.c:458
-#5  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe80011d0
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
-
-Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x0) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x0) at malloc.c:3359
-#1  0x00007ffff7d7f612 in __glibc_tls_internal_free () at ../sysdeps/unix/sysv/linux/tls-internal.c:26
-#2  0x00007ffff7d68b67 in __libc_thread_freeres () at thread-freeres.c:36
-#3  0x00007ffff7d554c7 in start_thread (arg=<optimized out>) at pthread_create.c:458
-#4  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x0
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe80012a0) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7fffe80012a0) at malloc.c:3359
-#1  0x00007ffff7d6663b in tcache_thread_shutdown () at malloc.c:3234
-#2  __malloc_arena_thread_freeres () at /usr/src/debug/glibc-2.39-22.fc40.x86_64/malloc/arena.c:897
-#3  0x00007ffff7d68b72 in __libc_thread_freeres () at thread-freeres.c:41
-#4  0x00007ffff7d554c7 in start_thread (arg=<optimized out>) at pthread_create.c:458
-#5  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe80012a0
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
-
-Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x0) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x0) at malloc.c:3359
-#1  0x00007ffff7d7f623 in __glibc_tls_internal_free () at ../sysdeps/unix/sysv/linux/tls-internal.c:27
-#2  0x00007ffff7d68b67 in __libc_thread_freeres () at thread-freeres.c:36
-#3  0x00007ffff7d554c7 in start_thread (arg=<optimized out>) at pthread_create.c:458
-#4  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x0
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe8001300) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7fffe8001300) at malloc.c:3359
-#1  0x00007ffff7d6663b in tcache_thread_shutdown () at malloc.c:3234
-#2  __malloc_arena_thread_freeres () at /usr/src/debug/glibc-2.39-22.fc40.x86_64/malloc/arena.c:897
-#3  0x00007ffff7d68b72 in __libc_thread_freeres () at thread-freeres.c:41
-#4  0x00007ffff7d554c7 in start_thread (arg=<optimized out>) at pthread_create.c:458
-#5  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe8001300
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
-
-Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0001240) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7ffff0001240) at malloc.c:3359
-#1  0x00007ffff7d6663b in tcache_thread_shutdown () at malloc.c:3234
-#2  __malloc_arena_thread_freeres () at /usr/src/debug/glibc-2.39-22.fc40.x86_64/malloc/arena.c:897
-#3  0x00007ffff7d68b72 in __libc_thread_freeres () at thread-freeres.c:41
-#4  0x00007ffff7d554c7 in start_thread (arg=<optimized out>) at pthread_create.c:458
-#5  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7ffff0001240
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe8001370) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7fffe8001370) at malloc.c:3359
-#1  0x00007ffff7d6663b in tcache_thread_shutdown () at malloc.c:3234
-#2  __malloc_arena_thread_freeres () at /usr/src/debug/glibc-2.39-22.fc40.x86_64/malloc/arena.c:897
-#3  0x00007ffff7d68b72 in __libc_thread_freeres () at thread-freeres.c:41
-#4  0x00007ffff7d554c7 in start_thread (arg=<optimized out>) at pthread_create.c:458
-#5  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe8001370
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
-
-Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff00011d0) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7ffff00011d0) at malloc.c:3359
-#1  0x00007ffff7d6663b in tcache_thread_shutdown () at malloc.c:3234
-#2  __malloc_arena_thread_freeres () at /usr/src/debug/glibc-2.39-22.fc40.x86_64/malloc/arena.c:897
-#3  0x00007ffff7d68b72 in __libc_thread_freeres () at thread-freeres.c:41
-#4  0x00007ffff7d554c7 in start_thread (arg=<optimized out>) at pthread_create.c:458
-#5  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7ffff00011d0
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe8001400) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7fffe8001400) at malloc.c:3359
-#1  0x00007ffff7d6663b in tcache_thread_shutdown () at malloc.c:3234
-#2  __malloc_arena_thread_freeres () at /usr/src/debug/glibc-2.39-22.fc40.x86_64/malloc/arena.c:897
-#3  0x00007ffff7d68b72 in __libc_thread_freeres () at thread-freeres.c:41
-#4  0x00007ffff7d554c7 in start_thread (arg=<optimized out>) at pthread_create.c:458
-#5  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe8001400
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
-
-Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff00012a0) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7ffff00012a0) at malloc.c:3359
-#1  0x00007ffff7d6663b in tcache_thread_shutdown () at malloc.c:3234
-#2  __malloc_arena_thread_freeres () at /usr/src/debug/glibc-2.39-22.fc40.x86_64/malloc/arena.c:897
-#3  0x00007ffff7d68b72 in __libc_thread_freeres () at thread-freeres.c:41
-#4  0x00007ffff7d554c7 in start_thread (arg=<optimized out>) at pthread_create.c:458
-#5  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7ffff00012a0
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe80013e0) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7fffe80013e0) at malloc.c:3359
-#1  0x00007ffff7d6663b in tcache_thread_shutdown () at malloc.c:3234
-#2  __malloc_arena_thread_freeres () at /usr/src/debug/glibc-2.39-22.fc40.x86_64/malloc/arena.c:897
-#3  0x00007ffff7d68b72 in __libc_thread_freeres () at thread-freeres.c:41
-#4  0x00007ffff7d554c7 in start_thread (arg=<optimized out>) at pthread_create.c:458
-#5  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe80013e0
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
-
-Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0001300) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7ffff0001300) at malloc.c:3359
-#1  0x00007ffff7d6663b in tcache_thread_shutdown () at malloc.c:3234
-#2  __malloc_arena_thread_freeres () at /usr/src/debug/glibc-2.39-22.fc40.x86_64/malloc/arena.c:897
-#3  0x00007ffff7d68b72 in __libc_thread_freeres () at thread-freeres.c:41
-#4  0x00007ffff7d554c7 in start_thread (arg=<optimized out>) at pthread_create.c:458
-#5  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7ffff0001300
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe8000bb0) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7fffe8000bb0) at malloc.c:3359
-#1  0x00007ffff7d6663b in tcache_thread_shutdown () at malloc.c:3234
-#2  __malloc_arena_thread_freeres () at /usr/src/debug/glibc-2.39-22.fc40.x86_64/malloc/arena.c:897
-#3  0x00007ffff7d68b72 in __libc_thread_freeres () at thread-freeres.c:41
-#4  0x00007ffff7d554c7 in start_thread (arg=<optimized out>) at pthread_create.c:458
-#5  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe8000bb0
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
-
-Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0001370) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7ffff0001370) at malloc.c:3359
-#1  0x00007ffff7d6663b in tcache_thread_shutdown () at malloc.c:3234
-#2  __malloc_arena_thread_freeres () at /usr/src/debug/glibc-2.39-22.fc40.x86_64/malloc/arena.c:897
-#3  0x00007ffff7d68b72 in __libc_thread_freeres () at thread-freeres.c:41
-#4  0x00007ffff7d554c7 in start_thread (arg=<optimized out>) at pthread_create.c:458
-#5  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7ffff0001370
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe80017a0) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7fffe80017a0) at malloc.c:3359
-#1  0x00007ffff7d6663b in tcache_thread_shutdown () at malloc.c:3234
-#2  __malloc_arena_thread_freeres () at /usr/src/debug/glibc-2.39-22.fc40.x86_64/malloc/arena.c:897
-#3  0x00007ffff7d68b72 in __libc_thread_freeres () at thread-freeres.c:41
-#4  0x00007ffff7d554c7 in start_thread (arg=<optimized out>) at pthread_create.c:458
-#5  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe80017a0
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
-
-Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0001400) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7ffff0001400) at malloc.c:3359
-#1  0x00007ffff7d6663b in tcache_thread_shutdown () at malloc.c:3234
-#2  __malloc_arena_thread_freeres () at /usr/src/debug/glibc-2.39-22.fc40.x86_64/malloc/arena.c:897
-#3  0x00007ffff7d68b72 in __libc_thread_freeres () at thread-freeres.c:41
-#4  0x00007ffff7d554c7 in start_thread (arg=<optimized out>) at pthread_create.c:458
-#5  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7ffff0001400
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe80012c0) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7fffe80012c0) at malloc.c:3359
-#1  0x00007ffff7d6663b in tcache_thread_shutdown () at malloc.c:3234
-#2  __malloc_arena_thread_freeres () at /usr/src/debug/glibc-2.39-22.fc40.x86_64/malloc/arena.c:897
-#3  0x00007ffff7d68b72 in __libc_thread_freeres () at thread-freeres.c:41
-#4  0x00007ffff7d554c7 in start_thread (arg=<optimized out>) at pthread_create.c:458
-#5  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe80012c0
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
-
-Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff00013e0) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7ffff00013e0) at malloc.c:3359
-#1  0x00007ffff7d6663b in tcache_thread_shutdown () at malloc.c:3234
-#2  __malloc_arena_thread_freeres () at /usr/src/debug/glibc-2.39-22.fc40.x86_64/malloc/arena.c:897
-#3  0x00007ffff7d68b72 in __libc_thread_freeres () at thread-freeres.c:41
-#4  0x00007ffff7d554c7 in start_thread (arg=<optimized out>) at pthread_create.c:458
-#5  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7ffff00013e0
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe8000ec0) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7fffe8000ec0) at malloc.c:3359
-#1  0x00007ffff7d6663b in tcache_thread_shutdown () at malloc.c:3234
-#2  __malloc_arena_thread_freeres () at /usr/src/debug/glibc-2.39-22.fc40.x86_64/malloc/arena.c:897
-#3  0x00007ffff7d68b72 in __libc_thread_freeres () at thread-freeres.c:41
-#4  0x00007ffff7d554c7 in start_thread (arg=<optimized out>) at pthread_create.c:458
-#5  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe8000ec0
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
 
 Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0000bb0) at malloc.c:3359
 3359	{
@@ -1842,94 +495,6 @@ Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0000
 #4  0x00007ffff7d554c7 in start_thread (arg=<optimized out>) at pthread_create.c:458
 #5  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
 free 0x7ffff0000bb0
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe8000e80) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7fffe8000e80) at malloc.c:3359
-#1  0x00007ffff7d6663b in tcache_thread_shutdown () at malloc.c:3234
-#2  __malloc_arena_thread_freeres () at /usr/src/debug/glibc-2.39-22.fc40.x86_64/malloc/arena.c:897
-#3  0x00007ffff7d68b72 in __libc_thread_freeres () at thread-freeres.c:41
-#4  0x00007ffff7d554c7 in start_thread (arg=<optimized out>) at pthread_create.c:458
-#5  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe8000e80
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
-
-Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0001bb0) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7ffff0001bb0) at malloc.c:3359
-#1  0x00007ffff7d6663b in tcache_thread_shutdown () at malloc.c:3234
-#2  __malloc_arena_thread_freeres () at /usr/src/debug/glibc-2.39-22.fc40.x86_64/malloc/arena.c:897
-#3  0x00007ffff7d68b72 in __libc_thread_freeres () at thread-freeres.c:41
-#4  0x00007ffff7d554c7 in start_thread (arg=<optimized out>) at pthread_create.c:458
-#5  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7ffff0001bb0
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe8001260) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7fffe8001260) at malloc.c:3359
-#1  0x00007ffff7d6663b in tcache_thread_shutdown () at malloc.c:3234
-#2  __malloc_arena_thread_freeres () at /usr/src/debug/glibc-2.39-22.fc40.x86_64/malloc/arena.c:897
-#3  0x00007ffff7d68b72 in __libc_thread_freeres () at thread-freeres.c:41
-#4  0x00007ffff7d554c7 in start_thread (arg=<optimized out>) at pthread_create.c:458
-#5  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe8001260
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
-
-Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff00012c0) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7ffff00012c0) at malloc.c:3359
-#1  0x00007ffff7d6663b in tcache_thread_shutdown () at malloc.c:3234
-#2  __malloc_arena_thread_freeres () at /usr/src/debug/glibc-2.39-22.fc40.x86_64/malloc/arena.c:897
-#3  0x00007ffff7d68b72 in __libc_thread_freeres () at thread-freeres.c:41
-#4  0x00007ffff7d554c7 in start_thread (arg=<optimized out>) at pthread_create.c:458
-#5  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7ffff00012c0
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe8001190) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7fffe8001190) at malloc.c:3359
-#1  0x00007ffff7d6663b in tcache_thread_shutdown () at malloc.c:3234
-#2  __malloc_arena_thread_freeres () at /usr/src/debug/glibc-2.39-22.fc40.x86_64/malloc/arena.c:897
-#3  0x00007ffff7d68b72 in __libc_thread_freeres () at thread-freeres.c:41
-#4  0x00007ffff7d554c7 in start_thread (arg=<optimized out>) at pthread_create.c:458
-#5  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe8001190
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe80011f0) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7fffe80011f0) at malloc.c:3359
-#1  0x00007ffff7d6663b in tcache_thread_shutdown () at malloc.c:3234
-#2  __malloc_arena_thread_freeres () at /usr/src/debug/glibc-2.39-22.fc40.x86_64/malloc/arena.c:897
-#3  0x00007ffff7d68b72 in __libc_thread_freeres () at thread-freeres.c:41
-#4  0x00007ffff7d554c7 in start_thread (arg=<optimized out>) at pthread_create.c:458
-#5  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe80011f0
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
-
-Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0000ec0) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7ffff0000ec0) at malloc.c:3359
-#1  0x00007ffff7d6663b in tcache_thread_shutdown () at malloc.c:3234
-#2  __malloc_arena_thread_freeres () at /usr/src/debug/glibc-2.39-22.fc40.x86_64/malloc/arena.c:897
-#3  0x00007ffff7d68b72 in __libc_thread_freeres () at thread-freeres.c:41
-#4  0x00007ffff7d554c7 in start_thread (arg=<optimized out>) at pthread_create.c:458
-#5  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7ffff0000ec0
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe8001320) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7fffe8001320) at malloc.c:3359
-#1  0x00007ffff7d6663b in tcache_thread_shutdown () at malloc.c:3234
-#2  __malloc_arena_thread_freeres () at /usr/src/debug/glibc-2.39-22.fc40.x86_64/malloc/arena.c:897
-#3  0x00007ffff7d68b72 in __libc_thread_freeres () at thread-freeres.c:41
-#4  0x00007ffff7d554c7 in start_thread (arg=<optimized out>) at pthread_create.c:458
-#5  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe8001320
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
 
 Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0000e80) at malloc.c:3359
 3359	{
@@ -1940,18 +505,26 @@ Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0000
 #4  0x00007ffff7d554c7 in start_thread (arg=<optimized out>) at pthread_create.c:458
 #5  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
 free 0x7ffff0000e80
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
 
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe8001390) at malloc.c:3359
+Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0000ec0) at malloc.c:3359
 3359	{
-#0  __GI___libc_free (mem=0x7fffe8001390) at malloc.c:3359
+#0  __GI___libc_free (mem=0x7ffff0000ec0) at malloc.c:3359
 #1  0x00007ffff7d6663b in tcache_thread_shutdown () at malloc.c:3234
 #2  __malloc_arena_thread_freeres () at /usr/src/debug/glibc-2.39-22.fc40.x86_64/malloc/arena.c:897
 #3  0x00007ffff7d68b72 in __libc_thread_freeres () at thread-freeres.c:41
 #4  0x00007ffff7d554c7 in start_thread (arg=<optimized out>) at pthread_create.c:458
 #5  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe8001390
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
+free 0x7ffff0000ec0
+
+Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff00012c0) at malloc.c:3359
+3359	{
+#0  __GI___libc_free (mem=0x7ffff00012c0) at malloc.c:3359
+#1  0x00007ffff7d6663b in tcache_thread_shutdown () at malloc.c:3234
+#2  __malloc_arena_thread_freeres () at /usr/src/debug/glibc-2.39-22.fc40.x86_64/malloc/arena.c:897
+#3  0x00007ffff7d68b72 in __libc_thread_freeres () at thread-freeres.c:41
+#4  0x00007ffff7d554c7 in start_thread (arg=<optimized out>) at pthread_create.c:458
+#5  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+free 0x7ffff00012c0
 
 Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0001260) at malloc.c:3359
 3359	{
@@ -1962,28 +535,6 @@ Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0001
 #4  0x00007ffff7d554c7 in start_thread (arg=<optimized out>) at pthread_create.c:458
 #5  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
 free 0x7ffff0001260
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe8001a70) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7fffe8001a70) at malloc.c:3359
-#1  0x00007ffff7d6663b in tcache_thread_shutdown () at malloc.c:3234
-#2  __malloc_arena_thread_freeres () at /usr/src/debug/glibc-2.39-22.fc40.x86_64/malloc/arena.c:897
-#3  0x00007ffff7d68b72 in __libc_thread_freeres () at thread-freeres.c:41
-#4  0x00007ffff7d554c7 in start_thread (arg=<optimized out>) at pthread_create.c:458
-#5  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe8001a70
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe8001440) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7fffe8001440) at malloc.c:3359
-#1  0x00007ffff7d6663b in tcache_thread_shutdown () at malloc.c:3234
-#2  __malloc_arena_thread_freeres () at /usr/src/debug/glibc-2.39-22.fc40.x86_64/malloc/arena.c:897
-#3  0x00007ffff7d68b72 in __libc_thread_freeres () at thread-freeres.c:41
-#4  0x00007ffff7d554c7 in start_thread (arg=<optimized out>) at pthread_create.c:458
-#5  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe8001440
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
 
 Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0001190) at malloc.c:3359
 3359	{
@@ -1994,82 +545,6 @@ Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0001
 #4  0x00007ffff7d554c7 in start_thread (arg=<optimized out>) at pthread_create.c:458
 #5  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
 free 0x7ffff0001190
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe8001510) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7fffe8001510) at malloc.c:3359
-#1  0x00007ffff7d6663b in tcache_thread_shutdown () at malloc.c:3234
-#2  __malloc_arena_thread_freeres () at /usr/src/debug/glibc-2.39-22.fc40.x86_64/malloc/arena.c:897
-#3  0x00007ffff7d68b72 in __libc_thread_freeres () at thread-freeres.c:41
-#4  0x00007ffff7d554c7 in start_thread (arg=<optimized out>) at pthread_create.c:458
-#5  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe8001510
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
-
-Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff00011f0) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7ffff00011f0) at malloc.c:3359
-#1  0x00007ffff7d6663b in tcache_thread_shutdown () at malloc.c:3234
-#2  __malloc_arena_thread_freeres () at /usr/src/debug/glibc-2.39-22.fc40.x86_64/malloc/arena.c:897
-#3  0x00007ffff7d68b72 in __libc_thread_freeres () at thread-freeres.c:41
-#4  0x00007ffff7d554c7 in start_thread (arg=<optimized out>) at pthread_create.c:458
-#5  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7ffff00011f0
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe80017e0) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7fffe80017e0) at malloc.c:3359
-#1  0x00007ffff7d6663b in tcache_thread_shutdown () at malloc.c:3234
-#2  __malloc_arena_thread_freeres () at /usr/src/debug/glibc-2.39-22.fc40.x86_64/malloc/arena.c:897
-#3  0x00007ffff7d68b72 in __libc_thread_freeres () at thread-freeres.c:41
-#4  0x00007ffff7d554c7 in start_thread (arg=<optimized out>) at pthread_create.c:458
-#5  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe80017e0
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe8000bf0) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7fffe8000bf0) at malloc.c:3359
-#1  0x00007ffff7d6663b in tcache_thread_shutdown () at malloc.c:3234
-#2  __malloc_arena_thread_freeres () at /usr/src/debug/glibc-2.39-22.fc40.x86_64/malloc/arena.c:897
-#3  0x00007ffff7d68b72 in __libc_thread_freeres () at thread-freeres.c:41
-#4  0x00007ffff7d554c7 in start_thread (arg=<optimized out>) at pthread_create.c:458
-#5  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe8000bf0
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
-
-Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0001320) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7ffff0001320) at malloc.c:3359
-#1  0x00007ffff7d6663b in tcache_thread_shutdown () at malloc.c:3234
-#2  __malloc_arena_thread_freeres () at /usr/src/debug/glibc-2.39-22.fc40.x86_64/malloc/arena.c:897
-#3  0x00007ffff7d68b72 in __libc_thread_freeres () at thread-freeres.c:41
-#4  0x00007ffff7d554c7 in start_thread (arg=<optimized out>) at pthread_create.c:458
-#5  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7ffff0001320
-[Switching to Thread 0x7ffff718f6c0 (LWP 1334067)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7fffe8000f00) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7fffe8000f00) at malloc.c:3359
-#1  0x00007ffff7d6663b in tcache_thread_shutdown () at malloc.c:3234
-#2  __malloc_arena_thread_freeres () at /usr/src/debug/glibc-2.39-22.fc40.x86_64/malloc/arena.c:897
-#3  0x00007ffff7d68b72 in __libc_thread_freeres () at thread-freeres.c:41
-#4  0x00007ffff7d554c7 in start_thread (arg=<optimized out>) at pthread_create.c:458
-#5  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe8000f00
-
-Thread 3 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=mem@entry=0x7fffe80008e0) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=mem@entry=0x7fffe80008e0) at malloc.c:3359
-#1  0x00007ffff7d66671 in tcache_thread_shutdown () at malloc.c:3238
-#2  __malloc_arena_thread_freeres () at /usr/src/debug/glibc-2.39-22.fc40.x86_64/malloc/arena.c:897
-#3  0x00007ffff7d68b72 in __libc_thread_freeres () at thread-freeres.c:41
-#4  0x00007ffff7d554c7 in start_thread (arg=<optimized out>) at pthread_create.c:458
-#5  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7fffe80008e0
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1334066)]
 
 Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0001390) at malloc.c:3359
 3359	{
@@ -2081,15 +556,25 @@ Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0001
 #5  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
 free 0x7ffff0001390
 
-Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0001e80) at malloc.c:3359
+Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0001320) at malloc.c:3359
 3359	{
-#0  __GI___libc_free (mem=0x7ffff0001e80) at malloc.c:3359
+#0  __GI___libc_free (mem=0x7ffff0001320) at malloc.c:3359
 #1  0x00007ffff7d6663b in tcache_thread_shutdown () at malloc.c:3234
 #2  __malloc_arena_thread_freeres () at /usr/src/debug/glibc-2.39-22.fc40.x86_64/malloc/arena.c:897
 #3  0x00007ffff7d68b72 in __libc_thread_freeres () at thread-freeres.c:41
 #4  0x00007ffff7d554c7 in start_thread (arg=<optimized out>) at pthread_create.c:458
 #5  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7ffff0001e80
+free 0x7ffff0001320
+
+Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff00011f0) at malloc.c:3359
+3359	{
+#0  __GI___libc_free (mem=0x7ffff00011f0) at malloc.c:3359
+#1  0x00007ffff7d6663b in tcache_thread_shutdown () at malloc.c:3234
+#2  __malloc_arena_thread_freeres () at /usr/src/debug/glibc-2.39-22.fc40.x86_64/malloc/arena.c:897
+#3  0x00007ffff7d68b72 in __libc_thread_freeres () at thread-freeres.c:41
+#4  0x00007ffff7d554c7 in start_thread (arg=<optimized out>) at pthread_create.c:458
+#5  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+free 0x7ffff00011f0
 
 Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0001440) at malloc.c:3359
 3359	{
@@ -2100,26 +585,6 @@ Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0001
 #4  0x00007ffff7d554c7 in start_thread (arg=<optimized out>) at pthread_create.c:458
 #5  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
 free 0x7ffff0001440
-
-Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0001920) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7ffff0001920) at malloc.c:3359
-#1  0x00007ffff7d6663b in tcache_thread_shutdown () at malloc.c:3234
-#2  __malloc_arena_thread_freeres () at /usr/src/debug/glibc-2.39-22.fc40.x86_64/malloc/arena.c:897
-#3  0x00007ffff7d68b72 in __libc_thread_freeres () at thread-freeres.c:41
-#4  0x00007ffff7d554c7 in start_thread (arg=<optimized out>) at pthread_create.c:458
-#5  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7ffff0001920
-
-Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0001bf0) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x7ffff0001bf0) at malloc.c:3359
-#1  0x00007ffff7d6663b in tcache_thread_shutdown () at malloc.c:3234
-#2  __malloc_arena_thread_freeres () at /usr/src/debug/glibc-2.39-22.fc40.x86_64/malloc/arena.c:897
-#3  0x00007ffff7d68b72 in __libc_thread_freeres () at thread-freeres.c:41
-#4  0x00007ffff7d554c7 in start_thread (arg=<optimized out>) at pthread_create.c:458
-#5  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-free 0x7ffff0001bf0
 
 Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x7ffff0000bf0) at malloc.c:3359
 3359	{
@@ -2150,223 +615,7 @@ Thread 2 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=mem@entry=0
 #4  0x00007ffff7d554c7 in start_thread (arg=<optimized out>) at pthread_create.c:458
 #5  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
 free 0x7ffff00008e0
-[Switching to Thread 0x7ffff7cbb740 (LWP 1333986)]
+[Switching to Thread 0x7ffff7cbb740 (LWP 1471127)]
 
-Thread 1 "test_multi_thre" hit Breakpoint 7.1, __GI___libc_free (mem=0x4052a0) at malloc.c:3359
-3359	{
-#0  __GI___libc_free (mem=0x4052a0) at malloc.c:3359
-#1  0x00000000004014d5 in main (argc=3, argv=0x7fffffffe018) at /home/tyler/json-c/tests/test_multi_thread.c:64
-free 0x4052a0
-
-Thread 1 "test_multi_thre" hit Breakpoint 2, main (argc=3, argv=0x7fffffffe018) at /home/tyler/json-c/tests/test_multi_thread.c:66
-66		return EXIT_SUCCESS;
-12	#include "json.h"
-13	#include "json_object.h"
-14	#include "parse_flags.h"
-15	
-16	static void *thread_do(void *p_n_iter)
-17	{
-18		long int n_iter = *(long int *)p_n_iter;
-19	
-20		for (long int idx = 0; idx < n_iter; idx++) {
-21	
-22			json_object *obj = json_object_new_object();
-23			json_object *nested = json_object_new_object();
-24	
-25			json_object_object_add(obj, "abc", json_object_new_int(12));
-26			json_object_object_add(obj, "foo", json_object_new_string("bar"));
-27			json_object_object_add(obj, "bool0", json_object_new_boolean(0));
-28			json_object_object_add(obj, "bool1", json_object_new_boolean(1));
-29			json_object_object_add(obj, "baz", json_object_new_string("bang"));
-30	
-31			json_object_object_add(nested, "nested_field", json_object_new_string("derp"));
-32	
-33			json_object_object_add(obj, "nest", nested);
-34	
-35			const char *result = json_object_to_json_string_ext(obj, JSON_C_TO_STRING_SPACED | JSON_C_TO_STRING_PRETTY);
-36	
-37			printf("\"%s\"\n", result);
-38	
-39			json_object_put(obj);
-40	
-41		}
-Breakpoint 8 at 0x401327: file /home/tyler/json-c/tests/test_multi_thread.c, line 35.
-Starting program: /home/tyler/json-c/build/tests/test_multi_thread 2 2
-Error in re-setting breakpoint 6: No symbol "__libc_realloc" in current context.
-Error in re-setting breakpoint 6: No symbol "__libc_realloc" in current context.
-Error in re-setting breakpoint 6: No symbol "__libc_realloc" in current context.
-[Thread debugging using libthread_db enabled]
-Using host libthread_db library "/lib64/libthread_db.so.1".
-
-Breakpoint 1, main (argc=3, argv=0x7fffffffe018) at /home/tyler/json-c/tests/test_multi_thread.c:48
-48		long int n_th = 10;
-43		return NULL;
-44	}
-45	
-46	int main(int argc, char **argv)
-47	{
-48		long int n_th = 10;
-49		long int n_iter = 100;
-50	
-51		if (argc >= 2)
-52			n_iter = atol(argv[1]);
-Continuing.
-
-Breakpoint 5, __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
-3809	  assert (nclears >= 3);
-#0  __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
-#1  0x00000000004013e7 in main (argc=3, argv=0x7fffffffe018) at /home/tyler/json-c/tests/test_multi_thread.c:57
-calloc 0x4052a0 16
-
-Breakpoint 5, __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
-3809	  assert (nclears >= 3);
-#0  __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
-#1  0x00007ffff7fd9fe4 in calloc (a=18, b=16) at ../include/rtld-malloc.h:44
-#2  allocate_dtv (result=result@entry=0x7ffff7b8f6c0) at ../elf/dl-tls.c:370
-#3  0x00007ffff7fdaa72 in __GI__dl_allocate_tls (mem=mem@entry=0x7ffff7b8f6c0) at ../elf/dl-tls.c:629
-#4  0x00007ffff7d56234 in allocate_stack (attr=0x7fffffffdde0, pdp=<synthetic pointer>, stack=<synthetic pointer>, stacksize=<synthetic pointer>) at /usr/src/debug/glibc-2.39-22.fc40.x86_64/nptl/allocatestack.c:429
-#5  __pthread_create_2_1 (newthread=<optimized out>, attr=<optimized out>, start_routine=<optimized out>, arg=<optimized out>) at pthread_create.c:655
-#6  0x0000000000401424 in main (argc=3, argv=0x7fffffffe018) at /home/tyler/json-c/tests/test_multi_thread.c:60
-calloc 0x4052c0 288
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1338796)]
-
-Thread 2 "test_multi_thre" hit Breakpoint 5, __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
-3809	  assert (nclears >= 3);
-#0  __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
-#1  0x00007ffff7fb7054 in lh_table_new (size=16, free_fn=0x7ffff7faeb72 <json_object_lh_entry_free>, hash_fn=0x7ffff7fb6f6c <lh_char_hash>, equal_fn=0x7ffff7fb6fd3 <lh_char_equal>) at /home/tyler/json-c/linkhash.c:505
-#2  0x00007ffff7fb714a in lh_kchar_table_new (size=16, free_fn=0x7ffff7faeb72 <json_object_lh_entry_free>) at /home/tyler/json-c/linkhash.c:527
-#3  0x00007ffff7faec33 in json_object_new_object () at /home/tyler/json-c/json_object.c:536
-#4  0x000000000040121f in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:22
-#5  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#6  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-calloc 0x7ffff0000bb0 56
-[Switching to Thread 0x7ffff7cbb740 (LWP 1338704)]
-
-Thread 1 "test_multi_thre" hit Breakpoint 5, __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
-3809	  assert (nclears >= 3);
-#0  __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
-#1  0x00007ffff7fd9fe4 in calloc (a=18, b=16) at ../include/rtld-malloc.h:44
-#2  allocate_dtv (result=result@entry=0x7ffff718f6c0) at ../elf/dl-tls.c:370
-#3  0x00007ffff7fdaa72 in __GI__dl_allocate_tls (mem=mem@entry=0x7ffff718f6c0) at ../elf/dl-tls.c:629
-#4  0x00007ffff7d56234 in allocate_stack (attr=0x7fffffffdde0, pdp=<synthetic pointer>, stack=<synthetic pointer>, stacksize=<synthetic pointer>) at /usr/src/debug/glibc-2.39-22.fc40.x86_64/nptl/allocatestack.c:429
-#5  __pthread_create_2_1 (newthread=<optimized out>, attr=<optimized out>, start_routine=<optimized out>, arg=<optimized out>) at pthread_create.c:655
-#6  0x0000000000401424 in main (argc=3, argv=0x7fffffffe018) at /home/tyler/json-c/tests/test_multi_thread.c:60
-calloc 0x4053f0 288
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1338796)]
-
-Thread 2 "test_multi_thre" hit Breakpoint 5, __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
-3809	  assert (nclears >= 3);
-#0  __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
-#1  0x00007ffff7fb708f in lh_table_new (size=16, free_fn=0x7ffff7faeb72 <json_object_lh_entry_free>, hash_fn=0x7ffff7fb6f6c <lh_char_hash>, equal_fn=0x7ffff7fb6fd3 <lh_char_equal>) at /home/tyler/json-c/linkhash.c:511
-#2  0x00007ffff7fb714a in lh_kchar_table_new (size=16, free_fn=0x7ffff7faeb72 <json_object_lh_entry_free>) at /home/tyler/json-c/linkhash.c:527
-#3  0x00007ffff7faec33 in json_object_new_object () at /home/tyler/json-c/json_object.c:536
-#4  0x000000000040121f in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:22
-#5  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#6  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-calloc 0x7ffff0000bf0 640
-[Switching to Thread 0x7ffff718f6c0 (LWP 1338797)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 5, __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
-3809	  assert (nclears >= 3);
-#0  __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
-#1  0x00007ffff7fb7054 in lh_table_new (size=16, free_fn=0x7ffff7faeb72 <json_object_lh_entry_free>, hash_fn=0x7ffff7fb6f6c <lh_char_hash>, equal_fn=0x7ffff7fb6fd3 <lh_char_equal>) at /home/tyler/json-c/linkhash.c:505
-#2  0x00007ffff7fb714a in lh_kchar_table_new (size=16, free_fn=0x7ffff7faeb72 <json_object_lh_entry_free>) at /home/tyler/json-c/linkhash.c:527
-#3  0x00007ffff7faec33 in json_object_new_object () at /home/tyler/json-c/json_object.c:536
-#4  0x000000000040121f in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:22
-#5  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#6  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-calloc 0x7fffe8000bb0 56
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1338796)]
-
-Thread 2 "test_multi_thre" hit Breakpoint 5, __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
-3809	  assert (nclears >= 3);
-#0  __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
-#1  0x00007ffff7fb7054 in lh_table_new (size=16, free_fn=0x7ffff7faeb72 <json_object_lh_entry_free>, hash_fn=0x7ffff7fb6f6c <lh_char_hash>, equal_fn=0x7ffff7fb6fd3 <lh_char_equal>) at /home/tyler/json-c/linkhash.c:505
-#2  0x00007ffff7fb714a in lh_kchar_table_new (size=16, free_fn=0x7ffff7faeb72 <json_object_lh_entry_free>) at /home/tyler/json-c/linkhash.c:527
-#3  0x00007ffff7faec33 in json_object_new_object () at /home/tyler/json-c/json_object.c:536
-#4  0x0000000000401228 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:23
-#5  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#6  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-calloc 0x7ffff0000ec0 56
-[Switching to Thread 0x7ffff718f6c0 (LWP 1338797)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 5, __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
-3809	  assert (nclears >= 3);
-#0  __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
-#1  0x00007ffff7fb708f in lh_table_new (size=16, free_fn=0x7ffff7faeb72 <json_object_lh_entry_free>, hash_fn=0x7ffff7fb6f6c <lh_char_hash>, equal_fn=0x7ffff7fb6fd3 <lh_char_equal>) at /home/tyler/json-c/linkhash.c:511
-#2  0x00007ffff7fb714a in lh_kchar_table_new (size=16, free_fn=0x7ffff7faeb72 <json_object_lh_entry_free>) at /home/tyler/json-c/linkhash.c:527
-#3  0x00007ffff7faec33 in json_object_new_object () at /home/tyler/json-c/json_object.c:536
-#4  0x000000000040121f in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:22
-#5  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#6  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-calloc 0x7fffe8000bf0 640
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1338796)]
-
-Thread 2 "test_multi_thre" hit Breakpoint 5, __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
-3809	  assert (nclears >= 3);
-#0  __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
-#1  0x00007ffff7fb708f in lh_table_new (size=16, free_fn=0x7ffff7faeb72 <json_object_lh_entry_free>, hash_fn=0x7ffff7fb6f6c <lh_char_hash>, equal_fn=0x7ffff7fb6fd3 <lh_char_equal>) at /home/tyler/json-c/linkhash.c:511
-#2  0x00007ffff7fb714a in lh_kchar_table_new (size=16, free_fn=0x7ffff7faeb72 <json_object_lh_entry_free>) at /home/tyler/json-c/linkhash.c:527
-#3  0x00007ffff7faec33 in json_object_new_object () at /home/tyler/json-c/json_object.c:536
-#4  0x0000000000401228 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:23
-#5  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#6  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-calloc 0x7ffff0000f00 640
-[Switching to Thread 0x7ffff718f6c0 (LWP 1338797)]
-
-Thread 3 "test_multi_thre" hit Breakpoint 5, __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
-3809	  assert (nclears >= 3);
-#0  __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
-#1  0x00007ffff7fb7054 in lh_table_new (size=16, free_fn=0x7ffff7faeb72 <json_object_lh_entry_free>, hash_fn=0x7ffff7fb6f6c <lh_char_hash>, equal_fn=0x7ffff7fb6fd3 <lh_char_equal>) at /home/tyler/json-c/linkhash.c:505
-#2  0x00007ffff7fb714a in lh_kchar_table_new (size=16, free_fn=0x7ffff7faeb72 <json_object_lh_entry_free>) at /home/tyler/json-c/linkhash.c:527
-#3  0x00007ffff7faec33 in json_object_new_object () at /home/tyler/json-c/json_object.c:536
-#4  0x0000000000401228 in thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:23
-#5  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
-#6  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
-calloc 0x7fffe8000ec0 56
-[Switching to Thread 0x7ffff7b8f6c0 (LWP 1338796)]
-
-Thread 2 "test_multi_thre" hit Breakpoint 8, thread_do (p_n_iter=0x7fffffffded0) at /home/tyler/json-c/tests/test_multi_thread.c:35
-35			const char *result = json_object_to_json_string_ext(obj, JSON_C_TO_STRING_SPACED | JSON_C_TO_STRING_PRETTY);
-$1 = (json_object *) 0x7ffff0000b70
-$2 = {
-  o_type = json_type_object,
-  _ref_count = 1,
-  _to_json_string = 0x7ffff7fae821 <json_object_object_to_json_string>,
-  _pb = 0x0,
-  _user_delete = 0x0,
-  _userdata = 0x0
-}
-$3 = {
-  o_type = json_type_object,
-  _ref_count = 1,
-  _to_json_string = 0x7ffff7fae821 <json_object_object_to_json_string>,
-  _pb = 0x0,
-  _user_delete = 0x0,
-  _userdata = 0x0
-}
-No symbol "json_object_object" in current context.
-$4 = {
-  base = {
-    o_type = json_type_object,
-    _ref_count = 1,
-    _to_json_string = 0x7ffff7fae821 <json_object_object_to_json_string>,
-    _pb = 0x0,
-    _user_delete = 0x0,
-    _userdata = 0x0
-  },
-  c_object = 0x7ffff0000bb0
-}
-There is no member named c_objct.
-There is no member named c_object.
-$5 = (struct lh_table *) 0x7ffff0000bb0
-$6 = {
-  size = 16,
-  count = 6,
-  head = 0x7ffff0000c90,
-  tail = 0x7ffff0000d80,
-  table = 0x7ffff0000bf0,
-  free_fn = 0x7ffff7faeb72 <json_object_lh_entry_free>,
-  hash_fn = 0x7ffff7fb6f6c <lh_char_hash>,
-  equal_fn = 0x7ffff7fb6fd3 <lh_char_equal>
-}
+Thread 1 "test_multi_thre" hit Breakpoint 2, main (argc=3, argv=0x7fffffffe018) at /home/tyler/json-c/tests/test_multi_thread.c:64
+64		free(pth);
