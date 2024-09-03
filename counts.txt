@@ -1,142 +1,1208 @@
 - inbalanced -------------------------------------------------------------------
+0x4059c0 {'malloc': 0, 'reallo': 0, 'free': 0, 'calloc': 1, 'realla': 0, 'idx': 422}
+0x405af0 {'malloc': 0, 'reallo': 0, 'free': 0, 'calloc': 1, 'realla': 0, 'idx': 504}
+0x405c20 {'malloc': 0, 'reallo': 0, 'free': 0, 'calloc': 1, 'realla': 0, 'idx': 615}
+0x405d50 {'malloc': 0, 'reallo': 0, 'free': 0, 'calloc': 1, 'realla': 0, 'idx': 735}
 - invalid ----------------------------------------------------------------------
-0x0 {'malloc': 0, 'reallo': 0, 'free': 3500, 'calloc': 0, 'realla': 0}
-0x4052a0 {'malloc': 0, 'reallo': 0, 'free': 100, 'calloc': 5, 'realla': 0}
-0x405700 {'malloc': 0, 'reallo': 1, 'free': 113, 'calloc': 43, 'realla': 0}
-0x405720 {'malloc': 1, 'reallo': 1, 'free': 11, 'calloc': 0, 'realla': 0}
-0x405740 {'malloc': 1, 'reallo': 0, 'free': 88, 'calloc': 0, 'realla': 0}
-0x405750 {'malloc': 1, 'reallo': 0, 'free': 10, 'calloc': 1, 'realla': 0}
-0x405770 {'malloc': 0, 'reallo': 0, 'free': 90, 'calloc': 0, 'realla': 0}
-0x405790 {'malloc': 0, 'reallo': 0, 'free': 9, 'calloc': 6, 'realla': 0}
-0x405a60 {'malloc': 1, 'reallo': 1, 'free': 100, 'calloc': 42, 'realla': 0}
-0x405aa0 {'malloc': 0, 'reallo': 1, 'free': 11, 'calloc': 2, 'realla': 0}
-0x405ac0 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0}
-0x405ae0 {'malloc': 0, 'reallo': 0, 'free': 34, 'calloc': 2, 'realla': 0}
-0x405d90 {'malloc': 1, 'reallo': 0, 'free': 210, 'calloc': 0, 'realla': 0}
-0x405db0 {'malloc': 1, 'reallo': 0, 'free': 100, 'calloc': 0, 'realla': 0}
-0x405e00 {'malloc': 1, 'reallo': 0, 'free': 190, 'calloc': 0, 'realla': 0}
-0x405e20 {'malloc': 1, 'reallo': 0, 'free': 39, 'calloc': 1, 'realla': 0}
-0x405e60 {'malloc': 0, 'reallo': 0, 'free': 99, 'calloc': 41, 'realla': 0}
-0x406130 {'malloc': 1, 'reallo': 0, 'free': 210, 'calloc': 0, 'realla': 0}
-0x406150 {'malloc': 1, 'reallo': 0, 'free': 100, 'calloc': 0, 'realla': 0}
-0x4061a0 {'malloc': 6, 'reallo': 1, 'free': 116, 'calloc': 44, 'realla': 0}
-0x4061c0 {'malloc': 1, 'reallo': 2, 'free': 25, 'calloc': 2, 'realla': 0}
-0x4061e0 {'malloc': 1, 'reallo': 1, 'free': 11, 'calloc': 3, 'realla': 0}
-0x406200 {'malloc': 1, 'reallo': 3, 'free': 24, 'calloc': 12, 'realla': 0}
-0x406230 {'malloc': 3, 'reallo': 1, 'free': 17, 'calloc': 2, 'realla': 0}
-0x406340 {'malloc': 1, 'reallo': 0, 'free': 100, 'calloc': 36, 'realla': 0}
-0x406380 {'malloc': 0, 'reallo': 0, 'free': 3, 'calloc': 1, 'realla': 0}
-0x406650 {'malloc': 16, 'reallo': 0, 'free': 188, 'calloc': 11, 'realla': 0}
-0x406670 {'malloc': 1, 'reallo': 0, 'free': 100, 'calloc': 0, 'realla': 0}
-0x4066c0 {'malloc': 14, 'reallo': 0, 'free': 175, 'calloc': 11, 'realla': 0}
-0x4066e0 {'malloc': 1, 'reallo': 0, 'free': 100, 'calloc': 0, 'realla': 0}
-0x406730 {'malloc': 1, 'reallo': 0, 'free': 100, 'calloc': 47, 'realla': 0}
-0x406750 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0}
-0x406770 {'malloc': 1, 'reallo': 0, 'free': 97, 'calloc': 0, 'realla': 0}
-0x4067a0 {'malloc': 1, 'reallo': 0, 'free': 10, 'calloc': 0, 'realla': 0}
-0x406800 {'malloc': 13, 'reallo': 0, 'free': 183, 'calloc': 13, 'realla': 0}
-0x406820 {'malloc': 1, 'reallo': 0, 'free': 100, 'calloc': 0, 'realla': 0}
-0x406870 {'malloc': 8, 'reallo': 5, 'free': 113, 'calloc': 4, 'realla': 0}
-0x406890 {'malloc': 3, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0}
-0x4068b0 {'malloc': 0, 'reallo': 6, 'free': 72, 'calloc': 44, 'realla': 0}
-0x4068e0 {'malloc': 5, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0}
-0x406900 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0}
-0x406990 {'malloc': 1, 'reallo': 4, 'free': 100, 'calloc': 53, 'realla': 0}
-0x4069d0 {'malloc': 0, 'reallo': 1, 'free': 12, 'calloc': 4, 'realla': 0}
-0x406a20 {'malloc': 1, 'reallo': 0, 'free': 22, 'calloc': 1, 'realla': 0}
-0x406a80 {'malloc': 16, 'reallo': 1, 'free': 183, 'calloc': 12, 'realla': 0}
-0x406b90 {'malloc': 3, 'reallo': 1, 'free': 15, 'calloc': 6, 'realla': 0}
-0x406bd0 {'malloc': 0, 'reallo': 0, 'free': 5, 'calloc': 1, 'realla': 0}
-0x406be0 {'malloc': 1, 'reallo': 0, 'free': 7, 'calloc': 4, 'realla': 0}
-0x406c10 {'malloc': 1, 'reallo': 0, 'free': 3, 'calloc': 0, 'realla': 0}
-0x4077f0 {'malloc': 14, 'reallo': 1, 'free': 190, 'calloc': 14, 'realla': 0}
-0x407b90 {'malloc': 0, 'reallo': 2, 'free': 1, 'calloc': 0, 'realla': 0}
-0x407c20 {'malloc': 3, 'reallo': 1, 'free': 187, 'calloc': 1, 'realla': 0}
-0x408550 {'malloc': 1, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0}
-0x4085e0 {'malloc': 1, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0}
-0x408a00 {'malloc': 0, 'reallo': 2, 'free': 1, 'calloc': 0, 'realla': 0}
-0x408a90 {'malloc': 12, 'reallo': 1, 'free': 189, 'calloc': 14, 'realla': 0}
-0x4090c0 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0}
-0x409150 {'malloc': 12, 'reallo': 1, 'free': 181, 'calloc': 14, 'realla': 0}
-0x409e90 {'malloc': 4, 'reallo': 13, 'free': 93, 'calloc': 34, 'realla': 0}
-0x409eb0 {'malloc': 6, 'reallo': 0, 'free': 8, 'calloc': 1, 'realla': 0}
-0x409f00 {'malloc': 2, 'reallo': 2, 'free': 3, 'calloc': 0, 'realla': 0}
-0x409fa0 {'malloc': 0, 'reallo': 2, 'free': 1, 'calloc': 0, 'realla': 0}
-0x40a2c0 {'malloc': 0, 'reallo': 0, 'free': 85, 'calloc': 4, 'realla': 0}
-0x40a300 {'malloc': 1, 'reallo': 33, 'free': 91, 'calloc': 17, 'realla': 0}
-0x40a320 {'malloc': 0, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0}
-0x40a340 {'malloc': 0, 'reallo': 3, 'free': 10, 'calloc': 1, 'realla': 0}
-0x40a380 {'malloc': 0, 'reallo': 3, 'free': 6, 'calloc': 2, 'realla': 0}
-0x40a550 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0}
-0x40a590 {'malloc': 0, 'reallo': 2, 'free': 1, 'calloc': 0, 'realla': 0}
-0x40a5e0 {'malloc': 1, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0}
-0x40a630 {'malloc': 1, 'reallo': 1, 'free': 93, 'calloc': 86, 'realla': 0}
-0x40a680 {'malloc': 1, 'reallo': 1, 'free': 15, 'calloc': 5, 'realla': 0}
-0x40a6c0 {'malloc': 1, 'reallo': 6, 'free': 6, 'calloc': 0, 'realla': 0}
-0x40a6d0 {'malloc': 2, 'reallo': 2, 'free': 5, 'calloc': 0, 'realla': 0}
-0x40a710 {'malloc': 1, 'reallo': 1, 'free': 3, 'calloc': 0, 'realla': 0}
-0x40a750 {'malloc': 1, 'reallo': 0, 'free': 4, 'calloc': 2, 'realla': 0}
-0x40a7a0 {'malloc': 4, 'reallo': 1, 'free': 6, 'calloc': 1, 'realla': 0}
-0x40a8c0 {'malloc': 3, 'reallo': 73, 'free': 77, 'calloc': 0, 'realla': 0}
-0x40aa20 {'malloc': 11, 'reallo': 37, 'free': 77, 'calloc': 1, 'realla': 0}
-0x40aa70 {'malloc': 1, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0}
-0x40ab30 {'malloc': 3, 'reallo': 0, 'free': 5, 'calloc': 1, 'realla': 0}
-0x40ab50 {'malloc': 4, 'reallo': 0, 'free': 8, 'calloc': 2, 'realla': 0}
-0x40ab80 {'malloc': 2, 'reallo': 0, 'free': 15, 'calloc': 2, 'realla': 0}
-0x40aba0 {'malloc': 7, 'reallo': 2, 'free': 11, 'calloc': 2, 'realla': 0}
-0x40abf0 {'malloc': 2, 'reallo': 0, 'free': 4, 'calloc': 1, 'realla': 0}
+0x7ffff0000b70 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 5, 'realla': 0, 'idx': 30}
+0x7ffff0000bc0 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 55}
+0x7ffff0000fd0 {'malloc': 0, 'reallo': 0, 'free': 23, 'calloc': 2, 'realla': 0, 'idx': 68}
+0x7fffe8000b70 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 5, 'realla': 0, 'idx': 93}
+0x0 {'malloc': 0, 'reallo': 0, 'free': 3616, 'calloc': 0, 'realla': 0, 'idx': 108}
+0x7fffe8000bc0 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 121}
+0x7ffff0001060 {'malloc': 0, 'reallo': 0, 'free': 9, 'calloc': 6, 'realla': 0, 'idx': 148}
+0x7fffe4000b70 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 5, 'realla': 0, 'idx': 161}
+0x7fffe8000fd0 {'malloc': 0, 'reallo': 0, 'free': 23, 'calloc': 2, 'realla': 0, 'idx': 175}
+0x7fffe4000bc0 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 188}
+0x7ffff00010a0 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 203}
+0x7fffdc000b70 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 5, 'realla': 0, 'idx': 228}
+0x7fffe4000fd0 {'malloc': 0, 'reallo': 0, 'free': 23, 'calloc': 2, 'realla': 0, 'idx': 242}
+0x7fffdc000bc0 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 283}
+0x7fffd8000b70 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 5, 'realla': 0, 'idx': 308}
+0x7ffff0001390 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 323}
+0x7fffe8001060 {'malloc': 0, 'reallo': 0, 'free': 9, 'calloc': 6, 'realla': 0, 'idx': 338}
+0x7fffdc000fd0 {'malloc': 0, 'reallo': 0, 'free': 23, 'calloc': 2, 'realla': 0, 'idx': 367}
+0x7fffd8000bc0 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 380}
+0x7ffff00013d0 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 395}
+0x7fffe80010a0 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 410}
+0x7fffd0000b70 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 5, 'realla': 0, 'idx': 450}
+0x7fffe4001060 {'malloc': 0, 'reallo': 0, 'free': 9, 'calloc': 6, 'realla': 0, 'idx': 465}
+0x7fffd8000fd0 {'malloc': 0, 'reallo': 0, 'free': 23, 'calloc': 2, 'realla': 0, 'idx': 479}
+0x7fffd0000bc0 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 517}
+0x7fffdc001060 {'malloc': 0, 'reallo': 0, 'free': 9, 'calloc': 6, 'realla': 0, 'idx': 532}
+0x7fffe40010a0 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 547}
+0x7fffcc000b70 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 5, 'realla': 0, 'idx': 588}
+0x7fffdc0010a0 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 603}
+0x7fffc4000b70 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 5, 'realla': 0, 'idx': 654}
+0x7fffd0000fd0 {'malloc': 0, 'reallo': 0, 'free': 23, 'calloc': 2, 'realla': 0, 'idx': 668}
+0x7fffe8001390 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 696}
+0x7ffff0001660 {'malloc': 0, 'reallo': 0, 'free': 29, 'calloc': 0, 'realla': 0, 'idx': 708}
+0x7fffd8001060 {'malloc': 0, 'reallo': 0, 'free': 9, 'calloc': 6, 'realla': 0, 'idx': 723}
+0x7fffcc000bc0 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 748}
+0x7fffdc001390 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 778}
+0x7fffe80013d0 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 793}
+0x7fffe4001390 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 808}
+0x7fffc4000bc0 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 821}
+0x7fffc0000b70 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 5, 'realla': 0, 'idx': 834}
+0x7fffd80010a0 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 849}
+0x7fffcc000fd0 {'malloc': 0, 'reallo': 0, 'free': 23, 'calloc': 2, 'realla': 0, 'idx': 889}
+0x7fffdc0013d0 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 904}
+0x7fffe40013d0 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 919}
+0x7fffc4000fd0 {'malloc': 0, 'reallo': 0, 'free': 23, 'calloc': 2, 'realla': 0, 'idx': 959}
+0x7ffff0001730 {'malloc': 0, 'reallo': 0, 'free': 9, 'calloc': 4, 'realla': 0, 'idx': 987}
+0x7fffe8001660 {'malloc': 0, 'reallo': 0, 'free': 29, 'calloc': 0, 'realla': 0, 'idx': 1014}
+0x7fffd0001060 {'malloc': 0, 'reallo': 0, 'free': 9, 'calloc': 6, 'realla': 0, 'idx': 1029}
+0x7fffc0000bc0 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 1042}
+0x7fffd8001390 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 1096}
+0x7fffc0000fd0 {'malloc': 0, 'reallo': 0, 'free': 23, 'calloc': 2, 'realla': 0, 'idx': 1110}
+0x7fffb8000b70 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 5, 'realla': 0, 'idx': 1123}
+0x7fffd00010a0 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 1138}
+0x7ffff0001770 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 1166}
+0x7fffcc001060 {'malloc': 0, 'reallo': 0, 'free': 9, 'calloc': 6, 'realla': 0, 'idx': 1181}
+0x7fffd80013d0 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 1196}
+0x7fffe4001660 {'malloc': 0, 'reallo': 0, 'free': 29, 'calloc': 0, 'realla': 0, 'idx': 1236}
+0x7fffcc0010a0 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 1251}
+0x7fffe8001730 {'malloc': 0, 'reallo': 0, 'free': 9, 'calloc': 4, 'realla': 0, 'idx': 1266}
+0x7fffb8000bc0 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 1279}
+0x7fffd0001390 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 1348}
+0x7fffb8000fd0 {'malloc': 0, 'reallo': 0, 'free': 23, 'calloc': 2, 'realla': 0, 'idx': 1375}
+0x7fffe8001770 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 1390}
+0x7fffe4001730 {'malloc': 0, 'reallo': 0, 'free': 9, 'calloc': 4, 'realla': 0, 'idx': 1418}
+0x7fffc0001060 {'malloc': 0, 'reallo': 0, 'free': 9, 'calloc': 6, 'realla': 0, 'idx': 1461}
+0x7fffd00013d0 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 1476}
+0x7fffdc001660 {'malloc': 0, 'reallo': 0, 'free': 29, 'calloc': 0, 'realla': 0, 'idx': 1488}
+0x7ffff0001a00 {'malloc': 0, 'reallo': 0, 'free': 29, 'calloc': 0, 'realla': 0, 'idx': 1500}
+0x7fffcc001390 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 1515}
+0x7fffc4001060 {'malloc': 0, 'reallo': 0, 'free': 9, 'calloc': 6, 'realla': 0, 'idx': 1530}
+0x7fffb8001060 {'malloc': 0, 'reallo': 0, 'free': 9, 'calloc': 6, 'realla': 0, 'idx': 1545}
+0x7fffd8001660 {'malloc': 0, 'reallo': 0, 'free': 29, 'calloc': 0, 'realla': 0, 'idx': 1557}
+0x7fffcc0013d0 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 1585}
+0x7fffc00010a0 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 1600}
+0x7fffc40010a0 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 1628}
+0x7fffb80010a0 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 1656}
+0x7fffe4001770 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 1684}
+0x7fffdc001730 {'malloc': 0, 'reallo': 0, 'free': 9, 'calloc': 4, 'realla': 0, 'idx': 1712}
+0x7fffc0001390 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 1779}
+0x7fffdc001770 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 1807}
+0x7ffff0001c50 {'malloc': 0, 'reallo': 0, 'free': 4, 'calloc': 1, 'realla': 0, 'idx': 1848}
+0x7fffb8001390 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 1863}
+0x7fffcc001660 {'malloc': 0, 'reallo': 0, 'free': 29, 'calloc': 0, 'realla': 0, 'idx': 1901}
+0x7fffc4001390 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 1916}
+0x7ffff0001c90 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 1931}
+0x7fffc00013d0 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 1959}
+0x7fffb80013d0 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 1974}
+0x7fffc40013d0 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 2015}
+0x7fffdc001a00 {'malloc': 0, 'reallo': 0, 'free': 29, 'calloc': 0, 'realla': 0, 'idx': 2066}
+0x7fffd0001660 {'malloc': 0, 'reallo': 0, 'free': 29, 'calloc': 0, 'realla': 0, 'idx': 2078}
+0x7fffe4001a00 {'malloc': 0, 'reallo': 0, 'free': 29, 'calloc': 0, 'realla': 0, 'idx': 2090}
+0x7fffcc001730 {'malloc': 0, 'reallo': 0, 'free': 9, 'calloc': 4, 'realla': 0, 'idx': 2105}
+0x7fffd8001730 {'malloc': 0, 'reallo': 0, 'free': 9, 'calloc': 4, 'realla': 0, 'idx': 2172}
+0x7fffcc001770 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 2187}
+0x7fffe8001a00 {'malloc': 0, 'reallo': 0, 'free': 29, 'calloc': 0, 'realla': 0, 'idx': 2212}
+0x7fffc0001660 {'malloc': 0, 'reallo': 0, 'free': 29, 'calloc': 0, 'realla': 0, 'idx': 2237}
+0x7ffff0001f20 {'malloc': 0, 'reallo': 0, 'free': 21, 'calloc': 0, 'realla': 0, 'idx': 2288}
+0x7fffb8001660 {'malloc': 0, 'reallo': 0, 'free': 29, 'calloc': 0, 'realla': 0, 'idx': 2313}
+0x7fffd8001770 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 2328}
+0x7fffd0001730 {'malloc': 0, 'reallo': 0, 'free': 9, 'calloc': 4, 'realla': 0, 'idx': 2343}
+0x7fffc0001730 {'malloc': 0, 'reallo': 0, 'free': 9, 'calloc': 4, 'realla': 0, 'idx': 2397}
+0x7fffe4001c50 {'malloc': 0, 'reallo': 0, 'free': 4, 'calloc': 1, 'realla': 0, 'idx': 2438}
+0x7fffd0001770 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 2479}
+0x7fffc4001660 {'malloc': 0, 'reallo': 0, 'free': 29, 'calloc': 0, 'realla': 0, 'idx': 2504}
+0x7fffe4001c90 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 2519}
+0x7fffcc001a00 {'malloc': 0, 'reallo': 0, 'free': 29, 'calloc': 0, 'realla': 0, 'idx': 2544}
+0x7fffb8001730 {'malloc': 0, 'reallo': 0, 'free': 9, 'calloc': 4, 'realla': 0, 'idx': 2559}
+0x7fffe8001c50 {'malloc': 0, 'reallo': 0, 'free': 4, 'calloc': 1, 'realla': 0, 'idx': 2587}
+0x7fffdc001c50 {'malloc': 0, 'reallo': 0, 'free': 4, 'calloc': 1, 'realla': 0, 'idx': 2602}
+0x7fffc0001770 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 2669}
+0x7fffdc001c90 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 2709}
+0x7fffc4001730 {'malloc': 0, 'reallo': 0, 'free': 9, 'calloc': 4, 'realla': 0, 'idx': 2724}
+0x7fffd8001a00 {'malloc': 0, 'reallo': 0, 'free': 29, 'calloc': 0, 'realla': 0, 'idx': 2749}
+0x7fffe8001c90 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 2764}
+0x7fffc4001770 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 2818}
+0x7fffb8001770 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 2846}
+0x7fffcc001c50 {'malloc': 0, 'reallo': 0, 'free': 4, 'calloc': 1, 'realla': 0, 'idx': 2874}
+0x7fffd0001a00 {'malloc': 0, 'reallo': 0, 'free': 29, 'calloc': 0, 'realla': 0, 'idx': 2912}
+0x7ffff0002020 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 2926}
+0x7fffcc001c90 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 2967}
+0x7fffe4001f20 {'malloc': 0, 'reallo': 0, 'free': 21, 'calloc': 0, 'realla': 0, 'idx': 2979}
+0x7fffc0001a00 {'malloc': 0, 'reallo': 0, 'free': 29, 'calloc': 0, 'realla': 0, 'idx': 2991}
+0x7fffd8001c50 {'malloc': 0, 'reallo': 0, 'free': 4, 'calloc': 1, 'realla': 0, 'idx': 3071}
+0x7fffd8001c90 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 3138}
+0x7fffb8001a00 {'malloc': 0, 'reallo': 0, 'free': 29, 'calloc': 0, 'realla': 0, 'idx': 3163}
+0x7fffe8001f20 {'malloc': 0, 'reallo': 0, 'free': 21, 'calloc': 0, 'realla': 0, 'idx': 3213}
+0x7fffc0001c50 {'malloc': 0, 'reallo': 0, 'free': 4, 'calloc': 1, 'realla': 0, 'idx': 3228}
+0x7fffc4001a00 {'malloc': 0, 'reallo': 0, 'free': 29, 'calloc': 0, 'realla': 0, 'idx': 3253}
+0x7fffc0001c90 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 3294}
+0x7fffcc001f20 {'malloc': 0, 'reallo': 0, 'free': 21, 'calloc': 0, 'realla': 0, 'idx': 3371}
+0x7fffb8001c50 {'malloc': 0, 'reallo': 0, 'free': 4, 'calloc': 1, 'realla': 0, 'idx': 3423}
+0x7fffd8001f20 {'malloc': 0, 'reallo': 0, 'free': 21, 'calloc': 0, 'realla': 0, 'idx': 3539}
+0x7fffe4002020 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 3553}
+0x7fffdc001f20 {'malloc': 0, 'reallo': 0, 'free': 21, 'calloc': 0, 'realla': 0, 'idx': 3578}
+0x7fffc0001f20 {'malloc': 0, 'reallo': 0, 'free': 21, 'calloc': 0, 'realla': 0, 'idx': 3616}
+0x7fffb8001c90 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 3631}
+0x7fffd0001c50 {'malloc': 0, 'reallo': 0, 'free': 4, 'calloc': 1, 'realla': 0, 'idx': 3670}
+0x7fffc4001c50 {'malloc': 0, 'reallo': 0, 'free': 4, 'calloc': 1, 'realla': 0, 'idx': 3685}
+0x7fffe8002020 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 3751}
+0x7fffc4001c90 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 3804}
+0x7fffd0001c90 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 3845}
+0x7fffcc002020 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 3885}
+0x7fffb8001f20 {'malloc': 0, 'reallo': 0, 'free': 21, 'calloc': 0, 'realla': 0, 'idx': 4076}
+0x7fffc4001f20 {'malloc': 0, 'reallo': 0, 'free': 21, 'calloc': 0, 'realla': 0, 'idx': 4125}
+0x7fffd8002020 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 4139}
+0x7ffff00021d0 {'malloc': 0, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 4230}
+0x7fffdc002020 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 4269}
+0x7fffd0001f20 {'malloc': 0, 'reallo': 0, 'free': 21, 'calloc': 0, 'realla': 0, 'idx': 4281}
+0x7fffc0002020 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 4308}
+0x7fffc4002020 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 4625}
+0x7fffb8002020 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 4717}
+0x7fffd0002020 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 4744}
+0x7fffcc0021d0 {'malloc': 0, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 5111}
+0x7fffe80021d0 {'malloc': 0, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 5125}
+0x7fffd80021d0 {'malloc': 0, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 5165}
+0x7ffff0002350 {'malloc': 0, 'reallo': 1, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 5295}
+0x7fffe40021d0 {'malloc': 0, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 5309}
+0x7fffdc0021d0 {'malloc': 0, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 5564}
+0x7fffc00021d0 {'malloc': 0, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 5616}
+0x7ffff0001b00 {'malloc': 0, 'reallo': 1, 'free': 4, 'calloc': 1, 'realla': 0, 'idx': 5732}
+0x7fffc40021d0 {'malloc': 0, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 5809}
+0x7fffb80021d0 {'malloc': 0, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 6054}
+0x7fffd00021d0 {'malloc': 0, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 6248}
+0x7ffff0001330 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 4, 'realla': 0, 'idx': 6286}
+0x7fffe8002350 {'malloc': 0, 'reallo': 1, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 6326}
+0x7fffcc002350 {'malloc': 0, 'reallo': 1, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 6392}
+0x7fffe4002350 {'malloc': 0, 'reallo': 1, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 6637}
+0x7fffd8002350 {'malloc': 0, 'reallo': 1, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 6677}
+0x7fffcc001b00 {'malloc': 0, 'reallo': 1, 'free': 4, 'calloc': 1, 'realla': 0, 'idx': 6704}
+0x7fffc0002350 {'malloc': 0, 'reallo': 1, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 6834}
+0x7fffe8001b00 {'malloc': 0, 'reallo': 1, 'free': 4, 'calloc': 1, 'realla': 0, 'idx': 6899}
+0x7fffc4002350 {'malloc': 0, 'reallo': 1, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 7001}
+0x7fffd8001b00 {'malloc': 0, 'reallo': 1, 'free': 4, 'calloc': 1, 'realla': 0, 'idx': 7067}
+0x7fffdc002350 {'malloc': 0, 'reallo': 1, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 7208}
+0x7fffe4001b00 {'malloc': 0, 'reallo': 1, 'free': 4, 'calloc': 1, 'realla': 0, 'idx': 7222}
+0x7ffff00016d0 {'malloc': 0, 'reallo': 0, 'free': 13, 'calloc': 0, 'realla': 0, 'idx': 7239}
+0x7ffff0001680 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 7310}
+0x7fffc0001b00 {'malloc': 0, 'reallo': 1, 'free': 4, 'calloc': 1, 'realla': 0, 'idx': 7413}
+0x7fffb8002350 {'malloc': 0, 'reallo': 1, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 7440}
+0x7fffc4001b00 {'malloc': 0, 'reallo': 1, 'free': 4, 'calloc': 1, 'realla': 0, 'idx': 7467}
+0x7fffcc001330 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 4, 'realla': 0, 'idx': 7585}
+0x7ffff0001a70 {'malloc': 0, 'reallo': 0, 'free': 13, 'calloc': 0, 'realla': 0, 'idx': 7619}
+0x7ffff0001a20 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 7692}
+0x7fffd8001330 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 4, 'realla': 0, 'idx': 7704}
+0x7fffe8001330 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 4, 'realla': 0, 'idx': 7742}
+0x7fffd0002350 {'malloc': 0, 'reallo': 1, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 7894}
+0x7ffff0001f90 {'malloc': 0, 'reallo': 0, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 7987}
+0x7ffff0001f40 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 8084}
+0x7fffe4001330 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 4, 'realla': 0, 'idx': 8160}
+0x7fffc4001330 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 4, 'realla': 0, 'idx': 8172}
+0x7fffb8001b00 {'malloc': 0, 'reallo': 1, 'free': 4, 'calloc': 1, 'realla': 0, 'idx': 8198}
+0x7fffc0001330 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 4, 'realla': 0, 'idx': 8222}
+0x7ffff0002000 {'malloc': 0, 'reallo': 0, 'free': 10, 'calloc': 4, 'realla': 0, 'idx': 8251}
+0x7fffdc001b00 {'malloc': 0, 'reallo': 1, 'free': 4, 'calloc': 1, 'realla': 0, 'idx': 8329}
+0x7fffd80016d0 {'malloc': 0, 'reallo': 0, 'free': 13, 'calloc': 0, 'realla': 0, 'idx': 8385}
+0x7ffff0001fb0 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 8417}
+0x7fffd8001680 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 8488}
+0x7ffff00020d0 {'malloc': 0, 'reallo': 0, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 8543}
+0x7fffd0001b00 {'malloc': 0, 'reallo': 1, 'free': 4, 'calloc': 1, 'realla': 0, 'idx': 8624}
+0x7fffcc0016d0 {'malloc': 0, 'reallo': 0, 'free': 13, 'calloc': 0, 'realla': 0, 'idx': 8745}
+0x7ffff0002070 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 8777}
+0x7fffe80016d0 {'malloc': 0, 'reallo': 0, 'free': 13, 'calloc': 0, 'realla': 0, 'idx': 8794}
+0x7ffff0002140 {'malloc': 0, 'reallo': 0, 'free': 23, 'calloc': 0, 'realla': 0, 'idx': 8860}
+0x7fffd8001a70 {'malloc': 0, 'reallo': 0, 'free': 13, 'calloc': 0, 'realla': 0, 'idx': 8917}
+0x7fffe8001680 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 8937}
+0x7fffcc001680 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 8957}
+0x7fffb8001330 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 4, 'realla': 0, 'idx': 8969}
+0x7ffff00020f0 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 9001}
+0x7ffff00021b0 {'malloc': 0, 'reallo': 0, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 9099}
+0x7fffcc001a70 {'malloc': 0, 'reallo': 0, 'free': 13, 'calloc': 0, 'realla': 0, 'idx': 9133}
+0x7fffc40016d0 {'malloc': 0, 'reallo': 0, 'free': 13, 'calloc': 0, 'realla': 0, 'idx': 9150}
+0x7ffff0002160 {'malloc': 0, 'reallo': 0, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 9206}
+0x7fffcc001a20 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 9274}
+0x7ffff00022f0 {'malloc': 0, 'reallo': 0, 'free': 8, 'calloc': 0, 'realla': 0, 'idx': 9315}
+0x7fffe8001a70 {'malloc': 0, 'reallo': 0, 'free': 13, 'calloc': 0, 'realla': 0, 'idx': 9349}
+0x7fffe40016d0 {'malloc': 0, 'reallo': 0, 'free': 13, 'calloc': 0, 'realla': 0, 'idx': 9366}
+0x7fffc4001680 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 9419}
+0x7fffe8001a20 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 9443}
+0x7ffff0002260 {'malloc': 0, 'reallo': 1, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 9475}
+0x7fffd0001330 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 4, 'realla': 0, 'idx': 9487}
+0x7fffd8001a20 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 9511}
+0x7fffe4001680 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 9531}
+0x7fffc4001a70 {'malloc': 0, 'reallo': 0, 'free': 13, 'calloc': 0, 'realla': 0, 'idx': 9633}
+0x7ffff0002500 {'malloc': 0, 'reallo': 0, 'free': 3, 'calloc': 1, 'realla': 0, 'idx': 9683}
+0x7fffcc001f90 {'malloc': 0, 'reallo': 0, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 9712}
+0x7fffc00016d0 {'malloc': 0, 'reallo': 0, 'free': 13, 'calloc': 0, 'realla': 0, 'idx': 9729}
+0x7fffd8001f90 {'malloc': 0, 'reallo': 0, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 9758}
+0x7fffe4001a70 {'malloc': 0, 'reallo': 0, 'free': 13, 'calloc': 0, 'realla': 0, 'idx': 9779}
+0x7fffe8001f90 {'malloc': 0, 'reallo': 0, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 9808}
+0x7fffd8001f40 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 9866}
+0x7fffcc001f40 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 9898}
+0x7fffdc001330 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 4, 'realla': 0, 'idx': 9946}
+0x7fffe4001a20 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 9970}
+0x7fffcc002000 {'malloc': 0, 'reallo': 0, 'free': 10, 'calloc': 4, 'realla': 0, 'idx': 10012}
+0x7ffff0002460 {'malloc': 0, 'reallo': 0, 'free': 10, 'calloc': 6, 'realla': 0, 'idx': 10048}
+0x7fffd8002000 {'malloc': 0, 'reallo': 0, 'free': 10, 'calloc': 4, 'realla': 0, 'idx': 10077}
+0x7fffe8001f40 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 10109}
+0x7fffd8001fb0 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 10188}
+0x7fffc4001a20 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 10212}
+0x7fffe8002000 {'malloc': 0, 'reallo': 0, 'free': 10, 'calloc': 4, 'realla': 0, 'idx': 10254}
+0x7fffc0001680 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 10274}
+0x7ffff00024b0 {'malloc': 0, 'reallo': 0, 'free': 7, 'calloc': 4, 'realla': 0, 'idx': 10322}
+0x7fffcc001fb0 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 10367}
+0x7fffd80020d0 {'malloc': 0, 'reallo': 0, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 10480}
+0x7fffe4001f90 {'malloc': 0, 'reallo': 0, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 10509}
+0x7fffc0001a70 {'malloc': 0, 'reallo': 0, 'free': 13, 'calloc': 0, 'realla': 0, 'idx': 10530}
+0x7ffff0000ff0 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 10562}
+0x7fffe8001fb0 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 10607}
+0x7fffc4001f90 {'malloc': 0, 'reallo': 0, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 10636}
+0x7fffc0001a20 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 10660}
+0x7ffff0002310 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 10692}
+0x7fffcc0020d0 {'malloc': 0, 'reallo': 0, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 10721}
+0x7fffe4001f40 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 10753}
+0x7fffd8002070 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 10785}
+0x7fffcc002070 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 10858}
+0x7fffd8002140 {'malloc': 0, 'reallo': 0, 'free': 23, 'calloc': 0, 'realla': 0, 'idx': 10908}
+0x7fffc4001f40 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 10940}
+0x7fffc0001f90 {'malloc': 0, 'reallo': 0, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 11035}
+0x7fffd80020f0 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 11067}
+0x7ffff0001c10 {'malloc': 0, 'reallo': 0, 'free': 10, 'calloc': 3, 'realla': 0, 'idx': 11095}
+0x7fffcc002140 {'malloc': 0, 'reallo': 0, 'free': 23, 'calloc': 0, 'realla': 0, 'idx': 11124}
+0x7fffb80016d0 {'malloc': 0, 'reallo': 0, 'free': 13, 'calloc': 0, 'realla': 0, 'idx': 11153}
+0x7fffe80020d0 {'malloc': 0, 'reallo': 0, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 11182}
+0x7fffe4002000 {'malloc': 0, 'reallo': 0, 'free': 10, 'calloc': 4, 'realla': 0, 'idx': 11211}
+0x7fffcc0020f0 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 11243}
+0x7fffc4002000 {'malloc': 0, 'reallo': 0, 'free': 10, 'calloc': 4, 'realla': 0, 'idx': 11272}
+0x7fffb8001680 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 11292}
+0x7fffc0001f40 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 11324}
+0x7fffe4001fb0 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 11356}
+0x7fffe8002070 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 11388}
+0x7fffcc0021b0 {'malloc': 0, 'reallo': 0, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 11429}
+0x7fffc0002000 {'malloc': 0, 'reallo': 0, 'free': 10, 'calloc': 4, 'realla': 0, 'idx': 11499}
+0x7fffe40020d0 {'malloc': 0, 'reallo': 0, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 11541}
+0x7fffc4001fb0 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 11573}
+0x7fffcc002160 {'malloc': 0, 'reallo': 0, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 11605}
+0x7ffff0001ad0 {'malloc': 0, 'reallo': 2, 'free': 11, 'calloc': 4, 'realla': 0, 'idx': 11629}
+0x7fffc0001fb0 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 11673}
+0x7fffe8002140 {'malloc': 0, 'reallo': 0, 'free': 23, 'calloc': 0, 'realla': 0, 'idx': 11702}
+0x7fffe4002070 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 11734}
+0x7fffd80021b0 {'malloc': 0, 'reallo': 0, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 11763}
+0x7fffdc0016d0 {'malloc': 0, 'reallo': 0, 'free': 13, 'calloc': 0, 'realla': 0, 'idx': 11780}
+0x7fffc00020d0 {'malloc': 0, 'reallo': 0, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 11822}
+0x7fffcc0022f0 {'malloc': 0, 'reallo': 0, 'free': 8, 'calloc': 0, 'realla': 0, 'idx': 11851}
+0x7fffe4002140 {'malloc': 0, 'reallo': 0, 'free': 23, 'calloc': 0, 'realla': 0, 'idx': 11880}
+0x7fffb8001a70 {'malloc': 0, 'reallo': 0, 'free': 13, 'calloc': 0, 'realla': 0, 'idx': 11901}
+0x7ffff0001a90 {'malloc': 0, 'reallo': 0, 'free': 10, 'calloc': 1, 'realla': 0, 'idx': 11925}
+0x7fffc0002070 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 11957}
+0x7fffcc002260 {'malloc': 0, 'reallo': 1, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 11989}
+0x7fffc40020d0 {'malloc': 0, 'reallo': 0, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 12018}
+0x7fffd8002160 {'malloc': 0, 'reallo': 0, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 12050}
+0x7fffb8001a20 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 12074}
+0x7fffe40020f0 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 12106}
+0x7fffd00016d0 {'malloc': 0, 'reallo': 0, 'free': 13, 'calloc': 0, 'realla': 0, 'idx': 12123}
+0x7fffc4002070 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 12155}
+0x7fffe80020f0 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 12187}
+0x7fffdc001680 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 12207}
+0x7fffd80022f0 {'malloc': 0, 'reallo': 0, 'free': 8, 'calloc': 0, 'realla': 0, 'idx': 12236}
+0x7fffd0001680 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 12256}
+0x7fffc4002140 {'malloc': 0, 'reallo': 0, 'free': 23, 'calloc': 0, 'realla': 0, 'idx': 12285}
+0x7fffc0002140 {'malloc': 0, 'reallo': 0, 'free': 23, 'calloc': 0, 'realla': 0, 'idx': 12335}
+0x7fffd8002260 {'malloc': 0, 'reallo': 1, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 12367}
+0x7fffe80021b0 {'malloc': 0, 'reallo': 0, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 12433}
+0x7fffb8001f90 {'malloc': 0, 'reallo': 0, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 12462}
+0x7fffc00020f0 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 12494}
+0x7fffd8002500 {'malloc': 0, 'reallo': 0, 'free': 3, 'calloc': 1, 'realla': 0, 'idx': 12523}
+0x7fffe40021b0 {'malloc': 0, 'reallo': 0, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 12552}
+0x7fffcc002500 {'malloc': 0, 'reallo': 0, 'free': 3, 'calloc': 1, 'realla': 0, 'idx': 12581}
+0x7fffb8001f40 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 12630}
+0x7fffc40020f0 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 12662}
+0x7fffdc001a70 {'malloc': 0, 'reallo': 0, 'free': 13, 'calloc': 0, 'realla': 0, 'idx': 12703}
+0x7fffc00021b0 {'malloc': 0, 'reallo': 0, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 12732}
+0x7fffe4002160 {'malloc': 0, 'reallo': 0, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 12764}
+0x7fffb8002000 {'malloc': 0, 'reallo': 0, 'free': 10, 'calloc': 4, 'realla': 0, 'idx': 12793}
+0x7fffe8002160 {'malloc': 0, 'reallo': 0, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 12861}
+0x7fffc0002160 {'malloc': 0, 'reallo': 0, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 12893}
+0x7fffc40021b0 {'malloc': 0, 'reallo': 0, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 12922}
+0x7fffd8002460 {'malloc': 0, 'reallo': 0, 'free': 10, 'calloc': 6, 'realla': 0, 'idx': 12994}
+0x7fffe40022f0 {'malloc': 0, 'reallo': 0, 'free': 8, 'calloc': 0, 'realla': 0, 'idx': 13023}
+0x7fffe80022f0 {'malloc': 0, 'reallo': 0, 'free': 8, 'calloc': 0, 'realla': 0, 'idx': 13052}
+0x7fffc00022f0 {'malloc': 0, 'reallo': 0, 'free': 8, 'calloc': 0, 'realla': 0, 'idx': 13081}
+0x7fffd0001a70 {'malloc': 0, 'reallo': 0, 'free': 13, 'calloc': 0, 'realla': 0, 'idx': 13102}
+0x7ffff00016f0 {'malloc': 0, 'reallo': 0, 'free': 6, 'calloc': 1, 'realla': 0, 'idx': 13122}
+0x7fffcc002460 {'malloc': 0, 'reallo': 0, 'free': 10, 'calloc': 6, 'realla': 0, 'idx': 13158}
+0x7fffdc001a20 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 13182}
+0x7fffc0002260 {'malloc': 0, 'reallo': 1, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 13214}
+0x7fffe4002260 {'malloc': 0, 'reallo': 1, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 13246}
+0x7fffd0001a20 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 13286}
+0x7fffc4002160 {'malloc': 0, 'reallo': 0, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 13318}
+0x7fffd80024b0 {'malloc': 0, 'reallo': 0, 'free': 7, 'calloc': 4, 'realla': 0, 'idx': 13354}
+0x7fffcc0024b0 {'malloc': 0, 'reallo': 0, 'free': 7, 'calloc': 4, 'realla': 0, 'idx': 13390}
+0x7fffe8002260 {'malloc': 0, 'reallo': 1, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 13422}
+0x7fffc40022f0 {'malloc': 0, 'reallo': 0, 'free': 8, 'calloc': 0, 'realla': 0, 'idx': 13472}
+0x7fffe4002500 {'malloc': 0, 'reallo': 0, 'free': 3, 'calloc': 1, 'realla': 0, 'idx': 13501}
+0x7fffc0002500 {'malloc': 0, 'reallo': 0, 'free': 3, 'calloc': 1, 'realla': 0, 'idx': 13610}
+0x7ffff0001350 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 13683}
+0x7fffcc000ff0 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 13715}
+0x7fffdc001f90 {'malloc': 0, 'reallo': 0, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 13744}
+0x7fffe8002500 {'malloc': 0, 'reallo': 0, 'free': 3, 'calloc': 1, 'realla': 0, 'idx': 13773}
+0x7fffd0001f90 {'malloc': 0, 'reallo': 0, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 13802}
+0x7fffcc002310 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 13846}
+0x7fffe4002460 {'malloc': 0, 'reallo': 0, 'free': 10, 'calloc': 6, 'realla': 0, 'idx': 13882}
+0x7fffb8001fb0 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 13914}
+0x7fffd8000ff0 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 13946}
+0x7fffd0001f40 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 13978}
+0x7fffdc001f40 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 14010}
+0x7fffc4002260 {'malloc': 0, 'reallo': 1, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 14042}
+0x7fffd0002000 {'malloc': 0, 'reallo': 0, 'free': 10, 'calloc': 4, 'realla': 0, 'idx': 14143}
+0x7fffdc002000 {'malloc': 0, 'reallo': 0, 'free': 10, 'calloc': 4, 'realla': 0, 'idx': 14200}
+0x7fffc0002460 {'malloc': 0, 'reallo': 0, 'free': 10, 'calloc': 6, 'realla': 0, 'idx': 14248}
+0x7fffd0001fb0 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 14280}
+0x7fffd8002310 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 14312}
+0x7fffe40024b0 {'malloc': 0, 'reallo': 0, 'free': 7, 'calloc': 4, 'realla': 0, 'idx': 14348}
+0x7fffb80020d0 {'malloc': 0, 'reallo': 0, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 14377}
+0x7fffe8002460 {'malloc': 0, 'reallo': 0, 'free': 10, 'calloc': 6, 'realla': 0, 'idx': 14413}
+0x7fffc00024b0 {'malloc': 0, 'reallo': 0, 'free': 7, 'calloc': 4, 'realla': 0, 'idx': 14449}
+0x7ffff0001020 {'malloc': 0, 'reallo': 0, 'free': 10, 'calloc': 1, 'realla': 0, 'idx': 14461}
+0x7fffe80024b0 {'malloc': 0, 'reallo': 0, 'free': 7, 'calloc': 4, 'realla': 0, 'idx': 14585}
+0x7fffdc001fb0 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 14617}
+0x7fffb8002070 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 14722}
+0x7fffd00020d0 {'malloc': 0, 'reallo': 0, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 14751}
+0x7fffc4002500 {'malloc': 0, 'reallo': 0, 'free': 3, 'calloc': 1, 'realla': 0, 'idx': 14780}
+0x7fffdc0020d0 {'malloc': 0, 'reallo': 0, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 14809}
+0x7fffc0000ff0 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 14841}
+0x7fffcc001c10 {'malloc': 0, 'reallo': 0, 'free': 10, 'calloc': 3, 'realla': 0, 'idx': 14869}
+0x7fffd0002070 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 14914}
+0x7fffd8001c10 {'malloc': 0, 'reallo': 0, 'free': 10, 'calloc': 3, 'realla': 0, 'idx': 14978}
+0x7fffdc002070 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 15048}
+0x7fffe4000ff0 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 15080}
+0x7fffc0002310 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 15112}
+0x7fffcc001ad0 {'malloc': 0, 'reallo': 2, 'free': 11, 'calloc': 4, 'realla': 0, 'idx': 15136}
+0x7fffb8002140 {'malloc': 0, 'reallo': 0, 'free': 23, 'calloc': 0, 'realla': 0, 'idx': 15165}
+0x7fffc4002460 {'malloc': 0, 'reallo': 0, 'free': 10, 'calloc': 6, 'realla': 0, 'idx': 15216}
+0x7fffd0002140 {'malloc': 0, 'reallo': 0, 'free': 23, 'calloc': 0, 'realla': 0, 'idx': 15273}
+0x7fffe4002310 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 15305}
+0x7fffdc002140 {'malloc': 0, 'reallo': 0, 'free': 23, 'calloc': 0, 'realla': 0, 'idx': 15334}
+0x7fffb80020f0 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 15366}
+0x7fffd00020f0 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 15441}
+0x7fffdc0020f0 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 15473}
+0x7fffc0001c10 {'malloc': 0, 'reallo': 0, 'free': 10, 'calloc': 3, 'realla': 0, 'idx': 15561}
+0x7fffb80021b0 {'malloc': 0, 'reallo': 0, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 15590}
+0x7fffdc0021b0 {'malloc': 0, 'reallo': 0, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 15643}
+0x7fffcc001a90 {'malloc': 0, 'reallo': 0, 'free': 10, 'calloc': 1, 'realla': 0, 'idx': 15695}
+0x7fffc40024b0 {'malloc': 0, 'reallo': 0, 'free': 7, 'calloc': 4, 'realla': 0, 'idx': 15731}
+0x7fffd8001ad0 {'malloc': 0, 'reallo': 2, 'free': 11, 'calloc': 4, 'realla': 0, 'idx': 15755}
+0x7fffe8000ff0 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 15787}
+0x7fffb8002160 {'malloc': 0, 'reallo': 0, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 15834}
+0x7fffdc002160 {'malloc': 0, 'reallo': 0, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 15866}
+0x7fffd00021b0 {'malloc': 0, 'reallo': 0, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 15895}
+0x7fffe8002310 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 15951}
+0x7fffd8001a90 {'malloc': 0, 'reallo': 0, 'free': 10, 'calloc': 1, 'realla': 0, 'idx': 15975}
+0x7fffdc0022f0 {'malloc': 0, 'reallo': 0, 'free': 8, 'calloc': 0, 'realla': 0, 'idx': 16024}
+0x7fffb80022f0 {'malloc': 0, 'reallo': 0, 'free': 8, 'calloc': 0, 'realla': 0, 'idx': 16146}
+0x7fffdc002260 {'malloc': 0, 'reallo': 1, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 16178}
+0x7fffe4001c10 {'malloc': 0, 'reallo': 0, 'free': 10, 'calloc': 3, 'realla': 0, 'idx': 16206}
+0x7fffcc0016f0 {'malloc': 0, 'reallo': 0, 'free': 6, 'calloc': 1, 'realla': 0, 'idx': 16241}
+0x7fffc0001ad0 {'malloc': 0, 'reallo': 2, 'free': 11, 'calloc': 4, 'realla': 0, 'idx': 16285}
+0x7fffdc002500 {'malloc': 0, 'reallo': 0, 'free': 3, 'calloc': 1, 'realla': 0, 'idx': 16342}
+0x7fffb8002260 {'malloc': 0, 'reallo': 1, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 16374}
+0x7fffd0002160 {'malloc': 0, 'reallo': 0, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 16466}
+0x7ffff0002ba0 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 16481}
+0x7fffc4000ff0 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 16513}
+0x7fffc0001a90 {'malloc': 0, 'reallo': 0, 'free': 10, 'calloc': 1, 'realla': 0, 'idx': 16537}
+0x7fffb8002500 {'malloc': 0, 'reallo': 0, 'free': 3, 'calloc': 1, 'realla': 0, 'idx': 16582}
+0x7fffe8001c10 {'malloc': 0, 'reallo': 0, 'free': 10, 'calloc': 3, 'realla': 0, 'idx': 16610}
+0x7fffe4001ad0 {'malloc': 0, 'reallo': 2, 'free': 11, 'calloc': 4, 'realla': 0, 'idx': 16634}
+0x7fffd80016f0 {'malloc': 0, 'reallo': 0, 'free': 6, 'calloc': 1, 'realla': 0, 'idx': 16667}
+0x7fffd00022f0 {'malloc': 0, 'reallo': 0, 'free': 8, 'calloc': 0, 'realla': 0, 'idx': 16696}
+0x7fffc4002310 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 16764}
+0x7fffe4001a90 {'malloc': 0, 'reallo': 0, 'free': 10, 'calloc': 1, 'realla': 0, 'idx': 16788}
+0x7fffcc001350 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 16837}
+0x7fffb8002460 {'malloc': 0, 'reallo': 0, 'free': 10, 'calloc': 6, 'realla': 0, 'idx': 16917}
+0x7fffd0002260 {'malloc': 0, 'reallo': 1, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 16949}
+0x7fffe8001ad0 {'malloc': 0, 'reallo': 2, 'free': 11, 'calloc': 4, 'realla': 0, 'idx': 17001}
+0x7fffc00016f0 {'malloc': 0, 'reallo': 0, 'free': 6, 'calloc': 1, 'realla': 0, 'idx': 17181}
+0x7fffdc002460 {'malloc': 0, 'reallo': 0, 'free': 10, 'calloc': 6, 'realla': 0, 'idx': 17217}
+0x7fffd0002500 {'malloc': 0, 'reallo': 0, 'free': 3, 'calloc': 1, 'realla': 0, 'idx': 17246}
+0x7fffd8001350 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 17262}
+0x7fffb80024b0 {'malloc': 0, 'reallo': 0, 'free': 7, 'calloc': 4, 'realla': 0, 'idx': 17298}
+0x7fffc4001c10 {'malloc': 0, 'reallo': 0, 'free': 10, 'calloc': 3, 'realla': 0, 'idx': 17326}
+0x7fffdc0024b0 {'malloc': 0, 'reallo': 0, 'free': 7, 'calloc': 4, 'realla': 0, 'idx': 17362}
+0x7fffe40016f0 {'malloc': 0, 'reallo': 0, 'free': 6, 'calloc': 1, 'realla': 0, 'idx': 17398}
+0x7fffcc001020 {'malloc': 0, 'reallo': 0, 'free': 10, 'calloc': 1, 'realla': 0, 'idx': 17587}
+0x7fffdc000ff0 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 17634}
+0x7fffe8001a90 {'malloc': 0, 'reallo': 0, 'free': 10, 'calloc': 1, 'realla': 0, 'idx': 17674}
+0x7fffb8000ff0 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 17706}
+0x7fffd0002460 {'malloc': 0, 'reallo': 0, 'free': 10, 'calloc': 6, 'realla': 0, 'idx': 17742}
+0x7fffc4001ad0 {'malloc': 0, 'reallo': 2, 'free': 11, 'calloc': 4, 'realla': 0, 'idx': 17766}
+0x7ffff0002e30 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 17781}
+0x7fffb8002310 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 17849}
+0x7fffc0001350 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 17865}
+0x7fffdc002310 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 17909}
+0x7fffe4001350 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 17925}
+0x7fffd8001020 {'malloc': 0, 'reallo': 0, 'free': 10, 'calloc': 1, 'realla': 0, 'idx': 17963}
+0x7fffd00024b0 {'malloc': 0, 'reallo': 0, 'free': 7, 'calloc': 4, 'realla': 0, 'idx': 18027}
+0x7fffc4001a90 {'malloc': 0, 'reallo': 0, 'free': 10, 'calloc': 1, 'realla': 0, 'idx': 18188}
+0x7fffe80016f0 {'malloc': 0, 'reallo': 0, 'free': 6, 'calloc': 1, 'realla': 0, 'idx': 18208}
+0x7fffc0001020 {'malloc': 0, 'reallo': 0, 'free': 10, 'calloc': 1, 'realla': 0, 'idx': 18348}
+0x7fffd0000ff0 {'malloc': 0, 'reallo': 0, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 18380}
+0x7fffe4001020 {'malloc': 0, 'reallo': 0, 'free': 10, 'calloc': 1, 'realla': 0, 'idx': 18478}
+0x7fffd0002310 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 18510}
+0x7fffdc001c10 {'malloc': 0, 'reallo': 0, 'free': 10, 'calloc': 3, 'realla': 0, 'idx': 18614}
+0x7fffb8001c10 {'malloc': 0, 'reallo': 0, 'free': 10, 'calloc': 3, 'realla': 0, 'idx': 18642}
+0x7fffc40016f0 {'malloc': 0, 'reallo': 0, 'free': 6, 'calloc': 1, 'realla': 0, 'idx': 18804}
+0x7fffe8001350 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 18835}
+0x7fffb8001ad0 {'malloc': 0, 'reallo': 2, 'free': 11, 'calloc': 4, 'realla': 0, 'idx': 18983}
+0x7fffdc001ad0 {'malloc': 0, 'reallo': 2, 'free': 11, 'calloc': 4, 'realla': 0, 'idx': 19007}
+0x7ffff00031d0 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 19037}
+0x7fffcc002ba0 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 19052}
+0x7fffb8001a90 {'malloc': 0, 'reallo': 0, 'free': 10, 'calloc': 1, 'realla': 0, 'idx': 19076}
+0x7fffdc001a90 {'malloc': 0, 'reallo': 0, 'free': 10, 'calloc': 1, 'realla': 0, 'idx': 19128}
+0x7fffd0001c10 {'malloc': 0, 'reallo': 0, 'free': 10, 'calloc': 3, 'realla': 0, 'idx': 19246}
+0x7fffd8002ba0 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 19261}
+0x7fffc4001350 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 19290}
+0x7fffd0001ad0 {'malloc': 0, 'reallo': 2, 'free': 11, 'calloc': 4, 'realla': 0, 'idx': 19416}
+0x7fffb80016f0 {'malloc': 0, 'reallo': 0, 'free': 6, 'calloc': 1, 'realla': 0, 'idx': 19436}
+0x7fffd0001a90 {'malloc': 0, 'reallo': 0, 'free': 10, 'calloc': 1, 'realla': 0, 'idx': 19521}
+0x7fffc0002ba0 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 19616}
+0x7fffdc0016f0 {'malloc': 0, 'reallo': 0, 'free': 6, 'calloc': 1, 'realla': 0, 'idx': 19636}
+0x7fffe8001020 {'malloc': 0, 'reallo': 0, 'free': 10, 'calloc': 1, 'realla': 0, 'idx': 19648}
+0x7fffd00016f0 {'malloc': 0, 'reallo': 0, 'free': 6, 'calloc': 1, 'realla': 0, 'idx': 19817}
+0x7fffb8001350 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 19833}
+0x7fffc4001020 {'malloc': 0, 'reallo': 0, 'free': 10, 'calloc': 1, 'realla': 0, 'idx': 19874}
+0x7fffd8002e30 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 19957}
+0x7fffcc002e30 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 20023}
+0x7fffe4002ba0 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 20145}
+0x7fffb8001020 {'malloc': 0, 'reallo': 0, 'free': 10, 'calloc': 1, 'realla': 0, 'idx': 20157}
+0x7fffd0001350 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 20266}
+0x7ffff0003460 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 20334}
+0x7fffdc001350 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 20375}
+0x7fffc0002e30 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 20535}
+0x7fffd80031d0 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 20577}
+0x7fffd0001020 {'malloc': 0, 'reallo': 0, 'free': 10, 'calloc': 1, 'realla': 0, 'idx': 20589}
+0x7fffcc0031d0 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 20643}
+0x7fffdc001020 {'malloc': 0, 'reallo': 0, 'free': 10, 'calloc': 1, 'realla': 0, 'idx': 20683}
+0x7fffe4002e30 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 20863}
+0x7fffc4002ba0 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 21051}
+0x7fffe8002ba0 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 21433}
+0x7fffc00031d0 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 21488}
+0x7fffd8003460 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 21527}
+0x7fffcc003460 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 21631}
+0x7fffb8002ba0 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 21771}
+0x7fffdc002ba0 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 21786}
+0x7fffe40031d0 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 21921}
+0x7fffc4002e30 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 21974}
+0x7fffd0002ba0 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 21989}
+0x7fffe8002e30 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 22210}
+0x7fffdc002e30 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 22393}
+0x7fffb8002e30 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 22449}
+0x7fffd0002e30 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 22580}
+0x7fffc0003460 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 22594}
+0x7fffe80031d0 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 23060}
+0x7fffe4003460 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 23114}
+0x7ffff00034f0 {'malloc': 0, 'reallo': 1, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 23128}
+0x7fffdc0031d0 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 23183}
+0x7fffc40031d0 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 23367}
+0x7fffb80031d0 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 23407}
+0x7fffd00031d0 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 23666}
+0x7ffff00030c0 {'malloc': 0, 'reallo': 1, 'free': 10, 'calloc': 2, 'realla': 0, 'idx': 23796}
+0x7fffdc003460 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 24053}
+0x7fffe8003460 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 24156}
+0x7fffb8003460 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 24207}
+0x7fffcc0034f0 {'malloc': 0, 'reallo': 1, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 24221}
+0x7fffc4003460 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 24376}
+0x7fffd0003460 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 24569}
+0x7fffd80034f0 {'malloc': 0, 'reallo': 1, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 24646}
+0x7fffcc0030c0 {'malloc': 0, 'reallo': 1, 'free': 10, 'calloc': 2, 'realla': 0, 'idx': 24775}
+0x7fffc00034f0 {'malloc': 0, 'reallo': 1, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 24942}
+0x7fffd80030c0 {'malloc': 0, 'reallo': 1, 'free': 10, 'calloc': 2, 'realla': 0, 'idx': 25111}
+0x7fffe40034f0 {'malloc': 0, 'reallo': 1, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 25533}
+0x7fffc00030c0 {'malloc': 0, 'reallo': 1, 'free': 10, 'calloc': 2, 'realla': 0, 'idx': 25736}
+0x7fffe40030c0 {'malloc': 0, 'reallo': 1, 'free': 10, 'calloc': 2, 'realla': 0, 'idx': 25935}
+0x7fffb80034f0 {'malloc': 0, 'reallo': 1, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 26417}
+0x7fffdc0034f0 {'malloc': 0, 'reallo': 1, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 26872}
+0x7fffe80034f0 {'malloc': 0, 'reallo': 1, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 26913}
+0x7fffb80030c0 {'malloc': 0, 'reallo': 1, 'free': 10, 'calloc': 2, 'realla': 0, 'idx': 27077}
+0x7fffc40034f0 {'malloc': 0, 'reallo': 1, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 27116}
+0x7fffdc0030c0 {'malloc': 0, 'reallo': 1, 'free': 10, 'calloc': 2, 'realla': 0, 'idx': 27327}
+0x7fffd00034f0 {'malloc': 0, 'reallo': 1, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 27353}
+0x7fffe80030c0 {'malloc': 0, 'reallo': 1, 'free': 10, 'calloc': 2, 'realla': 0, 'idx': 27499}
+0x7fffd00030c0 {'malloc': 0, 'reallo': 1, 'free': 10, 'calloc': 2, 'realla': 0, 'idx': 27966}
+0x7fffc40030c0 {'malloc': 0, 'reallo': 1, 'free': 10, 'calloc': 2, 'realla': 0, 'idx': 28186}
+0x7ffff0003600 {'malloc': 0, 'reallo': 0, 'free': 3, 'calloc': 1, 'realla': 0, 'idx': 28699}
+0x7ffff0003650 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 28818}
+0x7fffd8003600 {'malloc': 0, 'reallo': 0, 'free': 3, 'calloc': 1, 'realla': 0, 'idx': 30042}
+0x7fffd8003650 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 30516}
+0x7fffcc003600 {'malloc': 0, 'reallo': 0, 'free': 3, 'calloc': 1, 'realla': 0, 'idx': 30766}
+0x7fffcc003650 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 30941}
+0x7fffc0003600 {'malloc': 0, 'reallo': 0, 'free': 3, 'calloc': 1, 'realla': 0, 'idx': 32758}
+0x7fffc0003650 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 33086}
+0x7fffe4003600 {'malloc': 0, 'reallo': 0, 'free': 3, 'calloc': 1, 'realla': 0, 'idx': 33400}
+0x7fffe4003650 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 33563}
+0x7fffb8003600 {'malloc': 0, 'reallo': 0, 'free': 3, 'calloc': 1, 'realla': 0, 'idx': 34879}
+0x7ffff0003a10 {'malloc': 0, 'reallo': 0, 'free': 3, 'calloc': 2, 'realla': 0, 'idx': 35246}
+0x7fffb8003650 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 35282}
+0x7fffdc003600 {'malloc': 0, 'reallo': 0, 'free': 3, 'calloc': 1, 'realla': 0, 'idx': 35600}
+0x7fffd0003600 {'malloc': 0, 'reallo': 0, 'free': 3, 'calloc': 1, 'realla': 0, 'idx': 35636}
+0x7fffdc003650 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 35725}
+0x7fffd0003650 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 35807}
+0x7fffe8003600 {'malloc': 0, 'reallo': 0, 'free': 3, 'calloc': 1, 'realla': 0, 'idx': 36785}
+0x7fffc4003600 {'malloc': 0, 'reallo': 0, 'free': 3, 'calloc': 1, 'realla': 0, 'idx': 36858}
+0x7fffe8003650 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 36907}
+0x7fffc4003650 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 37014}
+0x7fffd8003a10 {'malloc': 0, 'reallo': 0, 'free': 3, 'calloc': 2, 'realla': 0, 'idx': 37205}
+0x7fffcc003a10 {'malloc': 0, 'reallo': 0, 'free': 3, 'calloc': 2, 'realla': 0, 'idx': 37458}
+0x7ffff0001370 {'malloc': 0, 'reallo': 0, 'free': 7, 'calloc': 1, 'realla': 0, 'idx': 37538}
+0x7fffe4003a10 {'malloc': 0, 'reallo': 0, 'free': 3, 'calloc': 2, 'realla': 0, 'idx': 39013}
+0x7fffc0003a10 {'malloc': 0, 'reallo': 0, 'free': 3, 'calloc': 2, 'realla': 0, 'idx': 39094}
+0x7ffff00042d0 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 39249}
+0x7fffcc001370 {'malloc': 0, 'reallo': 0, 'free': 7, 'calloc': 1, 'realla': 0, 'idx': 39264}
+0x7fffd8001370 {'malloc': 0, 'reallo': 0, 'free': 7, 'calloc': 1, 'realla': 0, 'idx': 39279}
+0x7ffff00013b0 {'malloc': 0, 'reallo': 0, 'free': 23, 'calloc': 1, 'realla': 0, 'idx': 39431}
+0x7fffb8003a10 {'malloc': 0, 'reallo': 0, 'free': 3, 'calloc': 2, 'realla': 0, 'idx': 39835}
+0x7fffcc0042d0 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 40188}
+0x7fffd0003a10 {'malloc': 0, 'reallo': 0, 'free': 3, 'calloc': 2, 'realla': 0, 'idx': 40215}
+0x7fffcc0013b0 {'malloc': 0, 'reallo': 0, 'free': 23, 'calloc': 1, 'realla': 0, 'idx': 40328}
+0x7fffd80042d0 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 40406}
+0x7fffe4001370 {'malloc': 0, 'reallo': 0, 'free': 7, 'calloc': 1, 'realla': 0, 'idx': 40678}
+0x7fffc0001370 {'malloc': 0, 'reallo': 0, 'free': 7, 'calloc': 1, 'realla': 0, 'idx': 40708}
+0x7fffdc003a10 {'malloc': 0, 'reallo': 0, 'free': 3, 'calloc': 2, 'realla': 0, 'idx': 40930}
+0x7fffe8003a10 {'malloc': 0, 'reallo': 0, 'free': 3, 'calloc': 2, 'realla': 0, 'idx': 40971}
+0x7fffd80013b0 {'malloc': 0, 'reallo': 0, 'free': 23, 'calloc': 1, 'realla': 0, 'idx': 41035}
+0x7fffb8001370 {'malloc': 0, 'reallo': 0, 'free': 7, 'calloc': 1, 'realla': 0, 'idx': 41399}
+0x7fffe40042d0 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 41520}
+0x7fffd0001370 {'malloc': 0, 'reallo': 0, 'free': 7, 'calloc': 1, 'realla': 0, 'idx': 41698}
+0x7fffe40013b0 {'malloc': 0, 'reallo': 0, 'free': 23, 'calloc': 1, 'realla': 0, 'idx': 41736}
+0x7fffc4003a10 {'malloc': 0, 'reallo': 0, 'free': 3, 'calloc': 2, 'realla': 0, 'idx': 41779}
+0x7ffff0004360 {'malloc': 0, 'reallo': 1, 'free': 9, 'calloc': 2, 'realla': 0, 'idx': 41882}
+0x7fffc00042d0 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 41999}
+0x7fffc00013b0 {'malloc': 0, 'reallo': 0, 'free': 23, 'calloc': 1, 'realla': 0, 'idx': 42189}
+0x7fffdc001370 {'malloc': 0, 'reallo': 0, 'free': 7, 'calloc': 1, 'realla': 0, 'idx': 42414}
+0x7ffff0003f30 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 42492}
+0x7fffe8001370 {'malloc': 0, 'reallo': 0, 'free': 7, 'calloc': 1, 'realla': 0, 'idx': 42520}
+0x7fffcc004360 {'malloc': 0, 'reallo': 1, 'free': 9, 'calloc': 2, 'realla': 0, 'idx': 42716}
+0x7fffd00042d0 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 42935}
+0x7fffc4001370 {'malloc': 0, 'reallo': 0, 'free': 7, 'calloc': 1, 'realla': 0, 'idx': 42977}
+0x7fffb80042d0 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 43015}
+0x7fffcc003f30 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 43223}
+0x7fffb80013b0 {'malloc': 0, 'reallo': 0, 'free': 23, 'calloc': 1, 'realla': 0, 'idx': 43338}
+0x7fffd00013b0 {'malloc': 0, 'reallo': 0, 'free': 23, 'calloc': 1, 'realla': 0, 'idx': 43376}
+0x7fffd8004360 {'malloc': 0, 'reallo': 1, 'free': 9, 'calloc': 2, 'realla': 0, 'idx': 43583}
+0x7fffe4004360 {'malloc': 0, 'reallo': 1, 'free': 9, 'calloc': 2, 'realla': 0, 'idx': 43674}
+0x7fffe80042d0 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 43802}
+0x7fffd8003f30 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 43916}
+0x7fffc40042d0 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 43930}
+0x7fffe80013b0 {'malloc': 0, 'reallo': 0, 'free': 23, 'calloc': 1, 'realla': 0, 'idx': 44006}
+0x7fffdc0042d0 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 44103}
+0x7fffc40013b0 {'malloc': 0, 'reallo': 0, 'free': 23, 'calloc': 1, 'realla': 0, 'idx': 44273}
+0x7fffdc0013b0 {'malloc': 0, 'reallo': 0, 'free': 23, 'calloc': 1, 'realla': 0, 'idx': 44285}
+0x7fffe4003f30 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 44506}
+0x7fffc0004360 {'malloc': 0, 'reallo': 1, 'free': 9, 'calloc': 2, 'realla': 0, 'idx': 44658}
+0x7fffc0003f30 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 45103}
+0x7fffd0004360 {'malloc': 0, 'reallo': 1, 'free': 9, 'calloc': 2, 'realla': 0, 'idx': 45567}
+0x7fffb8004360 {'malloc': 0, 'reallo': 1, 'free': 9, 'calloc': 2, 'realla': 0, 'idx': 45926}
+0x7fffd0003f30 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 46113}
+0x7fffe8004360 {'malloc': 0, 'reallo': 1, 'free': 9, 'calloc': 2, 'realla': 0, 'idx': 46318}
+0x7fffb8003f30 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 46704}
+0x7ffff0004470 {'malloc': 0, 'reallo': 0, 'free': 4, 'calloc': 2, 'realla': 0, 'idx': 46753}
+0x7fffe8003f30 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 46873}
+0x7ffff00044c0 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 46922}
+0x7fffdc004360 {'malloc': 0, 'reallo': 1, 'free': 9, 'calloc': 2, 'realla': 0, 'idx': 46936}
+0x7fffc4004360 {'malloc': 0, 'reallo': 1, 'free': 9, 'calloc': 2, 'realla': 0, 'idx': 47344}
+0x7fffdc003f30 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 47450}
+0x7fffc4003f30 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 48266}
+0x7fffcc004470 {'malloc': 0, 'reallo': 0, 'free': 4, 'calloc': 2, 'realla': 0, 'idx': 48786}
+0x7fffcc0044c0 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 48896}
+0x7fffd8004470 {'malloc': 0, 'reallo': 0, 'free': 4, 'calloc': 2, 'realla': 0, 'idx': 50092}
+0x7fffd80044c0 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 50340}
+0x7fffe4004470 {'malloc': 0, 'reallo': 0, 'free': 4, 'calloc': 2, 'realla': 0, 'idx': 51317}
+0x7fffe40044c0 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 51500}
+0x7fffc0004470 {'malloc': 0, 'reallo': 0, 'free': 4, 'calloc': 2, 'realla': 0, 'idx': 51818}
+0x7fffc00044c0 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 51999}
+0x7fffd0004470 {'malloc': 0, 'reallo': 0, 'free': 4, 'calloc': 2, 'realla': 0, 'idx': 52778}
+0x7fffd00044c0 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 52998}
+0x7fffe8004470 {'malloc': 0, 'reallo': 0, 'free': 4, 'calloc': 2, 'realla': 0, 'idx': 54511}
+0x7fffb8004470 {'malloc': 0, 'reallo': 0, 'free': 4, 'calloc': 2, 'realla': 0, 'idx': 54669}
+0x7fffe80044c0 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 54786}
+0x7fffb80044c0 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 54967}
+0x7fffc4004470 {'malloc': 0, 'reallo': 0, 'free': 4, 'calloc': 2, 'realla': 0, 'idx': 55989}
+0x7fffc40044c0 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 56133}
+0x7fffdc004470 {'malloc': 0, 'reallo': 0, 'free': 4, 'calloc': 2, 'realla': 0, 'idx': 57876}
+0x7fffdc0044c0 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 57995}
+0x7ffff0004990 {'malloc': 0, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 60278}
+0x7fffcc004990 {'malloc': 0, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 60478}
+0x7fffd8004990 {'malloc': 0, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 60991}
+0x7fffe4004990 {'malloc': 0, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 61634}
+0x7ffff0004a20 {'malloc': 0, 'reallo': 1, 'free': 8, 'calloc': 2, 'realla': 0, 'idx': 61726}
+0x7fffc0004990 {'malloc': 0, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 61829}
+0x7fffcc004a20 {'malloc': 0, 'reallo': 1, 'free': 8, 'calloc': 2, 'realla': 0, 'idx': 62045}
+0x7ffff0003e20 {'malloc': 0, 'reallo': 2, 'free': 3, 'calloc': 0, 'realla': 0, 'idx': 62243}
+0x7fffd8004a20 {'malloc': 0, 'reallo': 1, 'free': 8, 'calloc': 2, 'realla': 0, 'idx': 62295}
+0x7fffcc003e20 {'malloc': 0, 'reallo': 2, 'free': 3, 'calloc': 0, 'realla': 0, 'idx': 62667}
+0x7fffe4004a20 {'malloc': 0, 'reallo': 1, 'free': 8, 'calloc': 2, 'realla': 0, 'idx': 62720}
+0x7fffd8003e20 {'malloc': 0, 'reallo': 2, 'free': 3, 'calloc': 0, 'realla': 0, 'idx': 62849}
+0x7fffd0004990 {'malloc': 0, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 62927}
+0x7fffe8004990 {'malloc': 0, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 62967}
+0x7fffc0004a20 {'malloc': 0, 'reallo': 1, 'free': 8, 'calloc': 2, 'realla': 0, 'idx': 63058}
+0x7fffe4003e20 {'malloc': 0, 'reallo': 2, 'free': 3, 'calloc': 0, 'realla': 0, 'idx': 63238}
+0x7fffc0003e20 {'malloc': 0, 'reallo': 2, 'free': 3, 'calloc': 0, 'realla': 0, 'idx': 63649}
+0x7fffb8004990 {'malloc': 0, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 63740}
+0x7fffc4004990 {'malloc': 0, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 63754}
+0x7fffd0004a20 {'malloc': 0, 'reallo': 1, 'free': 8, 'calloc': 2, 'realla': 0, 'idx': 64110}
+0x7fffe8004a20 {'malloc': 0, 'reallo': 1, 'free': 8, 'calloc': 2, 'realla': 0, 'idx': 64445}
+0x7fffd0003e20 {'malloc': 0, 'reallo': 2, 'free': 3, 'calloc': 0, 'realla': 0, 'idx': 64472}
+0x7fffe8003e20 {'malloc': 0, 'reallo': 2, 'free': 3, 'calloc': 0, 'realla': 0, 'idx': 64974}
+0x7fffc4004a20 {'malloc': 0, 'reallo': 1, 'free': 8, 'calloc': 2, 'realla': 0, 'idx': 65017}
+0x7fffb8004a20 {'malloc': 0, 'reallo': 1, 'free': 8, 'calloc': 2, 'realla': 0, 'idx': 65308}
+0x7fffc4003e20 {'malloc': 0, 'reallo': 2, 'free': 3, 'calloc': 0, 'realla': 0, 'idx': 65525}
+0x7fffdc004990 {'malloc': 0, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 65915}
+0x7fffb8003e20 {'malloc': 0, 'reallo': 2, 'free': 3, 'calloc': 0, 'realla': 0, 'idx': 66539}
+0x7fffd8004b30 {'malloc': 0, 'reallo': 0, 'free': 4, 'calloc': 2, 'realla': 0, 'idx': 67589}
+0x7fffd8002040 {'malloc': 0, 'reallo': 0, 'free': 8, 'calloc': 0, 'realla': 0, 'idx': 67978}
+0x7fffdc004a20 {'malloc': 0, 'reallo': 1, 'free': 8, 'calloc': 2, 'realla': 0, 'idx': 68085}
+0x7ffff0004b30 {'malloc': 0, 'reallo': 0, 'free': 4, 'calloc': 2, 'realla': 0, 'idx': 68121}
+0x7ffff0002040 {'malloc': 0, 'reallo': 0, 'free': 8, 'calloc': 0, 'realla': 0, 'idx': 68558}
+0x7fffdc003e20 {'malloc': 0, 'reallo': 2, 'free': 3, 'calloc': 0, 'realla': 0, 'idx': 69390}
+0x7fffe4004b30 {'malloc': 0, 'reallo': 0, 'free': 4, 'calloc': 2, 'realla': 0, 'idx': 69786}
+0x7fffc0004b30 {'malloc': 0, 'reallo': 0, 'free': 4, 'calloc': 2, 'realla': 0, 'idx': 69846}
+0x7fffcc004b30 {'malloc': 0, 'reallo': 0, 'free': 4, 'calloc': 2, 'realla': 0, 'idx': 70163}
+0x7fffc0002040 {'malloc': 0, 'reallo': 0, 'free': 8, 'calloc': 0, 'realla': 0, 'idx': 70688}
+0x7fffe4002040 {'malloc': 0, 'reallo': 0, 'free': 8, 'calloc': 0, 'realla': 0, 'idx': 70756}
+0x7fffcc002040 {'malloc': 0, 'reallo': 0, 'free': 8, 'calloc': 0, 'realla': 0, 'idx': 70938}
+0x7fffd0004b30 {'malloc': 0, 'reallo': 0, 'free': 4, 'calloc': 2, 'realla': 0, 'idx': 71232}
+0x7fffd0002040 {'malloc': 0, 'reallo': 0, 'free': 8, 'calloc': 0, 'realla': 0, 'idx': 71558}
+0x7fffc4004b30 {'malloc': 0, 'reallo': 0, 'free': 4, 'calloc': 2, 'realla': 0, 'idx': 73685}
+0x7fffe8004b30 {'malloc': 0, 'reallo': 0, 'free': 4, 'calloc': 2, 'realla': 0, 'idx': 73773}
+0x7fffe8002040 {'malloc': 0, 'reallo': 0, 'free': 8, 'calloc': 0, 'realla': 0, 'idx': 74086}
+0x7fffc4002040 {'malloc': 0, 'reallo': 0, 'free': 8, 'calloc': 0, 'realla': 0, 'idx': 74210}
+0x7fffb8004b30 {'malloc': 0, 'reallo': 0, 'free': 4, 'calloc': 2, 'realla': 0, 'idx': 74800}
+0x7fffb8002040 {'malloc': 0, 'reallo': 0, 'free': 8, 'calloc': 0, 'realla': 0, 'idx': 74996}
+0x7fffdc004b30 {'malloc': 0, 'reallo': 0, 'free': 4, 'calloc': 2, 'realla': 0, 'idx': 76324}
+0x7fffdc002040 {'malloc': 0, 'reallo': 0, 'free': 8, 'calloc': 0, 'realla': 0, 'idx': 76524}
+0x7ffff0005050 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 80591}
+0x7fffd8005050 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 80722}
+0x7ffff0004880 {'malloc': 0, 'reallo': 6, 'free': 6, 'calloc': 0, 'realla': 0, 'idx': 80903}
+0x7fffd8004880 {'malloc': 0, 'reallo': 6, 'free': 6, 'calloc': 0, 'realla': 0, 'idx': 81167}
+0x7fffc0005050 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 81526}
+0x7fffd0005050 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 81566}
+0x7fffc0004880 {'malloc': 0, 'reallo': 6, 'free': 6, 'calloc': 0, 'realla': 0, 'idx': 81929}
+0x7fffd0004880 {'malloc': 0, 'reallo': 6, 'free': 6, 'calloc': 0, 'realla': 0, 'idx': 82112}
+0x7fffcc005050 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 82293}
+0x7fffcc004880 {'malloc': 0, 'reallo': 6, 'free': 6, 'calloc': 0, 'realla': 0, 'idx': 82612}
+0x7fffe4005050 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 82638}
+0x7fffe4004880 {'malloc': 0, 'reallo': 6, 'free': 6, 'calloc': 0, 'realla': 0, 'idx': 83140}
+0x7fffe8005050 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 83740}
+0x7fffe8004880 {'malloc': 0, 'reallo': 6, 'free': 6, 'calloc': 0, 'realla': 0, 'idx': 84150}
+0x7fffb8005050 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 84661}
+0x7fffb8004880 {'malloc': 0, 'reallo': 6, 'free': 6, 'calloc': 0, 'realla': 0, 'idx': 85571}
+0x7fffc4005050 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 85850}
+0x7ffff0003eb0 {'malloc': 0, 'reallo': 2, 'free': 3, 'calloc': 0, 'realla': 0, 'idx': 85886}
+0x7fffdc005050 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 86287}
+0x7fffc4004880 {'malloc': 0, 'reallo': 6, 'free': 6, 'calloc': 0, 'realla': 0, 'idx': 86812}
+0x7fffd8003eb0 {'malloc': 0, 'reallo': 2, 'free': 3, 'calloc': 0, 'realla': 0, 'idx': 86898}
+0x7fffdc004880 {'malloc': 0, 'reallo': 6, 'free': 6, 'calloc': 0, 'realla': 0, 'idx': 87659}
+0x7fffd0003eb0 {'malloc': 0, 'reallo': 2, 'free': 3, 'calloc': 0, 'realla': 0, 'idx': 88830}
+0x7fffc0003eb0 {'malloc': 0, 'reallo': 2, 'free': 3, 'calloc': 0, 'realla': 0, 'idx': 88988}
+0x7fffe4003eb0 {'malloc': 0, 'reallo': 2, 'free': 3, 'calloc': 0, 'realla': 0, 'idx': 89380}
+0x7fffcc003eb0 {'malloc': 0, 'reallo': 2, 'free': 3, 'calloc': 0, 'realla': 0, 'idx': 90483}
+0x7fffe8003eb0 {'malloc': 0, 'reallo': 2, 'free': 3, 'calloc': 0, 'realla': 0, 'idx': 91681}
+0x7fffb8003eb0 {'malloc': 0, 'reallo': 2, 'free': 3, 'calloc': 0, 'realla': 0, 'idx': 93436}
+0x7fffd8004f40 {'malloc': 0, 'reallo': 0, 'free': 3, 'calloc': 2, 'realla': 0, 'idx': 93827}
+0x7ffff0004f40 {'malloc': 0, 'reallo': 0, 'free': 3, 'calloc': 2, 'realla': 0, 'idx': 94480}
+0x7fffdc003eb0 {'malloc': 0, 'reallo': 2, 'free': 3, 'calloc': 0, 'realla': 0, 'idx': 94651}
+0x7fffc4003eb0 {'malloc': 0, 'reallo': 2, 'free': 3, 'calloc': 0, 'realla': 0, 'idx': 94847}
+0x7fffd0004f40 {'malloc': 0, 'reallo': 0, 'free': 3, 'calloc': 2, 'realla': 0, 'idx': 95989}
+0x7fffc0004f40 {'malloc': 0, 'reallo': 0, 'free': 3, 'calloc': 2, 'realla': 0, 'idx': 96348}
+0x7fffe4004f40 {'malloc': 0, 'reallo': 0, 'free': 3, 'calloc': 2, 'realla': 0, 'idx': 96731}
+0x7fffcc004f40 {'malloc': 0, 'reallo': 0, 'free': 3, 'calloc': 2, 'realla': 0, 'idx': 97217}
+0x7fffe8004f40 {'malloc': 0, 'reallo': 0, 'free': 3, 'calloc': 2, 'realla': 0, 'idx': 97646}
+0x7fffb8004f40 {'malloc': 0, 'reallo': 0, 'free': 3, 'calloc': 2, 'realla': 0, 'idx': 98494}
+0x7fffd8005460 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 99081}
+0x7fffdc004f40 {'malloc': 0, 'reallo': 0, 'free': 3, 'calloc': 2, 'realla': 0, 'idx': 99250}
+0x7fffc4004f40 {'malloc': 0, 'reallo': 0, 'free': 3, 'calloc': 2, 'realla': 0, 'idx': 99568}
+0x7fffd0005460 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 100245}
+0x7fffe4005460 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 100428}
+0x7fffc0005460 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 100907}
+0x7ffff0005460 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 101010}
+0x7fffe8005460 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 102218}
+0x7fffcc005460 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 102703}
+0x7fffb8005460 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 102918}
+0x7fffd8005570 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 104170}
+0x7fffd80055c0 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 104350}
+0x7fffdc005460 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 104820}
+0x7fffc4005460 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 105157}
+0x7fffe4005570 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 106354}
+0x7fffe40055c0 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 106516}
+0x7ffff0005570 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 107384}
+0x7ffff00055c0 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 107561}
+0x7fffd0005570 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 107929}
+0x7fffd00055c0 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 108361}
+0x7fffc0005570 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 109858}
+0x7fffc00055c0 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 110056}
+0x7fffcc005570 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 110471}
+0x7fffcc0055c0 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 110662}
+0x7fffb8005570 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 110842}
+0x7fffe8005570 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 111070}
+0x7fffb80055c0 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 111199}
+0x7fffe80055c0 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 111468}
+0x7fffdc005570 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 112956}
+0x7fffdc0055c0 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 113212}
+0x7fffc4005570 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 114084}
+0x7fffc40055c0 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 114291}
+0x7fffd8005870 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 114680}
+0x7fffe4005870 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 116302}
+0x7ffff0005870 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 116649}
+0x7fffd0005870 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 117400}
+0x7fffc0005870 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 117429}
+0x7fffd8005900 {'malloc': 0, 'reallo': 1, 'free': 4, 'calloc': 3, 'realla': 0, 'idx': 117842}
+0x7fffcc005870 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 118563}
+0x7ffff0005900 {'malloc': 0, 'reallo': 1, 'free': 4, 'calloc': 3, 'realla': 0, 'idx': 118741}
+0x7fffe4005900 {'malloc': 0, 'reallo': 1, 'free': 4, 'calloc': 3, 'realla': 0, 'idx': 118858}
+0x7fffb8005870 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 119138}
+0x7fffe8005870 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 119375}
+0x7fffdc005870 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 119810}
+0x7fffc0005900 {'malloc': 0, 'reallo': 1, 'free': 4, 'calloc': 3, 'realla': 0, 'idx': 119952}
+0x7fffd0005900 {'malloc': 0, 'reallo': 1, 'free': 4, 'calloc': 3, 'realla': 0, 'idx': 120056}
+0x7fffcc005900 {'malloc': 0, 'reallo': 1, 'free': 4, 'calloc': 3, 'realla': 0, 'idx': 121323}
+0x7fffc4005870 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 121425}
+0x7fffb8005900 {'malloc': 0, 'reallo': 1, 'free': 4, 'calloc': 3, 'realla': 0, 'idx': 121614}
+0x7fffdc005900 {'malloc': 0, 'reallo': 1, 'free': 4, 'calloc': 3, 'realla': 0, 'idx': 122759}
+0x7fffe8005900 {'malloc': 0, 'reallo': 1, 'free': 4, 'calloc': 3, 'realla': 0, 'idx': 122901}
+0x7fffd8005a10 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 123794}
+0x7fffd8005a60 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 124008}
+0x7fffe4005a10 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 124674}
+0x7ffff0005a10 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 124747}
+0x7fffe4005a60 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 124870}
+0x7ffff0005a60 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 124906}
+0x7fffc4005900 {'malloc': 0, 'reallo': 1, 'free': 4, 'calloc': 3, 'realla': 0, 'idx': 125312}
+0x7fffc0005a10 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 127302}
+0x7fffc0005a60 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 127433}
+0x7fffd0005a10 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 127591}
+0x7fffd0005a60 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 127830}
+0x7fffdc005a10 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 129814}
+0x7fffcc005a10 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 130028}
+0x7fffdc005a60 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 130096}
+0x7fffcc005a60 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 130147}
+0x7fffb8005a10 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 130371}
+0x7fffb8005a60 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 130503}
+0x7fffd80024a0 {'malloc': 0, 'reallo': 0, 'free': 4, 'calloc': 1, 'realla': 0, 'idx': 132302}
+0x7fffd8005b90 {'malloc': 0, 'reallo': 0, 'free': 4, 'calloc': 2, 'realla': 0, 'idx': 132458}
+0x7fffe8005a10 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 132594}
+0x7fffe40024a0 {'malloc': 0, 'reallo': 0, 'free': 4, 'calloc': 1, 'realla': 0, 'idx': 132767}
+0x7fffe4005b90 {'malloc': 0, 'reallo': 0, 'free': 4, 'calloc': 2, 'realla': 0, 'idx': 132851}
+0x7fffe8005a60 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 132944}
+0x7fffc4005a10 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 133630}
+0x7ffff00024a0 {'malloc': 0, 'reallo': 0, 'free': 4, 'calloc': 1, 'realla': 0, 'idx': 133645}
+0x7fffc4005a60 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 133722}
+0x7ffff0005b90 {'malloc': 0, 'reallo': 0, 'free': 4, 'calloc': 2, 'realla': 0, 'idx': 133805}
+0x7fffe4005e20 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 134115}
+0x7fffd8005e20 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 134618}
+0x7fffd00024a0 {'malloc': 0, 'reallo': 0, 'free': 4, 'calloc': 1, 'realla': 0, 'idx': 134889}
+0x7fffc00024a0 {'malloc': 0, 'reallo': 0, 'free': 4, 'calloc': 1, 'realla': 0, 'idx': 134960}
+0x7fffd0005b90 {'malloc': 0, 'reallo': 0, 'free': 4, 'calloc': 2, 'realla': 0, 'idx': 134975}
+0x7fffc0005b90 {'malloc': 0, 'reallo': 0, 'free': 4, 'calloc': 2, 'realla': 0, 'idx': 135047}
+0x7ffff0005e20 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 135076}
+0x7fffc0005e20 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 136152}
+0x7fffd0005e20 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 136286}
+0x7fffe4005760 {'malloc': 0, 'reallo': 3, 'free': 3, 'calloc': 0, 'realla': 0, 'idx': 136845}
+0x7fffb80024a0 {'malloc': 0, 'reallo': 0, 'free': 4, 'calloc': 1, 'realla': 0, 'idx': 137118}
+0x7fffcc0024a0 {'malloc': 0, 'reallo': 0, 'free': 4, 'calloc': 1, 'realla': 0, 'idx': 137184}
+0x7fffb8005b90 {'malloc': 0, 'reallo': 0, 'free': 4, 'calloc': 2, 'realla': 0, 'idx': 137292}
+0x7fffd8005760 {'malloc': 0, 'reallo': 3, 'free': 3, 'calloc': 0, 'realla': 0, 'idx': 137306}
+0x7fffcc005b90 {'malloc': 0, 'reallo': 0, 'free': 4, 'calloc': 2, 'realla': 0, 'idx': 137335}
+0x7ffff0005760 {'malloc': 0, 'reallo': 3, 'free': 3, 'calloc': 0, 'realla': 0, 'idx': 137349}
+0x7fffdc0024a0 {'malloc': 0, 'reallo': 0, 'free': 4, 'calloc': 1, 'realla': 0, 'idx': 137364}
+0x7fffdc005b90 {'malloc': 0, 'reallo': 0, 'free': 4, 'calloc': 2, 'realla': 0, 'idx': 137499}
+0x7fffd0005760 {'malloc': 0, 'reallo': 3, 'free': 3, 'calloc': 0, 'realla': 0, 'idx': 138249}
+0x7fffe80024a0 {'malloc': 0, 'reallo': 0, 'free': 4, 'calloc': 1, 'realla': 0, 'idx': 138291}
+0x7fffcc005e20 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 138369}
+0x7fffe8005b90 {'malloc': 0, 'reallo': 0, 'free': 4, 'calloc': 2, 'realla': 0, 'idx': 138536}
+0x7fffb8005e20 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 138615}
+0x7fffc0005760 {'malloc': 0, 'reallo': 3, 'free': 3, 'calloc': 0, 'realla': 0, 'idx': 138746}
+0x7fffdc005e20 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 138801}
+0x7fffc40024a0 {'malloc': 0, 'reallo': 0, 'free': 4, 'calloc': 1, 'realla': 0, 'idx': 139732}
+0x7fffe8005e20 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 139760}
+0x7fffc4005b90 {'malloc': 0, 'reallo': 0, 'free': 4, 'calloc': 2, 'realla': 0, 'idx': 139856}
+0x7fffcc005760 {'malloc': 0, 'reallo': 3, 'free': 3, 'calloc': 0, 'realla': 0, 'idx': 140863}
+0x7fffdc005760 {'malloc': 0, 'reallo': 3, 'free': 3, 'calloc': 0, 'realla': 0, 'idx': 141205}
+0x7fffc4005e20 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 141322}
+0x7fffe4005eb0 {'malloc': 0, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 142171}
+0x7fffe4005f00 {'malloc': 0, 'reallo': 0, 'free': 3, 'calloc': 1, 'realla': 0, 'idx': 142338}
+0x7fffb8005760 {'malloc': 0, 'reallo': 3, 'free': 3, 'calloc': 0, 'realla': 0, 'idx': 142352}
+0x7ffff0005eb0 {'malloc': 0, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 142769}
+0x7ffff0005f00 {'malloc': 0, 'reallo': 0, 'free': 3, 'calloc': 1, 'realla': 0, 'idx': 142876}
+0x7fffe8005760 {'malloc': 0, 'reallo': 3, 'free': 3, 'calloc': 0, 'realla': 0, 'idx': 142952}
+0x7fffd8005eb0 {'malloc': 0, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 143980}
+0x7fffd8005f00 {'malloc': 0, 'reallo': 0, 'free': 3, 'calloc': 1, 'realla': 0, 'idx': 144216}
+0x7fffc4005760 {'malloc': 0, 'reallo': 3, 'free': 3, 'calloc': 0, 'realla': 0, 'idx': 145590}
+0x7fffd0005eb0 {'malloc': 0, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 145685}
+0x7fffc0005eb0 {'malloc': 0, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 146049}
+0x7fffd0005f00 {'malloc': 0, 'reallo': 0, 'free': 3, 'calloc': 1, 'realla': 0, 'idx': 146145}
+0x7fffc0005f00 {'malloc': 0, 'reallo': 0, 'free': 3, 'calloc': 1, 'realla': 0, 'idx': 146297}
+0x7fffdc005eb0 {'malloc': 0, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 148857}
+0x7fffdc005f00 {'malloc': 0, 'reallo': 0, 'free': 3, 'calloc': 1, 'realla': 0, 'idx': 148966}
+0x7fffcc005eb0 {'malloc': 0, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 149570}
+0x7fffcc005f00 {'malloc': 0, 'reallo': 0, 'free': 3, 'calloc': 1, 'realla': 0, 'idx': 149694}
+0x7fffe8005eb0 {'malloc': 0, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 150367}
+0x7fffe8005f00 {'malloc': 0, 'reallo': 0, 'free': 3, 'calloc': 1, 'realla': 0, 'idx': 150507}
+0x7fffe4005f50 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 150738}
+0x7ffff0005f50 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 151594}
+0x7fffb8005eb0 {'malloc': 0, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 151963}
+0x7fffb8005f00 {'malloc': 0, 'reallo': 0, 'free': 3, 'calloc': 1, 'realla': 0, 'idx': 152162}
+0x7fffd8005f50 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 152290}
+0x7fffc4005eb0 {'malloc': 0, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 152429}
+0x7fffc4005f00 {'malloc': 0, 'reallo': 0, 'free': 3, 'calloc': 1, 'realla': 0, 'idx': 152597}
+0x7fffd0005f50 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 153769}
+0x7fffc0005f50 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 155334}
+0x7fffe8005f50 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 156222}
+0x7fffdc005f50 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 156473}
+0x7fffcc005f50 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 156539}
+0x7fffb8005f50 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 157322}
+0x7fffc4005f50 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 1, 'realla': 0, 'idx': 157866}
+0x7ffff00024e0 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 159036}
+0x7fffe40024e0 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 159204}
+0x7fffd80024e0 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 160340}
+0x7fffd00024e0 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 162924}
+0x7fffc00024e0 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 164783}
+0x7fffdc0024e0 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 165364}
+0x7fffcc0024e0 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 165793}
+0x7fffe80024e0 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 165975}
+0x7fffb80024e0 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 166903}
+0x7fffc40024e0 {'malloc': 0, 'reallo': 0, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 169339}
+0x7fffe4005e60 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 171514}
+0x7ffff0005e60 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 171812}
+0x7fffd8005e60 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 171878}
+0x7fffd0005e60 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 174029}
+0x7fffdc005e60 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 175906}
+0x7fffb8005e60 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 176360}
+0x7fffc0005e60 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 176701}
+0x7fffe8005e60 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 177204}
+0x7fffcc005e60 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 177337}
+0x7fffc4005e60 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 177643}
+0x7fffd8004a40 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 190553}
+0x7fffe4004a40 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 190584}
+0x7fffe4003f50 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 190669}
+0x7fffd8003f50 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 190680}
+0x7fffe4004380 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 190757}
+0x7fffd8004380 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 190768}
+0x7fffd80030e0 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 190895}
+0x7fffd8003510 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 191069}
+0x7fffe40030e0 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 191091}
+0x7fffd8001b20 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 191161}
+0x7fffd8002370 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 191252}
+0x7fffe4003510 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 191487}
+0x7fffe4001b20 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 191744}
+0x7fffe4002370 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 191819}
+0x7ffff0004a40 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 191927}
+0x7ffff0003f50 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 191996}
+0x7ffff0004380 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 192122}
+0x7ffff00030e0 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 192220}
+0x7ffff0003510 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 192304}
+0x7ffff0001b20 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 192371}
+0x7ffff0002370 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 192426}
+0x7fffd0004a40 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 192636}
+0x7fffd0003f50 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 192722}
+0x7fffd0004380 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 192777}
+0x7fffd00030e0 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 192876}
+0x7fffd0003510 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 192953}
+0x7fffd0001b20 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 193052}
+0x7fffd80008e0 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 193063}
+0x7fffd0002370 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 193217}
+0x7fffe40008e0 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 193635}
+0x7fffdc004a40 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 193954}
+0x7ffff00008e0 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 193987}
+0x7fffdc003f50 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 194042}
+0x7fffdc004380 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 194130}
+0x7fffdc0030e0 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 194218}
+0x7fffdc003510 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 194284}
+0x7fffdc001b20 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 194339}
+0x7fffb8004a40 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 194350}
+0x7fffdc002370 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 194394}
+0x7fffb8003f50 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 194416}
+0x7fffb8004380 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 194493}
+0x7fffd00008e0 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 194559}
+0x7fffb80030e0 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 194570}
+0x7fffb8003510 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 194625}
+0x7fffb8001b20 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 194691}
+0x7fffb8002370 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 194757}
+0x7fffc0004a40 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 195076}
+0x7fffc0003f50 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 195142}
+0x7fffc0004380 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 195197}
+0x7fffc00030e0 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 195252}
+0x7fffc0003510 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 195318}
+0x7fffcc004a40 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 195351}
+0x7fffc0001b20 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 195373}
+0x7fffcc003f50 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 195406}
+0x7fffc4004a40 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 195428}
+0x7fffc0002370 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 195450}
+0x7fffcc004380 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 195461}
+0x7fffdc0008e0 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 195472}
+0x7fffc4003f50 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 195494}
+0x7fffe8004a40 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 195516}
+0x7fffcc0030e0 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 195527}
+0x7fffc4004380 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 195549}
+0x7fffe8003f50 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 195571}
+0x7fffcc003510 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 195582}
+0x7fffc40030e0 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 195604}
+0x7fffe8004380 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 195626}
+0x7fffcc001b20 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 195637}
+0x7fffc4003510 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 195659}
+0x7fffe80030e0 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 195681}
+0x7fffcc002370 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 195692}
+0x7fffb80008e0 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 195703}
+0x7fffc4001b20 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 195714}
+0x7fffe8003510 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 195736}
+0x7fffc4002370 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 195758}
+0x7fffe8001b20 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 195780}
+0x7fffe8002370 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 195835}
+0x7fffc00008e0 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 196132}
+0x7fffcc0008e0 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 196275}
+0x7fffc40008e0 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 196352}
+0x7fffe80008e0 {'malloc': 0, 'reallo': 0, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 196373}
 - realloc'ed -------------------------------------------------------------------
-0x405700 {'malloc': 0, 'reallo': 1, 'free': 113, 'calloc': 43, 'realla': 0}
-0x405720 {'malloc': 1, 'reallo': 1, 'free': 11, 'calloc': 0, 'realla': 0}
-0x405a60 {'malloc': 1, 'reallo': 1, 'free': 100, 'calloc': 42, 'realla': 0}
-0x4061a0 {'malloc': 6, 'reallo': 1, 'free': 116, 'calloc': 44, 'realla': 0}
-0x4061c0 {'malloc': 1, 'reallo': 2, 'free': 25, 'calloc': 2, 'realla': 0}
-0x406200 {'malloc': 1, 'reallo': 3, 'free': 24, 'calloc': 12, 'realla': 0}
-0x406230 {'malloc': 3, 'reallo': 1, 'free': 17, 'calloc': 2, 'realla': 0}
-0x406750 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0}
-0x406870 {'malloc': 8, 'reallo': 5, 'free': 113, 'calloc': 4, 'realla': 0}
-0x406900 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0}
-0x406990 {'malloc': 1, 'reallo': 4, 'free': 100, 'calloc': 53, 'realla': 0}
-0x406a80 {'malloc': 16, 'reallo': 1, 'free': 183, 'calloc': 12, 'realla': 0}
-0x406b90 {'malloc': 3, 'reallo': 1, 'free': 15, 'calloc': 6, 'realla': 0}
-0x4077f0 {'malloc': 14, 'reallo': 1, 'free': 190, 'calloc': 14, 'realla': 0}
-0x407b90 {'malloc': 0, 'reallo': 2, 'free': 1, 'calloc': 0, 'realla': 0}
-0x407c20 {'malloc': 3, 'reallo': 1, 'free': 187, 'calloc': 1, 'realla': 0}
-0x408660 {'malloc': 1, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0}
-0x405aa0 {'malloc': 0, 'reallo': 1, 'free': 11, 'calloc': 2, 'realla': 0}
-0x408a00 {'malloc': 0, 'reallo': 2, 'free': 1, 'calloc': 0, 'realla': 0}
-0x408a90 {'malloc': 12, 'reallo': 1, 'free': 189, 'calloc': 14, 'realla': 0}
-0x408550 {'malloc': 1, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0}
-0x4090c0 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0}
-0x409150 {'malloc': 12, 'reallo': 1, 'free': 181, 'calloc': 14, 'realla': 0}
-0x408fb0 {'malloc': 96, 'reallo': 96, 'free': 96, 'calloc': 0, 'realla': 0}
-0x409780 {'malloc': 1, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0}
-0x4085e0 {'malloc': 1, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0}
-0x409b90 {'malloc': 1, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0}
-0x409fa0 {'malloc': 0, 'reallo': 2, 'free': 1, 'calloc': 0, 'realla': 0}
-0x40a030 {'malloc': 1, 'reallo': 1, 'free': 94, 'calloc': 93, 'realla': 0}
-0x40a550 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0}
-0x40a5e0 {'malloc': 1, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0}
-0x40a630 {'malloc': 1, 'reallo': 1, 'free': 93, 'calloc': 86, 'realla': 0}
-0x409e90 {'malloc': 4, 'reallo': 13, 'free': 93, 'calloc': 34, 'realla': 0}
-0x40a680 {'malloc': 1, 'reallo': 1, 'free': 15, 'calloc': 5, 'realla': 0}
-0x40a300 {'malloc': 1, 'reallo': 33, 'free': 91, 'calloc': 17, 'realla': 0}
-0x40a590 {'malloc': 0, 'reallo': 2, 'free': 1, 'calloc': 0, 'realla': 0}
-0x40a6d0 {'malloc': 2, 'reallo': 2, 'free': 5, 'calloc': 0, 'realla': 0}
-0x4069d0 {'malloc': 0, 'reallo': 1, 'free': 12, 'calloc': 4, 'realla': 0}
-0x40a710 {'malloc': 1, 'reallo': 1, 'free': 3, 'calloc': 0, 'realla': 0}
-0x4068b0 {'malloc': 0, 'reallo': 6, 'free': 72, 'calloc': 44, 'realla': 0}
-0x40a7a0 {'malloc': 4, 'reallo': 1, 'free': 6, 'calloc': 1, 'realla': 0}
-0x40a6c0 {'malloc': 1, 'reallo': 6, 'free': 6, 'calloc': 0, 'realla': 0}
-0x40a7f0 {'malloc': 2, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0}
-0x409f00 {'malloc': 2, 'reallo': 2, 'free': 3, 'calloc': 0, 'realla': 0}
-0x40a340 {'malloc': 0, 'reallo': 3, 'free': 10, 'calloc': 1, 'realla': 0}
-0x40a8c0 {'malloc': 3, 'reallo': 73, 'free': 77, 'calloc': 0, 'realla': 0}
-0x40aa20 {'malloc': 11, 'reallo': 37, 'free': 77, 'calloc': 1, 'realla': 0}
-0x40aa70 {'malloc': 1, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0}
-0x4061e0 {'malloc': 1, 'reallo': 1, 'free': 11, 'calloc': 3, 'realla': 0}
-0x40a380 {'malloc': 0, 'reallo': 3, 'free': 6, 'calloc': 2, 'realla': 0}
-0x40aa40 {'malloc': 6, 'reallo': 6, 'free': 6, 'calloc': 0, 'realla': 0}
-0x40aab0 {'malloc': 61, 'reallo': 60, 'free': 61, 'calloc': 0, 'realla': 0}
-0x40aba0 {'malloc': 7, 'reallo': 2, 'free': 11, 'calloc': 2, 'realla': 0}
-0x40a320 {'malloc': 0, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0}
+0x7ffff0002020 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 2926}
+0x7fffe4002020 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 3553}
+0x7fffe8002020 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 3751}
+0x7fffcc002020 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 3885}
+0x7fffd8002020 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 4139}
+0x7ffff00021d0 {'malloc': 0, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 4230}
+0x7fffdc002020 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 4269}
+0x7fffc0002020 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 4308}
+0x7fffc4002020 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 4625}
+0x7fffb8002020 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 4717}
+0x7fffd0002020 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 4744}
+0x7fffcc0021d0 {'malloc': 0, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 5111}
+0x7fffe80021d0 {'malloc': 0, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 5125}
+0x7fffd80021d0 {'malloc': 0, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 5165}
+0x7ffff0002350 {'malloc': 0, 'reallo': 1, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 5295}
+0x7fffe40021d0 {'malloc': 0, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 5309}
+0x7fffdc0021d0 {'malloc': 0, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 5564}
+0x7fffc00021d0 {'malloc': 0, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 5616}
+0x7ffff0001b00 {'malloc': 0, 'reallo': 1, 'free': 4, 'calloc': 1, 'realla': 0, 'idx': 5732}
+0x7fffc40021d0 {'malloc': 0, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 5809}
+0x7fffb80021d0 {'malloc': 0, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 6054}
+0x7fffd00021d0 {'malloc': 0, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 6248}
+0x7fffe8002350 {'malloc': 0, 'reallo': 1, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 6326}
+0x7fffcc002350 {'malloc': 0, 'reallo': 1, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 6392}
+0x7fffe4002350 {'malloc': 0, 'reallo': 1, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 6637}
+0x7fffd8002350 {'malloc': 0, 'reallo': 1, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 6677}
+0x7fffcc001b00 {'malloc': 0, 'reallo': 1, 'free': 4, 'calloc': 1, 'realla': 0, 'idx': 6704}
+0x7fffc0002350 {'malloc': 0, 'reallo': 1, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 6834}
+0x7fffe8001b00 {'malloc': 0, 'reallo': 1, 'free': 4, 'calloc': 1, 'realla': 0, 'idx': 6899}
+0x7fffc4002350 {'malloc': 0, 'reallo': 1, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 7001}
+0x7fffd8001b00 {'malloc': 0, 'reallo': 1, 'free': 4, 'calloc': 1, 'realla': 0, 'idx': 7067}
+0x7fffdc002350 {'malloc': 0, 'reallo': 1, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 7208}
+0x7fffe4001b00 {'malloc': 0, 'reallo': 1, 'free': 4, 'calloc': 1, 'realla': 0, 'idx': 7222}
+0x7fffc0001b00 {'malloc': 0, 'reallo': 1, 'free': 4, 'calloc': 1, 'realla': 0, 'idx': 7413}
+0x7fffb8002350 {'malloc': 0, 'reallo': 1, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 7440}
+0x7fffc4001b00 {'malloc': 0, 'reallo': 1, 'free': 4, 'calloc': 1, 'realla': 0, 'idx': 7467}
+0x7fffd0002350 {'malloc': 0, 'reallo': 1, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 7894}
+0x7fffb8001b00 {'malloc': 0, 'reallo': 1, 'free': 4, 'calloc': 1, 'realla': 0, 'idx': 8198}
+0x7fffdc001b00 {'malloc': 0, 'reallo': 1, 'free': 4, 'calloc': 1, 'realla': 0, 'idx': 8329}
+0x7fffd0001b00 {'malloc': 0, 'reallo': 1, 'free': 4, 'calloc': 1, 'realla': 0, 'idx': 8624}
+0x7ffff0002260 {'malloc': 0, 'reallo': 1, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 9475}
+0x7ffff0001ad0 {'malloc': 0, 'reallo': 2, 'free': 11, 'calloc': 4, 'realla': 0, 'idx': 11629}
+0x7fffcc002260 {'malloc': 0, 'reallo': 1, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 11989}
+0x7fffd8002260 {'malloc': 0, 'reallo': 1, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 12367}
+0x7fffc0002260 {'malloc': 0, 'reallo': 1, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 13214}
+0x7fffe4002260 {'malloc': 0, 'reallo': 1, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 13246}
+0x7fffe8002260 {'malloc': 0, 'reallo': 1, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 13422}
+0x7fffc4002260 {'malloc': 0, 'reallo': 1, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 14042}
+0x7fffcc001ad0 {'malloc': 0, 'reallo': 2, 'free': 11, 'calloc': 4, 'realla': 0, 'idx': 15136}
+0x7fffd8001ad0 {'malloc': 0, 'reallo': 2, 'free': 11, 'calloc': 4, 'realla': 0, 'idx': 15755}
+0x7fffdc002260 {'malloc': 0, 'reallo': 1, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 16178}
+0x7fffc0001ad0 {'malloc': 0, 'reallo': 2, 'free': 11, 'calloc': 4, 'realla': 0, 'idx': 16285}
+0x7fffb8002260 {'malloc': 0, 'reallo': 1, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 16374}
+0x7fffe4001ad0 {'malloc': 0, 'reallo': 2, 'free': 11, 'calloc': 4, 'realla': 0, 'idx': 16634}
+0x7fffd0002260 {'malloc': 0, 'reallo': 1, 'free': 11, 'calloc': 0, 'realla': 0, 'idx': 16949}
+0x7fffe8001ad0 {'malloc': 0, 'reallo': 2, 'free': 11, 'calloc': 4, 'realla': 0, 'idx': 17001}
+0x7fffc4001ad0 {'malloc': 0, 'reallo': 2, 'free': 11, 'calloc': 4, 'realla': 0, 'idx': 17766}
+0x7fffb8001ad0 {'malloc': 0, 'reallo': 2, 'free': 11, 'calloc': 4, 'realla': 0, 'idx': 18983}
+0x7fffdc001ad0 {'malloc': 0, 'reallo': 2, 'free': 11, 'calloc': 4, 'realla': 0, 'idx': 19007}
+0x7fffd0001ad0 {'malloc': 0, 'reallo': 2, 'free': 11, 'calloc': 4, 'realla': 0, 'idx': 19416}
+0x7ffff0003460 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 20334}
+0x7fffd8003460 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 21527}
+0x7fffcc003460 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 21631}
+0x7fffc0003460 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 22594}
+0x7fffe4003460 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 23114}
+0x7ffff00034f0 {'malloc': 0, 'reallo': 1, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 23128}
+0x7ffff00030c0 {'malloc': 0, 'reallo': 1, 'free': 10, 'calloc': 2, 'realla': 0, 'idx': 23796}
+0x7fffdc003460 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 24053}
+0x7fffe8003460 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 24156}
+0x7fffb8003460 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 24207}
+0x7fffcc0034f0 {'malloc': 0, 'reallo': 1, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 24221}
+0x7fffc4003460 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 24376}
+0x7fffd0003460 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 24569}
+0x7fffd80034f0 {'malloc': 0, 'reallo': 1, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 24646}
+0x7fffcc0030c0 {'malloc': 0, 'reallo': 1, 'free': 10, 'calloc': 2, 'realla': 0, 'idx': 24775}
+0x7fffc00034f0 {'malloc': 0, 'reallo': 1, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 24942}
+0x7fffd80030c0 {'malloc': 0, 'reallo': 1, 'free': 10, 'calloc': 2, 'realla': 0, 'idx': 25111}
+0x7fffe40034f0 {'malloc': 0, 'reallo': 1, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 25533}
+0x7fffc00030c0 {'malloc': 0, 'reallo': 1, 'free': 10, 'calloc': 2, 'realla': 0, 'idx': 25736}
+0x7fffe40030c0 {'malloc': 0, 'reallo': 1, 'free': 10, 'calloc': 2, 'realla': 0, 'idx': 25935}
+0x7fffb80034f0 {'malloc': 0, 'reallo': 1, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 26417}
+0x7fffdc0034f0 {'malloc': 0, 'reallo': 1, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 26872}
+0x7fffe80034f0 {'malloc': 0, 'reallo': 1, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 26913}
+0x7fffb80030c0 {'malloc': 0, 'reallo': 1, 'free': 10, 'calloc': 2, 'realla': 0, 'idx': 27077}
+0x7fffc40034f0 {'malloc': 0, 'reallo': 1, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 27116}
+0x7fffdc0030c0 {'malloc': 0, 'reallo': 1, 'free': 10, 'calloc': 2, 'realla': 0, 'idx': 27327}
+0x7fffd00034f0 {'malloc': 0, 'reallo': 1, 'free': 9, 'calloc': 0, 'realla': 0, 'idx': 27353}
+0x7fffe80030c0 {'malloc': 0, 'reallo': 1, 'free': 10, 'calloc': 2, 'realla': 0, 'idx': 27499}
+0x7fffd00030c0 {'malloc': 0, 'reallo': 1, 'free': 10, 'calloc': 2, 'realla': 0, 'idx': 27966}
+0x7fffc40030c0 {'malloc': 0, 'reallo': 1, 'free': 10, 'calloc': 2, 'realla': 0, 'idx': 28186}
+0x7ffff00042d0 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 39249}
+0x7fffcc0042d0 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 40188}
+0x7fffd80042d0 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 40406}
+0x7fffe40042d0 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 41520}
+0x7ffff0004360 {'malloc': 0, 'reallo': 1, 'free': 9, 'calloc': 2, 'realla': 0, 'idx': 41882}
+0x7fffc00042d0 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 41999}
+0x7ffff0003f30 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 42492}
+0x7fffcc004360 {'malloc': 0, 'reallo': 1, 'free': 9, 'calloc': 2, 'realla': 0, 'idx': 42716}
+0x7fffd00042d0 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 42935}
+0x7fffb80042d0 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 43015}
+0x7fffcc003f30 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 43223}
+0x7fffd8004360 {'malloc': 0, 'reallo': 1, 'free': 9, 'calloc': 2, 'realla': 0, 'idx': 43583}
+0x7fffe4004360 {'malloc': 0, 'reallo': 1, 'free': 9, 'calloc': 2, 'realla': 0, 'idx': 43674}
+0x7fffe80042d0 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 43802}
+0x7fffd8003f30 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 43916}
+0x7fffc40042d0 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 43930}
+0x7fffdc0042d0 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 44103}
+0x7fffe4003f30 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 44506}
+0x7fffc0004360 {'malloc': 0, 'reallo': 1, 'free': 9, 'calloc': 2, 'realla': 0, 'idx': 44658}
+0x7fffc0003f30 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 45103}
+0x7fffd0004360 {'malloc': 0, 'reallo': 1, 'free': 9, 'calloc': 2, 'realla': 0, 'idx': 45567}
+0x7fffb8004360 {'malloc': 0, 'reallo': 1, 'free': 9, 'calloc': 2, 'realla': 0, 'idx': 45926}
+0x7fffd0003f30 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 46113}
+0x7fffe8004360 {'malloc': 0, 'reallo': 1, 'free': 9, 'calloc': 2, 'realla': 0, 'idx': 46318}
+0x7fffb8003f30 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 46704}
+0x7fffe8003f30 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 46873}
+0x7fffdc004360 {'malloc': 0, 'reallo': 1, 'free': 9, 'calloc': 2, 'realla': 0, 'idx': 46936}
+0x7fffc4004360 {'malloc': 0, 'reallo': 1, 'free': 9, 'calloc': 2, 'realla': 0, 'idx': 47344}
+0x7fffdc003f30 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 47450}
+0x7fffc4003f30 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 48266}
+0x7ffff0004990 {'malloc': 0, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 60278}
+0x7fffcc004990 {'malloc': 0, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 60478}
+0x7fffd8004990 {'malloc': 0, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 60991}
+0x7fffe4004990 {'malloc': 0, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 61634}
+0x7ffff0004a20 {'malloc': 0, 'reallo': 1, 'free': 8, 'calloc': 2, 'realla': 0, 'idx': 61726}
+0x7fffc0004990 {'malloc': 0, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 61829}
+0x7fffcc004a20 {'malloc': 0, 'reallo': 1, 'free': 8, 'calloc': 2, 'realla': 0, 'idx': 62045}
+0x7ffff0003e20 {'malloc': 0, 'reallo': 2, 'free': 3, 'calloc': 0, 'realla': 0, 'idx': 62243}
+0x7fffd8004a20 {'malloc': 0, 'reallo': 1, 'free': 8, 'calloc': 2, 'realla': 0, 'idx': 62295}
+0x7fffcc003e20 {'malloc': 0, 'reallo': 2, 'free': 3, 'calloc': 0, 'realla': 0, 'idx': 62667}
+0x7fffe4004a20 {'malloc': 0, 'reallo': 1, 'free': 8, 'calloc': 2, 'realla': 0, 'idx': 62720}
+0x7fffd8003e20 {'malloc': 0, 'reallo': 2, 'free': 3, 'calloc': 0, 'realla': 0, 'idx': 62849}
+0x7fffd0004990 {'malloc': 0, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 62927}
+0x7fffe8004990 {'malloc': 0, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 62967}
+0x7fffc0004a20 {'malloc': 0, 'reallo': 1, 'free': 8, 'calloc': 2, 'realla': 0, 'idx': 63058}
+0x7fffe4003e20 {'malloc': 0, 'reallo': 2, 'free': 3, 'calloc': 0, 'realla': 0, 'idx': 63238}
+0x7fffc0003e20 {'malloc': 0, 'reallo': 2, 'free': 3, 'calloc': 0, 'realla': 0, 'idx': 63649}
+0x7fffb8004990 {'malloc': 0, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 63740}
+0x7fffc4004990 {'malloc': 0, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 63754}
+0x7fffd0004a20 {'malloc': 0, 'reallo': 1, 'free': 8, 'calloc': 2, 'realla': 0, 'idx': 64110}
+0x7fffe8004a20 {'malloc': 0, 'reallo': 1, 'free': 8, 'calloc': 2, 'realla': 0, 'idx': 64445}
+0x7fffd0003e20 {'malloc': 0, 'reallo': 2, 'free': 3, 'calloc': 0, 'realla': 0, 'idx': 64472}
+0x7fffe8003e20 {'malloc': 0, 'reallo': 2, 'free': 3, 'calloc': 0, 'realla': 0, 'idx': 64974}
+0x7fffc4004a20 {'malloc': 0, 'reallo': 1, 'free': 8, 'calloc': 2, 'realla': 0, 'idx': 65017}
+0x7fffb8004a20 {'malloc': 0, 'reallo': 1, 'free': 8, 'calloc': 2, 'realla': 0, 'idx': 65308}
+0x7fffc4003e20 {'malloc': 0, 'reallo': 2, 'free': 3, 'calloc': 0, 'realla': 0, 'idx': 65525}
+0x7fffdc004990 {'malloc': 0, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 65915}
+0x7fffb8003e20 {'malloc': 0, 'reallo': 2, 'free': 3, 'calloc': 0, 'realla': 0, 'idx': 66539}
+0x7fffdc004a20 {'malloc': 0, 'reallo': 1, 'free': 8, 'calloc': 2, 'realla': 0, 'idx': 68085}
+0x7fffdc003e20 {'malloc': 0, 'reallo': 2, 'free': 3, 'calloc': 0, 'realla': 0, 'idx': 69390}
+0x7ffff0005050 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 80591}
+0x7fffd8005050 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 80722}
+0x7ffff0004880 {'malloc': 0, 'reallo': 6, 'free': 6, 'calloc': 0, 'realla': 0, 'idx': 80903}
+0x7fffd8004880 {'malloc': 0, 'reallo': 6, 'free': 6, 'calloc': 0, 'realla': 0, 'idx': 81167}
+0x7fffc0005050 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 81526}
+0x7fffd0005050 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 81566}
+0x7fffc0004880 {'malloc': 0, 'reallo': 6, 'free': 6, 'calloc': 0, 'realla': 0, 'idx': 81929}
+0x7fffd0004880 {'malloc': 0, 'reallo': 6, 'free': 6, 'calloc': 0, 'realla': 0, 'idx': 82112}
+0x7fffcc005050 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 82293}
+0x7fffcc004880 {'malloc': 0, 'reallo': 6, 'free': 6, 'calloc': 0, 'realla': 0, 'idx': 82612}
+0x7fffe4005050 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 82638}
+0x7fffe4004880 {'malloc': 0, 'reallo': 6, 'free': 6, 'calloc': 0, 'realla': 0, 'idx': 83140}
+0x7fffe8005050 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 83740}
+0x7fffe8004880 {'malloc': 0, 'reallo': 6, 'free': 6, 'calloc': 0, 'realla': 0, 'idx': 84150}
+0x7fffb8005050 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 84661}
+0x7fffb8004880 {'malloc': 0, 'reallo': 6, 'free': 6, 'calloc': 0, 'realla': 0, 'idx': 85571}
+0x7fffc4005050 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 85850}
+0x7ffff0003eb0 {'malloc': 0, 'reallo': 2, 'free': 3, 'calloc': 0, 'realla': 0, 'idx': 85886}
+0x7fffdc005050 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 86287}
+0x7fffc4004880 {'malloc': 0, 'reallo': 6, 'free': 6, 'calloc': 0, 'realla': 0, 'idx': 86812}
+0x7fffd8003eb0 {'malloc': 0, 'reallo': 2, 'free': 3, 'calloc': 0, 'realla': 0, 'idx': 86898}
+0x7fffdc004880 {'malloc': 0, 'reallo': 6, 'free': 6, 'calloc': 0, 'realla': 0, 'idx': 87659}
+0x7fffd0003eb0 {'malloc': 0, 'reallo': 2, 'free': 3, 'calloc': 0, 'realla': 0, 'idx': 88830}
+0x7fffc0003eb0 {'malloc': 0, 'reallo': 2, 'free': 3, 'calloc': 0, 'realla': 0, 'idx': 88988}
+0x7fffe4003eb0 {'malloc': 0, 'reallo': 2, 'free': 3, 'calloc': 0, 'realla': 0, 'idx': 89380}
+0x7fffcc003eb0 {'malloc': 0, 'reallo': 2, 'free': 3, 'calloc': 0, 'realla': 0, 'idx': 90483}
+0x7fffe8003eb0 {'malloc': 0, 'reallo': 2, 'free': 3, 'calloc': 0, 'realla': 0, 'idx': 91681}
+0x7fffb8003eb0 {'malloc': 0, 'reallo': 2, 'free': 3, 'calloc': 0, 'realla': 0, 'idx': 93436}
+0x7fffdc003eb0 {'malloc': 0, 'reallo': 2, 'free': 3, 'calloc': 0, 'realla': 0, 'idx': 94651}
+0x7fffc4003eb0 {'malloc': 0, 'reallo': 2, 'free': 3, 'calloc': 0, 'realla': 0, 'idx': 94847}
+0x7fffd8005460 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 99081}
+0x7fffd0005460 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 100245}
+0x7fffe4005460 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 100428}
+0x7fffc0005460 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 100907}
+0x7ffff0005460 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 101010}
+0x7fffe8005460 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 102218}
+0x7fffcc005460 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 102703}
+0x7fffb8005460 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 102918}
+0x7fffdc005460 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 104820}
+0x7fffc4005460 {'malloc': 0, 'reallo': 1, 'free': 1, 'calloc': 0, 'realla': 0, 'idx': 105157}
+0x7fffd8005870 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 114680}
+0x7fffe4005870 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 116302}
+0x7ffff0005870 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 116649}
+0x7fffd0005870 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 117400}
+0x7fffc0005870 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 117429}
+0x7fffd8005900 {'malloc': 0, 'reallo': 1, 'free': 4, 'calloc': 3, 'realla': 0, 'idx': 117842}
+0x7fffcc005870 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 118563}
+0x7ffff0005900 {'malloc': 0, 'reallo': 1, 'free': 4, 'calloc': 3, 'realla': 0, 'idx': 118741}
+0x7fffe4005900 {'malloc': 0, 'reallo': 1, 'free': 4, 'calloc': 3, 'realla': 0, 'idx': 118858}
+0x7fffb8005870 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 119138}
+0x7fffe8005870 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 119375}
+0x7fffdc005870 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 119810}
+0x7fffc0005900 {'malloc': 0, 'reallo': 1, 'free': 4, 'calloc': 3, 'realla': 0, 'idx': 119952}
+0x7fffd0005900 {'malloc': 0, 'reallo': 1, 'free': 4, 'calloc': 3, 'realla': 0, 'idx': 120056}
+0x7fffcc005900 {'malloc': 0, 'reallo': 1, 'free': 4, 'calloc': 3, 'realla': 0, 'idx': 121323}
+0x7fffc4005870 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 121425}
+0x7fffb8005900 {'malloc': 0, 'reallo': 1, 'free': 4, 'calloc': 3, 'realla': 0, 'idx': 121614}
+0x7fffdc005900 {'malloc': 0, 'reallo': 1, 'free': 4, 'calloc': 3, 'realla': 0, 'idx': 122759}
+0x7fffe8005900 {'malloc': 0, 'reallo': 1, 'free': 4, 'calloc': 3, 'realla': 0, 'idx': 122901}
+0x7fffc4005900 {'malloc': 0, 'reallo': 1, 'free': 4, 'calloc': 3, 'realla': 0, 'idx': 125312}
+0x7fffe4005e20 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 134115}
+0x7fffd8005e20 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 134618}
+0x7ffff0005e20 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 135076}
+0x7fffc0005e20 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 136152}
+0x7fffd0005e20 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 136286}
+0x7fffe4005760 {'malloc': 0, 'reallo': 3, 'free': 3, 'calloc': 0, 'realla': 0, 'idx': 136845}
+0x7fffd8005760 {'malloc': 0, 'reallo': 3, 'free': 3, 'calloc': 0, 'realla': 0, 'idx': 137306}
+0x7ffff0005760 {'malloc': 0, 'reallo': 3, 'free': 3, 'calloc': 0, 'realla': 0, 'idx': 137349}
+0x7fffd0005760 {'malloc': 0, 'reallo': 3, 'free': 3, 'calloc': 0, 'realla': 0, 'idx': 138249}
+0x7fffcc005e20 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 138369}
+0x7fffb8005e20 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 138615}
+0x7fffc0005760 {'malloc': 0, 'reallo': 3, 'free': 3, 'calloc': 0, 'realla': 0, 'idx': 138746}
+0x7fffdc005e20 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 138801}
+0x7fffe8005e20 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 139760}
+0x7fffcc005760 {'malloc': 0, 'reallo': 3, 'free': 3, 'calloc': 0, 'realla': 0, 'idx': 140863}
+0x7fffdc005760 {'malloc': 0, 'reallo': 3, 'free': 3, 'calloc': 0, 'realla': 0, 'idx': 141205}
+0x7fffc4005e20 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 141322}
+0x7fffe4005eb0 {'malloc': 0, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 142171}
+0x7fffb8005760 {'malloc': 0, 'reallo': 3, 'free': 3, 'calloc': 0, 'realla': 0, 'idx': 142352}
+0x7ffff0005eb0 {'malloc': 0, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 142769}
+0x7fffe8005760 {'malloc': 0, 'reallo': 3, 'free': 3, 'calloc': 0, 'realla': 0, 'idx': 142952}
+0x7fffd8005eb0 {'malloc': 0, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 143980}
+0x7fffc4005760 {'malloc': 0, 'reallo': 3, 'free': 3, 'calloc': 0, 'realla': 0, 'idx': 145590}
+0x7fffd0005eb0 {'malloc': 0, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 145685}
+0x7fffc0005eb0 {'malloc': 0, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 146049}
+0x7fffdc005eb0 {'malloc': 0, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 148857}
+0x7fffcc005eb0 {'malloc': 0, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 149570}
+0x7fffe8005eb0 {'malloc': 0, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 150367}
+0x7fffb8005eb0 {'malloc': 0, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 151963}
+0x7fffc4005eb0 {'malloc': 0, 'reallo': 1, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 152429}
+0x7fffe4005e60 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 171514}
+0x7ffff0005e60 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 171812}
+0x7fffd8005e60 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 171878}
+0x7fffd0005e60 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 174029}
+0x7fffdc005e60 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 175906}
+0x7fffb8005e60 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 176360}
+0x7fffc0005e60 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 176701}
+0x7fffe8005e60 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 177204}
+0x7fffcc005e60 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 177337}
+0x7fffc4005e60 {'malloc': 0, 'reallo': 2, 'free': 2, 'calloc': 0, 'realla': 0, 'idx': 177643}

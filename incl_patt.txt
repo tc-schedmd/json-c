@@ -1,0 +1,316 @@
+
+Thread 2 "test_multi_thre" hit Breakpoint 4, __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
+3809	  assert (nclears >= 3);
+#0  __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
+#1  0x00007ffff7fb1d8f in json_tokener_new_ex (depth=32) at /home/tyler/json-c/json_tokener.c:157
+#2  0x00007ffff7fb1e48 in json_tokener_new () at /home/tyler/json-c/json_tokener.c:180
+#3  0x00007ffff7fb1ff6 in json_tokener_parse_verbose (str=0x402010 "/* more difficult test case */{ \"glossary\": { \"title\": \"example glossary\", \"GlossDiv\": { \"title\": \"S\", \"GlossList\": [ { \"ID\": \"SGML\", \"SortAs\": \"SGML\", \"GlossTerm\": \"Standard Generalized Markup Langua"..., error=0x7ffff7b8ee84) at /home/tyler/json-c/json_tokener.c:227
+#4  0x00007ffff7fb1fd7 in json_tokener_parse (str=0x402010 "/* more difficult test case */{ \"glossary\": { \"title\": \"example glossary\", \"GlossDiv\": { \"title\": \"S\", \"GlossList\": [ { \"ID\": \"SGML\", \"SortAs\": \"SGML\", \"GlossTerm\": \"Standard Generalized Markup Langua"...) at /home/tyler/json-c/json_tokener.c:218
+#5  0x000000000040118b in thread_do () at /home/tyler/json-c/tests/test_multi_thread.c:21
+#6  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
+#7  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+calloc 0x7ffff0000b70 72
+[Switching to Thread 0x7ffff7cbb740 (LWP 1124045)]
+
+Thread 2 "test_multi_thre" hit Breakpoint 6.1, __GI___libc_free (mem=0x7ffff0000b70) at malloc.c:3359
+3359	{
+#0  __GI___libc_free (mem=0x7ffff0000b70) at malloc.c:3359
+#1  0x00007ffff7fb1e9b in json_tokener_free (tok=0x7ffff0000b70) at /home/tyler/json-c/json_tokener.c:189
+#2  0x00007ffff7fb2063 in json_tokener_parse_verbose (str=0x402010 "/* more difficult test case */{ \"glossary\": { \"title\": \"example glossary\", \"GlossDiv\": { \"title\": \"S\", \"GlossList\": [ { \"ID\": \"SGML\", \"SortAs\": \"SGML\", \"GlossTerm\": \"Standard Generalized Markup Langua"..., error=0x7ffff7b8ee84) at /home/tyler/json-c/json_tokener.c:249
+#3  0x00007ffff7fb1fd7 in json_tokener_parse (str=0x402010 "/* more difficult test case */{ \"glossary\": { \"title\": \"example glossary\", \"GlossDiv\": { \"title\": \"S\", \"GlossList\": [ { \"ID\": \"SGML\", \"SortAs\": \"SGML\", \"GlossTerm\": \"Standard Generalized Markup Langua"...) at /home/tyler/json-c/json_tokener.c:218
+#4  0x000000000040118b in thread_do () at /home/tyler/json-c/tests/test_multi_thread.c:21
+#5  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
+#6  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+free 0x7ffff0000b70
+[Switching to Thread 0x7fffee18f6c0 (LWP 1124129)]
+
+Thread 2 "test_multi_thre" hit Breakpoint 6.1, __GI___libc_free (mem=0x7ffff0000b70) at malloc.c:3359
+3359	{
+#0  __GI___libc_free (mem=0x7ffff0000b70) at malloc.c:3359
+#1  0x00007ffff7fae43e in json_object_generic_delete (jso=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:313
+#2  0x00007ffff7fb0580 in json_object_string_delete (jso=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:1263
+#3  0x00007ffff7fae400 in json_object_put (jso=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:302
+#4  0x00007ffff7fb0b77 in json_object_array_entry_free (data=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:1452
+#5  0x00007ffff7fad484 in array_list_free (arr=0x7ffff0001ad0) at /home/tyler/json-c/arraylist.c:69
+#6  0x00007ffff7fb0b9e in json_object_array_delete (jso=0x7ffff0001c50) at /home/tyler/json-c/json_object.c:1457
+#7  0x00007ffff7fae3f2 in json_object_put (jso=0x7ffff0001c50) at /home/tyler/json-c/json_object.c:301
+#8  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7ffff0003388) at /home/tyler/json-c/json_object.c:521
+#9  0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff0001020) at /home/tyler/json-c/linkhash.c:572
+#10 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0001c10) at /home/tyler/json-c/json_object.c:526
+#11 0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0001c10) at /home/tyler/json-c/json_object.c:300
+#12 0x00007ffff7fb0b77 in json_object_array_entry_free (data=0x7ffff0001c10) at /home/tyler/json-c/json_object.c:1452
+#13 0x00007ffff7fad484 in array_list_free (arr=0x7ffff0000ff0) at /home/tyler/json-c/arraylist.c:69
+#14 0x00007ffff7fb0b9e in json_object_array_delete (jso=0x7ffff0001a90) at /home/tyler/json-c/json_object.c:1457
+#15 0x00007ffff7fae3f2 in json_object_put (jso=0x7ffff0001a90) at /home/tyler/json-c/json_object.c:301
+#16 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7ffff0002f20) at /home/tyler/json-c/json_object.c:521
+#17 0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff0002000) at /home/tyler/json-c/linkhash.c:572
+#18 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0001730) at /home/tyler/json-c/json_object.c:526
+#19 0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0001730) at /home/tyler/json-c/json_object.c:300
+#20 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7ffff0002df8) at /home/tyler/json-c/json_object.c:521
+#21 0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff0002460) at /home/tyler/json-c/linkhash.c:572
+#22 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff00016f0) at /home/tyler/json-c/json_object.c:526
+#23 0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff00016f0) at /home/tyler/json-c/json_object.c:300
+#24 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7ffff0002b40) at /home/tyler/json-c/json_object.c:521
+#25 0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff0001350) at /home/tyler/json-c/linkhash.c:572
+#26 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0001390) at /home/tyler/json-c/json_object.c:526
+#27 0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0001390) at /home/tyler/json-c/json_object.c:300
+#28 0x000000000040119b in thread_do () at /home/tyler/json-c/tests/test_multi_thread.c:29
+#29 0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
+#30 0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+free 0x7ffff0000b70
+[Switching to Thread 0x7ffff5d8f6c0 (LWP 1124124)]
+
+Thread 2 "test_multi_thre" hit Breakpoint 4, __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
+3809	  assert (nclears >= 3);
+#0  __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
+#1  0x00007ffff7fb7054 in lh_table_new (size=16, free_fn=0x7ffff7faeb72 <json_object_lh_entry_free>, hash_fn=0x7ffff7fb6f6c <lh_char_hash>, equal_fn=0x7ffff7fb6fd3 <lh_char_equal>) at /home/tyler/json-c/linkhash.c:505
+#2  0x00007ffff7fb714a in lh_kchar_table_new (size=16, free_fn=0x7ffff7faeb72 <json_object_lh_entry_free>) at /home/tyler/json-c/linkhash.c:527
+#3  0x00007ffff7faec33 in json_object_new_object () at /home/tyler/json-c/json_object.c:536
+#4  0x00007ffff7fb240a in json_tokener_parse_ex (tok=0x7ffff0002460, str=0x40203c "{ \"title\": \"example glossary\", \"GlossDiv\": { \"title\": \"S\", \"GlossList\": [ { \"ID\": \"SGML\", \"SortAs\": \"SGML\", \"GlossTerm\": \"Standard Generalized Markup Language\", \"Acronym\": \"SGML\", \"Abbrev\": \"ISO 8879:"..., len=-1) at /home/tyler/json-c/json_tokener.c:401
+#5  0x00007ffff7fb2020 in json_tokener_parse_verbose (str=0x402010 "/* more difficult test case */{ \"glossary\": { \"title\": \"example glossary\", \"GlossDiv\": { \"title\": \"S\", \"GlossList\": [ { \"ID\": \"SGML\", \"SortAs\": \"SGML\", \"GlossTerm\": \"Standard Generalized Markup Langua"..., error=0x7ffff7b8ee84) at /home/tyler/json-c/json_tokener.c:230
+#6  0x00007ffff7fb1fd7 in json_tokener_parse (str=0x402010 "/* more difficult test case */{ \"glossary\": { \"title\": \"example glossary\", \"GlossDiv\": { \"title\": \"S\", \"GlossList\": [ { \"ID\": \"SGML\", \"SortAs\": \"SGML\", \"GlossTerm\": \"Standard Generalized Markup Langua"...) at /home/tyler/json-c/json_tokener.c:218
+#7  0x000000000040118b in thread_do () at /home/tyler/json-c/tests/test_multi_thread.c:21
+#8  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
+#9  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+calloc 0x7ffff0000b70 56
+[Switching to Thread 0x7fffeeb8f6c0 (LWP 1124128)]
+
+Thread 2 "test_multi_thre" hit Breakpoint 6.1, __GI___libc_free (mem=0x7ffff0000b70) at malloc.c:3359
+3359	{
+#0  __GI___libc_free (mem=0x7ffff0000b70) at malloc.c:3359
+#1  0x00007ffff7fb7316 in lh_table_free (t=0x7ffff0000b70) at /home/tyler/json-c/linkhash.c:575
+#2  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff00016f0) at /home/tyler/json-c/json_object.c:526
+#3  0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff00016f0) at /home/tyler/json-c/json_object.c:300
+#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7ffff0002b40) at /home/tyler/json-c/json_object.c:521
+#5  0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff0001060) at /home/tyler/json-c/linkhash.c:572
+#6  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0001730) at /home/tyler/json-c/json_object.c:526
+#7  0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0001730) at /home/tyler/json-c/json_object.c:300
+#8  0x000000000040119b in thread_do () at /home/tyler/json-c/tests/test_multi_thread.c:29
+#9  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
+#10 0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+free 0x7ffff0000b70
+[Switching to Thread 0x7fffee18f6c0 (LWP 1124129)]
+
+Thread 2 "test_multi_thre" hit Breakpoint 4, __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
+3809	  assert (nclears >= 3);
+#0  __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
+#1  0x00007ffff7fb1d8f in json_tokener_new_ex (depth=32) at /home/tyler/json-c/json_tokener.c:157
+#2  0x00007ffff7fb1e48 in json_tokener_new () at /home/tyler/json-c/json_tokener.c:180
+#3  0x00007ffff7fb1ff6 in json_tokener_parse_verbose (str=0x402010 "/* more difficult test case */{ \"glossary\": { \"title\": \"example glossary\", \"GlossDiv\": { \"title\": \"S\", \"GlossList\": [ { \"ID\": \"SGML\", \"SortAs\": \"SGML\", \"GlossTerm\": \"Standard Generalized Markup Langua"..., error=0x7ffff7b8ee84) at /home/tyler/json-c/json_tokener.c:227
+#4  0x00007ffff7fb1fd7 in json_tokener_parse (str=0x402010 "/* more difficult test case */{ \"glossary\": { \"title\": \"example glossary\", \"GlossDiv\": { \"title\": \"S\", \"GlossList\": [ { \"ID\": \"SGML\", \"SortAs\": \"SGML\", \"GlossTerm\": \"Standard Generalized Markup Langua"...) at /home/tyler/json-c/json_tokener.c:218
+#5  0x000000000040118b in thread_do () at /home/tyler/json-c/tests/test_multi_thread.c:21
+#6  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
+#7  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+calloc 0x7ffff0000b70 72
+[Switching to Thread 0x7ffff538f6c0 (LWP 1124125)]
+
+Thread 2 "test_multi_thre" hit Breakpoint 6.1, __GI___libc_free (mem=0x7ffff0000b70) at malloc.c:3359
+3359	{
+#0  __GI___libc_free (mem=0x7ffff0000b70) at malloc.c:3359
+#1  0x00007ffff7fb1e9b in json_tokener_free (tok=0x7ffff0000b70) at /home/tyler/json-c/json_tokener.c:189
+#2  0x00007ffff7fb2063 in json_tokener_parse_verbose (str=0x402010 "/* more difficult test case */{ \"glossary\": { \"title\": \"example glossary\", \"GlossDiv\": { \"title\": \"S\", \"GlossList\": [ { \"ID\": \"SGML\", \"SortAs\": \"SGML\", \"GlossTerm\": \"Standard Generalized Markup Langua"..., error=0x7ffff7b8ee84) at /home/tyler/json-c/json_tokener.c:249
+#3  0x00007ffff7fb1fd7 in json_tokener_parse (str=0x402010 "/* more difficult test case */{ \"glossary\": { \"title\": \"example glossary\", \"GlossDiv\": { \"title\": \"S\", \"GlossList\": [ { \"ID\": \"SGML\", \"SortAs\": \"SGML\", \"GlossTerm\": \"Standard Generalized Markup Langua"...) at /home/tyler/json-c/json_tokener.c:218
+#4  0x000000000040118b in thread_do () at /home/tyler/json-c/tests/test_multi_thread.c:21
+#5  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
+#6  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+free 0x7ffff0000b70
+[Switching to Thread 0x7ffff678f6c0 (LWP 1124117)]
+
+Thread 2 "test_multi_thre" hit Breakpoint 6.1, __GI___libc_free (mem=0x7ffff0000b70) at malloc.c:3359
+3359	{
+#0  __GI___libc_free (mem=0x7ffff0000b70) at malloc.c:3359
+#1  0x00007ffff7fae43e in json_object_generic_delete (jso=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:313
+#2  0x00007ffff7fb0580 in json_object_string_delete (jso=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:1263
+#3  0x00007ffff7fae400 in json_object_put (jso=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:302
+#4  0x00007ffff7fb0b77 in json_object_array_entry_free (data=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:1452
+#5  0x00007ffff7fad484 in array_list_free (arr=0x7ffff0000ff0) at /home/tyler/json-c/arraylist.c:69
+#6  0x00007ffff7fb0b9e in json_object_array_delete (jso=0x7ffff00016f0) at /home/tyler/json-c/json_object.c:1457
+#7  0x00007ffff7fae3f2 in json_object_put (jso=0x7ffff00016f0) at /home/tyler/json-c/json_object.c:301
+#8  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7ffff0004f78) at /home/tyler/json-c/json_object.c:521
+#9  0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff0001a90) at /home/tyler/json-c/linkhash.c:572
+#10 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0001020) at /home/tyler/json-c/json_object.c:526
+#11 0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0001020) at /home/tyler/json-c/json_object.c:300
+#12 0x00007ffff7fb0b77 in json_object_array_entry_free (data=0x7ffff0001020) at /home/tyler/json-c/json_object.c:1452
+#13 0x00007ffff7fad484 in array_list_free (arr=0x7ffff0002040) at /home/tyler/json-c/arraylist.c:69
+#14 0x00007ffff7fb0b9e in json_object_array_delete (jso=0x7ffff0001370) at /home/tyler/json-c/json_object.c:1457
+#15 0x00007ffff7fae3f2 in json_object_put (jso=0x7ffff0001370) at /home/tyler/json-c/json_object.c:301
+#16 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7ffff0004c20) at /home/tyler/json-c/json_object.c:521
+#17 0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff0002460) at /home/tyler/json-c/linkhash.c:572
+#18 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0002000) at /home/tyler/json-c/json_object.c:526
+#19 0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0002000) at /home/tyler/json-c/json_object.c:300
+#20 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7ffff0004298) at /home/tyler/json-c/json_object.c:521
+#21 0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff0001060) at /home/tyler/json-c/linkhash.c:572
+#22 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0001330) at /home/tyler/json-c/json_object.c:526
+#23 0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0001330) at /home/tyler/json-c/json_object.c:300
+#24 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7ffff0002b40) at /home/tyler/json-c/json_object.c:521
+#25 0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff0001730) at /home/tyler/json-c/linkhash.c:572
+#26 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0001c10) at /home/tyler/json-c/json_object.c:526
+#27 0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0001c10) at /home/tyler/json-c/json_object.c:300
+#28 0x000000000040119b in thread_do () at /home/tyler/json-c/tests/test_multi_thread.c:29
+#29 0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
+#30 0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+free 0x7ffff0000b70
+[Switching to Thread 0x7fffee18f6c0 (LWP 1124129)]
+
+Thread 2 "test_multi_thre" hit Breakpoint 4, __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
+3809	  assert (nclears >= 3);
+#0  __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
+#1  0x00007ffff7fb7054 in lh_table_new (size=16, free_fn=0x7ffff7faeb72 <json_object_lh_entry_free>, hash_fn=0x7ffff7fb6f6c <lh_char_hash>, equal_fn=0x7ffff7fb6fd3 <lh_char_equal>) at /home/tyler/json-c/linkhash.c:505
+#2  0x00007ffff7fb714a in lh_kchar_table_new (size=16, free_fn=0x7ffff7faeb72 <json_object_lh_entry_free>) at /home/tyler/json-c/linkhash.c:527
+#3  0x00007ffff7faec33 in json_object_new_object () at /home/tyler/json-c/json_object.c:536
+#4  0x00007ffff7fb240a in json_tokener_parse_ex (tok=0x7ffff0002460, str=0x402067 "{ \"title\": \"S\", \"GlossList\": [ { \"ID\": \"SGML\", \"SortAs\": \"SGML\", \"GlossTerm\": \"Standard Generalized Markup Language\", \"Acronym\": \"SGML\", \"Abbrev\": \"ISO 8879:1986\", \"GlossDef\": \"A meta-markup language,"..., len=-1) at /home/tyler/json-c/json_tokener.c:401
+#5  0x00007ffff7fb2020 in json_tokener_parse_verbose (str=0x402010 "/* more difficult test case */{ \"glossary\": { \"title\": \"example glossary\", \"GlossDiv\": { \"title\": \"S\", \"GlossList\": [ { \"ID\": \"SGML\", \"SortAs\": \"SGML\", \"GlossTerm\": \"Standard Generalized Markup Langua"..., error=0x7ffff7b8ee84) at /home/tyler/json-c/json_tokener.c:230
+#6  0x00007ffff7fb1fd7 in json_tokener_parse (str=0x402010 "/* more difficult test case */{ \"glossary\": { \"title\": \"example glossary\", \"GlossDiv\": { \"title\": \"S\", \"GlossList\": [ { \"ID\": \"SGML\", \"SortAs\": \"SGML\", \"GlossTerm\": \"Standard Generalized Markup Langua"...) at /home/tyler/json-c/json_tokener.c:218
+#7  0x000000000040118b in thread_do () at /home/tyler/json-c/tests/test_multi_thread.c:21
+#8  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
+#9  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+calloc 0x7ffff0000b70 56
+[Switching to Thread 0x7fffee18f6c0 (LWP 1124129)]
+
+Thread 2 "test_multi_thre" hit Breakpoint 6.1, __GI___libc_free (mem=0x7ffff0000b70) at malloc.c:3359
+3359	{
+#0  __GI___libc_free (mem=0x7ffff0000b70) at malloc.c:3359
+#1  0x00007ffff7fb7316 in lh_table_free (t=0x7ffff0000b70) at /home/tyler/json-c/linkhash.c:575
+#2  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0001060) at /home/tyler/json-c/json_object.c:526
+#3  0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0001060) at /home/tyler/json-c/json_object.c:300
+#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7ffff0002b68) at /home/tyler/json-c/json_object.c:521
+#5  0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff0001330) at /home/tyler/json-c/linkhash.c:572
+#6  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0001730) at /home/tyler/json-c/json_object.c:526
+#7  0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0001730) at /home/tyler/json-c/json_object.c:300
+#8  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7ffff0004270) at /home/tyler/json-c/json_object.c:521
+#9  0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff0001c10) at /home/tyler/json-c/linkhash.c:572
+#10 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0002000) at /home/tyler/json-c/json_object.c:526
+#11 0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0002000) at /home/tyler/json-c/json_object.c:300
+#12 0x000000000040119b in thread_do () at /home/tyler/json-c/tests/test_multi_thread.c:29
+#13 0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
+#14 0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+free 0x7ffff0000b70
+[Switching to Thread 0x7fffeff8f6c0 (LWP 1124126)]
+
+Thread 2 "test_multi_thre" hit Breakpoint 4, __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
+3809	  assert (nclears >= 3);
+#0  __libc_calloc (n=<optimized out>, elem_size=<optimized out>) at malloc.c:3809
+#1  0x00007ffff7fb1d8f in json_tokener_new_ex (depth=32) at /home/tyler/json-c/json_tokener.c:157
+#2  0x00007ffff7fb1e48 in json_tokener_new () at /home/tyler/json-c/json_tokener.c:180
+#3  0x00007ffff7fb1ff6 in json_tokener_parse_verbose (str=0x402010 "/* more difficult test case */{ \"glossary\": { \"title\": \"example glossary\", \"GlossDiv\": { \"title\": \"S\", \"GlossList\": [ { \"ID\": \"SGML\", \"SortAs\": \"SGML\", \"GlossTerm\": \"Standard Generalized Markup Langua"..., error=0x7ffff7b8ee84) at /home/tyler/json-c/json_tokener.c:227
+#4  0x00007ffff7fb1fd7 in json_tokener_parse (str=0x402010 "/* more difficult test case */{ \"glossary\": { \"title\": \"example glossary\", \"GlossDiv\": { \"title\": \"S\", \"GlossList\": [ { \"ID\": \"SGML\", \"SortAs\": \"SGML\", \"GlossTerm\": \"Standard Generalized Markup Langua"...) at /home/tyler/json-c/json_tokener.c:218
+#5  0x000000000040118b in thread_do () at /home/tyler/json-c/tests/test_multi_thread.c:21
+#6  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
+#7  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+calloc 0x7ffff0000b70 72
+[Switching to Thread 0x7fffeeb8f6c0 (LWP 1124128)]
+
+Thread 2 "test_multi_thre" hit Breakpoint 6.1, __GI___libc_free (mem=0x7ffff0000b70) at malloc.c:3359
+3359	{
+#0  __GI___libc_free (mem=0x7ffff0000b70) at malloc.c:3359
+#1  0x00007ffff7fb1e9b in json_tokener_free (tok=0x7ffff0000b70) at /home/tyler/json-c/json_tokener.c:189
+#2  0x00007ffff7fb2063 in json_tokener_parse_verbose (str=0x402010 "/* more difficult test case */{ \"glossary\": { \"title\": \"example glossary\", \"GlossDiv\": { \"title\": \"S\", \"GlossList\": [ { \"ID\": \"SGML\", \"SortAs\": \"SGML\", \"GlossTerm\": \"Standard Generalized Markup Langua"..., error=0x7ffff7b8ee84) at /home/tyler/json-c/json_tokener.c:249
+#3  0x00007ffff7fb1fd7 in json_tokener_parse (str=0x402010 "/* more difficult test case */{ \"glossary\": { \"title\": \"example glossary\", \"GlossDiv\": { \"title\": \"S\", \"GlossList\": [ { \"ID\": \"SGML\", \"SortAs\": \"SGML\", \"GlossTerm\": \"Standard Generalized Markup Langua"...) at /home/tyler/json-c/json_tokener.c:218
+#4  0x000000000040118b in thread_do () at /home/tyler/json-c/tests/test_multi_thread.c:21
+#5  0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
+#6  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+free 0x7ffff0000b70
+[Switching to Thread 0x7ffff5d8f6c0 (LWP 1124124)]
+
+Thread 2 "test_multi_thre" hit Breakpoint 6.1, __GI___libc_free (mem=0x7ffff0000b70) at malloc.c:3359
+3359	{
+#0  __GI___libc_free (mem=0x7ffff0000b70) at malloc.c:3359
+#1  0x00007ffff7fae43e in json_object_generic_delete (jso=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:313
+#2  0x00007ffff7fb0580 in json_object_string_delete (jso=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:1263
+#3  0x00007ffff7fae400 in json_object_put (jso=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:302
+#4  0x00007ffff7fb0b77 in json_object_array_entry_free (data=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:1452
+#5  0x00007ffff7fad484 in array_list_free (arr=0x7ffff0002040) at /home/tyler/json-c/arraylist.c:69
+#6  0x00007ffff7fb0b9e in json_object_array_delete (jso=0x7ffff0001a90) at /home/tyler/json-c/json_object.c:1457
+#7  0x00007ffff7fae3f2 in json_object_put (jso=0x7ffff0001a90) at /home/tyler/json-c/json_object.c:301
+#8  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7ffff0005d48) at /home/tyler/json-c/json_object.c:521
+#9  0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff00024a0) at /home/tyler/json-c/linkhash.c:572
+#10 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0001020) at /home/tyler/json-c/json_object.c:526
+#11 0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0001020) at /home/tyler/json-c/json_object.c:300
+#12 0x00007ffff7fb0b77 in json_object_array_entry_free (data=0x7ffff0001020) at /home/tyler/json-c/json_object.c:1452
+#13 0x00007ffff7fad484 in array_list_free (arr=0x7ffff0000ff0) at /home/tyler/json-c/arraylist.c:69
+#14 0x00007ffff7fb0b9e in json_object_array_delete (jso=0x7ffff0001370) at /home/tyler/json-c/json_object.c:1457
+#15 0x00007ffff7fae3f2 in json_object_put (jso=0x7ffff0001370) at /home/tyler/json-c/json_object.c:301
+#16 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7ffff00059f0) at /home/tyler/json-c/json_object.c:521
+#17 0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff0002460) at /home/tyler/json-c/linkhash.c:572
+#18 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0001730) at /home/tyler/json-c/json_object.c:526
+#19 0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0001730) at /home/tyler/json-c/json_object.c:300
+#20 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7ffff0002b68) at /home/tyler/json-c/json_object.c:521
+#21 0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff0001c10) at /home/tyler/json-c/linkhash.c:572
+#22 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0002000) at /home/tyler/json-c/json_object.c:526
+#23 0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0002000) at /home/tyler/json-c/json_object.c:300
+#24 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7ffff0004270) at /home/tyler/json-c/json_object.c:521
+#25 0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff0001060) at /home/tyler/json-c/linkhash.c:572
+#26 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0001330) at /home/tyler/json-c/json_object.c:526
+#27 0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0001330) at /home/tyler/json-c/json_object.c:300
+#28 0x000000000040119b in thread_do () at /home/tyler/json-c/tests/test_multi_thread.c:29
+#29 0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
+#30 0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+free 0x7ffff0000b70
+[Switching to Thread 0x7fffef58f6c0 (LWP 1124127)]
+
+Thread 2 "test_multi_thre" hit Breakpoint 6.1, __GI___libc_free (mem=0x7ffff0000b70) at malloc.c:3359
+3359	{
+#0  __GI___libc_free (mem=0x7ffff0000b70) at malloc.c:3359
+#1  0x00007ffff7fae43e in json_object_generic_delete (jso=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:313
+#2  0x00007ffff7fb0580 in json_object_string_delete (jso=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:1263
+#3  0x00007ffff7fae400 in json_object_put (jso=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:302
+#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7ffff0006130) at /home/tyler/json-c/json_object.c:521
+#5  0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff0005b90) at /home/tyler/json-c/linkhash.c:572
+#6  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0001020) at /home/tyler/json-c/json_object.c:526
+#7  0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0001020) at /home/tyler/json-c/json_object.c:300
+#8  0x00007ffff7fb0b77 in json_object_array_entry_free (data=0x7ffff0001020) at /home/tyler/json-c/json_object.c:1452
+#9  0x00007ffff7fad484 in array_list_free (arr=0x7ffff0002040) at /home/tyler/json-c/arraylist.c:69
+#10 0x00007ffff7fb0b9e in json_object_array_delete (jso=0x7ffff0002460) at /home/tyler/json-c/json_object.c:1457
+#11 0x00007ffff7fae3f2 in json_object_put (jso=0x7ffff0002460) at /home/tyler/json-c/json_object.c:301
+#12 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7ffff00059f0) at /home/tyler/json-c/json_object.c:521
+#13 0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff0001730) at /home/tyler/json-c/linkhash.c:572
+#14 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0001c10) at /home/tyler/json-c/json_object.c:526
+#15 0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0001c10) at /home/tyler/json-c/json_object.c:300
+#16 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7ffff0004298) at /home/tyler/json-c/json_object.c:521
+#17 0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff0002000) at /home/tyler/json-c/linkhash.c:572
+#18 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0001060) at /home/tyler/json-c/json_object.c:526
+#19 0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0001060) at /home/tyler/json-c/json_object.c:300
+#20 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7ffff0002b40) at /home/tyler/json-c/json_object.c:521
+#21 0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff0001330) at /home/tyler/json-c/linkhash.c:572
+#22 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0001370) at /home/tyler/json-c/json_object.c:526
+#23 0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0001370) at /home/tyler/json-c/json_object.c:300
+#24 0x000000000040119b in thread_do () at /home/tyler/json-c/tests/test_multi_thread.c:29
+#25 0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
+#26 0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+free 0x7ffff0000b70
+[Switching to Thread 0x7ffff718f6c0 (LWP 1124116)]
+
+Thread 2 "test_multi_thre" hit Breakpoint 6.1, __GI___libc_free (mem=0x7ffff0000b70) at malloc.c:3359
+3359	{
+#0  __GI___libc_free (mem=0x7ffff0000b70) at malloc.c:3359
+#1  0x00007ffff7fae43e in json_object_generic_delete (jso=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:313
+#2  0x00007ffff7fb0580 in json_object_string_delete (jso=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:1263
+#3  0x00007ffff7fae400 in json_object_put (jso=0x7ffff0000b70) at /home/tyler/json-c/json_object.c:302
+#4  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7ffff0002a50) at /home/tyler/json-c/json_object.c:521
+#5  0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff0002460) at /home/tyler/json-c/linkhash.c:572
+#6  0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0001730) at /home/tyler/json-c/json_object.c:526
+#7  0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0001730) at /home/tyler/json-c/json_object.c:300
+#8  0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7ffff0004298) at /home/tyler/json-c/json_object.c:521
+#9  0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff0001c10) at /home/tyler/json-c/linkhash.c:572
+#10 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0002000) at /home/tyler/json-c/json_object.c:526
+#11 0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0002000) at /home/tyler/json-c/json_object.c:300
+#12 0x00007ffff7faebb6 in json_object_lh_entry_free (ent=0x7ffff0005b30) at /home/tyler/json-c/json_object.c:521
+#13 0x00007ffff7fb72e7 in lh_table_free (t=0x7ffff0001060) at /home/tyler/json-c/linkhash.c:572
+#14 0x00007ffff7faebdd in json_object_object_delete (jso_base=0x7ffff0001020) at /home/tyler/json-c/json_object.c:526
+#15 0x00007ffff7fae3e4 in json_object_put (jso=0x7ffff0001020) at /home/tyler/json-c/json_object.c:300
+#16 0x000000000040119b in thread_do () at /home/tyler/json-c/tests/test_multi_thread.c:29
+#17 0x00007ffff7d556d7 in start_thread (arg=<optimized out>) at pthread_create.c:447
+#18 0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+free 0x7ffff0000b70
+[Switching to Thread 0x7fffee18f6c0 (LWP 1124129)]
+
+Thread 2 "test_multi_thre" hit Breakpoint 6.1, __GI___libc_free (mem=0x7ffff0000b70) at malloc.c:3359
+3359	{
+#0  __GI___libc_free (mem=0x7ffff0000b70) at malloc.c:3359
+#1  0x00007ffff7d6663b in tcache_thread_shutdown () at malloc.c:3234
+#2  __malloc_arena_thread_freeres () at /usr/src/debug/glibc-2.39-22.fc40.x86_64/malloc/arena.c:897
+#3  0x00007ffff7d68b72 in __libc_thread_freeres () at thread-freeres.c:41
+#4  0x00007ffff7d554c7 in start_thread (arg=<optimized out>) at pthread_create.c:458
+#5  0x00007ffff7dd960c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+free 0x7ffff0000b70
+[Switching to Thread 0x7fffed78f6c0 (LWP 1124130)]
