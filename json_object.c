@@ -37,6 +37,8 @@
 /* Avoid ctype.h and locale overhead */
 #define is_plain_digit(c) ((c) >= '0' && (c) <= '9')
 
+#define SPEC___THREAD
+
 #if SIZEOF_LONG_LONG != SIZEOF_INT64_T
 #error The long long type is not 64-bits
 #endif
